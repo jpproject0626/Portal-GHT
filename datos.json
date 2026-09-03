@@ -1,0 +1,530 @@
+[
+  {
+    "finca": "GHT FALCON",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT TEMKIN",
+    "elemento": "13002003",
+    "ow": "583518A-01",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT TEMKIN",
+    "elemento": "13004412",
+    "ow": "583514A-01",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT RIO FR",
+    "elemento": "13003035",
+    "ow": "41658",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT RIO FR",
+    "elemento": "13028870",
+    "ow": "41675",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT RIO FR",
+    "elemento": "13028541",
+    "ow": "41674",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT RIO FR",
+    "elemento": "11535701",
+    "ow": "41645",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MELODY",
+    "elemento": "11535701",
+    "ow": "41645",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MELODY",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT PARDO",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT SNF",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT GENERA",
+    "elemento": "13003037",
+    "ow": "41660",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT GENERA",
+    "elemento": "13003035",
+    "ow": "41658",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT ACACIA",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT ACACIA",
+    "elemento": "12009401",
+    "ow": "41646",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT ACACIA",
+    "elemento": "11215221",
+    "ow": "41642",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT ACACIA",
+    "elemento": "13007210",
+    "ow": "41664",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT CIPRES",
+    "elemento": "12034601",
+    "ow": "41653",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT CIPRES",
+    "elemento": "13003035",
+    "ow": "41658",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT CIPRES",
+    "elemento": "11535701",
+    "ow": "41645",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT CIPRES",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT FALCON",
+    "elemento": "11532101",
+    "ow": "41643",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT FALCON",
+    "elemento": "10986801",
+    "ow": "41640",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT FALCON",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT FALCON",
+    "elemento": "12009701",
+    "ow": "41648",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT UBATE",
+    "elemento": "12009501",
+    "ow": "41647",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT FOLLAJ",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT LUISA",
+    "elemento": "13007534",
+    "ow": "41666",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT LUISA",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MOUNTA",
+    "elemento": "13007529",
+    "ow": "41665",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MOUNTA",
+    "elemento": "13003035",
+    "ow": "41658",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MOUNTA",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MOUNTA",
+    "elemento": "11535701",
+    "ow": "41645",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "12108801",
+    "ow": "41654",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT J CHIA",
+    "elemento": "13003038",
+    "ow": "41661",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT J CHIA",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "13003038",
+    "ow": "41661",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "12657501",
+    "ow": "41657",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "11535701",
+    "ow": "41645",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "13019733",
+    "ow": "41670",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT CASABL",
+    "elemento": "13008317",
+    "ow": "41667",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT CASABL",
+    "elemento": "12657501",
+    "ow": "41657",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT CASABL",
+    "elemento": "12199801",
+    "ow": "41655",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT AJIBE",
+    "elemento": "11535701",
+    "ow": "41645",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT AJIBE",
+    "elemento": "13008317",
+    "ow": "41667",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT AJIBE",
+    "elemento": "11532501",
+    "ow": "41644",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT FLOVAL",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT FLOVAL",
+    "elemento": "13008317",
+    "ow": "41667",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT FLOVAL",
+    "elemento": "12034601",
+    "ow": "41653",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT FLOVAL",
+    "elemento": "13003035",
+    "ow": "41658",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MANA",
+    "elemento": "13019730",
+    "ow": "41668",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MANA",
+    "elemento": "11215221",
+    "ow": "41642",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT MANA",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT DESIGN",
+    "elemento": "13007210",
+    "ow": "41664",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT COLOMB",
+    "elemento": "10852201",
+    "ow": "41639",
+    "estado": "Listo",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT TEMKIN",
+    "elemento": "13004412",
+    "ow": "583515A-01",
+    "estado": "Pedido recibido",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT TEMKIN",
+    "elemento": "13004412",
+    "ow": "583516A-01",
+    "estado": "Pedido recibido",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  },
+  {
+    "finca": "GHT TEMKIN",
+    "elemento": "13004412",
+    "ow": "583517A-01",
+    "estado": "Pedido recibido",
+    "orden_compra": "",
+    "fecha_estimada_despacho": ""
+  }
+]
