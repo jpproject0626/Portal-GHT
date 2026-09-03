@@ -71,7 +71,6 @@
   a.mark{ cursor:pointer; }
   a.mark:hover, a.mark:focus-visible{ opacity: .85; }
   .mark img{ height:34px; width:auto; display:block; }
-  .gate-card .mark img{ height:32px; }
 
   /* ---------- WATERMARK ---------- */
   .watermark{
@@ -306,20 +305,62 @@
   /* ---------- PASSWORD GATE ---------- */
   #gate{
     position:fixed; inset:0;
-    background: var(--pine-deep);
-    display:flex; align-items:center; justify-content:center;
+    display:flex;
     z-index: 50;
-    padding: 20px;
+    overflow-y:auto;
+  }
+
+  .gate-brand{
+    flex: 1 1 44%;
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 72% 38%, #123a82 0%, #00205B 55%, #001338 100%);
+    display:flex; flex-direction:column;
+    align-items:flex-start; justify-content:center;
+    padding: 60px;
+    min-height: 260px;
+  }
+  .gate-brand::after{
+    content:"";
+    position:absolute; inset:0;
+    background: radial-gradient(circle at 78% 60%, rgba(60,158,255,.16), transparent 55%);
+    pointer-events:none;
+  }
+  .gate-brand-icon{ height:52px; width:auto; display:block; margin-bottom:24px; position:relative; z-index:1; }
+  .gate-brand-word{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size: 32px;
+    line-height:1.18;
+    color:#fff;
+    margin:0;
+    position:relative; z-index:1;
+  }
+  .gate-brand-tag{
+    margin: 16px 0 0;
+    font-size:14px;
+    color: rgba(235,240,250,.68);
+    max-width: 30ch;
+    line-height:1.55;
+    position:relative; z-index:1;
+  }
+
+  .gate-form-panel{
+    flex: 1 1 56%;
+    background: var(--paper);
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(27,67,50,0.05) 1px, transparent 0);
+    background-size: 22px 22px;
+    border-left: 4px solid var(--marigold);
+    display:flex; align-items:center; justify-content:center;
+    padding: 40px 32px;
   }
   .gate-card{
-    background: var(--paper-raised);
-    border-radius: 6px;
-    padding: 34px 30px;
     width:100%; max-width: 340px;
     text-align:left;
-    box-shadow: 0 18px 40px rgba(0,0,0,.28);
   }
-  .gate-card .mark{ margin-bottom:16px; }
+  .gate-card .ght-logo{ height:58px; width:auto; display:block; margin-bottom:20px; }
   .gate-card h2{
     font-family:'Fraunces', serif;
     font-weight:500;
@@ -339,6 +380,7 @@
     border-radius: var(--radius);
     margin-bottom: 12px;
     font-size:14px;
+    background: var(--paper-raised);
   }
   .gate-card .btn{ width:100%; padding: 12px 0; }
   .gate-error{
@@ -346,6 +388,27 @@
     font-size:12.5px;
     margin: -4px 0 12px;
     display:none;
+  }
+
+  @media (max-width:760px){
+    #gate{ flex-direction:column; }
+    .gate-brand{
+      flex: none;
+      min-height:0;
+      flex-direction:row;
+      align-items:center;
+      gap:14px;
+      padding: 22px 24px;
+    }
+    .gate-brand-icon{ height:34px; margin-bottom:0; }
+    .gate-brand-word{ font-size:17px; }
+    .gate-brand-tag{ display:none; }
+    .gate-form-panel{
+      flex:1;
+      border-left:none;
+      border-top: 4px solid var(--marigold);
+      padding: 36px 24px;
+    }
   }
 
   @media (max-width:480px){
@@ -359,13 +422,20 @@
 
   <!-- ================= PASSWORD GATE ================= -->
   <div id="gate">
-    <div class="gate-card">
-      <div class="mark"><img src="logo-sw.png" alt="Smurfit Westrock"></div>
-      <h2>Acceso al portal</h2>
-      <p>Este portal es exclusivo para Grupo Chía (GHT). Ingresa la clave de acceso que te compartió tu contacto en Smurfit Westrock.</p>
-      <div class="gate-error" id="gateError">Clave incorrecta. Intenta de nuevo.</div>
-      <input type="password" id="gatePass" placeholder="Clave de acceso" autocomplete="off">
-      <button class="btn" onclick="checkPass()">Ingresar</button>
+    <div class="gate-brand">
+      <img src="logo-sw.png" class="gate-brand-icon" alt="Smurfit Westrock">
+      <p class="gate-brand-word">Smurfit<br>Westrock</p>
+      <p class="gate-brand-tag">Portal de seguimiento de pedidos para socios de manufactura</p>
+    </div>
+    <div class="gate-form-panel">
+      <div class="gate-card">
+        <img src="logo-ght.png" class="ght-logo" alt="GHT · Growers Hub Trading">
+        <h2>Acceso al portal</h2>
+        <p>Este portal es exclusivo para Growers Hub Trading (GHT). Ingresa la clave de acceso que te compartió tu contacto en Smurfit Westrock.</p>
+        <div class="gate-error" id="gateError">Clave incorrecta. Intenta de nuevo.</div>
+        <input type="password" id="gatePass" placeholder="Clave de acceso" autocomplete="off">
+        <button class="btn" onclick="checkPass()">Ingresar</button>
+      </div>
     </div>
   </div>
 
@@ -374,7 +444,7 @@
     <a class="mark" href="index.html" onclick="sessionStorage.removeItem('ghtAccess')" aria-label="Cerrar sesión y volver al inicio"><img src="logo-sw.png" alt="Smurfit Westrock"></a>
     <div class="ribbon-text">
       <div class="brand"><strong>Smurfit Westrock</strong> · Portal GHT</div>
-      <div class="sub">Seguimiento de pedidos — Grupo Chía</div>
+      <div class="sub">Seguimiento de pedidos — Growers Hub Trading</div>
     </div>
   </header>
 
