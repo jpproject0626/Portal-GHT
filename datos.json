@@ -2,529 +2,595 @@
   {
     "finca": "GHT FALCON",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "AJ01. X1 - 66017",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT TEMKIN",
     "elemento": "13002003",
+    "descripcion": "4CACAJ21-  RUANA 24 X 24",
     "ow": "583518A-01",
+    "orden_compra": "9094",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT TEMKIN",
     "elemento": "13004412",
+    "descripcion": "4CACAJ20- CAJA CAPUCHON TEMKIN-. TAPA Y BASE AA",
     "ow": "583514A-01",
+    "orden_compra": "9090",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT RIO FR",
     "elemento": "13003035",
+    "descripcion": "4CATAP103  TAPA 1/3  QUEENS",
     "ow": "41658",
+    "orden_compra": "RQ01. GR - 30730",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT RIO FR",
     "elemento": "13028870",
+    "descripcion": "TAPA STD FLOREXPO MECANIZADA CAB1",
     "ow": "41675",
+    "orden_compra": "RQ01. GR - 30730",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT RIO FR",
     "elemento": "13028541",
+    "descripcion": "4CABAS65 BASE STD MECANIZADA",
     "ow": "41674",
+    "orden_compra": "RQ01. GR - 30730",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT RIO FR",
     "elemento": "11535701",
+    "descripcion": "4CABAS37 BASE 1/3",
     "ow": "41645",
+    "orden_compra": "RQ01. GR - 30730",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MELODY",
     "elemento": "11535701",
+    "descripcion": "4CABAS37 BASE 1/3",
     "ow": "41645",
+    "orden_compra": "ML01. GN - 30239",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MELODY",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "ML01. GN - 30239",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT PARDO",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "SB01. GS - 38738",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT SNF",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "SN01. GU - 35770",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT GENERA",
     "elemento": "13003037",
+    "descripcion": "4CATAP81 TAPA TBC QUEENS",
     "ow": "41660",
+    "orden_compra": "FG01. GB - 16213",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT GENERA",
     "elemento": "13003035",
+    "descripcion": "4CATAP103  TAPA 1/3  QUEENS",
     "ow": "41658",
+    "orden_compra": "FG01. GB - 16213",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT ACACIA",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "LC01. GK - 42443",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT ACACIA",
     "elemento": "12009401",
+    "descripcion": "4CATAP107 TAPA TBC FALCON 97X24",
     "ow": "41646",
+    "orden_compra": "FA01. GK - 42442",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT ACACIA",
     "elemento": "11215221",
+    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "41642",
+    "orden_compra": "FA01. GK - 42442",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT ACACIA",
     "elemento": "13007210",
+    "descripcion": "4CABAS36 BASE STD- CAB 2",
     "ow": "41664",
+    "orden_compra": "FA01. GK - 42442",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT CIPRES",
     "elemento": "12034601",
+    "descripcion": "4CATAP84 TAPA TBC  DESIGNER  C720",
     "ow": "41653",
+    "orden_compra": "CP01. G5 - 31987",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT CIPRES",
     "elemento": "13003035",
+    "descripcion": "4CATAP103  TAPA 1/3  QUEENS",
     "ow": "41658",
+    "orden_compra": "CP01. G5 - 31987",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT CIPRES",
     "elemento": "11535701",
+    "descripcion": "4CABAS37 BASE 1/3",
     "ow": "41645",
+    "orden_compra": "CP01. G5 - 31987",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT CIPRES",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "CP01. G5 - 31987",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT FALCON",
     "elemento": "11532101",
+    "descripcion": "4CATAP09 TAPA  STD NACIONAL",
     "ow": "41643",
+    "orden_compra": "P001. X1 - 66154",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT FALCON",
     "elemento": "10986801",
+    "descripcion": "4CABAS35 BASE TBC Cab 3",
     "ow": "41640",
+    "orden_compra": "TM01. X1 - 66153",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT FALCON",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "AJ01. X1 - 66151",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT FALCON",
     "elemento": "12009701",
+    "descripcion": "4CATAP109 TAPA 1/4 FALCON 97 X 24",
     "ow": "41648",
+    "orden_compra": "AJ01. X1 - 66151",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT UBATE",
     "elemento": "12009501",
+    "descripcion": "4CATAPF124 TAPA TBC POLO FARMS  97",
     "ow": "41647",
+    "orden_compra": "UB01. GX - 24423",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT FOLLAJ",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "CG01. G3 - 10435",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT LUISA",
     "elemento": "13007534",
+    "descripcion": "4CATAP108 TAPA STD FALCON 97 X 48 X 21  CAB 2",
     "ow": "41666",
+    "orden_compra": "SZ01. X3 - 32354",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT LUISA",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "SZ01. X3 - 32354",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MOUNTA",
     "elemento": "13007529",
+    "descripcion": "CAB 2  4CATAP73 TAPA STD  FLOREXPO  C930 CAB 2",
     "ow": "41665",
+    "orden_compra": "MO01. GO - 31489",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MOUNTA",
     "elemento": "13003035",
+    "descripcion": "4CATAP103  TAPA 1/3  QUEENS",
     "ow": "41658",
+    "orden_compra": "MO01. GO - 31489",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MOUNTA",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "MO01. GO - 31489",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MOUNTA",
     "elemento": "11535701",
+    "descripcion": "4CABAS37 BASE 1/3",
     "ow": "41645",
+    "orden_compra": "MO01. GO - 31489",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT TANDIL",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "PM01. GV - 41546",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT TANDIL",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "PM01. GV - 41546",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT TANDIL",
     "elemento": "12108801",
+    "descripcion": "4CATAP133 TAPA 1/4 GOLDEN",
     "ow": "41654",
+    "orden_compra": "PM01. GV - 41546",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT TANDIL",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "TN01. GV - 41545",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT J CHIA",
     "elemento": "13003038",
+    "descripcion": "4CACAJ35  FOLDER 1/8  QUEENS C720",
     "ow": "41661",
+    "orden_compra": "CH01. G4 - 50701",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT J CHIA",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "CH01. G4 - 50701",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MG",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "JA01. GM - 101469",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MG",
     "elemento": "13003038",
+    "descripcion": "4CACAJ35  FOLDER 1/8  QUEENS C720",
     "ow": "41661",
+    "orden_compra": "JA01. GM - 101469",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MG",
     "elemento": "12657501",
+    "descripcion": "4CABAS17 BASE TBC BENCHMARK 105X",
     "ow": "41657",
+    "orden_compra": "JA01. GM - 101469",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MG",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "HA01. GM - 101472",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MG",
     "elemento": "11535701",
+    "descripcion": "4CABAS37 BASE 1/3",
     "ow": "41645",
+    "orden_compra": "HA01. GM - 101472",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MG",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "ER01. GM - 101468",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MG",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "MG01. GM - 101470",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MG",
     "elemento": "13019733",
+    "descripcion": "4CATAP154 TAPA TBC GOLDEN 105 X 25 X 24 C930",
     "ow": "41670",
+    "orden_compra": "SC01. GM - 101471",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MG",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "SC01. GM - 101471",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT CASABL",
     "elemento": "13008317",
+    "descripcion": "4CABAS24 BENCHMARK CUARTO BASE 105 X 26 X 15",
     "ow": "41667",
+    "orden_compra": "RF01. G7 - 25504",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT CASABL",
     "elemento": "12657501",
+    "descripcion": "4CABAS17 BASE TBC BENCHMARK 105X",
     "ow": "41657",
+    "orden_compra": "RF01. G7 - 25504",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT CASABL",
     "elemento": "12199801",
+    "descripcion": "4CACAJ52  FOLDER 1/8 GOLDEN NEW",
     "ow": "41655",
+    "orden_compra": "RF01. G7 - 25504",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT AJIBE",
     "elemento": "11535701",
+    "descripcion": "4CABAS37 BASE 1/3",
     "ow": "41645",
+    "orden_compra": "AL01. G1 - 33530",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT AJIBE",
     "elemento": "13008317",
+    "descripcion": "4CABAS24 BENCHMARK CUARTO BASE 105 X 26 X 15",
     "ow": "41667",
+    "orden_compra": "AL01. G1 - 33530",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT AJIBE",
     "elemento": "11532501",
+    "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
     "ow": "41644",
+    "orden_compra": "AL01. G1 - 33519",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT FLOVAL",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "QF01. GE - 68428",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT FLOVAL",
     "elemento": "13008317",
+    "descripcion": "4CABAS24 BENCHMARK CUARTO BASE 105 X 26 X 15",
     "ow": "41667",
+    "orden_compra": "QF01. GE - 68428",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT FLOVAL",
     "elemento": "12034601",
+    "descripcion": "4CATAP84 TAPA TBC  DESIGNER  C720",
     "ow": "41653",
+    "orden_compra": "FV01. GE - 68427",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT FLOVAL",
     "elemento": "13003035",
+    "descripcion": "4CATAP103  TAPA 1/3  QUEENS",
     "ow": "41658",
+    "orden_compra": "FV01. GE - 68427",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MANA",
     "elemento": "13019730",
+    "descripcion": "4CATAP150 TAPA CUARTO REFORZADA BENCHMARK 105X26X15 C930",
     "ow": "41668",
+    "orden_compra": "LM01. GL - 39254",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MANA",
     "elemento": "11215221",
+    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "41642",
+    "orden_compra": "LM01. GL - 39254",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT MANA",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "LM01. GL - 39254",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT DESIGN",
     "elemento": "13007210",
+    "descripcion": "4CABAS36 BASE STD- CAB 2",
     "ow": "41664",
+    "orden_compra": "E-mail 29-08-2026- FLORES ALIZANZA",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT COLOMB",
     "elemento": "10852201",
+    "descripcion": "4CABAS34 BASE 1/4",
     "ow": "41639",
+    "orden_compra": "PA01. XD - 1201",
     "estado": "Listo",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT TEMKIN",
     "elemento": "13004412",
+    "descripcion": "4CACAJ20- CAJA CAPUCHON TEMKIN-. TAPA Y BASE AA",
     "ow": "583515A-01",
+    "orden_compra": "9091",
     "estado": "Pedido recibido",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT TEMKIN",
     "elemento": "13004412",
+    "descripcion": "4CACAJ20- CAJA CAPUCHON TEMKIN-. TAPA Y BASE AA",
     "ow": "583516A-01",
+    "orden_compra": "9092",
     "estado": "Pedido recibido",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   },
   {
     "finca": "GHT TEMKIN",
     "elemento": "13004412",
+    "descripcion": "4CACAJ20- CAJA CAPUCHON TEMKIN-. TAPA Y BASE AA",
     "ow": "583517A-01",
+    "orden_compra": "9093",
     "estado": "Pedido recibido",
-    "orden_compra": "",
     "fecha_estimada_despacho": ""
   }
 ]

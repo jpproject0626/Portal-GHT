@@ -114,6 +114,8 @@ def generar_datos():
 
     idx_id_cliente = encabezado.index("ID Cliente")
     idx_elemento = encabezado.index("Elemento")
+    idx_descripcion = encabezado.index("Descripción")
+    idx_ord_compra = encabezado.index("Ord. de Compra")
     idx_ord_trabajo = encabezado.index("Ord. de Trabajo")
     idx_estatus_omp = encabezado.index("Estatus OMP")
 
@@ -133,6 +135,8 @@ def generar_datos():
         total_ght += 1
 
         elemento = limpiar_texto(fila[idx_elemento])
+        descripcion = limpiar_texto(fila[idx_descripcion])
+        orden_compra = limpiar_texto(fila[idx_ord_compra])
 
         # --- OW Final: si el backlog ya trae Ord. de Trabajo propio, se respeta ---
         ord_trabajo_original = limpiar_texto(fila[idx_ord_trabajo])
@@ -159,11 +163,12 @@ def generar_datos():
         resultado.append({
             "finca": id_cliente,
             "elemento": elemento,
+            "descripcion": descripcion,
             "ow": ow_final,
+            "orden_compra": orden_compra,
             "estado": estado_ght,
-            # Estos 2 campos quedan vacios hasta que TI ajuste el bot de despachos.
-            # Cuando lleguen, se agregan aqui mismo sin tocar el resto del script.
-            "orden_compra": "",
+            # Este campo queda vacio hasta que TI termine de ajustar el bot
+            # de despachos para que incluya la fecha/hora estimada.
             "fecha_estimada_despacho": "",
         })
 

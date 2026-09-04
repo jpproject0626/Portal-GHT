@@ -122,9 +122,58 @@
 
   /* ---------- SEARCH ---------- */
   form.lookup{
+    position:relative;
     display:flex;
     gap:10px;
     margin-bottom: 8px;
+  }
+
+  .suggestions{
+    display:none;
+    position:absolute;
+    top: calc(100% + 6px);
+    left:0; right:0;
+    background: var(--paper-raised);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 14px 30px rgba(18,48,31,.14);
+    max-height: 320px;
+    overflow-y:auto;
+    z-index: 6;
+  }
+  .suggestions.open{ display:block; }
+  .suggestion-item{
+    display:block;
+    width:100%;
+    text-align:left;
+    padding: 10px 14px;
+    border:none;
+    border-bottom: 1px solid var(--line-soft);
+    background:none;
+    cursor:pointer;
+    font-family:'Inter', sans-serif;
+  }
+  .suggestion-item:last-child{ border-bottom:none; }
+  .suggestion-item:hover, .suggestion-item:focus-visible{ background: var(--paper); }
+  .suggestion-item .suggestion-code{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    font-weight:600;
+    color: var(--pine-deep);
+  }
+  .suggestion-item .suggestion-finca{
+    font-size:11px;
+    letter-spacing:.02em;
+    color: var(--mist);
+    margin-left:8px;
+  }
+  .suggestion-item .suggestion-desc{
+    font-size:12.5px;
+    color: var(--ink-soft);
+    margin-top:2px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
   }
   .lookup input[type="text"]{
     flex:1;
@@ -263,6 +312,7 @@
     gap: 16px 18px;
   }
   dl.fields div{ min-width:0; }
+  dl.fields div.field-full{ grid-column: 1 / -1; }
   dl.fields dt{
     font-size:11px;
     letter-spacing:.02em;
@@ -402,11 +452,12 @@
       <h1>Encuentra tu pedido</h1>
       <p class="lede">Ingresa el número de elemento o de orden de compra para ver en qué etapa va tu pedido.</p>
 
-      <form class="lookup" id="lookupForm">
-        <input type="text" id="query" placeholder="Ej. 10852201" autocomplete="off" inputmode="search">
+      <form class="lookup" id="lookupForm" autocomplete="off">
+        <input type="text" id="query" placeholder="Ej. 4CABAS37" autocomplete="off" inputmode="search">
         <button type="submit" class="btn">Buscar</button>
+        <div class="suggestions" id="suggestions"></div>
       </form>
-      <p class="hint">Búsqueda por elemento u orden de compra · datos actualizados a diario</p>
+      <p class="hint">Búsqueda por descripción del producto u orden de compra · datos actualizados a diario</p>
 
       <div id="result"></div>
     </div>
@@ -444,6 +495,11 @@
   let DATA = [];
   fetch('datos.json').then(r=>r.json()).then(d=>{ DATA = d; }).catch(()=>{ DATA = []; });
 
+  function extraerCodigoProducto(descripcion){
+    const m = (descripcion || '').match(/4C[A-Za-z]+\d+/i);
+    return m ? m[0] : '';
+  }
+
   const ESTADOS = ["Pedido recibido","En producción","Listo"];
   const STAMP_CLASS = {
     "Pedido recibido":"recibido",
@@ -476,6 +532,7 @@
     const stampClass = STAMP_CLASS[item.estado] || "recibido";
     const oc = item.orden_compra && item.orden_compra.trim() ? item.orden_compra : null;
     const fecha = item.fecha_estimada_despacho && item.fecha_estimada_despacho.trim() ? item.fecha_estimada_despacho : null;
+    const desc = item.descripcion && item.descripcion.trim() ? item.descripcion : null;
     return `
       <div class="ticket">
         <div class="ticket-top">
@@ -491,21 +548,25 @@
         <div class="perf"></div>
 
         <dl class="fields">
-          <div>
-            <dt>Elemento</dt>
-            <dd>${item.elemento || '—'}</dd>
-          </div>
-          <div>
-            <dt>Orden de trabajo</dt>
-            <dd>${item.ow || '—'}</dd>
+          <div class="field-full">
+            <dt>Descripción</dt>
+            <dd class="${desc ? '' : 'pending'}">${desc || 'Sin descripción'}</dd>
           </div>
           <div>
             <dt>Orden de compra</dt>
             <dd class="${oc ? '' : 'pending'}">${oc || 'Aún sin asignar'}</dd>
           </div>
           <div>
+            <dt>Elemento</dt>
+            <dd>${item.elemento || '—'}</dd>
+          </div>
+          <div>
             <dt>Fecha estimada de despacho</dt>
             <dd class="${fecha ? '' : 'pending'}">${fecha || 'Aún sin definir'}</dd>
+          </div>
+          <div>
+            <dt>Orden de trabajo</dt>
+            <dd>${item.ow || '—'}</dd>
           </div>
         </dl>
       </div>
@@ -521,8 +582,64 @@
     `;
   }
 
+  // ------------------------------------------------------------
+  // AUTOCOMPLETADO POR CODIGO DE PRODUCTO
+  // ------------------------------------------------------------
+  const queryInput = document.getElementById('query');
+  const suggestionsBox = document.getElementById('suggestions');
+
+  function closeSuggestions(){
+    suggestionsBox.classList.remove('open');
+    suggestionsBox.innerHTML = '';
+  }
+
+  function renderSuggestions(items){
+    if(!items.length){ closeSuggestions(); return; }
+
+    suggestionsBox.innerHTML = items.map((item, i) => `
+      <button type="button" class="suggestion-item" data-index="${i}">
+        <span class="suggestion-code">${extraerCodigoProducto(item.descripcion)}</span><span class="suggestion-finca">${item.finca}</span>
+        <div class="suggestion-desc">${item.descripcion}</div>
+      </button>
+    `).join('');
+    suggestionsBox.classList.add('open');
+
+    suggestionsBox.querySelectorAll('.suggestion-item').forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        const item = items[i];
+        queryInput.value = extraerCodigoProducto(item.descripcion) || item.elemento;
+        closeSuggestions();
+        document.getElementById('result').innerHTML = renderTicket(item);
+      });
+    });
+  }
+
+  queryInput.addEventListener('input', () => {
+    const q = queryInput.value.trim().toLowerCase();
+    if(q.length < 2){ closeSuggestions(); return; }
+
+    const matches = DATA.filter(item => {
+      const code = extraerCodigoProducto(item.descripcion).toLowerCase();
+      return code && code.startsWith(q);
+    }).slice(0, 8);
+
+    renderSuggestions(matches);
+  });
+
+  queryInput.addEventListener('keydown', e => {
+    if(e.key === 'Escape') closeSuggestions();
+  });
+
+  document.addEventListener('click', e => {
+    if(!e.target.closest('form.lookup')){ closeSuggestions(); }
+  });
+
+  // ------------------------------------------------------------
+  // BUSQUEDA (Enter / boton Buscar) — coincidencia exacta
+  // ------------------------------------------------------------
   document.getElementById('lookupForm').addEventListener('submit', function(e){
     e.preventDefault();
+    closeSuggestions();
     const q = document.getElementById('query').value.trim().toLowerCase();
     const box = document.getElementById('result');
     if(!q){ box.innerHTML = ""; return; }
@@ -530,7 +647,8 @@
     const match = DATA.find(item =>
       (item.elemento || '').toLowerCase() === q ||
       (item.orden_compra || '').toLowerCase() === q ||
-      (item.ow || '').toLowerCase() === q
+      (item.ow || '').toLowerCase() === q ||
+      extraerCodigoProducto(item.descripcion).toLowerCase() === q
     );
 
     box.innerHTML = match ? renderTicket(match) : renderNotFound(document.getElementById('query').value.trim());
