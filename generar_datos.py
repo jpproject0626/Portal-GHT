@@ -25,9 +25,11 @@ from openpyxl import load_workbook
 # ------------------------------------------------------------------
 # 1. RUTAS DE LOS ARCHIVOS (ajustar si cambian)
 # ------------------------------------------------------------------
-RUTA_BACKLOG = r"C:\Users\salceju\OneDrive - Smurfit Westrock\Backlog\BACKLOG.xlsm"
-RUTA_PROGRAMACION = r"C:\Users\salceju\OneDrive - Smurfit Westrock\Backlog\PROGRAMACION.xlsx"
+RUTA_BACKLOG = "BACKLOG.xlsm"
+RUTA_PROGRAMACION = "PROGRAMACION.xlsx"
+CARPETA_DESPACHOS = "."
 ARCHIVO_SALIDA = "datos.json"
+ARCHIVO_HISTORICO_DESPACHOS = "despachos_historico.json"
 
 
 def limpiar_texto(valor):
@@ -98,12 +100,89 @@ def cargar_programacion(ruta_programacion):
     return mapa
 
 
+def encontrar_archivo_mas_reciente(carpeta, extension=".xls"):
+    """
+    Busca dentro de 'carpeta' todos los archivos que terminen en 'extension'
+    y devuelve la ruta completa del que se modifico mas recientemente.
+    Asi no importa que el nombre del archivo cambie cada dia (ej. con la
+    fecha incluida en el nombre) - siempre agarra el ultimo que se subio.
+    """
+    import os
+    candidatos = [
+        os.path.join(carpeta, f) for f in os.listdir(carpeta)
+        if f.lower().endswith(extension.lower()) and not f.startswith("~$")
+    ]
+    if not candidatos:
+        raise FileNotFoundError(
+            f"No se encontro ningun archivo '{extension}' dentro de la carpeta: {carpeta}"
+        )
+    mas_reciente = max(candidatos, key=os.path.getmtime)
+    return mas_reciente
+
+
+def cargar_despachos(ruta_despachos):
+    """
+    Lee el archivo de Notas de Despacho (.xls) y arma un mapa
+    'Ord. de Venta' -> fecha de despacho real.
+    La Ord. de Venta se arma uniendo 'Order Number' + '-' + 'Order Line',
+    exactamente igual a como aparece en el backlog (ej. '584722-14').
+    """
+    import xlrd
+    wb = xlrd.open_workbook(ruta_despachos)
+    ws = wb.sheet_by_name("Sheet1")
+    encabezado = [limpiar_texto(ws.cell_value(0, c)) for c in range(ws.ncols)]
+
+    idx_order_number = encabezado.index("Order Number")
+    idx_order_line = encabezado.index("Order Line")
+    idx_fecha = encabezado.index("Fecha del Despacho")
+
+    mapa = {}
+    for r in range(1, ws.nrows):
+        try:
+            order_number = int(ws.cell_value(r, idx_order_number))
+            order_line = int(ws.cell_value(r, idx_order_line))
+        except (ValueError, TypeError):
+            continue
+        ov = f"{order_number}-{order_line}"
+
+        valor_fecha = ws.cell_value(r, idx_fecha)
+        try:
+            fecha = xlrd.xldate.xldate_as_datetime(valor_fecha, wb.datemode).strftime("%d/%m/%Y")
+        except (ValueError, TypeError):
+            fecha = ""
+
+        mapa[ov] = fecha
+    return mapa
+
+
 def generar_datos():
     print("Leyendo Order Capacity...")
     mapa_order_capacity = cargar_order_capacity(RUTA_BACKLOG)
 
     print("Leyendo Programacion...")
     mapa_programacion = cargar_programacion(RUTA_PROGRAMACION)
+
+    print("Leyendo Notas de Despacho...")
+    ruta_despachos = encontrar_archivo_mas_reciente(CARPETA_DESPACHOS, ".xls")
+    print(f"  Archivo encontrado: {ruta_despachos}")
+    mapa_despachos_nuevo = cargar_despachos(ruta_despachos)
+
+    # --- Combinar con el historial acumulado de corridas anteriores ---
+    # Asi, aunque el archivo de hoy sea angosto (solo "hoy"), nunca se
+    # pierde un despacho que ya se habia detectado en un dia anterior.
+    try:
+        with open(ARCHIVO_HISTORICO_DESPACHOS, "r", encoding="utf-8") as f:
+            mapa_despachos_historico = json.load(f)
+    except FileNotFoundError:
+        mapa_despachos_historico = {}
+
+    mapa_despachos = {**mapa_despachos_historico, **mapa_despachos_nuevo}
+
+    with open(ARCHIVO_HISTORICO_DESPACHOS, "w", encoding="utf-8") as f:
+        json.dump(mapa_despachos, f, ensure_ascii=False, indent=2)
+
+    print(f"Despachos nuevos en este archivo: {len(mapa_despachos_nuevo)}")
+    print(f"Total acumulado en el historial: {len(mapa_despachos)}")
 
     print("Leyendo backlog (hoja Formato)...")
     wb = load_workbook(RUTA_BACKLOG, read_only=True, data_only=True)
@@ -116,6 +195,7 @@ def generar_datos():
     idx_elemento = encabezado.index("Elemento")
     idx_descripcion = encabezado.index("Descripción")
     idx_ord_compra = encabezado.index("Ord. de Compra")
+    idx_ord_venta = encabezado.index("Ord. de Venta")
     idx_ord_trabajo = encabezado.index("Ord. de Trabajo")
     idx_estatus_omp = encabezado.index("Estatus OMP")
 
@@ -156,6 +236,13 @@ def generar_datos():
 
         estado_ght = clasificar_estado_ght(estatus_omp_final)
 
+        # --- Si ya existe un despacho real para esta Orden de Venta, ---
+        # --- el estado final pasa a ser "Despachado", con su fecha real. ---
+        ord_venta = limpiar_texto(fila[idx_ord_venta])
+        fecha_despacho = mapa_despachos.get(ord_venta, "")
+        if fecha_despacho:
+            estado_ght = "Despachado"
+
         # No exponemos los pedidos "Sin clasificar" al cliente (decision ya tomada en el proyecto)
         if estado_ght == "Sin clasificar":
             continue
@@ -167,8 +254,11 @@ def generar_datos():
             "ow": ow_final,
             "orden_compra": orden_compra,
             "estado": estado_ght,
+            "fecha_despacho": fecha_despacho,
             # Este campo queda vacio hasta que TI termine de ajustar el bot
-            # de despachos para que incluya la fecha/hora estimada.
+            # de despachos para que incluya la fecha/hora ESTIMADA (antes
+            # de que el pedido salga). La fecha_despacho de arriba es la
+            # fecha REAL, ya confirmada, que si tenemos.
             "fecha_estimada_despacho": "",
         })
 

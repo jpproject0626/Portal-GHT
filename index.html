@@ -21,6 +21,7 @@
     --marigold-deep: #B57F14;
     --slate: #54677A;
     --clay: #A6432E;
+    --navy: #00205B;
     --line: #C7CBB7;
     --line-soft: #DBDECD;
     --radius: 3px;
@@ -264,6 +265,7 @@
   .stamp.recibido{ color: var(--slate); background: rgba(84,103,122,.08); }
   .stamp.produccion{ color: var(--marigold-deep); background: rgba(222,159,31,.12); }
   .stamp.listo{ color: var(--pine); background: rgba(27,67,50,.09); }
+  .stamp.despachado{ color: var(--navy); background: rgba(0,32,91,.08); }
 
   /* progress track */
   .track{
@@ -500,11 +502,12 @@
     return m ? m[0] : '';
   }
 
-  const ESTADOS = ["Pedido recibido","En producción","Listo"];
+  const ESTADOS = ["Pedido recibido","En producción","Listo","Despachado"];
   const STAMP_CLASS = {
     "Pedido recibido":"recibido",
     "En producción":"produccion",
-    "Listo":"listo"
+    "Listo":"listo",
+    "Despachado":"despachado"
   };
 
   function renderTrack(estado){
@@ -531,7 +534,10 @@
   function renderTicket(item){
     const stampClass = STAMP_CLASS[item.estado] || "recibido";
     const oc = item.orden_compra && item.orden_compra.trim() ? item.orden_compra : null;
-    const fecha = item.fecha_estimada_despacho && item.fecha_estimada_despacho.trim() ? item.fecha_estimada_despacho : null;
+    const fechaReal = item.fecha_despacho && item.fecha_despacho.trim() ? item.fecha_despacho : null;
+    const fechaEstimada = item.fecha_estimada_despacho && item.fecha_estimada_despacho.trim() ? item.fecha_estimada_despacho : null;
+    const fechaLabel = fechaReal ? "Fecha de despacho" : "Fecha estimada de despacho";
+    const fecha = fechaReal || fechaEstimada;
     const desc = item.descripcion && item.descripcion.trim() ? item.descripcion : null;
     return `
       <div class="ticket">
@@ -561,7 +567,7 @@
             <dd>${item.elemento || '—'}</dd>
           </div>
           <div>
-            <dt>Fecha estimada de despacho</dt>
+            <dt>${fechaLabel}</dt>
             <dd class="${fecha ? '' : 'pending'}">${fecha || 'Aún sin definir'}</dd>
           </div>
           <div>

@@ -1,0 +1,12 @@
+# Archivos fuente del backlog: contienen datos de TODOS los clientes,
+# no solo GHT. Nunca deben subirse a este repo (es publico).
+BACKLOG.xlsm
+PROGRAMACION.xlsx
+*.xls
+*.xlsx
+*.xlsm
+despachos_historico.json
+
+# Basura de entorno local
+.Rhistory
+portal_ght_web.zip
