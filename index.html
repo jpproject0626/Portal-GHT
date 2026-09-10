@@ -366,8 +366,12 @@
   /* ---------- PASSWORD GATE ---------- */
   #gate{
     position:fixed; inset:0;
-    background:
-      radial-gradient(circle at 72% 32%, #123a82 0%, #00205B 55%, #001338 100%);
+    background-image:
+      linear-gradient(rgba(18,48,31,.87), rgba(18,48,31,.87)),
+      url('fondo-sw.webp');
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
     display:flex; align-items:center; justify-content:center;
     z-index: 50;
     padding: 20px;
