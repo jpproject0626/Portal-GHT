@@ -20,16 +20,36 @@ Requiere: pip install openpyxl --break-system-packages
 """
 
 import json
+import os
+from datetime import datetime, timedelta
 from openpyxl import load_workbook
 
 # ------------------------------------------------------------------
-# 1. RUTAS DE LOS ARCHIVOS (ajustar si cambian)
+# 1. RUTAS DE LOS ARCHIVOS
 # ------------------------------------------------------------------
-RUTA_BACKLOG = "BACKLOG.xlsm"
-RUTA_PROGRAMACION = "PROGRAMACION.xlsx"
-CARPETA_DESPACHOS = "."
+# Detecta automaticamente la carpeta de OneDrive de Smurfit, sin
+# importar en que computador o con que usuario de Windows se corra.
+# Windows guarda esa ruta en una de estas variables de entorno.
+_ONEDRIVE = os.environ.get("OneDriveCommercial") or os.environ.get("OneDrive")
+
+if _ONEDRIVE:
+    RUTA_BACKLOG = os.path.join(_ONEDRIVE, "Backlog", "BACKLOG.xlsm")
+    RUTA_PROGRAMACION = os.path.join(_ONEDRIVE, "Backlog", "PROGRAMACION.xlsx")
+    CARPETA_DESPACHOS = os.path.join(_ONEDRIVE, "Notas despachos")
+else:
+    # Si por alguna razon Windows no expone esa variable, se puede
+    # escribir la ruta completa a mano aqui como respaldo:
+    RUTA_BACKLOG = r"C:\Users\TU_USUARIO\OneDrive - Smurfit Westrock\Backlog\BACKLOG.xlsm"
+    RUTA_PROGRAMACION = r"C:\Users\TU_USUARIO\OneDrive - Smurfit Westrock\Backlog\PROGRAMACION.xlsx"
+    CARPETA_DESPACHOS = r"C:\Users\TU_USUARIO\OneDrive - Smurfit Westrock\Notas despachos"
+
 ARCHIVO_SALIDA = "datos.json"
 ARCHIVO_HISTORICO_DESPACHOS = "despachos_historico.json"
+
+# Un pedido ya despachado se sigue mostrando en el portal durante este
+# numero de dias despues de su fecha de despacho, AUNQUE el backlog ya
+# lo haya quitado de su lista. Pasado ese tiempo, deja de aparecer.
+DIAS_VISIBLE_DESPACHADO = 15
 
 
 def limpiar_texto(valor):
@@ -167,19 +187,28 @@ def generar_datos():
     print(f"  Archivo encontrado: {ruta_despachos}")
     mapa_despachos_nuevo = cargar_despachos(ruta_despachos)
 
-    # --- Combinar con el historial acumulado de corridas anteriores ---
-    # Asi, aunque el archivo de hoy sea angosto (solo "hoy"), nunca se
-    # pierde un despacho que ya se habia detectado en un dia anterior.
+    # --- Cargar el historial acumulado de corridas anteriores ---
+    # Este historial guarda el REGISTRO COMPLETO de cada pedido que ya
+    # se detecto como despachado (no solo la fecha), para poder seguirlo
+    # mostrando en el portal aunque el backlog ya lo haya quitado de su
+    # lista (ver DIAS_VISIBLE_DESPACHADO mas arriba).
     try:
         with open(ARCHIVO_HISTORICO_DESPACHOS, "r", encoding="utf-8") as f:
-            mapa_despachos_historico = json.load(f)
+            historico = json.load(f)
     except FileNotFoundError:
-        mapa_despachos_historico = {}
+        historico = {}
 
-    mapa_despachos = {**mapa_despachos_historico, **mapa_despachos_nuevo}
+    # Compatibilidad con el formato viejo (OV -> "dd/mm/aaaa" en texto
+    # plano, de antes de guardar el registro completo). Se convierte
+    # a la nueva forma, aunque sin los demas datos del pedido.
+    for ov, valor in list(historico.items()):
+        if isinstance(valor, str):
+            historico[ov] = {"fecha_despacho": valor}
 
-    with open(ARCHIVO_HISTORICO_DESPACHOS, "w", encoding="utf-8") as f:
-        json.dump(mapa_despachos, f, ensure_ascii=False, indent=2)
+    # Mapa simple OV -> fecha, combinando lo nuevo con el historial,
+    # usado para decidir el estado de cada fila del backlog de hoy.
+    mapa_despachos = {ov: v["fecha_despacho"] for ov, v in historico.items()}
+    mapa_despachos.update(mapa_despachos_nuevo)
 
     print(f"Despachos nuevos en este archivo: {len(mapa_despachos_nuevo)}")
     print(f"Total acumulado en el historial: {len(mapa_despachos)}")
@@ -200,6 +229,7 @@ def generar_datos():
     idx_estatus_omp = encabezado.index("Estatus OMP")
 
     resultado = []
+    ov_cubiertas = set()
     total_leidas = 0
     total_ght = 0
 
@@ -247,7 +277,7 @@ def generar_datos():
         if estado_ght == "Sin clasificar":
             continue
 
-        resultado.append({
+        registro = {
             "finca": id_cliente,
             "elemento": elemento,
             "descripcion": descripcion,
@@ -260,7 +290,40 @@ def generar_datos():
             # de que el pedido salga). La fecha_despacho de arriba es la
             # fecha REAL, ya confirmada, que si tenemos.
             "fecha_estimada_despacho": "",
-        })
+        }
+
+        if ord_venta:
+            ov_cubiertas.add(ord_venta)
+            if estado_ght == "Despachado":
+                # Guardamos el registro completo en el historial, para
+                # poder seguir mostrandolo aunque el backlog lo quite
+                # de su lista mas adelante.
+                historico[ord_venta] = registro
+
+        resultado.append(registro)
+
+    # --- Agregar despachos recientes que el backlog YA no muestra ---
+    # Si un pedido se despacho hace poco (dentro de DIAS_VISIBLE_DESPACHADO)
+    # pero hoy ya no aparece en el backlog (porque ya se cerro del todo),
+    # lo agregamos igual usando el ultimo registro completo que se guardo
+    # de el en el historial - asi no desaparece de golpe del portal.
+    hoy = datetime.now().date()
+    agregados_desde_historico = 0
+    for ov, registro in historico.items():
+        if ov in ov_cubiertas:
+            continue  # ya viene del backlog de hoy, no lo dupliquemos
+        if "finca" not in registro:
+            continue  # registro viejo (formato antiguo), sin datos suficientes
+        try:
+            fecha_reg = datetime.strptime(registro["fecha_despacho"], "%d/%m/%Y").date()
+        except (ValueError, TypeError):
+            continue
+        if (hoy - fecha_reg).days <= DIAS_VISIBLE_DESPACHADO:
+            resultado.append(registro)
+            agregados_desde_historico += 1
+
+    with open(ARCHIVO_HISTORICO_DESPACHOS, "w", encoding="utf-8") as f:
+        json.dump(historico, f, ensure_ascii=False, indent=2)
 
     with open(ARCHIVO_SALIDA, "w", encoding="utf-8") as f:
         json.dump(resultado, f, ensure_ascii=False, indent=2)
@@ -268,6 +331,7 @@ def generar_datos():
     print()
     print(f"Total filas leidas en el backlog: {total_leidas}")
     print(f"Total filas de GHT (antes de quitar 'Sin clasificar'): {total_ght}")
+    print(f"Pedidos despachados recuperados del historico (ya no estan en el backlog): {agregados_desde_historico}")
     print(f"Total filas exportadas a {ARCHIVO_SALIDA}: {len(resultado)}")
     print()
     print("Listo. Sube el archivo 'datos.json' al portal web.")

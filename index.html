@@ -335,6 +335,15 @@
     font-size:13px;
   }
 
+  .expiry-note{
+    margin: 18px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--line-soft);
+    font-size:12px;
+    font-style: italic;
+    color: var(--mist);
+  }
+
   .not-found{
     border: 1.5px solid var(--line);
     border-left: 4px solid var(--clay);
@@ -575,6 +584,8 @@
             <dd>${item.ow || '—'}</dd>
           </div>
         </dl>
+
+        ${item.estado === 'Despachado' ? '<p class="expiry-note">Este pedido permanece visible durante 15 días después del despacho.</p>' : ''}
       </div>
     `;
   }
