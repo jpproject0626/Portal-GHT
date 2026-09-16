@@ -535,7 +535,7 @@
         <button type="submit" class="btn">Buscar</button>
         <div class="suggestions" id="suggestions"></div>
       </form>
-      <p class="hint">Búsqueda por descripción del producto u orden de compra · datos actualizados a diario</p>
+      <p class="hint">Búsqueda por descripción del producto (ej. 4CABAS37) u orden de compra (ej. SB01. GS - 38760) · datos actualizados a diario</p>
 
       <div id="result"></div>
     </div>
@@ -590,25 +590,29 @@
     "Parcialmente despachado":"parcial",
     "Despachado":"despachado"
   };
+  const ESTADO_COLOR = {
+    "Pedido recibido": "#54677A",
+    "En producción": "#B57F14",
+    "Listo": "#1B4332",
+    "Parcialmente despachado": "#C97A2B",
+    "Despachado": "#0F5257"
+  };
 
   function renderTrack(estado){
     const idx = ESTADOS.indexOf(estado);
-    let nodes = "", segs = "";
-    ESTADOS.forEach((e,i)=>{
-      nodes += `<div class="node ${i<=idx?'done':''}"></div>`;
-      if(i < ESTADOS.length-1){
-        segs += `<div class="seg ${i<idx?'done':''}"></div>`;
-      }
-    });
-    // interleave nodes and segs
     let track = "";
     ESTADOS.forEach((e,i)=>{
-      track += `<div class="node ${i<=idx?'done':''}"></div>`;
+      const nodoListo = i <= idx;
+      track += `<div class="node${nodoListo ? ' done' : ''}"${nodoListo ? ` style="background:${ESTADO_COLOR[e]}"` : ''}></div>`;
       if(i < ESTADOS.length-1){
-        track += `<div class="seg ${i<idx?'done':''}"></div>`;
+        const segListo = i < idx;
+        track += `<div class="seg${segListo ? ' done' : ''}"${segListo ? ` style="background:${ESTADO_COLOR[e]}"` : ''}></div>`;
       }
     });
-    const labels = ESTADOS.map(e => `<span class="${e===estado?'active':''}">${e}</span>`).join('');
+    const labels = ESTADOS.map(e => {
+      const activo = e === estado;
+      return `<span class="${activo ? 'active' : ''}"${activo ? ` style="color:${ESTADO_COLOR[e]}"` : ''}>${e}</span>`;
+    }).join('');
     return `<div class="track">${track}</div><div class="track-labels">${labels}</div>`;
   }
 
