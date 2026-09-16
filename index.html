@@ -22,6 +22,8 @@
     --slate: #54677A;
     --clay: #A6432E;
     --navy: #00205B;
+    --navy-deep: #001338;
+    --navy-light: #123A82;
     --line: #C7CBB7;
     --line-soft: #DBDECD;
     --radius: 3px;
@@ -45,7 +47,7 @@
   }
 
   :focus-visible{
-    outline: 2px solid var(--pine);
+    outline: 2px solid var(--navy);
     outline-offset: 2px;
   }
 
@@ -55,7 +57,7 @@
 
   /* ---------- HEADER RIBBON ---------- */
   header.ribbon{
-    background: var(--pine);
+    background: var(--navy);
     color: #EFF3EE;
     padding: 18px 24px;
     display:flex;
@@ -111,7 +113,7 @@
     font-size: clamp(28px, 4.4vw, 38px);
     line-height:1.15;
     margin: 0 0 10px;
-    color: var(--pine-deep);
+    color: var(--navy-deep);
   }
   .lede{
     font-size:15.5px;
@@ -160,7 +162,7 @@
     font-family:'IBM Plex Mono', monospace;
     font-size:13px;
     font-weight:600;
-    color: var(--pine-deep);
+    color: var(--navy-deep);
   }
   .suggestion-item .suggestion-finca{
     font-size:11px;
@@ -190,7 +192,7 @@
     font-family:'Inter', sans-serif;
     color: var(--mist);
   }
-  .lookup input[type="text"]:focus{ border-color: var(--pine); }
+  .lookup input[type="text"]:focus{ border-color: var(--navy); }
 
   .btn{
     font-family:'Inter', sans-serif;
@@ -199,12 +201,12 @@
     padding: 0 22px;
     border:none;
     border-radius: var(--radius);
-    background: var(--pine);
+    background: var(--navy);
     color:#fff;
     cursor:pointer;
     transition: background .15s ease;
   }
-  .btn:hover{ background: var(--pine-light); }
+  .btn:hover{ background: var(--navy-light); }
   .btn:active{ transform: translateY(1px); }
 
   .hint{
@@ -246,7 +248,7 @@
     font-family:'Fraunces', serif;
     font-size:21px;
     font-weight:500;
-    color: var(--pine-deep);
+    color: var(--navy-deep);
     margin:0;
   }
 
@@ -379,7 +381,7 @@
     font-family:'Fraunces', serif;
     font-size:15px;
     font-weight:500;
-    color: var(--pine-deep);
+    color: var(--navy-deep);
   }
   .match-row-oc{
     font-family:'IBM Plex Mono', monospace;
@@ -402,9 +404,9 @@
     font-family:'Inter', sans-serif;
     font-size:13px;
     font-weight:600;
-    color: var(--pine);
+    color: var(--navy);
   }
-  .back-link:hover{ color: var(--pine-light); }
+  .back-link:hover{ color: var(--navy-light); }
 
   .not-found{
     border: 1.5px solid var(--line);
@@ -465,7 +467,7 @@
     font-weight:500;
     font-size:22px;
     margin: 0 0 6px;
-    color: var(--pine-deep);
+    color: var(--navy-deep);
   }
   .gate-card p{
     font-size:13.5px; color: var(--ink-soft);
