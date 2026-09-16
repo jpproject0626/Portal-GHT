@@ -2,20 +2,23 @@
 ============================================================
  GENERADOR DE DATOS DIARIOS - Portal GHT (Grupo Chia)
 ============================================================
-Este script lee el backlog diario y la programacion semanal,
-aplica la misma logica que ya esta funcionando en Power BI
-(filtro GHT, calculo de Estatus OMP Final, OW Final y Estado GHT),
-y genera un archivo "datos.json" listo para subir al portal web.
+Este script lee el backlog diario, la programacion semanal y las notas
+de despacho, aplica toda la logica de negocio (filtro GHT, Estatus OMP
+Final, OW Final, cruce de despachos con cantidades) y genera un archivo
+"datos.json" listo para subir al portal web.
 
 COMO USARLO:
-1. Ajusta las 2 rutas de archivo abajo (BACKLOG y PROGRAMACION)
-   si cambian de ubicacion.
-2. Corre este script cada dia despues de que el backlog se actualice:
+1. Cada dia, reemplaza (copia y pega encima) estos archivos DENTRO DE
+   ESTA MISMA CARPETA (C:\\Portal GHT):
+     - BACKLOG.xlsm
+     - PROGRAMACION.xlsx
+     - El archivo de Notas de Despacho (.xls) mas reciente - el nombre
+       puede variar cada dia, el script agarra solo el mas nuevo.
+2. Corre este script (o el .bat "actualizar_portal.bat", que ya lo
+   hace por ti junto con la subida a GitHub/Vercel):
        python generar_datos.py
-3. Sube el archivo "datos.json" que se genera a la carpeta del
-   portal web (o al repositorio, segun como quede desplegado).
 
-Requiere: pip install openpyxl --break-system-packages
+Requiere: pip install openpyxl xlrd
 ============================================================
 """
 
@@ -27,33 +30,11 @@ from openpyxl import load_workbook
 # ------------------------------------------------------------------
 # 1. RUTAS DE LOS ARCHIVOS
 # ------------------------------------------------------------------
-# Prioridad 1: si BACKLOG.xlsm esta suelto en esta misma carpeta del
-# proyecto (junto a este script), se usa directamente desde ahi. Asi
-# funciona en maquinas donde los archivos no viven dentro de OneDrive.
-_CARPETA_PROYECTO = os.path.dirname(os.path.abspath(__file__))
-_BACKLOG_LOCAL = os.path.join(_CARPETA_PROYECTO, "BACKLOG.xlsm")
-
-if os.path.exists(_BACKLOG_LOCAL):
-    RUTA_BACKLOG = _BACKLOG_LOCAL
-    RUTA_PROGRAMACION = os.path.join(_CARPETA_PROYECTO, "PROGRAMACION.xlsx")
-    CARPETA_DESPACHOS = _CARPETA_PROYECTO
-else:
-    # Prioridad 2: detecta automaticamente la carpeta de OneDrive de
-    # Smurfit, sin importar en que computador o con que usuario de
-    # Windows se corra. Windows guarda esa ruta en una de estas
-    # variables de entorno.
-    _ONEDRIVE = os.environ.get("OneDriveCommercial") or os.environ.get("OneDrive")
-
-    if _ONEDRIVE:
-        RUTA_BACKLOG = os.path.join(_ONEDRIVE, "Backlog", "BACKLOG.xlsm")
-        RUTA_PROGRAMACION = os.path.join(_ONEDRIVE, "Backlog", "PROGRAMACION.xlsx")
-        CARPETA_DESPACHOS = os.path.join(_ONEDRIVE, "Notas despachos")
-    else:
-        # Si por alguna razon Windows no expone esa variable, se puede
-        # escribir la ruta completa a mano aqui como respaldo:
-        RUTA_BACKLOG = r"C:\Users\TU_USUARIO\OneDrive - Smurfit Westrock\Backlog\BACKLOG.xlsm"
-        RUTA_PROGRAMACION = r"C:\Users\TU_USUARIO\OneDrive - Smurfit Westrock\Backlog\PROGRAMACION.xlsx"
-        CARPETA_DESPACHOS = r"C:\Users\TU_USUARIO\OneDrive - Smurfit Westrock\Notas despachos"
+# Los 3 archivos viven en la MISMA carpeta que este script (C:\Portal GHT).
+# Cada dia se reemplazan aqui mismo, encima de los de ayer.
+RUTA_BACKLOG = "BACKLOG.xlsm"
+RUTA_PROGRAMACION = "PROGRAMACION.xlsx"
+CARPETA_DESPACHOS = "."  # el script busca aqui el .xls MAS RECIENTE
 
 ARCHIVO_SALIDA = "datos.json"
 ARCHIVO_HISTORICO_DESPACHOS = "despachos_historico.json"

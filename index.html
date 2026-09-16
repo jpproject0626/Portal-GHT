@@ -671,10 +671,14 @@
             <dt>Orden de trabajo</dt>
             <dd>${item.ow || '—'}</dd>
           </div>
-          ${esParcial ? `
+          <div class="field-full">
+            <dt>Cantidad solicitada</dt>
+            <dd>${item.cantidad_solicitada || '—'}</dd>
+          </div>
+          ${parseFloat(item.cantidad_despachada) > 0 ? `
           <div class="field-full">
             <dt>Cantidad despachada</dt>
-            <dd>${item.cantidad_despachada || '—'} de ${item.cantidad_solicitada || '—'}</dd>
+            <dd>${item.cantidad_despachada}</dd>
           </div>` : ''}
           ${nota ? `
           <div class="field-full">
