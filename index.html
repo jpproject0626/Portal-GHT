@@ -267,6 +267,10 @@
   .stamp.listo{ color: var(--pine); background: rgba(27,67,50,.09); }
   .stamp.despachado{ color: var(--navy); background: rgba(0,32,91,.08); }
   .stamp.parcial{ color: #C97A2B; background: rgba(201,122,43,.12); }
+  /* Los estados finales tienen texto mas largo: la rotacion de sello
+     de goma que funciona en palabras cortas ("Listo") se ve torcida
+     en frases anchas, asi que estos quedan derechos. */
+  .stamp.despachado, .stamp.parcial{ transform: rotate(0deg); }
 
   /* progress track */
   .track{
