@@ -764,7 +764,7 @@
     suggestionsBox.innerHTML = items.map((item, i) => `
       <button type="button" class="suggestion-item" data-index="${i}">
         <span class="suggestion-code">${extraerCodigoProducto(item.descripcion)}</span><span class="suggestion-finca">${item.finca}</span>
-        <div class="suggestion-desc">${item.descripcion}</div>
+        <div class="suggestion-desc">${item.descripcion}${item.orden_compra ? ' · OC ' + item.orden_compra : ''}</div>
       </button>
     `).join('');
     suggestionsBox.classList.add('open');
@@ -772,7 +772,7 @@
     suggestionsBox.querySelectorAll('.suggestion-item').forEach((btn, i) => {
       btn.addEventListener('click', () => {
         const item = items[i];
-        queryInput.value = extraerCodigoProducto(item.descripcion) || item.elemento;
+        queryInput.value = extraerCodigoProducto(item.descripcion) || item.orden_compra || item.elemento;
         closeSuggestions();
         document.getElementById('result').innerHTML = renderTicket(item);
       });
@@ -780,12 +780,13 @@
   }
 
   queryInput.addEventListener('input', () => {
-    const q = queryInput.value.trim().toLowerCase();
+    const q = normalizar(queryInput.value.trim());
     if(q.length < 2){ closeSuggestions(); return; }
 
     const matches = DATA.filter(item => {
-      const code = extraerCodigoProducto(item.descripcion).toLowerCase();
-      return code && code.startsWith(q);
+      const code = normalizar(extraerCodigoProducto(item.descripcion));
+      const oc = normalizar(item.orden_compra);
+      return (code && code.startsWith(q)) || (oc && oc.startsWith(q));
     }).slice(0, 8);
 
     renderSuggestions(matches);
