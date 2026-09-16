@@ -27,21 +27,33 @@ from openpyxl import load_workbook
 # ------------------------------------------------------------------
 # 1. RUTAS DE LOS ARCHIVOS
 # ------------------------------------------------------------------
-# Detecta automaticamente la carpeta de OneDrive de Smurfit, sin
-# importar en que computador o con que usuario de Windows se corra.
-# Windows guarda esa ruta en una de estas variables de entorno.
-_ONEDRIVE = os.environ.get("OneDriveCommercial") or os.environ.get("OneDrive")
+# Prioridad 1: si BACKLOG.xlsm esta suelto en esta misma carpeta del
+# proyecto (junto a este script), se usa directamente desde ahi. Asi
+# funciona en maquinas donde los archivos no viven dentro de OneDrive.
+_CARPETA_PROYECTO = os.path.dirname(os.path.abspath(__file__))
+_BACKLOG_LOCAL = os.path.join(_CARPETA_PROYECTO, "BACKLOG.xlsm")
 
-if _ONEDRIVE:
-    RUTA_BACKLOG = os.path.join(_ONEDRIVE, "Backlog", "BACKLOG.xlsm")
-    RUTA_PROGRAMACION = os.path.join(_ONEDRIVE, "Backlog", "PROGRAMACION.xlsx")
-    CARPETA_DESPACHOS = os.path.join(_ONEDRIVE, "Notas despachos")
+if os.path.exists(_BACKLOG_LOCAL):
+    RUTA_BACKLOG = _BACKLOG_LOCAL
+    RUTA_PROGRAMACION = os.path.join(_CARPETA_PROYECTO, "PROGRAMACION.xlsx")
+    CARPETA_DESPACHOS = _CARPETA_PROYECTO
 else:
-    # Si por alguna razon Windows no expone esa variable, se puede
-    # escribir la ruta completa a mano aqui como respaldo:
-    RUTA_BACKLOG = r"C:\Users\TU_USUARIO\OneDrive - Smurfit Westrock\Backlog\BACKLOG.xlsm"
-    RUTA_PROGRAMACION = r"C:\Users\TU_USUARIO\OneDrive - Smurfit Westrock\Backlog\PROGRAMACION.xlsx"
-    CARPETA_DESPACHOS = r"C:\Users\TU_USUARIO\OneDrive - Smurfit Westrock\Notas despachos"
+    # Prioridad 2: detecta automaticamente la carpeta de OneDrive de
+    # Smurfit, sin importar en que computador o con que usuario de
+    # Windows se corra. Windows guarda esa ruta en una de estas
+    # variables de entorno.
+    _ONEDRIVE = os.environ.get("OneDriveCommercial") or os.environ.get("OneDrive")
+
+    if _ONEDRIVE:
+        RUTA_BACKLOG = os.path.join(_ONEDRIVE, "Backlog", "BACKLOG.xlsm")
+        RUTA_PROGRAMACION = os.path.join(_ONEDRIVE, "Backlog", "PROGRAMACION.xlsx")
+        CARPETA_DESPACHOS = os.path.join(_ONEDRIVE, "Notas despachos")
+    else:
+        # Si por alguna razon Windows no expone esa variable, se puede
+        # escribir la ruta completa a mano aqui como respaldo:
+        RUTA_BACKLOG = r"C:\Users\TU_USUARIO\OneDrive - Smurfit Westrock\Backlog\BACKLOG.xlsm"
+        RUTA_PROGRAMACION = r"C:\Users\TU_USUARIO\OneDrive - Smurfit Westrock\Backlog\PROGRAMACION.xlsx"
+        CARPETA_DESPACHOS = r"C:\Users\TU_USUARIO\OneDrive - Smurfit Westrock\Notas despachos"
 
 ARCHIVO_SALIDA = "datos.json"
 ARCHIVO_HISTORICO_DESPACHOS = "despachos_historico.json"
