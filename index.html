@@ -266,6 +266,7 @@
   .stamp.produccion{ color: var(--marigold-deep); background: rgba(222,159,31,.12); }
   .stamp.listo{ color: var(--pine); background: rgba(27,67,50,.09); }
   .stamp.despachado{ color: var(--navy); background: rgba(0,32,91,.08); }
+  .stamp.parcial{ color: #C97A2B; background: rgba(201,122,43,.12); }
 
   /* progress track */
   .track{
@@ -343,6 +344,68 @@
     font-style: italic;
     color: var(--mist);
   }
+
+  .match-list{
+    background: var(--paper-raised);
+    border: 1.5px solid var(--line);
+    border-radius: 6px;
+    overflow:hidden;
+    animation: rise .3s ease both;
+  }
+  .match-list-title{
+    margin:0;
+    padding: 14px 18px;
+    font-size:12.5px;
+    color: var(--mist);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .match-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    width:100%;
+    text-align:left;
+    padding: 14px 18px;
+    border:none;
+    border-bottom: 1px solid var(--line-soft);
+    background:none;
+    cursor:pointer;
+    font-family:'Inter', sans-serif;
+  }
+  .match-row:last-child{ border-bottom:none; }
+  .match-row:hover, .match-row:focus-visible{ background: var(--paper); }
+  .match-row-info{ min-width:0; }
+  .match-row-finca{
+    font-family:'Fraunces', serif;
+    font-size:15px;
+    font-weight:500;
+    color: var(--pine-deep);
+  }
+  .match-row-oc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color: var(--ink-soft);
+    margin-top:2px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+
+  .back-link{
+    display:inline-flex;
+    align-items:center;
+    margin-bottom:12px;
+    padding:0;
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    font-weight:600;
+    color: var(--pine);
+  }
+  .back-link:hover{ color: var(--pine-light); }
 
   .not-found{
     border: 1.5px solid var(--line);
@@ -516,11 +579,12 @@
     return m ? m[0] : '';
   }
 
-  const ESTADOS = ["Pedido recibido","En producción","Listo","Despachado"];
+  const ESTADOS = ["Pedido recibido","En producción","Listo","Parcialmente despachado","Despachado"];
   const STAMP_CLASS = {
     "Pedido recibido":"recibido",
     "En producción":"produccion",
     "Listo":"listo",
+    "Parcialmente despachado":"parcial",
     "Despachado":"despachado"
   };
 
@@ -547,12 +611,28 @@
 
   function renderTicket(item){
     const stampClass = STAMP_CLASS[item.estado] || "recibido";
+    const esParcial = item.estado === 'Parcialmente despachado';
+    const esDespachado = item.estado === 'Despachado';
     const oc = item.orden_compra && item.orden_compra.trim() ? item.orden_compra : null;
     const fechaReal = item.fecha_despacho && item.fecha_despacho.trim() ? item.fecha_despacho : null;
     const fechaEstimada = item.fecha_estimada_despacho && item.fecha_estimada_despacho.trim() ? item.fecha_estimada_despacho : null;
-    const fechaLabel = fechaReal ? "Fecha de despacho" : "Fecha estimada de despacho";
+    let fechaLabel;
+    if (esParcial) fechaLabel = "Fecha del último envío";
+    else if (fechaReal) fechaLabel = "Fecha de despacho";
+    else fechaLabel = "Fecha estimada de despacho";
     const fecha = fechaReal || fechaEstimada;
     const desc = item.descripcion && item.descripcion.trim() ? item.descripcion : null;
+
+    const nota = item.nota_despacho && item.nota_despacho.trim() ? item.nota_despacho.trim() : null;
+    const notaLabel = nota && nota.includes(',') ? 'Notas de despacho' : 'Nota de despacho';
+
+    let expiryNote = '';
+    if (esDespachado){
+      expiryNote = '<p class="expiry-note">Este pedido permanece visible durante 15 días después del despacho.</p>';
+    } else if (esParcial){
+      expiryNote = '<p class="expiry-note">Este pedido permanece visible durante 15 días después de su último envío.</p>';
+    }
+
     return `
       <div class="ticket">
         <div class="ticket-top">
@@ -588,9 +668,19 @@
             <dt>Orden de trabajo</dt>
             <dd>${item.ow || '—'}</dd>
           </div>
+          ${esParcial ? `
+          <div class="field-full">
+            <dt>Cantidad despachada</dt>
+            <dd>${item.cantidad_despachada || '—'} de ${item.cantidad_solicitada || '—'}</dd>
+          </div>` : ''}
+          ${nota ? `
+          <div class="field-full">
+            <dt>${notaLabel}</dt>
+            <dd>${nota}</dd>
+          </div>` : ''}
         </dl>
 
-        ${item.estado === 'Despachado' ? '<p class="expiry-note">Este pedido permanece visible durante 15 días después del despacho.</p>' : ''}
+        ${expiryNote}
       </div>
     `;
   }
@@ -602,6 +692,55 @@
         No hay ningún registro con "${q}". Verifica el número de elemento o de orden de compra e intenta de nuevo.
       </div>
     `;
+  }
+
+  // ------------------------------------------------------------
+  // LISTA DE COINCIDENCIAS (cuando hay mas de 1 resultado)
+  // ------------------------------------------------------------
+  let currentMatches = [];
+  let currentQueryLabel = '';
+  const resultBox = document.getElementById('result');
+
+  function renderMatchList(items, queryLabel){
+    currentMatches = items;
+    currentQueryLabel = queryLabel;
+
+    const rows = items.map((item, i) => {
+      const stampClass = STAMP_CLASS[item.estado] || 'recibido';
+      return `
+        <button type="button" class="match-row" data-index="${i}">
+          <div class="match-row-info">
+            <div class="match-row-finca">${item.finca}</div>
+            <div class="match-row-oc">${item.orden_compra || '—'}</div>
+          </div>
+          <div class="stamp ${stampClass}">${item.estado}</div>
+        </button>
+      `;
+    }).join('');
+
+    resultBox.innerHTML = `
+      <div class="match-list">
+        <p class="match-list-title">${items.length} pedidos encontrados para "${queryLabel}"</p>
+        ${rows}
+      </div>
+    `;
+
+    resultBox.querySelectorAll('.match-row').forEach(btn => {
+      btn.addEventListener('click', () => {
+        showTicketFromList(parseInt(btn.dataset.index, 10));
+      });
+    });
+  }
+
+  function showTicketFromList(index){
+    const item = currentMatches[index];
+    resultBox.innerHTML = `
+      <button type="button" class="back-link" id="backToList">← Ver todas las fincas</button>
+      ${renderTicket(item)}
+    `;
+    document.getElementById('backToList').addEventListener('click', () => {
+      renderMatchList(currentMatches, currentQueryLabel);
+    });
   }
 
   // ------------------------------------------------------------
@@ -662,18 +801,24 @@
   document.getElementById('lookupForm').addEventListener('submit', function(e){
     e.preventDefault();
     closeSuggestions();
-    const q = document.getElementById('query').value.trim().toLowerCase();
-    const box = document.getElementById('result');
-    if(!q){ box.innerHTML = ""; return; }
+    const rawQuery = document.getElementById('query').value.trim();
+    const q = rawQuery.toLowerCase();
+    if(!q){ resultBox.innerHTML = ""; return; }
 
-    const match = DATA.find(item =>
+    const matches = DATA.filter(item =>
       (item.elemento || '').toLowerCase() === q ||
       (item.orden_compra || '').toLowerCase() === q ||
       (item.ow || '').toLowerCase() === q ||
       extraerCodigoProducto(item.descripcion).toLowerCase() === q
     );
 
-    box.innerHTML = match ? renderTicket(match) : renderNotFound(document.getElementById('query').value.trim());
+    if(matches.length === 0){
+      resultBox.innerHTML = renderNotFound(rawQuery);
+    } else if(matches.length === 1){
+      resultBox.innerHTML = renderTicket(matches[0]);
+    } else {
+      renderMatchList(matches, rawQuery);
+    }
   });
 </script>
 </body>
