@@ -574,6 +574,10 @@
   let DATA = [];
   fetch('datos.json').then(r=>r.json()).then(d=>{ DATA = d; }).catch(()=>{ DATA = []; });
 
+  function normalizar(texto){
+    return (texto || '').toLowerCase().replace(/\s+/g, '');
+  }
+
   function extraerCodigoProducto(descripcion){
     const m = (descripcion || '').match(/4C[A-Za-z]+\d+/i);
     return m ? m[0] : '';
@@ -802,14 +806,14 @@
     e.preventDefault();
     closeSuggestions();
     const rawQuery = document.getElementById('query').value.trim();
-    const q = rawQuery.toLowerCase();
+    const q = normalizar(rawQuery);
     if(!q){ resultBox.innerHTML = ""; return; }
 
     const matches = DATA.filter(item =>
-      (item.elemento || '').toLowerCase() === q ||
-      (item.orden_compra || '').toLowerCase() === q ||
-      (item.ow || '').toLowerCase() === q ||
-      extraerCodigoProducto(item.descripcion).toLowerCase() === q
+      normalizar(item.elemento) === q ||
+      normalizar(item.orden_compra) === q ||
+      normalizar(item.ow) === q ||
+      normalizar(extraerCodigoProducto(item.descripcion)) === q
     );
 
     if(matches.length === 0){
