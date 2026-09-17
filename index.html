@@ -263,11 +263,11 @@
     white-space:nowrap;
     flex:none;
   }
-  .stamp.recibido{ color: var(--slate); background: rgba(84,103,122,.08); }
-  .stamp.produccion{ color: var(--marigold-deep); background: rgba(222,159,31,.12); }
-  .stamp.listo{ color: var(--pine); background: rgba(27,67,50,.09); }
-  .stamp.despachado{ color: var(--navy); background: rgba(0,32,91,.08); }
-  .stamp.parcial{ color: #C97A2B; background: rgba(201,122,43,.12); }
+  .stamp.recibido{ color: #54677A; background: rgba(84,103,122,.08); }
+  .stamp.produccion{ color: #DE9F1F; background: rgba(222,159,31,.12); }
+  .stamp.producido{ color: #8A8F5C; background: rgba(138,143,92,.12); }
+  .stamp.parcial{ color: #4E8B5C; background: rgba(78,139,92,.12); }
+  .stamp.despachado{ color: #0F5257; background: rgba(15,82,87,.10); }
 
   /* progress track */
   .track{
@@ -638,19 +638,19 @@
     return m ? m[0] : '';
   }
 
-  const ESTADOS = ["Pedido recibido","En producción","Listo","Parcialmente despachado","Despachado"];
+  const ESTADOS = ["Pedido recibido","En producción","Producido","Parcialmente despachado","Despachado"];
   const STAMP_CLASS = {
     "Pedido recibido":"recibido",
     "En producción":"produccion",
-    "Listo":"listo",
+    "Producido":"producido",
     "Parcialmente despachado":"parcial",
     "Despachado":"despachado"
   };
   const ESTADO_COLOR = {
     "Pedido recibido": "#54677A",
-    "En producción": "#B57F14",
-    "Listo": "#1B4332",
-    "Parcialmente despachado": "#C97A2B",
+    "En producción": "#DE9F1F",
+    "Producido": "#8A8F5C",
+    "Parcialmente despachado": "#4E8B5C",
     "Despachado": "#0F5257"
   };
 
@@ -672,15 +672,17 @@
     return `<div class="track">${track}</div><div class="track-labels">${labels}</div>`;
   }
 
+  function colorSegunPct(pct){
+    if (pct === 0) return '#C7CBB7';       // gris, sin cambios
+    if (pct < 100) return '#4E8B5C';       // verde de "Parcialmente despachado"
+    return '#0F5257';                       // teal de "Despachado"
+  }
+
   function renderRing(item){
     const solicitada = parseFloat(item.cantidad_solicitada) || 0;
     const despachada = parseFloat(item.cantidad_despachada) || 0;
     const pct = solicitada > 0 ? Math.round((despachada / solicitada) * 100) : 0;
-
-    let color;
-    if (pct === 0) color = '#C7CBB7';
-    else if (pct < 100) color = '#C97A2B';
-    else color = '#0F5257';
+    const color = colorSegunPct(pct);
 
     const circunferencia = 276.46; // 2 * PI * r (r=44)
     const offset = circunferencia - (circunferencia * pct / 100);
