@@ -139,10 +139,13 @@ def cargar_despachos(ruta_despachos):
     cada LINEA de despacho individual (una por cada envio real de un
     producto puntual, incluyendo envios parciales). Cada linea trae:
       - clave: identificador UNICO de esa linea de despacho, formado por
-        'Nota de despacho' + Orden de Venta. Se necesita esta combinacion
-        (no solo la nota) porque una misma nota de despacho puede incluir
-        varios productos/lineas distintas en un solo envio.
+        'Nota de despacho' + Orden de Venta + Elemento. Se necesita el
+        Elemento en la llave (no solo nota+OV) porque una misma Orden de
+        Venta a veces se repite en mas de un Elemento en el backlog -
+        sin esto, esos productos distintos compartirian por error la
+        misma cantidad/estado de despacho.
       - ov: 'Ord. de Venta' (Order Number + '-' + Order Line)
+      - elemento: el Elemento especifico que se envio en esta linea
       - cantidad: cantidad enviada en ESA linea puntual
       - fecha: fecha de ese envio
     """
@@ -155,6 +158,7 @@ def cargar_despachos(ruta_despachos):
     idx_order_line = encabezado.index("Order Line")
     idx_fecha = encabezado.index("Fecha del Despacho")
     idx_nota = encabezado.index("Nota de despacho")
+    idx_elemento = encabezado.index("Elemento")
     idx_cantidad = encabezado.index("Cantidad Enviada")
     idx_cancelada = encabezado.index("Cancelada") if "Cancelada" in encabezado else None
 
@@ -177,6 +181,8 @@ def cargar_despachos(ruta_despachos):
         if not nota:
             continue  # sin numero de nota no podemos evitar contarlo doble; se descarta
 
+        elemento = limpiar_texto(ws.cell_value(r, idx_elemento))
+
         try:
             cantidad = float(ws.cell_value(r, idx_cantidad))
         except (ValueError, TypeError):
@@ -188,11 +194,15 @@ def cargar_despachos(ruta_despachos):
         except (ValueError, TypeError):
             fecha = ""
 
-        # La llave unica es NOTA + OV, no la nota sola: una misma nota de
+        # La llave unica es NOTA + OV + ELEMENTO: una misma nota de
         # despacho puede incluir varias lineas/productos distintos en un
-        # mismo envio (una guia con varios items).
-        clave_linea = f"{nota}|{ov}"
-        lineas.append({"clave": clave_linea, "ov": ov, "nota": nota, "cantidad": cantidad, "fecha": fecha})
+        # mismo envio (una guia con varios items), y una misma OV a
+        # veces se repite en mas de un Elemento.
+        clave_linea = f"{nota}|{ov}|{elemento}"
+        lineas.append({
+            "clave": clave_linea, "ov": ov, "elemento": elemento,
+            "nota": nota, "cantidad": cantidad, "fecha": fecha,
+        })
 
     return lineas
 
@@ -243,20 +253,53 @@ def generar_datos():
     notas_historico = historico["notas"]
     pedidos_cache = historico["pedidos"]
 
+    # --- Migrar cache de corridas anteriores al esquema con Elemento ---
+    # Antes, "notas" se guardaba con llave "nota|ov" (sin Elemento) y
+    # "pedidos" con llave "ov" sola. Se recupera el Elemento que falta
+    # usando "pedidos" (que si trae el elemento de esa OV) - funciona
+    # bien salvo en el caso raro de una OV con mas de un Elemento, donde
+    # ese dato puntual del historico se pierde y se vuelve a acumular
+    # con los despachos de los proximos dias.
+    pedidos_migrados = {}
+    for clave, info in pedidos_cache.items():
+        nueva_clave = clave if "|" in clave else f"{clave}|{info.get('elemento', '')}"
+        pedidos_migrados[nueva_clave] = info
+    pedidos_cache = pedidos_migrados
+
+    notas_migradas = {}
+    for clave, linea in notas_historico.items():
+        if linea.get("elemento"):
+            notas_migradas[clave] = linea
+            continue
+        ov_vieja = linea.get("ov", "")
+        elemento_recuperado = ""
+        for clave_p, info_p in pedidos_cache.items():
+            if clave_p.startswith(f"{ov_vieja}|"):
+                elemento_recuperado = info_p.get("elemento", "")
+                break
+        if not elemento_recuperado:
+            continue  # no se pudo recuperar el elemento; se descarta esta entrada vieja
+        linea_migrada = dict(linea, elemento=elemento_recuperado)
+        notas_migradas[f"{linea.get('nota','')}|{ov_vieja}|{elemento_recuperado}"] = linea_migrada
+    notas_historico = notas_migradas
+
     notas_nuevas = 0
     for linea in lineas_nuevas:
         if linea["clave"] not in notas_historico:
             notas_nuevas += 1
         notas_historico[linea["clave"]] = {
-            "ov": linea["ov"], "nota": linea["nota"], "cantidad": linea["cantidad"], "fecha": linea["fecha"],
+            "ov": linea["ov"], "elemento": linea["elemento"], "nota": linea["nota"],
+            "cantidad": linea["cantidad"], "fecha": linea["fecha"],
         }
 
     # Acumular cantidad total despachada, fecha del ultimo envio, y la
-    # lista de notas de despacho involucradas, por Orden de Venta.
-    acumulado_por_ov = {}
+    # lista de notas de despacho involucradas, por Elemento+OV (NO solo
+    # por OV: una misma Orden de Venta a veces se repite en mas de un
+    # Elemento en el backlog, y cada uno debe llevar su propio despacho).
+    acumulado_por_clave = {}
     for linea_guardada in notas_historico.values():
-        ov = linea_guardada["ov"]
-        entrada = acumulado_por_ov.setdefault(ov, {"cantidad": 0.0, "fecha": None, "notas": set()})
+        clave_acum = f"{linea_guardada['ov']}|{linea_guardada.get('elemento', '')}"
+        entrada = acumulado_por_clave.setdefault(clave_acum, {"cantidad": 0.0, "fecha": None, "notas": set()})
         entrada["cantidad"] += linea_guardada["cantidad"]
         if linea_guardada.get("nota"):
             entrada["notas"].add(linea_guardada["nota"])
@@ -289,12 +332,13 @@ def generar_datos():
     def construir_registro(id_cliente, elemento, descripcion, ow_final, orden_compra, ov, cant_sol, estado_produccion):
         """
         Decide el estado final de un pedido comparando lo despachado
-        (acumulado_por_ov) contra lo solicitado (cant_sol):
+        (acumulado_por_clave, indexado por Elemento+OV) contra lo
+        solicitado (cant_sol):
           - Nada despachado todavia -> se respeta el estado de produccion.
           - Se despacho TODO (o mas, por redondeos) -> "Despachado".
           - Se despacho una parte -> "Parcialmente despachado".
         """
-        info_despacho = acumulado_por_ov.get(ov)
+        info_despacho = acumulado_por_clave.get(f"{ov}|{elemento}")
         cantidad_despachada = info_despacho["cantidad"] if info_despacho else 0.0
         fecha_ultimo = info_despacho["fecha"] if info_despacho else None
         notas_texto = ""
@@ -382,11 +426,15 @@ def generar_datos():
             continue
 
         if ord_venta:
-            ov_cubiertas.add(ord_venta)
+            # Elemento+OV, no solo OV: una misma Orden de Venta a veces se
+            # repite en mas de un Elemento en el backlog, y cada uno debe
+            # rastrearse (y recuperarse despues) por separado.
+            clave_pedido = f"{ord_venta}|{elemento}"
+            ov_cubiertas.add(clave_pedido)
             # Guardamos SIEMPRE la info mas reciente de este pedido (no solo
             # cuando ya se despacho), para poder recuperarla despues si el
             # backlog lo quita de su lista antes de completarse el despacho.
-            pedidos_cache[ord_venta] = {
+            pedidos_cache[clave_pedido] = {
                 "finca": id_cliente, "elemento": elemento, "descripcion": descripcion,
                 "ow": ow_final, "orden_compra": orden_compra, "cant_sol": cant_sol,
                 "estado_produccion": estado_produccion,
@@ -397,13 +445,14 @@ def generar_datos():
     # --- Agregar pedidos despachados/parciales recientes que el backlog YA no muestra ---
     hoy = datetime.now().date()
     agregados_desde_historico = 0
-    for ov, info in pedidos_cache.items():
-        if ov in ov_cubiertas:
+    for clave_pedido, info in pedidos_cache.items():
+        if clave_pedido in ov_cubiertas:
             continue  # ya viene del backlog de hoy, no lo dupliquemos
 
+        ov_de_clave = clave_pedido.split("|", 1)[0]
         registro, fecha_ultimo = construir_registro(
             info["finca"], info["elemento"], info["descripcion"], info["ow"],
-            info["orden_compra"], ov, info.get("cant_sol", 0), info.get("estado_produccion", "Sin clasificar"),
+            info["orden_compra"], ov_de_clave, info.get("cant_sol", 0), info.get("estado_produccion", "Sin clasificar"),
         )
         # Solo tiene sentido recuperarlo si de verdad hubo algun despacho
         # (si nunca se despacho nada, y ya no esta en el backlog, no
