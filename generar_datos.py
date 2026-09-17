@@ -64,11 +64,11 @@ def clasificar_estado_ght(estatus_omp_final):
     if "plano mestre" in texto:
         return "Pedido recibido"
     if "totalmente" in texto:
-        return "Listo"
+        return "Producido"
     if "parcial" in texto:
         return "En producción"
     if texto == "terminado":
-        return "Listo"
+        return "Producido"
     if "product" in texto:
         return "En producción"
 
