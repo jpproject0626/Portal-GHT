@@ -579,6 +579,15 @@
     return (texto || '').toLowerCase().replace(/\s+/g, '');
   }
 
+  // Coincide si uno de los dos textos "contiene" al otro (normalizados).
+  // Sirve para cuando se pega la celda completa de Excel (con texto de
+  // mas antes/despues del valor real) o solo una parte de el.
+  function coincideParcial(valor, q){
+    const v = normalizar(valor);
+    if(!v) return false;
+    return v.includes(q) || q.includes(v);
+  }
+
   function extraerCodigoProducto(descripcion){
     const m = (descripcion || '').match(/4C[A-Za-z]+\d+/i);
     return m ? m[0] : '';
@@ -821,9 +830,10 @@
 
     const matches = DATA.filter(item =>
       normalizar(item.elemento) === q ||
-      normalizar(item.orden_compra) === q ||
       normalizar(item.ow) === q ||
-      normalizar(extraerCodigoProducto(item.descripcion)) === q
+      coincideParcial(item.orden_compra, q) ||
+      coincideParcial(extraerCodigoProducto(item.descripcion), q) ||
+      coincideParcial(item.descripcion, q)
     );
 
     if(matches.length === 0){
