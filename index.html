@@ -309,6 +309,51 @@
   .perf::before{ left:-7px; }
   .perf::after{ right:-7px; }
 
+  .ring-wrap {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 16px;
+  }
+  .ring-wrap svg {
+    width: 110px;
+    height: 110px;
+    transform: rotate(-90deg);
+  }
+  .ring-bg {
+    fill: none;
+    stroke: #E4E1D3;
+    stroke-width: 10;
+  }
+  .ring-fg {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.6s ease;
+  }
+  .ring-label {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ring-pct {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--pine);
+  }
+  .ring-cap {
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-top: 2px;
+  }
+
   dl.fields{
     margin: 0;
     display:grid;
@@ -627,6 +672,36 @@
     return `<div class="track">${track}</div><div class="track-labels">${labels}</div>`;
   }
 
+  function renderRing(item){
+    const solicitada = parseFloat(item.cantidad_solicitada) || 0;
+    const despachada = parseFloat(item.cantidad_despachada) || 0;
+    const pct = solicitada > 0 ? Math.round((despachada / solicitada) * 100) : 0;
+
+    let color;
+    if (pct === 0) color = '#C7CBB7';
+    else if (pct < 100) color = '#C97A2B';
+    else color = '#0F5257';
+
+    const circunferencia = 276.46; // 2 * PI * r (r=44)
+    const offset = circunferencia - (circunferencia * pct / 100);
+
+    return `
+      <div class="ring-wrap">
+        <svg viewBox="0 0 110 110">
+          <circle class="ring-bg" cx="55" cy="55" r="44"/>
+          <circle class="ring-fg" cx="55" cy="55" r="44"
+            stroke="${color}"
+            stroke-dasharray="${circunferencia}"
+            stroke-dashoffset="${offset}"/>
+        </svg>
+        <div class="ring-label">
+          <span class="ring-pct">${pct}%</span>
+          <span class="ring-cap">Despacho</span>
+        </div>
+      </div>
+    `;
+  }
+
   function renderTicket(item){
     const stampClass = STAMP_CLASS[item.estado] || "recibido";
     const esParcial = item.estado === 'Parcialmente despachado';
@@ -664,6 +739,8 @@
         ${renderTrack(item.estado)}
 
         <div class="perf"></div>
+
+        ${renderRing(item)}
 
         <dl class="fields">
           <div class="field-full">
