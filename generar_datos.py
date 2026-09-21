@@ -283,6 +283,12 @@ def generar_datos():
         notas_migradas[f"{linea.get('nota','')}|{ov_vieja}|{elemento_recuperado}"] = linea_migrada
     notas_historico = notas_migradas
 
+    # Guardamos qué pedidos ya conocíamos ANTES de esta corrida, para poder
+    # diagnosticar al final cuáles "desaparecieron" hoy sin haberse
+    # despachado (ver diagnóstico al final de esta función). Las llaves
+    # son "ov|elemento", no solo "ov".
+    ovs_conocidas_antes = set(pedidos_cache.keys())
+
     notas_nuevas = 0
     for linea in lineas_nuevas:
         if linea["clave"] not in notas_historico:
@@ -329,14 +335,21 @@ def generar_datos():
     idx_estatus_omp = encabezado.index("Estatus OMP")
     idx_cant_sol = encabezado.index("Cant Sol")
 
-    def construir_registro(id_cliente, elemento, descripcion, ow_final, orden_compra, ov, cant_sol, estado_produccion):
+    def construir_registro(id_cliente, elemento, descripcion, ow_final, orden_compra, ov, cant_sol_original, estado_produccion):
         """
         Decide el estado final de un pedido comparando lo despachado
         (acumulado_por_clave, indexado por Elemento+OV) contra lo
-        solicitado (cant_sol):
+        solicitado ORIGINALMENTE (cant_sol_original, congelado desde la
+        primera vez que se vio el pedido en el backlog - ver mas abajo
+        donde se arma pedidos_cache):
           - Nada despachado todavia -> se respeta el estado de produccion.
           - Se despacho TODO (o mas, por redondeos) -> "Despachado".
           - Se despacho una parte -> "Parcialmente despachado".
+
+        Tambien calcula "porcentaje_despachado": lo acumulado despachado
+        sobre el total ORIGINAL del pedido (no sobre lo que diga el backlog
+        de hoy), para que el % avance de forma consistente semana a semana
+        y no salte si la cantidad solicitada cambia mas adelante.
         """
         info_despacho = acumulado_por_clave.get(f"{ov}|{elemento}")
         cantidad_despachada = info_despacho["cantidad"] if info_despacho else 0.0
@@ -348,12 +361,16 @@ def generar_datos():
         estado = estado_produccion
         fecha_despacho_txt = ""
         if cantidad_despachada > 0:
-            if cant_sol and cantidad_despachada >= cant_sol:
+            if cant_sol_original and cantidad_despachada >= cant_sol_original:
                 estado = "Despachado"
             else:
                 estado = "Parcialmente despachado"
             if fecha_ultimo:
                 fecha_despacho_txt = fecha_ultimo.strftime("%d/%m/%Y")
+
+        porcentaje_despachado = None
+        if cant_sol_original:
+            porcentaje_despachado = round(min(100.0, (cantidad_despachada / cant_sol_original) * 100))
 
         return {
             "finca": id_cliente,
@@ -363,19 +380,26 @@ def generar_datos():
             "orden_compra": orden_compra,
             "estado": estado,
             "fecha_despacho": fecha_despacho_txt,
-            "cantidad_solicitada": formatear_cantidad(cant_sol) if cant_sol else "",
+            "cantidad_solicitada": formatear_cantidad(cant_sol_original) if cant_sol_original else "",
             "cantidad_despachada": formatear_cantidad(cantidad_despachada) if cantidad_despachada else "",
+            "porcentaje_despachado": porcentaje_despachado,
             "nota_despacho": notas_texto,
             # Este campo queda vacio hasta que TI termine de ajustar el bot
             # de despachos para que incluya la fecha/hora ESTIMADA (antes
             # de que el pedido salga).
             "fecha_estimada_despacho": "",
+            # Campos temporales (numericos, sin formatear) para poder sumar
+            # por orden de compra mas abajo. Se borran antes de guardar el
+            # datos.json final - nunca llegan al portal.
+            "_cant_sol_num": cant_sol_original or 0.0,
+            "_cant_desp_num": cantidad_despachada or 0.0,
         }, fecha_ultimo
 
     resultado = []
     ov_cubiertas = set()
     total_leidas = 0
     total_ght = 0
+    pedidos_sin_estatus_hoy = []  # diagnóstico: ver mensaje al final
 
     for fila in datos:
         id_cliente = limpiar_texto(fila[idx_id_cliente])
@@ -416,27 +440,47 @@ def generar_datos():
 
         estado_produccion = clasificar_estado_ght(estatus_omp_final)
 
+        # --- Cantidad solicitada ORIGINAL: se congela la primera vez que
+        # vemos este pedido (Elemento+Orden de Venta) y nunca se vuelve a
+        # pisar, aunque el backlog cambie el valor mas adelante. Asi el %
+        # de avance siempre se mide contra el total inicial del pedido.
+        clave_pedido = f"{ord_venta}|{elemento}"
+        cache_previo = pedidos_cache.get(clave_pedido)
+        if cache_previo and cache_previo.get("cant_sol_original"):
+            cant_sol_original = cache_previo["cant_sol_original"]
+        else:
+            cant_sol_original = cant_sol
+
         registro, _ = construir_registro(
             id_cliente, elemento, descripcion, ow_final, orden_compra,
-            ord_venta, cant_sol, estado_produccion,
+            ord_venta, cant_sol_original, estado_produccion,
         )
 
         # No exponemos los pedidos "Sin clasificar" al cliente (decision ya tomada en el proyecto)
         if registro["estado"] == "Sin clasificar":
+            # DIAGNÓSTICO: si este pedido YA lo conocíamos de una corrida
+            # anterior (estaba en el portal antes) y hoy no trae estatus
+            # (ni en su propia fila del backlog ni en la carga de máquinas
+            # de hoy), avisamos aquí para poder revisarlo con datos reales.
+            if clave_pedido in ovs_conocidas_antes:
+                pedidos_sin_estatus_hoy.append({
+                    "finca": id_cliente, "elemento": elemento, "ov": ord_venta,
+                })
             continue
 
         if ord_venta:
-            # Elemento+OV, no solo OV: una misma Orden de Venta a veces se
-            # repite en mas de un Elemento en el backlog, y cada uno debe
-            # rastrearse (y recuperarse despues) por separado.
-            clave_pedido = f"{ord_venta}|{elemento}"
             ov_cubiertas.add(clave_pedido)
             # Guardamos SIEMPRE la info mas reciente de este pedido (no solo
             # cuando ya se despacho), para poder recuperarla despues si el
             # backlog lo quita de su lista antes de completarse el despacho.
+            # "cant_sol_original" queda congelada (ver arriba); no se
+            # sobrescribe con el valor del dia. La llave es Elemento+OV,
+            # no solo OV: una misma Orden de Venta a veces se repite en
+            # mas de un Elemento en el backlog.
             pedidos_cache[clave_pedido] = {
                 "finca": id_cliente, "elemento": elemento, "descripcion": descripcion,
-                "ow": ow_final, "orden_compra": orden_compra, "cant_sol": cant_sol,
+                "ow": ow_final, "orden_compra": orden_compra,
+                "cant_sol_original": cant_sol_original,
                 "estado_produccion": estado_produccion,
             }
 
@@ -445,14 +489,20 @@ def generar_datos():
     # --- Agregar pedidos despachados/parciales recientes que el backlog YA no muestra ---
     hoy = datetime.now().date()
     agregados_desde_historico = 0
+    ov_recuperadas = set()
     for clave_pedido, info in pedidos_cache.items():
         if clave_pedido in ov_cubiertas:
             continue  # ya viene del backlog de hoy, no lo dupliquemos
 
         ov_de_clave = clave_pedido.split("|", 1)[0]
+
+        # Compatibilidad: cache viejo (antes de este cambio) solo tenia
+        # "cant_sol"; el nuevo tiene "cant_sol_original" congelada.
+        cant_sol_original = info.get("cant_sol_original", info.get("cant_sol", 0))
+
         registro, fecha_ultimo = construir_registro(
             info["finca"], info["elemento"], info["descripcion"], info["ow"],
-            info["orden_compra"], ov_de_clave, info.get("cant_sol", 0), info.get("estado_produccion", "Sin clasificar"),
+            info["orden_compra"], ov_de_clave, cant_sol_original, info.get("estado_produccion", "Sin clasificar"),
         )
         # Solo tiene sentido recuperarlo si de verdad hubo algun despacho
         # (si nunca se despacho nada, y ya no esta en el backlog, no
@@ -462,6 +512,38 @@ def generar_datos():
         if (hoy - fecha_ultimo).days <= DIAS_VISIBLE_DESPACHADO:
             resultado.append(registro)
             agregados_desde_historico += 1
+            ov_recuperadas.add(clave_pedido)
+
+    # DIAGNÓSTICO: pedidos que ya conocíamos, nunca se habían despachado,
+    # y hoy no quedaron en ningún lado del resultado (ni backlog de hoy,
+    # ni recuperados del histórico porque nunca tuvieron un despacho que
+    # los sostenga). Estos son los que "desaparecen" del portal sin que
+    # el cliente vea por qué.
+    ov_desaparecidas_del_todo = ovs_conocidas_antes - ov_cubiertas - ov_recuperadas
+
+    # ------------------------------------------------------------
+    # PORCENTAJE ACUMULADO GLOBAL (TODOS los pedidos, de TODAS las
+    # fincas, juntos). Se suma todo lo solicitado (original, congelado)
+    # y todo lo despachado de absolutamente TODAS las lineas del
+    # resultado, sin separar por finca ni por orden de compra, y ese
+    # mismo numero se le pone a cada linea (ademas del
+    # "porcentaje_despachado" que ya tiene cada linea individual sola).
+    # ------------------------------------------------------------
+    total_sol_global = 0.0
+    total_desp_global = 0.0
+    for registro in resultado:
+        total_sol_global += registro["_cant_sol_num"]
+        total_desp_global += registro["_cant_desp_num"]
+
+    porcentaje_global = None
+    if total_sol_global > 0:
+        porcentaje_global = round(min(100.0, (total_desp_global / total_sol_global) * 100))
+
+    for registro in resultado:
+        registro["porcentaje_global"] = porcentaje_global
+        # Se borran los campos temporales, nunca deben llegar al datos.json
+        del registro["_cant_sol_num"]
+        del registro["_cant_desp_num"]
 
     historico = {"notas": notas_historico, "pedidos": pedidos_cache}
     with open(ARCHIVO_HISTORICO_DESPACHOS, "w", encoding="utf-8") as f:
@@ -475,7 +557,44 @@ def generar_datos():
     print(f"Total filas de GHT (antes de quitar 'Sin clasificar'): {total_ght}")
     print(f"Pedidos recuperados del historico (ya no estan en el backlog): {agregados_desde_historico}")
     print(f"Total filas exportadas a {ARCHIVO_SALIDA}: {len(resultado)}")
+    print(f"Porcentaje global despachado (todas las fincas, todos los pedidos): "
+          f"{porcentaje_global if porcentaje_global is not None else '—'}% "
+          f"({formatear_cantidad(total_desp_global)} / {formatear_cantidad(total_sol_global)})")
     print()
+
+    # ------------------------------------------------------------
+    # DIAGNÓSTICO — pedidos que hoy quedaron "sin estatus" (carga de
+    # máquinas no los trajo) y pedidos que desaparecieron del todo.
+    # Esto NO afecta el datos.json generado, es solo para revisar contigo
+    # si hay pedidos pendientes que se están perdiendo de vista.
+    # ------------------------------------------------------------
+    print("=" * 60)
+    print("DIAGNÓSTICO (no afecta el portal, solo para revisar)")
+    print("=" * 60)
+    if pedidos_sin_estatus_hoy:
+        print(f"\n{len(pedidos_sin_estatus_hoy)} pedido(s) que ya conocíamos de antes "
+              f"NO trajeron estatus hoy (ni en su fila del backlog, ni en la carga "
+              f"de máquinas) y por eso NO aparecen hoy en el portal:")
+        for p in pedidos_sin_estatus_hoy[:20]:
+            print(f"  - Finca: {p['finca']} | Elemento: {p['elemento']} | OV: {p['ov']}")
+        if len(pedidos_sin_estatus_hoy) > 20:
+            print(f"  ... y {len(pedidos_sin_estatus_hoy) - 20} más.")
+    else:
+        print("\nNo hubo pedidos que 'perdieran' su estatus hoy. Bien.")
+
+    if ov_desaparecidas_del_todo:
+        print(f"\n{len(ov_desaparecidas_del_todo)} pedido(s) que ya conocíamos, nunca se "
+              f"han despachado, y hoy no quedaron en el datos.json (ni en el backlog de "
+              f"hoy ni recuperados del histórico):")
+        for clave_pedido in list(ov_desaparecidas_del_todo)[:20]:
+            info = pedidos_cache.get(clave_pedido, {})
+            ov_mostrar = clave_pedido.split("|", 1)[0]
+            print(f"  - Finca: {info.get('finca','?')} | Elemento: {info.get('elemento','?')} | OV: {ov_mostrar}")
+    else:
+        print("\nNingún pedido pendiente desapareció por completo hoy. Bien.")
+    print("=" * 60)
+    print()
+
     print("Listo. Sube el archivo 'datos.json' al portal web.")
 
 

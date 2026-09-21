@@ -9,8 +9,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "3000",
     "cantidad_despachada": "2700",
+    "porcentaje_despachado": 90,
     "nota_despacho": "796397",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -22,8 +24,10 @@
     "fecha_despacho": "21/09/2026",
     "cantidad_solicitada": "9000",
     "cantidad_despachada": "8220",
+    "porcentaje_despachado": 91,
     "nota_despacho": "796607, 796618",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -35,8 +39,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "2000",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -48,8 +54,10 @@
     "fecha_despacho": "16/09/2026",
     "cantidad_solicitada": "2000",
     "cantidad_despachada": "1860",
+    "porcentaje_despachado": 93,
     "nota_despacho": "796276",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -61,8 +69,10 @@
     "fecha_despacho": "21/09/2026",
     "cantidad_solicitada": "5000",
     "cantidad_despachada": "1800",
+    "porcentaje_despachado": 36,
     "nota_despacho": "796618",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -74,8 +84,10 @@
     "fecha_despacho": "21/09/2026",
     "cantidad_solicitada": "2000",
     "cantidad_despachada": "1980",
+    "porcentaje_despachado": 99,
     "nota_despacho": "796618",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -87,8 +99,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -100,8 +114,10 @@
     "fecha_despacho": "21/09/2026",
     "cantidad_solicitada": "3000",
     "cantidad_despachada": "3000",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796601",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MELODY",
@@ -113,8 +129,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -126,8 +144,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "30",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -139,8 +159,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "270",
+    "porcentaje_despachado": 60,
     "nota_despacho": "796300",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT GENERA",
@@ -152,8 +174,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -165,8 +189,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT QUALIT",
@@ -178,8 +204,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CIPRES",
@@ -191,8 +219,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "30",
+    "porcentaje_despachado": 20,
     "nota_despacho": "796503",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -204,8 +234,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -217,8 +249,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "720",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -230,8 +264,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -243,8 +279,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -256,8 +294,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "330",
+    "porcentaje_despachado": 73,
     "nota_despacho": "796315",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -269,8 +309,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "900",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -282,8 +324,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "30",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -295,8 +339,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "30",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -308,8 +354,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "330",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -321,8 +369,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -334,8 +384,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1040",
+    "porcentaje_despachado": 87,
     "nota_despacho": "796308",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -347,8 +399,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -360,8 +414,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -373,8 +429,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1050",
+    "porcentaje_despachado": 88,
     "nota_despacho": "796394",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -386,8 +444,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "30",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -399,8 +459,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -412,8 +474,10 @@
     "fecha_despacho": "21/09/2026",
     "cantidad_solicitada": "1620",
     "cantidad_despachada": "1620",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796599",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -425,8 +489,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -438,8 +504,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 50,
     "nota_despacho": "796294",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -451,8 +519,10 @@
     "fecha_despacho": "21/09/2026",
     "cantidad_solicitada": "900",
     "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796600",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CASABL",
@@ -464,8 +534,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -477,8 +549,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "270",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -490,8 +564,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -503,8 +579,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "180",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -516,8 +594,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "480",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT AJIBE",
@@ -529,8 +609,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT AJIBE",
@@ -542,8 +624,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -555,8 +639,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -568,8 +654,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "900",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -581,8 +669,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "2850",
     "cantidad_despachada": "1380",
+    "porcentaje_despachado": 48,
     "nota_despacho": "796569",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MANA",
@@ -594,8 +684,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "1800",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PRESH",
@@ -607,8 +699,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "700",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PRESH",
@@ -620,8 +714,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PRESH",
@@ -633,8 +729,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PRESH",
@@ -646,8 +744,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TEMKIN",
@@ -659,8 +759,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "2000",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PRESH",
@@ -672,8 +774,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "1020",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TEMKIN",
@@ -685,8 +789,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "4000",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TEMKIN",
@@ -698,8 +804,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "3000",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TEMKIN",
@@ -711,8 +819,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "4000",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TEMKIN",
@@ -724,8 +834,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "1000",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TEMKIN",
@@ -737,8 +849,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "3000",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -750,8 +864,10 @@
     "fecha_despacho": "07/09/2026",
     "cantidad_solicitada": "2000",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 3,
     "nota_despacho": "795398",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -763,8 +879,10 @@
     "fecha_despacho": "07/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 20,
     "nota_despacho": "795375",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FOLLAJ",
@@ -776,8 +894,10 @@
     "fecha_despacho": "07/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "270",
+    "porcentaje_despachado": 45,
     "nota_despacho": "795369",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FOLLAJ",
@@ -789,8 +909,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "320",
+    "porcentaje_despachado": 53,
     "nota_despacho": "795397, 796351",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FOLLAJ",
@@ -802,8 +924,10 @@
     "fecha_despacho": "07/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1080",
+    "porcentaje_despachado": 90,
     "nota_despacho": "795369",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FOLLAJ",
@@ -815,8 +939,10 @@
     "fecha_despacho": "07/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 60,
     "nota_despacho": "795397",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -828,8 +954,10 @@
     "fecha_despacho": "07/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "30",
+    "porcentaje_despachado": 5,
     "nota_despacho": "795373",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -841,8 +969,10 @@
     "fecha_despacho": "07/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 10,
     "nota_despacho": "795373",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -854,8 +984,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796086, 796395",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -867,8 +999,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "1020",
     "cantidad_despachada": "270",
+    "porcentaje_despachado": 26,
     "nota_despacho": "796563",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -880,8 +1014,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "390",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 15,
     "nota_despacho": "796456",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -893,8 +1029,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796381",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -906,8 +1044,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "330",
+    "porcentaje_despachado": 55,
     "nota_despacho": "796293",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT DESIGN",
@@ -919,8 +1059,10 @@
     "fecha_despacho": "16/09/2026",
     "cantidad_solicitada": "1000",
     "cantidad_despachada": "340",
+    "porcentaje_despachado": 34,
     "nota_despacho": "796253",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -932,8 +1074,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796294",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -945,8 +1089,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "2520",
     "cantidad_despachada": "2520",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796518",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -958,8 +1104,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796348",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -971,8 +1119,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "1500",
     "cantidad_despachada": "1500",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796417",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -984,8 +1134,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796495",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -997,8 +1149,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796417",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -1010,8 +1164,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "900",
     "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796417",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -1023,8 +1179,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796348",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -1036,8 +1194,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796417",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -1049,8 +1209,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "3000",
     "cantidad_despachada": "3000",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796536",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -1062,8 +1224,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "6000",
     "cantidad_despachada": "6000",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796536",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -1075,8 +1239,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796354",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -1088,8 +1254,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796417",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -1101,8 +1269,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "900",
     "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796354",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -1114,8 +1284,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "1800",
     "cantidad_despachada": "1800",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796417",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -1127,8 +1299,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796495",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT RIO FR",
@@ -1140,8 +1314,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "900",
     "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796495",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT BOJACA",
@@ -1153,8 +1329,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796367",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT BOJACA",
@@ -1166,8 +1344,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "800",
     "cantidad_despachada": "800",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796298",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT BOJACA",
@@ -1179,8 +1359,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796367",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT BOJACA",
@@ -1192,8 +1374,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796298",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT BOJACA",
@@ -1205,8 +1389,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796561",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT BOJACA",
@@ -1218,8 +1404,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796454",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT BOJACA",
@@ -1231,8 +1419,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796454",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT BOJACA",
@@ -1244,8 +1434,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796454",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT BOJACA",
@@ -1257,8 +1449,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796367",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT BOJACA",
@@ -1270,8 +1464,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "900",
     "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796561",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT BOJACA",
@@ -1283,8 +1479,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "900",
     "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796317",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MELODY",
@@ -1296,8 +1494,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "900",
     "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796318",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MELODY",
@@ -1309,8 +1509,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796562",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MELODY",
@@ -1322,8 +1524,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796455",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MELODY",
@@ -1335,8 +1539,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "180",
     "cantidad_despachada": "180",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796344",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MELODY",
@@ -1348,8 +1554,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796455",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MELODY",
@@ -1361,8 +1569,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796344",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MELODY",
@@ -1374,8 +1584,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796344",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MELODY",
@@ -1387,8 +1599,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "400",
     "cantidad_despachada": "400",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796299",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MELODY",
@@ -1400,8 +1614,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "400",
     "cantidad_despachada": "400",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796455",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MELODY",
@@ -1413,8 +1629,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "200",
     "cantidad_despachada": "200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796299",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -1426,8 +1644,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796300, 796456",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -1439,8 +1659,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1020",
     "cantidad_despachada": "1020",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796368",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -1452,8 +1674,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796456",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -1465,8 +1689,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796563",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -1478,8 +1704,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796300",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -1491,8 +1719,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "330",
     "cantidad_despachada": "330",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796300",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -1504,8 +1734,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "880",
     "cantidad_despachada": "880",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796300",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -1517,8 +1749,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1480",
     "cantidad_despachada": "1480",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796300",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PARDO",
@@ -1530,8 +1764,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "1660",
     "cantidad_despachada": "1660",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796456",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT SNF",
@@ -1543,8 +1779,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796369",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT SNF",
@@ -1556,8 +1794,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796319",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT SNF",
@@ -1569,8 +1809,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796564",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT SNF",
@@ -1582,8 +1824,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796457",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT SNF",
@@ -1595,8 +1839,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1000",
     "cantidad_despachada": "1000",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796301",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT SNF",
@@ -1608,8 +1854,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796301, 796564",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT SNF",
@@ -1621,8 +1869,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "2000",
     "cantidad_despachada": "2000",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796457",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT GENERA",
@@ -1634,8 +1884,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796557",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT GENERA",
@@ -1647,8 +1899,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796557",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT GENERA",
@@ -1660,8 +1914,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796427",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT GENERA",
@@ -1673,8 +1929,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796379",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT GENERA",
@@ -1686,8 +1944,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796379",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1699,8 +1959,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "200",
     "cantidad_despachada": "200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796311",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1712,8 +1974,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "100",
     "cantidad_despachada": "100",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796311",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1725,8 +1989,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796485",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1738,8 +2004,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796433",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1751,8 +2019,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796529",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1764,8 +2034,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796362",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1777,8 +2049,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796362",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1790,8 +2064,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796362, 796436, 796529",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1803,8 +2079,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796362",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1816,8 +2094,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796489",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1829,8 +2109,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796529",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1842,8 +2124,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "690",
     "cantidad_despachada": "690",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796328",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1855,8 +2139,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796529",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1868,8 +2154,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796433",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1881,8 +2169,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "720",
     "cantidad_despachada": "720",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796560",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1894,8 +2184,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796560",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1907,8 +2199,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "180",
     "cantidad_despachada": "180",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796381",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1920,8 +2214,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796560",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1933,8 +2229,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796560",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1946,8 +2244,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796381",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT ACACIA",
@@ -1959,8 +2259,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "210",
     "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796560",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT QUALIT",
@@ -1972,8 +2274,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796472",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT QUALIT",
@@ -1985,8 +2289,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796573",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CIPRES",
@@ -1998,8 +2304,10 @@
     "fecha_despacho": "16/09/2026",
     "cantidad_solicitada": "100",
     "cantidad_despachada": "100",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796260",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CIPRES",
@@ -2011,8 +2319,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "100",
     "cantidad_despachada": "100",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796503",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CIPRES",
@@ -2024,8 +2334,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796385",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CIPRES",
@@ -2037,8 +2349,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796385",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CIPRES",
@@ -2050,8 +2364,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796503",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CIPRES",
@@ -2063,8 +2379,10 @@
     "fecha_despacho": "16/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796260",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CIPRES",
@@ -2076,8 +2394,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796324",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2089,8 +2409,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796323",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2102,8 +2424,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "900",
     "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796374",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2115,8 +2439,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796374",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2128,8 +2454,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796501",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2141,8 +2469,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796287",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2154,8 +2484,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796305",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2167,8 +2499,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "750",
     "cantidad_despachada": "750",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796375",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2180,8 +2514,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796375",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2193,8 +2529,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796432",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2206,8 +2544,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796527",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2219,8 +2559,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "360",
     "cantidad_despachada": "360",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796326",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2232,8 +2574,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "1620",
     "cantidad_despachada": "1620",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796432",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2245,8 +2589,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796432",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2258,8 +2604,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796432",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2271,8 +2619,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1620",
     "cantidad_despachada": "1620",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796309",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2284,8 +2634,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796309",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FALCON",
@@ -2297,8 +2649,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "220",
     "cantidad_despachada": "220",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796483",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2310,8 +2664,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796315",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2323,8 +2679,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796315",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2336,8 +2694,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "100",
     "cantidad_despachada": "100",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796315",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2349,8 +2709,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "160",
     "cantidad_despachada": "160",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796383",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2362,8 +2724,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "500",
     "cantidad_despachada": "500",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796475",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2375,8 +2739,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796315",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2388,8 +2754,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796571",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2401,8 +2769,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "900",
     "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796571",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2414,8 +2784,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796571",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2427,8 +2799,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796475",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2440,8 +2814,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "750",
     "cantidad_despachada": "750",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796383",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2453,8 +2829,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796571",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2466,8 +2844,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796383",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2479,8 +2859,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796475",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2492,8 +2874,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "900",
     "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796307",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT PLANIC",
@@ -2505,8 +2889,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "2400",
     "cantidad_despachada": "2400",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796571",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2518,8 +2904,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "240",
     "cantidad_despachada": "240",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796570",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2531,8 +2919,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "30",
     "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796570",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2544,8 +2934,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "30",
     "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796372",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2557,8 +2949,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796474",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2570,8 +2964,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796474",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2583,8 +2979,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796570",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2596,8 +2994,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796372",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2609,8 +3009,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796314",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2622,8 +3024,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "40",
     "cantidad_despachada": "40",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796314",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2635,8 +3039,10 @@
     "fecha_despacho": "16/09/2026",
     "cantidad_solicitada": "80",
     "cantidad_despachada": "80",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796254",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2648,8 +3054,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796372",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2661,8 +3069,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "40",
     "cantidad_despachada": "40",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796314",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2674,8 +3084,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "210",
     "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796314",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2687,8 +3099,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "40",
     "cantidad_despachada": "40",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796314",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2700,8 +3114,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796372",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2713,8 +3129,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796314",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2726,8 +3144,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "210",
     "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796314",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2739,8 +3159,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796474",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2752,8 +3174,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "210",
     "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796306",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT UBATE",
@@ -2765,8 +3189,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "810",
     "cantidad_despachada": "810",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796570",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FOLLAJ",
@@ -2778,8 +3204,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "900",
     "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796414",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FOLLAJ",
@@ -2791,8 +3219,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796292",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FOLLAJ",
@@ -2804,8 +3234,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796550",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FOLLAJ",
@@ -2817,8 +3249,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796478",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FOLLAJ",
@@ -2830,8 +3264,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "30",
     "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796347",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FOLLAJ",
@@ -2843,8 +3279,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796292",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT LUISA",
@@ -2856,8 +3294,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1020",
     "cantidad_despachada": "1020",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796327",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT LUISA",
@@ -2869,8 +3309,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "1020",
     "cantidad_despachada": "1020",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796528",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT LUISA",
@@ -2882,8 +3324,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796310",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT LUISA",
@@ -2895,8 +3339,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796484",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT LUISA",
@@ -2908,8 +3354,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796488",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT LUISA",
@@ -2921,8 +3369,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796361",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT LUISA",
@@ -2934,8 +3384,10 @@
     "fecha_despacho": "21/09/2026",
     "cantidad_solicitada": "1020",
     "cantidad_despachada": "810",
+    "porcentaje_despachado": 79,
     "nota_despacho": "796361, 796528, 796621",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -2947,8 +3399,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796431",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -2960,8 +3414,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796526",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -2973,8 +3429,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796325",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -2986,8 +3444,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "100",
     "cantidad_despachada": "100",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796360",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -2999,8 +3459,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "2000",
     "cantidad_despachada": "2000",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796482",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -3012,8 +3474,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796308",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -3025,8 +3489,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796526",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -3038,8 +3504,10 @@
     "fecha_despacho": "",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
     "nota_despacho": "796360, 796463",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -3051,8 +3519,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796487",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -3064,8 +3534,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796487",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -3077,8 +3549,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "750",
     "cantidad_despachada": "750",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796360",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -3090,8 +3564,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796431",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MOUNTA",
@@ -3103,8 +3579,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796487",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3116,8 +3594,10 @@
     "fecha_despacho": "16/09/2026",
     "cantidad_solicitada": "40",
     "cantidad_despachada": "40",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796258",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3129,8 +3609,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "80",
     "cantidad_despachada": "80",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796470",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3142,8 +3624,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "30",
     "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796395",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3155,8 +3639,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796395",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3168,8 +3654,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796258, 796545",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3181,8 +3669,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796395",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3194,8 +3684,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796394",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3207,8 +3699,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "180",
     "cantidad_despachada": "180",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796469",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3220,8 +3714,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796394",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3233,8 +3729,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796394",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3246,8 +3744,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "240",
     "cantidad_despachada": "240",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796544",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3259,8 +3759,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "210",
     "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796469",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3272,8 +3774,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "30",
     "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796544",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3285,8 +3789,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "200",
     "cantidad_despachada": "200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796257, 796544",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT TANDIL",
@@ -3298,8 +3804,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "800",
     "cantidad_despachada": "800",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796469",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT J CHIA",
@@ -3311,8 +3819,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796514",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT J CHIA",
@@ -3324,8 +3834,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "30",
     "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796476",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT J CHIA",
@@ -3337,8 +3849,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "240",
     "cantidad_despachada": "236",
+    "porcentaje_despachado": 98,
     "nota_despacho": "796345, 796460",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT J CHIA",
@@ -3350,8 +3864,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796345",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT J CHIA",
@@ -3363,8 +3879,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796412",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT J CHIA",
@@ -3376,8 +3894,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796548",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT J CHIA",
@@ -3389,8 +3909,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "510",
     "cantidad_despachada": "507",
+    "porcentaje_despachado": 99,
     "nota_despacho": "796345, 796461",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT J CHIA",
@@ -3402,8 +3924,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "30",
     "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796412",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3415,8 +3939,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "210",
     "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796502",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3428,8 +3954,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796384",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3441,8 +3969,10 @@
     "fecha_despacho": "16/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796259",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3454,8 +3984,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796502",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3467,8 +3999,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "500",
     "cantidad_despachada": "500",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796288",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3480,8 +4014,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "800",
     "cantidad_despachada": "800",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796502",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3493,8 +4029,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "800",
     "cantidad_despachada": "800",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796288",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3506,8 +4044,10 @@
     "fecha_despacho": "16/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796259",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3519,8 +4059,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796416",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3532,8 +4074,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "990",
     "cantidad_despachada": "990",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796353",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3545,8 +4089,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "100",
     "cantidad_despachada": "100",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796358",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3558,8 +4104,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "2000",
     "cantidad_despachada": "2000",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796452",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3571,8 +4119,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796516",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3584,8 +4134,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796358",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3597,8 +4149,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796358",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3610,8 +4164,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796493",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3623,8 +4179,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796515",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3636,8 +4194,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796357",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3649,8 +4209,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796492",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3662,8 +4224,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796357",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3675,8 +4239,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796293",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3688,8 +4254,10 @@
     "fecha_despacho": "16/09/2026",
     "cantidad_solicitada": "210",
     "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796274",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3701,8 +4269,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "210",
     "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796293",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3714,8 +4284,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796451",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3727,8 +4299,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796352",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3740,8 +4314,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "760",
     "cantidad_despachada": "760",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796352",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3753,8 +4329,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "210",
     "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796492",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3766,8 +4344,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796415",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3779,8 +4359,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "750",
     "cantidad_despachada": "750",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796352",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3792,8 +4374,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "3000",
     "cantidad_despachada": "3000",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796534",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3805,8 +4389,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "3600",
     "cantidad_despachada": "3600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796535",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3818,8 +4404,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "180",
     "cantidad_despachada": "180",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796494",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3831,8 +4419,10 @@
     "fecha_despacho": "16/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796275",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3844,8 +4434,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "160",
     "cantidad_despachada": "158",
+    "porcentaje_despachado": 99,
     "nota_despacho": "796294, 796424",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3857,8 +4449,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796517",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3870,8 +4464,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796494",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3883,8 +4479,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796359",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3896,8 +4494,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796494",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MG",
@@ -3909,8 +4509,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796359",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CASABL",
@@ -3922,8 +4524,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "200",
     "cantidad_despachada": "200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796291",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CASABL",
@@ -3935,8 +4539,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796450",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CASABL",
@@ -3948,8 +4554,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796477",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CASABL",
@@ -3961,8 +4569,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796346",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CASABL",
@@ -3974,8 +4584,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796477",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CASABL",
@@ -3987,8 +4599,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796346",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CASABL",
@@ -4000,8 +4614,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796549",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CASABL",
@@ -4013,8 +4629,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796291",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CASABL",
@@ -4026,8 +4644,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796413",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -4039,8 +4659,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "1000",
     "cantidad_despachada": "1000",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796558",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -4052,8 +4674,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1000",
     "cantidad_despachada": "1000",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796289",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -4065,8 +4689,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "270",
     "cantidad_despachada": "270",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796558",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -4078,8 +4704,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "570",
     "cantidad_despachada": "570",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796559",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -4091,8 +4719,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "270",
     "cantidad_despachada": "270",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796559",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -4104,8 +4734,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "570",
     "cantidad_despachada": "560",
+    "porcentaje_despachado": 98,
     "nota_despacho": "796290",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -4117,8 +4749,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "360",
     "cantidad_despachada": "360",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796559",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -4130,8 +4764,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "390",
     "cantidad_despachada": "390",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796380",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -4143,8 +4779,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "180",
     "cantidad_despachada": "180",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796559",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -4156,8 +4794,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "540",
     "cantidad_despachada": "540",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796429",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT CHIA",
@@ -4169,8 +4809,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "240",
     "cantidad_despachada": "240",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796429",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT AJIBE",
@@ -4182,8 +4824,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "240",
     "cantidad_despachada": "240",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796316",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT AJIBE",
@@ -4195,8 +4839,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "240",
     "cantidad_despachada": "240",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796471",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT AJIBE",
@@ -4208,8 +4854,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796572",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT AJIBE",
@@ -4221,8 +4869,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "180",
     "cantidad_despachada": "180",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796376",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT AJIBE",
@@ -4234,8 +4884,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796376",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT AJIBE",
@@ -4247,8 +4899,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "90",
     "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796376",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT AJIBE",
@@ -4260,8 +4914,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796471",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT AJIBE",
@@ -4273,8 +4929,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796572",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4286,8 +4944,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "120",
     "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796500",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4299,8 +4959,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "60",
     "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796500",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4312,8 +4974,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "180",
     "cantidad_despachada": "180",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796382",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4325,8 +4989,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796382",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4338,8 +5004,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "210",
     "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796279",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4351,8 +5019,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "210",
     "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796279",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4364,8 +5034,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796566",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4377,8 +5049,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796322",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4390,8 +5064,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "400",
     "cantidad_despachada": "400",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796313",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4403,8 +5079,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "400",
     "cantidad_despachada": "400",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796473",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4416,8 +5094,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796569",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4429,8 +5109,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796371",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4442,8 +5124,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796371",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4455,8 +5139,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "30",
     "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796371",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4468,8 +5154,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "300",
     "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796473",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT FLOVAL",
@@ -4481,8 +5169,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796304",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MANA",
@@ -4494,8 +5184,10 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "1800",
     "cantidad_despachada": "1800",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796568",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MANA",
@@ -4507,8 +5199,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "240",
     "cantidad_despachada": "240",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796504",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MANA",
@@ -4520,8 +5214,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796280",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MANA",
@@ -4533,8 +5229,10 @@
     "fecha_despacho": "18/09/2026",
     "cantidad_solicitada": "800",
     "cantidad_despachada": "800",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796504",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT MANA",
@@ -4546,8 +5244,10 @@
     "fecha_despacho": "17/09/2026",
     "cantidad_solicitada": "1200",
     "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796280",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   },
   {
     "finca": "GHT COLOMB",
@@ -4559,7 +5259,9 @@
     "fecha_despacho": "19/09/2026",
     "cantidad_solicitada": "480",
     "cantidad_despachada": "480",
+    "porcentaje_despachado": 100,
     "nota_despacho": "796567",
-    "fecha_estimada_despacho": ""
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 79
   }
 ]
