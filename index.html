@@ -212,8 +212,33 @@
   .hint{
     font-size:12.5px;
     color: var(--mist);
-    margin: 0 0 44px;
+    margin: 0 0 16px;
   }
+
+  .filtro-finca{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin: 0 0 36px;
+  }
+  .filtro-finca label{
+    font-size:12.5px;
+    color: var(--mist);
+    white-space:nowrap;
+  }
+  .filtro-finca select{
+    flex:1;
+    min-width: 180px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px;
+    padding: 10px 14px;
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    color: var(--ink);
+  }
+  .filtro-finca select:focus{ border-color: var(--navy); }
 
   /* ---------- RESULT TICKET ---------- */
   #result{ min-height: 4px; }
@@ -582,7 +607,14 @@
         <button type="submit" class="btn">Buscar</button>
         <div class="suggestions" id="suggestions"></div>
       </form>
-      <p class="hint">Búsqueda por descripción del producto u orden de compra · datos actualizados a diario</p>
+      <p class="hint">Búsqueda por descripción del producto (ej. 4CABAS37), orden de compra (ej. SB01. GS - 38760) o nombre de la finca (ej. Pardo, Acacia) · datos actualizados a diario</p>
+
+      <div class="filtro-finca">
+        <label for="fincaFilter">O selecciona una finca:</label>
+        <select id="fincaFilter">
+          <option value="">Todas las fincas</option>
+        </select>
+      </div>
 
       <div id="result"></div>
     </div>
@@ -618,7 +650,7 @@
   // DATOS
   // ------------------------------------------------------------
   let DATA = [];
-  fetch('datos.json').then(r=>r.json()).then(d=>{ DATA = d; }).catch(()=>{ DATA = []; });
+  fetch('datos.json').then(r=>r.json()).then(d=>{ DATA = d; poblarFiltroFinca(); }).catch(()=>{ DATA = []; });
 
   function normalizar(texto){
     return (texto || '').toLowerCase().replace(/\s+/g, '');
@@ -790,7 +822,7 @@
     return `
       <div class="not-found">
         <strong>No encontramos ese pedido</strong>
-        No hay ningún registro con "${q}". Verifica el número de elemento o de orden de compra e intenta de nuevo.
+        No hay ningún registro con "${q}". Verifica el número de SAG o de orden de compra e intenta de nuevo.
       </div>
     `;
   }
@@ -903,16 +935,24 @@
   document.getElementById('lookupForm').addEventListener('submit', function(e){
     e.preventDefault();
     closeSuggestions();
+    document.getElementById('fincaFilter').value = "";
     const rawQuery = document.getElementById('query').value.trim();
     const q = normalizar(rawQuery);
     if(!q){ resultBox.innerHTML = ""; return; }
+
+    const tokensQ = rawQuery.toLowerCase().split(/\s+/).filter(Boolean);
+    function fincaCoincide(item){
+      const fincaLower = (item.finca || '').toLowerCase();
+      return tokensQ.length > 0 && tokensQ.every(t => fincaLower.includes(t));
+    }
 
     const matches = DATA.filter(item =>
       normalizar(item.elemento) === q ||
       normalizar(item.ow) === q ||
       coincideParcial(item.orden_compra, q) ||
       coincideParcial(extraerCodigoProducto(item.descripcion), q) ||
-      coincideParcial(item.descripcion, q)
+      coincideParcial(item.descripcion, q) ||
+      fincaCoincide(item)
     );
 
     if(matches.length === 0){
@@ -921,6 +961,39 @@
       resultBox.innerHTML = renderTicket(matches[0]);
     } else {
       renderMatchList(matches, rawQuery);
+    }
+  });
+
+  // ------------------------------------------------------------
+  // FILTRO POR FINCA (desplegable)
+  // ------------------------------------------------------------
+  function poblarFiltroFinca(){
+    const select = document.getElementById('fincaFilter');
+    const fincas = [...new Set(DATA.map(item => item.finca).filter(Boolean))].sort();
+    fincas.forEach(finca => {
+      const opt = document.createElement('option');
+      opt.value = finca;
+      opt.textContent = finca;
+      select.appendChild(opt);
+    });
+  }
+
+  document.getElementById('fincaFilter').addEventListener('change', function(){
+    const fincaSeleccionada = this.value;
+    if(!fincaSeleccionada){ resultBox.innerHTML = ""; return; }
+
+    // Limpia la busqueda por texto para que no queden mezclados
+    document.getElementById('query').value = "";
+    closeSuggestions();
+
+    const matches = DATA.filter(item => item.finca === fincaSeleccionada);
+
+    if(matches.length === 0){
+      resultBox.innerHTML = renderNotFound(fincaSeleccionada);
+    } else if(matches.length === 1){
+      resultBox.innerHTML = renderTicket(matches[0]);
+    } else {
+      renderMatchList(matches, fincaSeleccionada);
     }
   });
 </script>
