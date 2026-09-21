@@ -115,6 +115,30 @@
     margin: 0 0 10px;
     color: var(--navy-deep);
   }
+
+  .row-title{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom: 10px; }
+  .avance-badge{
+    display:flex; align-items:center; gap:11px; flex:none;
+    background: var(--paper-raised); border: 1.5px solid var(--line);
+    border-radius: 40px; padding: 7px 16px 7px 7px;
+  }
+  .ring-wrap{ position:relative; width:52px; height:52px; }
+  .ring-wrap svg{ transform: rotate(-90deg); }
+  .ring-track{ fill:none; stroke: var(--line-soft); stroke-width:5.5; }
+  .ring-fill{
+    fill:none; stroke: url(#ringGrad); stroke-width:5.5; stroke-linecap:round;
+    stroke-dasharray: 141.4; stroke-dashoffset: 141.4;
+    filter: drop-shadow(0 0 3px rgba(222,159,31,.45));
+    transition: stroke-dashoffset .6s ease;
+  }
+  .ring-pct{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace; font-weight:700; font-size:13px; color: var(--pine-deep);
+  }
+  .avance-label{ line-height:1.3; }
+  .avance-label .l1{ font-size:10px; letter-spacing:.05em; text-transform:uppercase; color: var(--marigold-deep); font-weight:600; display:block; }
+  .avance-label .l2{ font-size:11.5px; color: var(--ink-soft); display:block; }
+
   .lede{
     font-size:15.5px;
     color: var(--ink-soft);
@@ -599,7 +623,28 @@
   <main>
     <div class="wrap">
       <img src="logo-sw.png" class="watermark" alt="" aria-hidden="true">
-      <h1>Encuentra tu pedido</h1>
+      <div class="row-title">
+        <h1>Encuentra tu pedido</h1>
+        <div class="avance-badge">
+          <div class="ring-wrap">
+            <svg width="52" height="52" viewBox="0 0 52 52">
+              <defs>
+                <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#B57F14"/>
+                  <stop offset="100%" stop-color="#DE9F1F"/>
+                </linearGradient>
+              </defs>
+              <circle class="ring-track" cx="26" cy="26" r="22.5"/>
+              <circle class="ring-fill" cx="26" cy="26" r="22.5" id="ringFillGlobal"/>
+            </svg>
+            <div class="ring-pct" id="ringPctGlobal">—</div>
+          </div>
+          <div class="avance-label">
+            <span class="l1">Avance</span>
+            <span class="l2">general GHT</span>
+          </div>
+        </div>
+      </div>
       <p class="lede">Ingresa el número de SAG o de orden de compra para ver en qué etapa va tu pedido.</p>
 
       <form class="lookup" id="lookupForm" autocomplete="off">
@@ -650,7 +695,17 @@
   // DATOS
   // ------------------------------------------------------------
   let DATA = [];
-  fetch('datos.json').then(r=>r.json()).then(d=>{ DATA = d; poblarFiltroFinca(); }).catch(()=>{ DATA = []; });
+  fetch('datos.json').then(r=>r.json()).then(d=>{ DATA = d; poblarFiltroFinca(); actualizarAnilloGlobal(); }).catch(()=>{ DATA = []; });
+
+  function actualizarAnilloGlobal(){
+    if (!DATA.length) return;
+    const pct = DATA[0].porcentaje_global;
+    if (pct == null) return;
+    const circle = document.getElementById('ringFillGlobal');
+    const circunferencia = 141.4;
+    circle.style.strokeDashoffset = circunferencia * (1 - pct / 100);
+    document.getElementById('ringPctGlobal').textContent = pct + '%';
+  }
 
   function normalizar(texto){
     return (texto || '').toLowerCase().replace(/\s+/g, '');
