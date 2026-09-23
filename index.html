@@ -78,6 +78,11 @@
   .mark img{ height:34px; width:auto; display:block; }
 
   .avance-sobrio{ display:flex; align-items:center; gap:8px; flex:none; }
+  .avance-sobrio-label{
+    font-size:12px;
+    color:#CBD8CF;
+    white-space:nowrap;
+  }
   .ring-sobrio{ position:relative; width:46px; height:46px; }
   .ring-sobrio svg{ transform: rotate(-90deg); }
   .ring-sobrio .track{ fill:none; stroke: rgba(255,255,255,.22); stroke-width:4; }
@@ -610,6 +615,7 @@
       </div>
     </div>
     <div class="avance-sobrio">
+      <span class="avance-sobrio-label">Avance general</span>
       <div class="ring-sobrio">
         <svg width="46" height="46" viewBox="0 0 46 46">
           <circle class="track" cx="23" cy="23" r="18"/>
