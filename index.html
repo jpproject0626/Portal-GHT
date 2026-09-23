@@ -59,12 +59,14 @@
   header.ribbon{
     background: var(--navy);
     color: #EFF3EE;
-    padding: 18px 24px;
+    padding: 9px 24px;
     display:flex;
     align-items:center;
+    justify-content:space-between;
     gap:14px;
     border-bottom: 4px solid var(--marigold);
   }
+  .header-left{ display:flex; align-items:center; gap:14px; }
   .mark{
     flex:none;
     display:flex; align-items:center; justify-content:center;
@@ -74,6 +76,17 @@
   a.mark{ cursor:pointer; }
   a.mark:hover, a.mark:focus-visible{ opacity: .85; }
   .mark img{ height:34px; width:auto; display:block; }
+
+  .avance-sobrio{ display:flex; align-items:center; gap:8px; flex:none; }
+  .ring-sobrio{ position:relative; width:46px; height:46px; }
+  .ring-sobrio svg{ transform: rotate(-90deg); }
+  .ring-sobrio .track{ fill:none; stroke: rgba(255,255,255,.22); stroke-width:4; }
+  .ring-sobrio .fill{ fill:none; stroke: var(--marigold); stroke-width:4; stroke-linecap:round;
+    stroke-dasharray:113.1; stroke-dashoffset:113.1; }
+  .ring-sobrio .pct{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:11.5px; color:#fff;
+  }
 
   /* ---------- WATERMARK ---------- */
   .watermark{
@@ -115,33 +128,6 @@
     margin: 0 0 10px;
     color: var(--navy-deep);
   }
-
-  .row-title{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom: 10px; }
-  .avance-badge{
-    display:flex; align-items:center; gap:8px; flex:none;
-    background: var(--paper-raised); border: 1.5px solid var(--line);
-    border-radius: 32px; padding: 5px 12px 5px 5px;
-  }
-  /* Estilos aislados bajo .avance-badge: .ring-wrap/.ring-fill/.ring-pct
-     tambien los usa el anillo de despacho de cada ticket (mas abajo en
-     esta hoja, a 110px) - sin este scope, esa regla posterior le ganaba
-     el tamano a esta insignia. */
-  .avance-badge .ring-wrap{ position:relative; width:40px; height:40px; }
-  .avance-badge .ring-wrap svg{ width:40px; height:40px; transform: rotate(-90deg); }
-  .avance-badge .ring-track{ fill:none; stroke: var(--line-soft); stroke-width:4; }
-  .avance-badge .ring-fill{
-    fill:none; stroke: url(#ringGrad); stroke-width:4; stroke-linecap:round;
-    stroke-dasharray: 100.5; stroke-dashoffset: 100.5;
-    filter: drop-shadow(0 0 2px rgba(27,67,50,.35));
-    transition: stroke-dashoffset .6s ease;
-  }
-  .avance-badge .ring-pct{
-    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-    font-family:'IBM Plex Mono', monospace; font-weight:700; font-size:10px; color: var(--pine-deep);
-  }
-  .avance-label{ line-height:1.3; }
-  .avance-label .l1{ font-size:9px; letter-spacing:.05em; text-transform:uppercase; color: var(--pine); font-weight:600; display:block; }
-  .avance-label .l2{ font-size:10.5px; color: var(--ink-soft); display:block; }
 
   .lede{
     font-size:15.5px;
@@ -616,10 +602,21 @@
 
   <!-- ================= HEADER ================= -->
   <header class="ribbon">
-    <a class="mark" href="index.html" onclick="sessionStorage.removeItem('ghtAccess')" aria-label="Cerrar sesión y volver al inicio"><img src="logo-sw.png" alt="Smurfit Westrock"></a>
-    <div class="ribbon-text">
-      <div class="brand"><strong>Smurfit Westrock</strong> · Portal GHT</div>
-      <div class="sub">Seguimiento de pedidos — Growers Hub Trading</div>
+    <div class="header-left">
+      <a class="mark" href="index.html" onclick="sessionStorage.removeItem('ghtAccess')" aria-label="Cerrar sesión y volver al inicio"><img src="logo-sw.png" alt="Smurfit Westrock"></a>
+      <div class="ribbon-text">
+        <div class="brand"><strong>Smurfit Westrock</strong> · Portal GHT</div>
+        <div class="sub">Seguimiento de pedidos — Growers Hub Trading</div>
+      </div>
+    </div>
+    <div class="avance-sobrio">
+      <div class="ring-sobrio">
+        <svg width="46" height="46" viewBox="0 0 46 46">
+          <circle class="track" cx="23" cy="23" r="18"/>
+          <circle class="fill" id="avanceRingFill" cx="23" cy="23" r="18"/>
+        </svg>
+        <div class="pct" id="avancePct">—</div>
+      </div>
     </div>
   </header>
 
@@ -627,28 +624,7 @@
   <main>
     <div class="wrap">
       <img src="logo-sw.png" class="watermark" alt="" aria-hidden="true">
-      <div class="row-title">
-        <h1>Encuentra tu pedido</h1>
-        <div class="avance-badge">
-          <div class="ring-wrap">
-            <svg width="40" height="40" viewBox="0 0 40 40">
-              <defs>
-                <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#1B4332"/>
-                  <stop offset="100%" stop-color="#2F6B4F"/>
-                </linearGradient>
-              </defs>
-              <circle class="ring-track" cx="20" cy="20" r="16"/>
-              <circle class="ring-fill" cx="20" cy="20" r="16" id="ringFillGlobal"/>
-            </svg>
-            <div class="ring-pct" id="ringPctGlobal">—</div>
-          </div>
-          <div class="avance-label">
-            <span class="l1">Avance</span>
-            <span class="l2">general GHT</span>
-          </div>
-        </div>
-      </div>
+      <h1>Encuentra tu pedido</h1>
       <p class="lede">Ingresa el número de SAG o de orden de compra para ver en qué etapa va tu pedido.</p>
 
       <form class="lookup" id="lookupForm" autocomplete="off">
@@ -699,16 +675,24 @@
   // DATOS
   // ------------------------------------------------------------
   let DATA = [];
-  fetch('datos.json').then(r=>r.json()).then(d=>{ DATA = d; poblarFiltroFinca(); actualizarAnilloGlobal(); }).catch(()=>{ DATA = []; });
+  fetch('datos.json').then(r=>r.json()).then(d=>{
+    DATA = d;
+    poblarFiltroFinca();
+    actualizarAvanceGeneral(DATA.length ? DATA[0].porcentaje_global : null);
+  }).catch(()=>{ DATA = []; });
 
-  function actualizarAnilloGlobal(){
-    if (!DATA.length) return;
-    const pct = DATA[0].porcentaje_global;
-    if (pct == null) return;
-    const circle = document.getElementById('ringFillGlobal');
-    const circunferencia = 100.5; // 2 * PI * r (r=16)
-    circle.style.strokeDashoffset = circunferencia * (1 - pct / 100);
-    document.getElementById('ringPctGlobal').textContent = pct + '%';
+  function actualizarAvanceGeneral(pct) {
+    const ring = document.getElementById('avanceRingFill');
+    const txt = document.getElementById('avancePct');
+    if (!ring || !txt) return;
+    const circ = 113.1;
+    if (pct === null || pct === undefined) {
+      txt.textContent = '—';
+      ring.style.strokeDashoffset = circ;
+      return;
+    }
+    ring.style.strokeDashoffset = circ * (1 - pct / 100);
+    txt.textContent = pct + '%';
   }
 
   function normalizar(texto){
