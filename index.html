@@ -329,6 +329,15 @@
     margin: 0 2px;
   }
   .track .seg.done{ background: var(--pine); }
+  /* Tramos con ancho proporcional en vez de iguales: el tramo 2
+     (En produccion -> Producido) es mas ancho porque esa etapa toma
+     mucho mas tiempo en la realidad que las demas. El track alterna
+     nodo/tramo/nodo/... asi que los tramos caen en las posiciones
+     pares (2,4,6,8) entre los 5 nodos (impares). */
+  .track > div.seg:nth-child(2){ flex: 15; } /* Tramo 1: Pedido recibido -> En produccion */
+  .track > div.seg:nth-child(4){ flex: 45; } /* Tramo 2: En produccion -> Producido */
+  .track > div.seg:nth-child(6){ flex: 20; } /* Tramo 3: Producido -> Parcialmente despachado */
+  .track > div.seg:nth-child(8){ flex: 20; } /* Tramo 4: Parcialmente despachado -> Despachado */
   .track-labels{
     display:flex; justify-content:space-between;
     font-size:10.5px; color: var(--mist);
