@@ -607,25 +607,21 @@
     .ticket{ padding: 22px 18px 18px; }
     .perf{ margin: 0 -18px 16px; }
     /* En pantallas angostas el carril proporcional (0/15/60/80/100%)
-       deja muy poco espacio a los titulos mas cortos de carril
-       (ej. "Despachado" en el 10%), obligando a partir palabras a la
-       mitad. Ahi se prioriza que se lea bien sobre la alineacion exacta
-       bajo cada punto: se reparte el espacio equitativo entre los 5
-       titulos (como antes de tener carriles proporcionales), dejando
-       que cada uno envuelva segun su propio contenido. El track de
-       puntos/segmentos arriba SI mantiene sus proporciones 15/45/20/20. */
-    .track-labels{
-      position:static;
-      height:auto;
-      display:flex;
-      justify-content:space-between;
-    }
+       deja muy poco espacio en px reales a los titulos de carril mas
+       chico. Se mantiene el "left:%" (heredado del inline style) para
+       que cada titulo siga alineado bajo su punto real, y el ancho
+       pasa de el % fijo a min-content para que nunca parta una palabra
+       a la mitad. Con el texto a 10.5px el espacio no alcanzaba ni asi
+       (dos pares quedaban solapados unos 15px) - se baja un poco el
+       tamano de letra SOLO de estos titulos para ganar el margen que
+       falta. El track de puntos/segmentos arriba mantiene sus
+       proporciones 15/45/20/20 y su tamano sin cambios. */
+    .track-labels{ font-size: 9px; }
     .track-labels span{
-      position:static;
-      left:auto !important;
-      width:min-content !important;
-      max-width:none !important;
-      flex:0 0 auto;
+      width: min-content !important;
+      max-width: none !important;
+      left: var(--dot-pos) !important;
+      transform: translateX(var(--dot-base-x)) translateX(var(--extra-shift, 0px)) !important;
     }
   }
 </style>
@@ -815,11 +811,58 @@
       const leftBound = boundaries[i];
       const rightBound = boundaries[i+1];
       const widthPct = rightBound - leftBound;
+      // Para pantallas angostas (ver media query mobile): centrar sobre
+      // la posicion REAL del punto (no el borde del carril), ya que ahi
+      // el ancho se reduce a min-content y el carril completo ya no
+      // aplica. --dot-pos/--dot-base-x quedan sin uso en desktop.
+      // --extra-shift la ajusta despues resolverColisionesTrackLabels()
+      // si dos etiquetas vecinas quedan encimadas.
+      let dotBaseX = '-50%';
+      if (i === 0) dotBaseX = '0%';
+      else if (i === nPos-1) dotBaseX = '-100%';
       const colorStyle = activo ? `color:${ESTADO_COLOR[e]};` : '';
-      return `<span class="${activo ? 'active' : ''}" style="left:${leftBound}%; width:${widthPct}%; ${colorStyle}">${e}</span>`;
+      return `<span class="${activo ? 'active' : ''}" style="left:${leftBound}%; width:${widthPct}%; --dot-pos:${LABEL_POS[i]}%; --dot-base-x:${dotBaseX}; --extra-shift:0px; ${colorStyle}">${e}</span>`;
     }).join('');
     return `<div class="track">${track}</div><div class="track-labels">${labels}</div>`;
   }
+
+  // ------------------------------------------------------------
+  // ANTI-SOLAPE DE TITULOS DEL TRACK EN MOBILE
+  // ------------------------------------------------------------
+  // En pantallas angostas (ver @media max-width:480px) los titulos se
+  // centran sobre la posicion real de su punto con ancho min-content;
+  // el espacio disponible es tan ajustado ahi que, segun como el
+  // navegador mida cada palabra, dos vecinos pueden terminar apenas
+  // encimados por unos pocos px. Esta funcion mide las cajas ya
+  // renderizadas y separa cualquier par que se toque, corriendo cada
+  // una la mitad hacia su lado via --extra-shift (sin tocar left ni el
+  // centrado base), hasta que no quede ningun solape.
+  function resolverColisionesTrackLabels(trackLabelsEl){
+    if (window.innerWidth > 480) return;
+    const spans = Array.from(trackLabelsEl.querySelectorAll('span'));
+    for (let pass = 0; pass < 4; pass++){
+      let movio = false;
+      for (let i = 0; i < spans.length - 1; i++){
+        const a = spans[i].getBoundingClientRect();
+        const b = spans[i+1].getBoundingClientRect();
+        const overlap = a.right - b.left;
+        if (overlap > 0.5){
+          const shift = overlap / 2 + 1;
+          const actualA = parseFloat(spans[i].style.getPropertyValue('--extra-shift')) || 0;
+          const actualB = parseFloat(spans[i+1].style.getPropertyValue('--extra-shift')) || 0;
+          spans[i].style.setProperty('--extra-shift', (actualA - shift) + 'px');
+          spans[i+1].style.setProperty('--extra-shift', (actualB + shift) + 'px');
+          movio = true;
+        }
+      }
+      if (!movio) break;
+    }
+  }
+
+  const resultObserver = new MutationObserver(() => {
+    document.querySelectorAll('#result .track-labels').forEach(resolverColisionesTrackLabels);
+  });
+  resultObserver.observe(document.getElementById('result'), { childList:true, subtree:true });
 
   function colorSegunPct(pct){
     if (pct === 0) return '#C7CBB7';       // gris, sin cambios
