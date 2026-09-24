@@ -339,10 +339,24 @@
   .track > div.seg:nth-child(6){ flex: 20; } /* Tramo 3: Producido -> Parcialmente despachado */
   .track > div.seg:nth-child(8){ flex: 20; } /* Tramo 4: Parcialmente despachado -> Despachado */
   .track-labels{
-    display:flex; justify-content:space-between;
+    position:relative;
+    height: 28px;
     font-size:10.5px; color: var(--mist);
     margin: 6px 0 22px;
     letter-spacing:.01em;
+  }
+  .track-labels span{
+    position:absolute;
+    top:0;
+    text-align:center;
+    white-space:normal;
+    overflow-wrap:break-word;
+    line-height:1.25;
+    /* Nunca mas angosto que su propia palabra mas larga, aunque el
+       carril proporcional calculado (via inline width:%) le de menos -
+       evita partir palabras a la mitad cuando el carril queda muy
+       ajustado (ej. "Despachado" en el tramo final, angosto). */
+    min-width: min-content;
   }
   .track-labels span.active{ color: var(--pine); font-weight:600; }
 
@@ -592,6 +606,27 @@
     dl.fields{ grid-template-columns: 1fr 1fr; gap:14px; }
     .ticket{ padding: 22px 18px 18px; }
     .perf{ margin: 0 -18px 16px; }
+    /* En pantallas angostas el carril proporcional (0/15/60/80/100%)
+       deja muy poco espacio a los titulos mas cortos de carril
+       (ej. "Despachado" en el 10%), obligando a partir palabras a la
+       mitad. Ahi se prioriza que se lea bien sobre la alineacion exacta
+       bajo cada punto: se reparte el espacio equitativo entre los 5
+       titulos (como antes de tener carriles proporcionales), dejando
+       que cada uno envuelva segun su propio contenido. El track de
+       puntos/segmentos arriba SI mantiene sus proporciones 15/45/20/20. */
+    .track-labels{
+      position:static;
+      height:auto;
+      display:flex;
+      justify-content:space-between;
+    }
+    .track-labels span{
+      position:static;
+      left:auto !important;
+      width:min-content !important;
+      max-width:none !important;
+      flex:0 0 auto;
+    }
   }
 </style>
 </head>
@@ -754,9 +789,34 @@
         track += `<div class="seg${segListo ? ' done' : ''}"${segListo ? ` style="background:${ESTADO_COLOR[e]}"` : ''}></div>`;
       }
     });
-    const labels = ESTADOS.map(e => {
+    // Posiciones acumuladas (%) que coinciden con los tramos 15/45/20/20
+    // del track. Cada titulo ocupa todo el "carril" disponible hasta el
+    // punto medio con su vecino (no solo un ancho simetrico centrado),
+    // para aprovechar el espacio de sobra del tramo largo del medio y
+    // que el primer/ultimo titulo (los mas apretados) tengan algo mas
+    // de aire para envolver en 2 lineas sin partir palabras a la mitad.
+    const LABEL_POS = [0, 15, 60, 80, 100];
+    const nPos = LABEL_POS.length;
+    // Limites naturales = punto medio entre posiciones vecinas. Se
+    // ajustan un poco los dos extremos (los carriles mas apretados,
+    // "Pedido recibido" y "Despachado") quitandole aire al carril
+    // vecino del medio (que sobra de espacio), para que ninguno de los
+    // dos necesite crecer mas alla de su carril via min-width.
+    const boundaries = [0];
+    for (let i = 0; i < nPos - 1; i++){
+      boundaries.push((LABEL_POS[i] + LABEL_POS[i+1]) / 2);
+    }
+    boundaries.push(100);
+    boundaries[1] = Math.max(boundaries[1], 9);
+    boundaries[nPos-1] = Math.min(boundaries[nPos-1], 87);
+
+    const labels = ESTADOS.map((e,i) => {
       const activo = e === estado;
-      return `<span class="${activo ? 'active' : ''}"${activo ? ` style="color:${ESTADO_COLOR[e]}"` : ''}>${e}</span>`;
+      const leftBound = boundaries[i];
+      const rightBound = boundaries[i+1];
+      const widthPct = rightBound - leftBound;
+      const colorStyle = activo ? `color:${ESTADO_COLOR[e]};` : '';
+      return `<span class="${activo ? 'active' : ''}" style="left:${leftBound}%; width:${widthPct}%; ${colorStyle}">${e}</span>`;
     }).join('');
     return `<div class="track">${track}</div><div class="track-labels">${labels}</div>`;
   }
