@@ -868,13 +868,9 @@
     // Nota estatica (no depende de datos del pedido, es la misma para
     // todos): estimado de duracion del tramo largo "En produccion ->
     // Producido" (15% a 60%), centrada en su punto medio (37.5%, fijo
-    // via CSS en .track-annot span). Toma el color del punto/tramo
-    // activo solo mientras el pedido esta en ese tramo (En produccion
-    // o Producido); en el resto de estados usa el gris por defecto.
-    const annotColorStyle = (estado === "En producción" || estado === "Producido")
-      ? ` style="color:${ESTADO_COLOR[estado]}"`
-      : '';
-    const annot = `<div class="track-annot"><span${annotColorStyle}>~1.5 días</span></div>`;
+    // via CSS en .track-annot span). Toma el color del estado actual
+    // del pedido (el mismo ESTADO_COLOR que pinta el punto/tramo).
+    const annot = `<div class="track-annot"><span style="color:${ESTADO_COLOR[estado]}">~1.5 días</span></div>`;
     return `<div class="track">${track}</div>${annot}<div class="track-labels">${labels}</div>`;
   }
 
