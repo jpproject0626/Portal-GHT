@@ -77,21 +77,6 @@
   a.mark:hover, a.mark:focus-visible{ opacity: .85; }
   .mark img{ height:34px; width:auto; display:block; }
 
-  .avance-sobrio{ display:flex; align-items:center; gap:8px; flex:none; }
-  .avance-label{
-    font-size: 10.5px; letter-spacing:.03em; text-transform:uppercase;
-    opacity:.85;
-  }
-  .ring-sobrio{ position:relative; width:46px; height:46px; }
-  .ring-sobrio svg{ transform: rotate(-90deg); }
-  .ring-sobrio .track{ fill:none; stroke: rgba(255,255,255,.22); stroke-width:4; }
-  .ring-sobrio .fill{ fill:none; stroke: var(--marigold); stroke-width:4; stroke-linecap:round;
-    stroke-dasharray:113.1; stroke-dashoffset:113.1; }
-  .ring-sobrio .pct{
-    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-    font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:11.5px; color:#fff;
-  }
-
   /* ---------- WATERMARK ---------- */
   .watermark{
     position:absolute;
@@ -139,6 +124,45 @@
     margin: 0 0 30px;
     max-width: 46ch;
     line-height:1.55;
+  }
+
+  /* ---------- AVANCE GENERAL (junto a "Encuentra tu pedido") ---------- */
+  .avance-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:16px;
+    margin: 0 0 14px;
+  }
+  .avance-header h1{ margin:0; }
+  .avance-info{ flex:none; text-align:right; }
+  .avance-pct{
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600;
+    font-size: clamp(22px, 4vw, 28px);
+    line-height:1;
+    color: var(--navy-deep);
+  }
+  .avance-info .avance-label{
+    font-size:10.5px;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    color: var(--marigold);
+    margin-top:4px;
+  }
+  .avance-bar-track{
+    height:7px;
+    border-radius:4px;
+    background: var(--line);
+    overflow:hidden;
+    margin: 0 0 22px;
+  }
+  .avance-bar-fill{
+    height:100%;
+    width:0%;
+    border-radius:4px;
+    background: var(--marigold);
+    transition: width .4s ease;
   }
 
   /* ---------- SEARCH ---------- */
@@ -653,23 +677,22 @@
         <div class="sub">Seguimiento de pedidos — Growers Hub Trading</div>
       </div>
     </div>
-    <div class="avance-sobrio">
-      <span class="avance-label">Avance general</span>
-      <div class="ring-sobrio">
-        <svg width="46" height="46" viewBox="0 0 46 46">
-          <circle class="track" cx="23" cy="23" r="18"/>
-          <circle class="fill" id="avanceRingFill" cx="23" cy="23" r="18"/>
-        </svg>
-        <div class="pct" id="avancePct">—</div>
-      </div>
-    </div>
   </header>
 
   <!-- ================= MAIN ================= -->
   <main>
     <div class="wrap">
       <img src="logo-sw.png" class="watermark" alt="" aria-hidden="true">
-      <h1>Encuentra tu pedido</h1>
+      <div class="avance-header">
+        <h1>Encuentra tu pedido</h1>
+        <div class="avance-info">
+          <div class="avance-pct" id="avancePct">—</div>
+          <div class="avance-label">Avance general</div>
+        </div>
+      </div>
+      <div class="avance-bar-track">
+        <div class="avance-bar-fill" id="avanceBarFill"></div>
+      </div>
       <p class="lede">Ingresa el número de SAG o de orden de compra para ver en qué etapa va tu pedido.</p>
 
       <form class="lookup" id="lookupForm" autocomplete="off">
@@ -727,16 +750,15 @@
   }).catch(()=>{ DATA = []; });
 
   function actualizarAvanceGeneral(pct) {
-    const ring = document.getElementById('avanceRingFill');
+    const barFill = document.getElementById('avanceBarFill');
     const txt = document.getElementById('avancePct');
-    if (!ring || !txt) return;
-    const circ = 113.1;
+    if (!barFill || !txt) return;
     if (pct === null || pct === undefined) {
       txt.textContent = '—';
-      ring.style.strokeDashoffset = circ;
+      barFill.style.width = '0%';
       return;
     }
-    ring.style.strokeDashoffset = circ * (1 - pct / 100);
+    barFill.style.width = pct + '%';
     txt.textContent = pct + '%';
   }
 
