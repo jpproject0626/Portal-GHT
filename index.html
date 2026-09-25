@@ -282,6 +282,23 @@
   }
   .filtro-finca select:focus{ border-color: var(--navy); }
 
+  .btn-export{
+    margin-left: auto;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:12.5px;
+    padding: 9px 14px;
+    border: 1.5px solid var(--navy);
+    border-radius: var(--radius);
+    background: transparent;
+    color: var(--navy);
+    cursor:pointer;
+    white-space:nowrap;
+    transition: background .15s ease, color .15s ease;
+  }
+  .btn-export:hover{ background: var(--navy); color:#fff; }
+  .btn-export:active{ transform: translateY(1px); }
+
   /* ---------- RESULT TICKET ---------- */
   #result{ min-height: 4px; }
 
@@ -669,6 +686,7 @@
     }
   }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
 
@@ -727,6 +745,7 @@
         <select id="fincaFilter">
           <option value="">Selecciona una finca…</option>
         </select>
+        <button type="button" class="btn-export" id="exportExcelBtn">Exportar consolidado a Excel</button>
       </div>
 
       <div id="result"></div>
@@ -1207,6 +1226,33 @@
     } else {
       renderMatchList(matches, fincaSeleccionada);
     }
+  });
+
+  // ------------------------------------------------------------
+  // EXPORTAR CONSOLIDADO A EXCEL (todos los pedidos de datos.json,
+  // sin importar busqueda/filtro activo)
+  // ------------------------------------------------------------
+  document.getElementById('exportExcelBtn').addEventListener('click', function(){
+    if (!DATA.length){
+      alert('Los datos todavía no han terminado de cargar. Intenta de nuevo en unos segundos.');
+      return;
+    }
+    const filas = DATA.map(item => ({
+      'Finca': item.finca || '',
+      'Descripción': item.descripcion || '',
+      'Orden de compra': item.orden_compra || '',
+      'Elemento': item.elemento || '',
+      'Orden de trabajo': item.ow || '',
+      'Estado': item.estado || '',
+      'Cantidad solicitada': item.cantidad_solicitada || '',
+      'Cantidad despachada': item.cantidad_despachada || '',
+      'Fecha del último envío': item.fecha_despacho || '',
+      'Notas de despacho': item.nota_despacho || ''
+    }));
+    const hoja = XLSX.utils.json_to_sheet(filas);
+    const libro = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(libro, hoja, 'Consolidado');
+    XLSX.writeFile(libro, 'GHT_consolidado_semana.xlsx');
   });
 </script>
 </body>
