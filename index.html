@@ -260,9 +260,16 @@
   .filtro-finca{
     display:flex;
     align-items:center;
-    gap:10px;
+    justify-content:space-between;
+    gap:10px 14px;
     flex-wrap:wrap;
     margin: 0 0 36px;
+  }
+  .filtro-finca-campo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
   }
   .filtro-finca label{
     font-size:12.5px;
@@ -282,21 +289,24 @@
   }
   .filtro-finca select:focus{ border-color: var(--navy); }
 
+  /* Accion secundaria: mismo lenguaje visual solido que "Buscar" pero
+     mas chica, para que se lea como parte del portal y no como un
+     elemento suelto sobre fondo blanco. */
   .btn-export{
-    margin-left: auto;
     font-family:'Inter', sans-serif;
     font-weight:600;
-    font-size:12.5px;
-    padding: 9px 14px;
-    border: 1.5px solid var(--navy);
+    font-size:12px;
+    padding: 7px 12px;
+    border:none;
     border-radius: var(--radius);
-    background: transparent;
-    color: var(--navy);
+    background: var(--navy);
+    color:#fff;
     cursor:pointer;
     white-space:nowrap;
-    transition: background .15s ease, color .15s ease;
+    flex:none;
+    transition: background .15s ease;
   }
-  .btn-export:hover{ background: var(--navy); color:#fff; }
+  .btn-export:hover{ background: var(--navy-light); }
   .btn-export:active{ transform: translateY(1px); }
 
   /* ---------- RESULT TICKET ---------- */
@@ -741,10 +751,12 @@
       <p class="hint">Búsqueda por descripción del producto, orden de compra o nombre de la finca · datos actualizados a diario</p>
 
       <div class="filtro-finca">
-        <label for="fincaFilter">O selecciona una finca:</label>
-        <select id="fincaFilter">
-          <option value="">Selecciona una finca…</option>
-        </select>
+        <div class="filtro-finca-campo">
+          <label for="fincaFilter">O selecciona una finca:</label>
+          <select id="fincaFilter">
+            <option value="">Selecciona una finca…</option>
+          </select>
+        </div>
         <button type="button" class="btn-export" id="exportExcelBtn">Exportar consolidado a Excel</button>
       </div>
 
