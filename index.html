@@ -340,7 +340,7 @@
   .track{
     display:flex;
     align-items:center;
-    margin: 4px 0 22px;
+    margin: 4px 0 4px;
   }
   .track .node{
     width:9px; height:9px; border-radius:50%;
@@ -362,6 +362,25 @@
   .track > div.seg:nth-child(4){ flex: 45; } /* Tramo 2: En produccion -> Producido */
   .track > div.seg:nth-child(6){ flex: 20; } /* Tramo 3: Producido -> Parcialmente despachado */
   .track > div.seg:nth-child(8){ flex: 20; } /* Tramo 4: Parcialmente despachado -> Despachado */
+
+  /* Anotacion estatica (misma para todos los pedidos, no depende de
+     datos): estimado de duracion del tramo largo "En produccion ->
+     Producido". Fila propia, separada de .track-labels, para que se
+     lea como una nota aparte y no como el titulo de una etapa. */
+  .track-annot{
+    position:relative;
+    height: 13px;
+    margin: 0 0 6px;
+    font-size: 10px;
+    color: var(--mist);
+  }
+  .track-annot span{
+    position:absolute;
+    top:0;
+    left: 37.5%;
+    transform: translateX(-50%);
+    white-space:nowrap;
+  }
   .track-labels{
     position:relative;
     height: 28px;
@@ -640,6 +659,7 @@
        tamano de letra SOLO de estos titulos para ganar el margen que
        falta. El track de puntos/segmentos arriba mantiene sus
        proporciones 15/45/20/20 y su tamano sin cambios. */
+    .track-annot{ font-size: 9px; }
     .track-labels{ font-size: 9px; }
     .track-labels span{
       width: min-content !important;
@@ -845,7 +865,12 @@
       const colorStyle = activo ? `color:${ESTADO_COLOR[e]};` : '';
       return `<span class="${activo ? 'active' : ''}" style="left:${leftBound}%; width:${widthPct}%; --dot-pos:${LABEL_POS[i]}%; --dot-base-x:${dotBaseX}; --extra-shift:0px; ${colorStyle}">${e}</span>`;
     }).join('');
-    return `<div class="track">${track}</div><div class="track-labels">${labels}</div>`;
+    // Nota estatica (no depende de datos del pedido, es la misma para
+    // todos): estimado de duracion del tramo largo "En produccion ->
+    // Producido" (15% a 60%), centrada en su punto medio (37.5%, fijo
+    // via CSS en .track-annot span).
+    const annot = `<div class="track-annot"><span>~1.5 días</span></div>`;
+    return `<div class="track">${track}</div>${annot}<div class="track-labels">${labels}</div>`;
   }
 
   // ------------------------------------------------------------
