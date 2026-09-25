@@ -7318,5 +7318,35 @@
     "nota_despacho": "796907",
     "fecha_estimada_despacho": "",
     "porcentaje_global": 17
+  },
+  {
+    "finca": "GHT CHIA",
+    "elemento": "13005281",
+    "descripcion": "4CACAJ54 CAJA PARA HORMONAS",
+    "ow": "42336",
+    "orden_compra": "GR18. G8 - 50867",
+    "estado": "Despachado",
+    "fecha_despacho": "25/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "796980",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 17
+  },
+  {
+    "finca": "GHT CHIA",
+    "elemento": "13005281",
+    "descripcion": "4CACAJ54 CAJA PARA HORMONAS",
+    "ow": "42336",
+    "orden_compra": "GR18. G8 - 50866",
+    "estado": "Despachado",
+    "fecha_despacho": "25/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "796979",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 17
   }
 ]
