@@ -7,6 +7,12 @@ PROGRAMACION.xlsx
 *.xlsm
 despachos_historico.json
 
+# Manuales de marca de Smurfit Westrock: material interno/corporativo,
+# no para el repo publico. Su contenido relevante ya quedo resumido en
+# BRAND.md.
+SW_Brand_Guidelines_v01_2024*.pdf
+SW_Logo_Guide_R1.pdf
+
 # Basura de entorno local
 .Rhistory
 portal_ght_web.zip
