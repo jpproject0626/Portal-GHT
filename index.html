@@ -9,6 +9,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root{
+    /* Paleta original del portal. El unico color de marca reemplazado es
+       el naranja -> azul, y solo en 2 lugares puntuales (franja del header
+       y bloque de "avance general"), aplicado directo en esas reglas en
+       vez de a traves de --marigold -- ver ese cambio en su propia regla. */
     --paper: #EFF1EA;
     --paper-raised: #F8F9F4;
     --ink: #1E2A22;
@@ -64,7 +68,7 @@
     align-items:center;
     justify-content:space-between;
     gap:14px;
-    border-bottom: 4px solid var(--marigold);
+    border-bottom: 4px solid #08B2FF; /* Light Blue (marca) -- unico reemplazo de marigold en el header */
   }
   .header-left{ display:flex; align-items:center; gap:14px; }
   .mark{
@@ -136,18 +140,21 @@
   }
   .avance-header h1{ margin:0; }
   .avance-info{ flex:none; text-align:right; }
+  /* Unico bloque, junto con el header, donde el naranja se reemplaza por
+     azul de marca: Blue 02 (#003DA5) para el texto y Light Blue (#08B2FF)
+     para el relleno de la barra -- hardcodeado, no via --marigold. */
   .avance-pct{
     font-family:'IBM Plex Mono', monospace;
     font-weight:600;
     font-size: clamp(22px, 4vw, 28px);
     line-height:1;
-    color: var(--navy-deep);
+    color: #003DA5;
   }
   .avance-info .avance-label{
     font-size:10.5px;
     letter-spacing:.03em;
     text-transform:uppercase;
-    color: var(--marigold);
+    color: #003DA5;
     margin-top:4px;
   }
   .avance-bar-track{
@@ -161,7 +168,7 @@
     height:100%;
     width:0%;
     border-radius:4px;
-    background: var(--marigold);
+    background: #08B2FF;
     transition: width .4s ease;
   }
 
@@ -361,7 +368,7 @@
   .stamp.produccion{ color: #DE9F1F; background: rgba(222,159,31,.12); }
   .stamp.producido{ color: #8A8F5C; background: rgba(138,143,92,.12); }
   .stamp.parcial{ color: #4E8B5C; background: rgba(78,139,92,.12); }
-  .stamp.despachado{ color: #0F5257; background: rgba(15,82,87,.10); }
+  .stamp.despachado{ color: #009056; background: rgba(0,144,86,.10); } /* verde oficial del logo GHT */
 
   /* progress track */
   .track{
@@ -950,7 +957,7 @@
   function colorSegunPct(pct){
     if (pct === 0) return '#C7CBB7';       // gris, sin cambios
     if (pct < 100) return '#4E8B5C';       // verde de "Parcialmente despachado"
-    return '#0F5257';                       // teal de "Despachado"
+    return '#009056';                       // verde oficial del logo GHT, solo al 100% (Despachado)
   }
 
   function renderRing(item){
