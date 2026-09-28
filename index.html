@@ -61,16 +61,37 @@
 
   /* ---------- HEADER RIBBON ---------- */
   header.ribbon{
-    background: var(--navy);
+    position:relative;
+    overflow:hidden;
+    background: linear-gradient(90deg, #00205B 0%, #041E42 40%, #00205B 100%);
     color: #EFF3EE;
     padding: 9px 24px;
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:14px;
-    border-bottom: 4px solid #08B2FF; /* Light Blue -- unico reemplazo de marigold en el header */
+    border-bottom: 3px solid #08B2FF; /* Light Blue -- unico reemplazo de marigold en el header */
   }
-  .header-left{ display:flex; align-items:center; gap:14px; }
+  /* Formas circulares decorativas sutiles, al estilo del sitio corporativo. */
+  header.ribbon::before{
+    content:"";
+    position:absolute;
+    top:-46px; right:-24px;
+    width:150px; height:150px;
+    border-radius:50%;
+    background: rgba(8,178,255,.22);
+    pointer-events:none;
+  }
+  header.ribbon::after{
+    content:"";
+    position:absolute;
+    bottom:-60px; left:18%;
+    width:120px; height:120px;
+    border-radius:50%;
+    background: rgba(0,112,212,.18);
+    pointer-events:none;
+  }
+  .header-left{ position:relative; z-index:1; display:flex; align-items:center; gap:14px; }
   .mark{
     flex:none;
     display:flex; align-items:center; justify-content:center;
@@ -139,22 +160,33 @@
     margin: 0 0 14px;
   }
   .avance-header h1{ margin:0; }
-  .avance-info{ flex:none; text-align:right; }
   /* Unico bloque, junto con el header, donde el naranja se reemplaza por
-     azul de marca -- hardcodeado, no via --marigold. Texto en navy (mejor
-     contraste), relleno de la barra en Light Blue. */
+     azul de marca -- hardcodeado, no via --marigold. Caja tenue con
+     degradado sutil para que el numero/etiqueta se lean como un chip. */
+  .avance-info{
+    flex:none;
+    text-align:right;
+    padding: 8px 14px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(8,178,255,.10), rgba(0,32,91,.04));
+    border: 1px solid rgba(0,112,212,.18);
+  }
   .avance-pct{
     font-family:'IBM Plex Mono', monospace;
     font-weight:600;
     font-size: clamp(22px, 4vw, 28px);
     line-height:1;
-    color: #00205B;
+    background: linear-gradient(90deg, #003DA5, #08B2FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
   .avance-info .avance-label{
     font-size:10.5px;
     letter-spacing:.03em;
     text-transform:uppercase;
-    color: #00205B;
+    color: #003DA5;
     margin-top:4px;
   }
   .avance-bar-track{
@@ -163,12 +195,13 @@
     background: var(--line);
     overflow:hidden;
     margin: 0 0 22px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.08);
   }
   .avance-bar-fill{
     height:100%;
     width:0%;
     border-radius:4px;
-    background: #08B2FF;
+    background: linear-gradient(90deg, #003DA5, #08B2FF);
     transition: width .4s ease;
   }
 
@@ -250,12 +283,13 @@
     padding: 0 22px;
     border:none;
     border-radius: var(--radius);
-    background: var(--navy);
+    background: linear-gradient(135deg, #003DA5, #00205B);
+    box-shadow: 0 2px 6px rgba(0,32,91,.25);
     color:#fff;
     cursor:pointer;
-    transition: background .15s ease;
+    transition: filter .15s ease;
   }
-  .btn:hover{ background: var(--navy-light); }
+  .btn:hover{ filter: brightness(1.12); }
   .btn:active{ transform: translateY(1px); }
 
   .hint{
@@ -306,14 +340,15 @@
     padding: 7px 12px;
     border:none;
     border-radius: var(--radius);
-    background: var(--navy);
+    background: linear-gradient(135deg, #003DA5, #00205B);
+    box-shadow: 0 2px 6px rgba(0,32,91,.25);
     color:#fff;
     cursor:pointer;
     white-space:nowrap;
     flex:none;
-    transition: background .15s ease;
+    transition: filter .15s ease;
   }
-  .btn-export:hover{ background: var(--navy-light); }
+  .btn-export:hover{ filter: brightness(1.12); }
   .btn-export:active{ transform: translateY(1px); }
 
   /* ---------- RESULT TICKET ---------- */
