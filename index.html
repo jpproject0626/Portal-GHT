@@ -366,9 +366,9 @@
   }
   .stamp.recibido{ color: #54677A; background: rgba(84,103,122,.08); }
   .stamp.produccion{ color: #DE9F1F; background: rgba(222,159,31,.12); }
-  .stamp.producido{ color: #8A8F5C; background: rgba(138,143,92,.12); }
-  .stamp.parcial{ color: #4E8B5C; background: rgba(78,139,92,.12); }
-  .stamp.despachado{ color: #009056; background: rgba(0,144,86,.10); } /* verde oficial del logo GHT */
+  .stamp.producido{ color: #009056; background: rgba(0,144,86,.12); }
+  .stamp.parcial{ color: #009056; background: rgba(0,144,86,.12); }
+  .stamp.despachado{ color: #009056; background: rgba(0,144,86,.10); } /* verde oficial del logo GHT, unico en toda la tarjeta */
 
   /* progress track */
   .track{
@@ -849,9 +849,12 @@
   const ESTADO_COLOR = {
     "Pedido recibido": "#54677A",
     "En producción": "#DE9F1F",
-    "Producido": "#8A8F5C",
-    "Parcialmente despachado": "#4E8B5C",
-    "Despachado": "#0F5257"
+    /* Un solo verde de marca (GHT) para los 3 estados de "verde": antes
+       cada uno tenia un tono distinto (oliva/verde/teal), lo cual se veia
+       inconsistente contra el verde ya usado en el badge y el anillo. */
+    "Producido": "#009056",
+    "Parcialmente despachado": "#009056",
+    "Despachado": "#009056"
   };
 
   function renderTrack(estado){
@@ -956,8 +959,8 @@
 
   function colorSegunPct(pct){
     if (pct === 0) return '#C7CBB7';       // gris, sin cambios
-    if (pct < 100) return '#4E8B5C';       // verde de "Parcialmente despachado"
-    return '#009056';                       // verde oficial del logo GHT, solo al 100% (Despachado)
+    if (pct < 100) return '#009056';       // verde oficial del logo GHT, mismo tono en toda la tarjeta
+    return '#009056';                       // verde oficial del logo GHT
   }
 
   function renderRing(item){
