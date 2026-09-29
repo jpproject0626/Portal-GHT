@@ -13,7 +13,7 @@
        el naranja -> azul, y solo en 2 lugares puntuales (franja del header
        y bloque de "avance general"), aplicado directo en esas reglas en
        vez de a traves de --marigold -- ver ese cambio en su propia regla. */
-    --paper: #EFF1EA;
+    --paper: #F2F6FB;
     --paper-raised: #F8F9F4;
     --ink: #1E2A22;
     --ink-soft: #445048;
@@ -40,9 +40,6 @@
   body{
     margin:0;
     background: var(--paper);
-    background-image:
-      radial-gradient(circle at 1px 1px, rgba(27,67,50,0.05) 1px, transparent 0);
-    background-size: 22px 22px;
     color: var(--ink);
     font-family: 'Inter', system-ui, sans-serif;
     min-height:100vh;
@@ -305,8 +302,7 @@
     display:flex;
     align-items:center;
     gap:8px;
-    min-width:0;
-    flex:1 1 auto;
+    flex:none;
   }
   .filtro-finca label{
     font-size:13px;
@@ -316,9 +312,8 @@
   }
   .filtro-finca select{
     width: auto;
-    min-width:0;
-    max-width: 100%;
-    flex:1 1 auto;
+    min-width:220px;
+    flex:none;
     font-family:'Inter', sans-serif;
     font-size:13px;
     padding: 8px 10px;
