@@ -1,33 +1,18 @@
 [
   {
-    "finca": "GHT RIO FR",
-    "elemento": "13028870",
-    "descripcion": "TAPA STD FLOREXPO MECANIZADA CAB1",
-    "ow": "42355",
-    "orden_compra": "RQ01. GR - 30835",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "26/09/2026",
-    "cantidad_solicitada": "2000",
-    "cantidad_despachada": "1980",
-    "porcentaje_despachado": 99,
-    "nota_despacho": "796682, 797109",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
     "finca": "GHT PRESH",
     "elemento": "13023247",
     "descripcion": "PARTICIONES CJ EXHIBIDORA TALLO ROSAS 390X312X260",
     "ow": "585042A-01",
     "orden_compra": "Z1-2771",
     "estado": "Parcialmente despachado",
-    "fecha_despacho": "23/09/2026",
+    "fecha_despacho": "29/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "315",
-    "porcentaje_despachado": 52,
-    "nota_despacho": "796825",
+    "cantidad_despachada": "480",
+    "porcentaje_despachado": 80,
+    "nota_despacho": "796825, 797313",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PRESH",
@@ -36,13 +21,13 @@
     "ow": "585042B-01",
     "orden_compra": "Z1-2771",
     "estado": "Parcialmente despachado",
-    "fecha_despacho": "23/09/2026",
+    "fecha_despacho": "29/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "315",
-    "porcentaje_despachado": 52,
-    "nota_despacho": "796825",
+    "cantidad_despachada": "480",
+    "porcentaje_despachado": 80,
+    "nota_despacho": "796825, 797313",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PRESH",
@@ -51,103 +36,13 @@
     "ow": "585042C-01",
     "orden_compra": "Z1-2771",
     "estado": "Parcialmente despachado",
-    "fecha_despacho": "23/09/2026",
+    "fecha_despacho": "29/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "315",
-    "porcentaje_despachado": 52,
-    "nota_despacho": "796825",
+    "cantidad_despachada": "480",
+    "porcentaje_despachado": 80,
+    "nota_despacho": "796825, 797313",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT RIO FR",
-    "elemento": "13028786",
-    "descripcion": "4CATAP182 TAPA STD QUEENS MECANIZADA CAB2",
-    "ow": "",
-    "orden_compra": "RQ01. GR - 30835",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "26/09/2026",
-    "cantidad_solicitada": "140",
-    "cantidad_despachada": "120",
-    "porcentaje_despachado": 86,
-    "nota_despacho": "797105",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT RIO FR",
-    "elemento": "11215221",
-    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
-    "ow": "42315",
-    "orden_compra": "RQ01. GR - 30963",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "300",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797216",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT RIO FR",
-    "elemento": "11210401",
-    "descripcion": "4CATAP95 TAPA 1/4 .DESIGNER C720",
-    "ow": "42314",
-    "orden_compra": "RQ01. GR - 30963",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "300",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797216",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT RIO FR",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "RQ01. GR - 30963",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "3900",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT RIO FR",
-    "elemento": "11215221",
-    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
-    "ow": "42315",
-    "orden_compra": "RQ01. GR - 30963",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "2520",
-    "cantidad_despachada": "1380",
-    "porcentaje_despachado": 55,
-    "nota_despacho": "797216",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT RIO FR",
-    "elemento": "13028870",
-    "descripcion": "TAPA STD FLOREXPO MECANIZADA CAB1",
-    "ow": "42355",
-    "orden_compra": "RQ01. GR - 30963",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "26/09/2026",
-    "cantidad_solicitada": "5000",
-    "cantidad_despachada": "4980",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797109",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -162,97 +57,7 @@
     "porcentaje_despachado": 91,
     "nota_despacho": "797108",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT RIO FR",
-    "elemento": "13028786",
-    "descripcion": "4CATAP182 TAPA STD QUEENS MECANIZADA CAB2",
-    "ow": "",
-    "orden_compra": "RQ01. GR - 30963",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "26/09/2026",
-    "cantidad_solicitada": "2000",
-    "cantidad_despachada": "1980",
-    "porcentaje_despachado": 99,
-    "nota_despacho": "797105",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT BOJACA",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "FL01. GZ - 30087",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT BOJACA",
-    "elemento": "13028563",
-    "descripcion": "4CATAP172 TAPA 1-4 THE VALLEY SPRINGS 97X24X10.5",
-    "ow": "42349",
-    "orden_compra": "FL01. GZ - 30087",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "900",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MELODY",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "ML01. GN - 30374",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "90",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MELODY",
-    "elemento": "11532501",
-    "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
-    "ow": "42318",
-    "orden_compra": "ML01. GN - 30374",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "160",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT PARDO",
-    "elemento": "13019731",
-    "descripcion": "4CATAP149 TAPA TABACO REFORZADA BENCHMARK 105X25X24 C930",
-    "ow": "42347",
-    "orden_compra": "SB01. GS - 38941",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "600",
-    "cantidad_despachada": "480",
-    "porcentaje_despachado": 80,
-    "nota_despacho": "797211",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PARDO",
@@ -260,44 +65,14 @@
     "descripcion": "4CATAP144 TAPA MARITIMA BENCHMARK 86 X 36 X 19",
     "ow": "42337",
     "orden_compra": "SB01. GS - 38941",
-    "estado": "En producción",
+    "estado": "Producido",
     "fecha_despacho": "",
     "cantidad_solicitada": "600",
     "cantidad_despachada": "",
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT PARDO",
-    "elemento": "12108701",
-    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
-    "ow": "42327",
-    "orden_compra": "SB01. GS - 38941",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT PARDO",
-    "elemento": "11215221",
-    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
-    "ow": "42315",
-    "orden_compra": "SB01. GS - 38941",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT GENERA",
@@ -305,80 +80,20 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "FG01. GB - 16285",
-    "estado": "Pedido recibido",
+    "estado": "Producido",
     "fecha_despacho": "",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "",
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT GENERA",
-    "elemento": "12108801",
-    "descripcion": "4CATAP133 TAPA 1/4 GOLDEN",
-    "ow": "42328",
-    "orden_compra": "FG01. GB - 16285",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
     "elemento": "13003036",
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
-    "orden_compra": "LC01. GK - 42659",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "900",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT ACACIA",
-    "elemento": "13007534",
-    "descripcion": "4CATAP108 TAPA STD FALCON 97 X 48 X 21  CAB 2",
-    "ow": "42342",
-    "orden_compra": "FA01. GK - 42658",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT ACACIA",
-    "elemento": "13007210",
-    "descripcion": "4CABAS36 BASE STD- CAB 2",
-    "ow": "42340",
-    "orden_compra": "FA01. GK - 42658",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "160",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT ACACIA",
-    "elemento": "13028563",
-    "descripcion": "4CATAP172 TAPA 1-4 THE VALLEY SPRINGS 97X24X10.5",
-    "ow": "42349",
     "orden_compra": "FA01. GK - 42658",
     "estado": "Producido",
     "fecha_despacho": "",
@@ -387,67 +102,7 @@
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT ACACIA",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "FA01. GK - 42658",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT ACACIA",
-    "elemento": "13003038",
-    "descripcion": "4CACAJ35  FOLDER 1/8  QUEENS C720",
-    "ow": "42335",
-    "orden_compra": "FA01. GK - 42658",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT ACACIA",
-    "elemento": "12108801",
-    "descripcion": "4CATAP133 TAPA 1/4 GOLDEN",
-    "ow": "42328",
-    "orden_compra": "FA01. GK - 42658",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT ACACIA",
-    "elemento": "13028563",
-    "descripcion": "4CATAP172 TAPA 1-4 THE VALLEY SPRINGS 97X24X10.5",
-    "ow": "42349",
-    "orden_compra": "LC01. GK - 42659",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "150",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PRESH",
@@ -455,14 +110,14 @@
     "descripcion": "MASTER BULK ITALIA EK",
     "ow": "584761A-01",
     "orden_compra": "Z101-X5 - 2767",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "29/09/2026",
     "cantidad_solicitada": "1020",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "1015",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797313",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PRESH",
@@ -477,172 +132,7 @@
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT CIPRES",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "CP01. G5 - 32120",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "30",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT CIPRES",
-    "elemento": "13007210",
-    "descripcion": "4CABAS36 BASE STD- CAB 2",
-    "ow": "42340",
-    "orden_compra": "CP01. G5 - 32120",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "200",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FALCON",
-    "elemento": "13007210",
-    "descripcion": "4CABAS36 BASE STD- CAB 2",
-    "ow": "42340",
-    "orden_compra": "LN01. X1 - 66822",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "200",
-    "cantidad_despachada": "200",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797218",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FALCON",
-    "elemento": "11532501",
-    "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
-    "ow": "42318",
-    "orden_compra": "P001. X1 - 66824",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "700",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FALCON",
-    "elemento": "13007210",
-    "descripcion": "4CABAS36 BASE STD- CAB 2",
-    "ow": "42340",
-    "orden_compra": "TM01. X1 - 66823",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "400",
-    "cantidad_despachada": "400",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797219",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FALCON",
-    "elemento": "12009701",
-    "descripcion": "4CATAP109 TAPA 1/4 FALCON 97 X 24",
-    "ow": "42322",
-    "orden_compra": "TM01. X1 - 66823",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "300",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797219",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FALCON",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "AJ01. X1 - 66821",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "1350",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT PLANIC",
-    "elemento": "12108701",
-    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
-    "ow": "42327",
-    "orden_compra": "PL02. XB - 22693",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "180",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT PLANIC",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "PL02. XB - 22693",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "1500",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT UBATE",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "UB01. GX - 24533",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "900",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT UBATE",
-    "elemento": "12108701",
-    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
-    "ow": "42327",
-    "orden_compra": "UB01. GX - 24533",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "150",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT BENCHM",
@@ -657,427 +147,7 @@
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT BENCHM",
-    "elemento": "13019731",
-    "descripcion": "4CATAP149 TAPA TABACO REFORZADA BENCHMARK 105X25X24 C930",
-    "ow": "42347",
-    "orden_compra": "BG01. PB - 1861",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "300",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797217",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT LUISA",
-    "elemento": "11532501",
-    "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
-    "ow": "42318",
-    "orden_compra": "SZ01. X3 - 32569",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "100",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MOUNTA",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "MO01. GO - 31630",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT TANDIL",
-    "elemento": "13007210",
-    "descripcion": "4CABAS36 BASE STD- CAB 2",
-    "ow": "42340",
-    "orden_compra": "PM01. GV - 41891",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT TANDIL",
-    "elemento": "11532501",
-    "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
-    "ow": "42318",
-    "orden_compra": "PM01. GV - 41891",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT TANDIL",
-    "elemento": "13005870",
-    "descripcion": "4CATAP144 TAPA MARITIMA BENCHMARK 86 X 36 X 19",
-    "ow": "42337",
-    "orden_compra": "PM01. GV - 41891",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "26/09/2026",
-    "cantidad_solicitada": "120",
-    "cantidad_despachada": "30",
-    "porcentaje_despachado": 25,
-    "nota_despacho": "797062",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT TANDIL",
-    "elemento": "13019730",
-    "descripcion": "4CATAP150 TAPA CUARTO REFORZADA BENCHMARK 105X26X15 C930",
-    "ow": "42346",
-    "orden_compra": "PM01. GV - 41891",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT TANDIL",
-    "elemento": "12009801",
-    "descripcion": "4CATAPF122 TAPA 1/4  POLO FARMS 97",
-    "ow": "42323",
-    "orden_compra": "PM01. GV - 41891",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "30",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT TANDIL",
-    "elemento": "13003038",
-    "descripcion": "4CACAJ35  FOLDER 1/8  QUEENS C720",
-    "ow": "42335",
-    "orden_compra": "PM01. GV - 41891",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "150",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT TANDIL",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "PM01. GV - 41891",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "840",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT TANDIL",
-    "elemento": "12108801",
-    "descripcion": "4CATAP133 TAPA 1/4 GOLDEN",
-    "ow": "42328",
-    "orden_compra": "PM01. GV - 41891",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "480",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT TANDIL",
-    "elemento": "11532101",
-    "descripcion": "4CATAP09 TAPA  STD NACIONAL",
-    "ow": "42317",
-    "orden_compra": "PM01. GV - 41891",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT TANDIL",
-    "elemento": "12108701",
-    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
-    "ow": "42327",
-    "orden_compra": "TN01. GV - 41890",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "90",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT TANDIL",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "TN01. GV - 41890",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT TANDIL",
-    "elemento": "13019730",
-    "descripcion": "4CATAP150 TAPA CUARTO REFORZADA BENCHMARK 105X26X15 C930",
-    "ow": "42346",
-    "orden_compra": "TN01. GV - 41890",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "30",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT J CHIA",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "CH01. G4 - 50805",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "210",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT J CHIA",
-    "elemento": "11215221",
-    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
-    "ow": "42315",
-    "orden_compra": "CH01. G4 - 50805",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "60",
-    "cantidad_despachada": "60",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797213",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT J CHIA",
-    "elemento": "12108701",
-    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
-    "ow": "42327",
-    "orden_compra": "CH01. G4 - 50805",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MG",
-    "elemento": "13007210",
-    "descripcion": "4CABAS36 BASE STD- CAB 2",
-    "ow": "42340",
-    "orden_compra": "ER01. GM - 102086",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MG",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "JA01. GM - 102087",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "210",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MG",
-    "elemento": "11215221",
-    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
-    "ow": "42315",
-    "orden_compra": "MG01. GM - 102088",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "300",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797215",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MG",
-    "elemento": "12200201",
-    "descripcion": "4CACAFJ44 FOLDER 1/8 FALCON",
-    "ow": "42330",
-    "orden_compra": "MG01. GM - 102088",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "300",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797215",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MG",
-    "elemento": "12108701",
-    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
-    "ow": "42327",
-    "orden_compra": "MG01. GM - 102088",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MG",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "SC01. GM - 102089",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "1050",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MG",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "HA01. GM - 102090",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "1350",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT CASABL",
-    "elemento": "11215221",
-    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
-    "ow": "42315",
-    "orden_compra": "RF01. G7 - 25654",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "210",
-    "cantidad_despachada": "210",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797214",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT CHIA",
-    "elemento": "12009401",
-    "descripcion": "4CATAP107 TAPA TBC FALCON 97X24",
-    "ow": "42320",
-    "orden_compra": "GR18. G8 - 50867",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT CHIA",
-    "elemento": "13021385",
-    "descripcion": "TAPA CUARTO SOLE FARMS NUEVA IMPRESIÓN",
-    "ow": "42348",
-    "orden_compra": "GR18. G8 - 50867",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "390",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -1085,14 +155,14 @@
     "descripcion": "4CATAPF124 TAPA TBC POLO FARMS  97",
     "ow": "42321",
     "orden_compra": "GR18. G8 - 50867",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "28/09/2026",
     "cantidad_solicitada": "240",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "30",
+    "porcentaje_despachado": 12,
+    "nota_despacho": "797252",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -1100,14 +170,14 @@
     "descripcion": "4CATAP95 TAPA 1/4 .DESIGNER C720",
     "ow": "42314",
     "orden_compra": "GR18. G8 - 50867",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "28/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "240",
+    "porcentaje_despachado": 80,
+    "nota_despacho": "797252",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -1115,14 +185,14 @@
     "descripcion": "4CATAP145 TAPA CUARTO SIN IMPRESIÓN 97 X 24 X 10.5",
     "ow": "42345",
     "orden_compra": "GR18. G8 - 50867",
-    "estado": "En producción",
+    "estado": "Producido",
     "fecha_despacho": "",
     "cantidad_solicitada": "450",
     "cantidad_despachada": "",
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -1137,22 +207,7 @@
     "porcentaje_despachado": 80,
     "nota_despacho": "797057",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT CHIA",
-    "elemento": "12199801",
-    "descripcion": "4CACAJ52  FOLDER 1/8 GOLDEN NEW",
-    "ow": "42329",
-    "orden_compra": "GR18. G8 - 50867",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -1160,14 +215,14 @@
     "descripcion": "4CATAP170 TAPA MARITIMA GOLDEN 86 X 36 X 19",
     "ow": "42352",
     "orden_compra": "GR18. G8 - 50867",
-    "estado": "En producción",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "28/09/2026",
     "cantidad_solicitada": "390",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "220",
+    "porcentaje_despachado": 56,
+    "nota_despacho": "797252",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -1175,44 +230,14 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "GR18. G8 - 50866",
-    "estado": "Pedido recibido",
+    "estado": "Producido",
     "fecha_despacho": "",
     "cantidad_solicitada": "2010",
     "cantidad_despachada": "",
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT AJIBE",
-    "elemento": "12108801",
-    "descripcion": "4CATAP133 TAPA 1/4 GOLDEN",
-    "ow": "42328",
-    "orden_compra": "AL01. G1 - 33664",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "90",
-    "cantidad_despachada": "90",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797221",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT AJIBE",
-    "elemento": "12108701",
-    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
-    "ow": "42327",
-    "orden_compra": "AL01. G1 - 33664",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "90",
-    "cantidad_despachada": "90",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797221",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT AJIBE",
@@ -1220,14 +245,14 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "AL01. G1 - 33664",
-    "estado": "Pedido recibido",
+    "estado": "Producido",
     "fecha_despacho": "",
     "cantidad_solicitada": "240",
     "cantidad_despachada": "",
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT AJIBE",
@@ -1235,149 +260,14 @@
     "descripcion": "4CATAP145 TAPA CUARTO SIN IMPRESIÓN 97 X 24 X 10.5",
     "ow": "42345",
     "orden_compra": "AL01. G1 - 33664",
-    "estado": "En producción",
+    "estado": "Producido",
     "fecha_despacho": "",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "",
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT AJIBE",
-    "elemento": "13019730",
-    "descripcion": "4CATAP150 TAPA CUARTO REFORZADA BENCHMARK 105X26X15 C930",
-    "ow": "42346",
-    "orden_compra": "AL01. G1 - 33664",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "60",
-    "cantidad_despachada": "60",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797221",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT AJIBE",
-    "elemento": "13007210",
-    "descripcion": "4CABAS36 BASE STD- CAB 2",
-    "ow": "42340",
-    "orden_compra": "AL01. G1 - 33664",
-    "estado": "Despachado",
-    "fecha_despacho": "28/09/2026",
-    "cantidad_solicitada": "600",
-    "cantidad_despachada": "600",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797221",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FLOVAL",
-    "elemento": "11532101",
-    "descripcion": "4CATAP09 TAPA  STD NACIONAL",
-    "ow": "42317",
-    "orden_compra": "QF01. GE - 68799",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "100",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FLOVAL",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "QF01. GE - 68799",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FLOVAL",
-    "elemento": "13003038",
-    "descripcion": "4CACAJ35  FOLDER 1/8  QUEENS C720",
-    "ow": "42335",
-    "orden_compra": "QF01. GE - 68799",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FLOVAL",
-    "elemento": "13021385",
-    "descripcion": "TAPA CUARTO SOLE FARMS NUEVA IMPRESIÓN",
-    "ow": "42348",
-    "orden_compra": "QF01. GE - 68799",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FLOVAL",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "QF01. GE - 68799",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FLOVAL",
-    "elemento": "12108801",
-    "descripcion": "4CATAP133 TAPA 1/4 GOLDEN",
-    "ow": "42328",
-    "orden_compra": "QF01. GE - 68799",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FLOVAL",
-    "elemento": "11532501",
-    "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
-    "ow": "42318",
-    "orden_compra": "QF01. GE - 68799",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FLOVAL",
@@ -1385,29 +275,14 @@
     "descripcion": "4CATAP170 TAPA MARITIMA GOLDEN 86 X 36 X 19",
     "ow": "42352",
     "orden_compra": "QF01. GE - 68799",
-    "estado": "En producción",
+    "estado": "Producido",
     "fecha_despacho": "",
     "cantidad_solicitada": "150",
     "cantidad_despachada": "",
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FLOVAL",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42333",
-    "orden_compra": "FV01. GE - 68798",
-    "estado": "Pedido recibido",
-    "fecha_despacho": "",
-    "cantidad_solicitada": "1500",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FLOVAL",
@@ -1422,7 +297,7 @@
     "porcentaje_despachado": 66,
     "nota_despacho": "797122",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TEMKIN",
@@ -1437,7 +312,7 @@
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TEMKIN",
@@ -1452,7 +327,7 @@
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TEMKIN",
@@ -1467,7 +342,7 @@
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TEMKIN",
@@ -1482,7 +357,7 @@
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TEMKIN",
@@ -1497,7 +372,7 @@
     "porcentaje_despachado": 0,
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TEMKIN",
@@ -1512,7 +387,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796397, 796805",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TEMKIN",
@@ -1527,22 +402,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797033",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
-    "elemento": "13028541",
-    "descripcion": "4CABAS65 BASE STD MECANIZADA",
-    "ow": "42354",
+    "elemento": "13028870",
+    "descripcion": "TAPA STD FLOREXPO MECANIZADA CAB1",
+    "ow": "42355",
     "orden_compra": "RQ01. GR - 30835",
     "estado": "Parcialmente despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "9000",
-    "cantidad_despachada": "8220",
-    "porcentaje_despachado": 91,
-    "nota_despacho": "796607, 796618",
+    "fecha_despacho": "26/09/2026",
+    "cantidad_solicitada": "2000",
+    "cantidad_despachada": "1980",
+    "porcentaje_despachado": 99,
+    "nota_despacho": "796682, 797109",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -1557,22 +432,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796618, 796682",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT RIO FR",
-    "elemento": "13028541",
-    "descripcion": "4CABAS65 BASE STD MECANIZADA",
-    "ow": "42256",
-    "orden_compra": "RQ01. GR - 30835",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "2000",
-    "cantidad_despachada": "1980",
-    "porcentaje_despachado": 99,
-    "nota_despacho": "796618",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -1587,22 +447,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796682",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT RIO FR",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42233",
-    "orden_compra": "RQ01. GR - 30835",
-    "estado": "Despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "3000",
-    "cantidad_despachada": "3000",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "796601",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MELODY",
@@ -1617,7 +462,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796700",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PARDO",
@@ -1632,7 +477,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796701",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT GENERA",
@@ -1647,7 +492,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796684",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -1662,7 +507,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796695",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT QUALIT",
@@ -1677,7 +522,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796707",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CIPRES",
@@ -1692,7 +537,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796503, 797065",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -1707,7 +552,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796693",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -1722,7 +567,7 @@
     "porcentaje_despachado": 99,
     "nota_despacho": "796693, 796732",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -1737,7 +582,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796693",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -1752,7 +597,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796790",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -1767,7 +612,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796315, 796705",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -1782,7 +627,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796705",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -1797,7 +642,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797080",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -1812,37 +657,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT UBATE",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42233",
-    "orden_compra": "UB01. GX - 24477",
-    "estado": "Despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "330",
-    "cantidad_despachada": "330",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "796664",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT UBATE",
-    "elemento": "13019733",
-    "descripcion": "4CATAP154 TAPA TBC GOLDEN 105 X 25 X 24 C930",
-    "ow": "42248",
-    "orden_compra": "UB01. GX - 24477",
-    "estado": "Despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "90",
-    "cantidad_despachada": "90",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "796664",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT LUISA",
@@ -1857,7 +672,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796361, 796528, 796621, 796694",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MOUNTA",
@@ -1872,7 +687,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796308, 796692",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MOUNTA",
@@ -1887,22 +702,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796360, 796463, 797088",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT TANDIL",
-    "elemento": "13005871",
-    "descripcion": "4CABAS53 BASE MARITIMA BENCHMARK 86 X 36 X 19",
-    "ow": "42237",
-    "orden_compra": "PM01. GV - 41699",
-    "estado": "Despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "60",
-    "cantidad_despachada": "60",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "796642",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TANDIL",
@@ -1917,7 +717,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796642, 797062",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TANDIL",
@@ -1932,7 +732,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796394, 797093",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TANDIL",
@@ -1947,7 +747,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797061",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT J CHIA",
@@ -1962,37 +762,7 @@
     "porcentaje_despachado": 99,
     "nota_despacho": "796345, 796461, 796816",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MG",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42233",
-    "orden_compra": "ER01. GM - 101742",
-    "estado": "Despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "90",
-    "cantidad_despachada": "90",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "796665",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MG",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42233",
-    "orden_compra": "HA01. GM - 101745",
-    "estado": "Despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "1620",
-    "cantidad_despachada": "1620",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "796599",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -2007,37 +777,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796681",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MG",
-    "elemento": "13005870",
-    "descripcion": "4CATAP144 TAPA MARITIMA BENCHMARK 86 X 36 X 19",
-    "ow": "42236",
-    "orden_compra": "SC01. GM - 101744",
-    "estado": "Despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "300",
-    "cantidad_despachada": "300",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "796294, 796640",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MG",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42233",
-    "orden_compra": "SC01. GM - 101744",
-    "estado": "Despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "900",
-    "cantidad_despachada": "900",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "796600",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CASABL",
@@ -2052,7 +792,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796680",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -2067,7 +807,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796685, 796806",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -2082,7 +822,7 @@
     "porcentaje_despachado": 98,
     "nota_despacho": "796558, 796629, 796813",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -2097,7 +837,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796686",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -2112,7 +852,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796686",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -2127,22 +867,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796686, 797055",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT AJIBE",
-    "elemento": "12199801",
-    "descripcion": "4CACAJ52  FOLDER 1/8 GOLDEN NEW",
-    "ow": "42228",
-    "orden_compra": "AL01. G1 - 33594",
-    "estado": "Despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "150",
-    "cantidad_despachada": "150",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "796628",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT AJIBE",
@@ -2157,37 +882,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796706",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FLOVAL",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42233",
-    "orden_compra": "QF01. GE - 68562",
-    "estado": "Despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "450",
-    "cantidad_despachada": "450",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "796662",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT FLOVAL",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42233",
-    "orden_compra": "FV01. GE - 68561",
-    "estado": "Despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "900",
-    "cantidad_despachada": "900",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "796663",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FLOVAL",
@@ -2202,22 +897,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796569, 796663, 796913",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
-  },
-  {
-    "finca": "GHT MANA",
-    "elemento": "13003036",
-    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
-    "ow": "42233",
-    "orden_compra": "LM01. GL - 39331",
-    "estado": "Despachado",
-    "fecha_despacho": "21/09/2026",
-    "cantidad_solicitada": "1800",
-    "cantidad_despachada": "1800",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "796657",
-    "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PARDO",
@@ -2232,7 +912,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796300, 796701",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PRESH",
@@ -2247,7 +927,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796825",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -2262,7 +942,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797108",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -2277,7 +957,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797105",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -2292,7 +972,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797052",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -2307,7 +987,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797052",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -2322,7 +1002,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797105",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -2337,7 +1017,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797035",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -2352,7 +1032,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797035",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -2367,7 +1047,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797147",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT RIO FR",
+    "elemento": "11215221",
+    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
+    "ow": "42315",
+    "orden_compra": "RQ01. GR - 30963",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797216",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -2382,7 +1077,37 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797121",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT RIO FR",
+    "elemento": "11210401",
+    "descripcion": "4CATAP95 TAPA 1/4 .DESIGNER C720",
+    "ow": "42314",
+    "orden_compra": "RQ01. GR - 30963",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797216",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT RIO FR",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "RQ01. GR - 30963",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "3900",
+    "cantidad_despachada": "3900",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797294",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -2397,7 +1122,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797052",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT RIO FR",
+    "elemento": "11215221",
+    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
+    "ow": "42315",
+    "orden_compra": "RQ01. GR - 30963",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "2520",
+    "cantidad_despachada": "2520",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797216, 797294",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -2412,7 +1152,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797035, 797105",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT RIO FR",
@@ -2427,7 +1167,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797164",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT RIO FR",
+    "elemento": "13028870",
+    "descripcion": "TAPA STD FLOREXPO MECANIZADA CAB1",
+    "ow": "42355",
+    "orden_compra": "RQ01. GR - 30963",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "26/09/2026",
+    "cantidad_solicitada": "5000",
+    "cantidad_despachada": "4980",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797109",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT BOJACA",
@@ -2442,7 +1197,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797112",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT BOJACA",
@@ -2457,7 +1212,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797165",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT BOJACA",
@@ -2472,7 +1227,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797112",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT BOJACA",
@@ -2487,7 +1242,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797165",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT BOJACA",
@@ -2502,7 +1257,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796849",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT BOJACA",
@@ -2517,7 +1272,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796849",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT BOJACA",
@@ -2532,7 +1287,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797165",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT BOJACA",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "FL01. GZ - 30087",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797265",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT BOJACA",
@@ -2547,7 +1317,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797112",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT BOJACA",
+    "elemento": "13028563",
+    "descripcion": "4CATAP172 TAPA 1-4 THE VALLEY SPRINGS 97X24X10.5",
+    "ow": "42349",
+    "orden_compra": "FL01. GZ - 30087",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "900",
+    "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797265",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT BOJACA",
@@ -2562,7 +1347,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796892",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MELODY",
@@ -2577,7 +1362,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797113",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MELODY",
@@ -2592,7 +1377,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797113",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MELODY",
@@ -2607,7 +1392,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797113",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT MELODY",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "ML01. GN - 30374",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "90",
+    "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797266",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MELODY",
@@ -2622,7 +1422,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797113",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MELODY",
@@ -2637,7 +1437,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797188",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MELODY",
@@ -2652,7 +1452,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797188",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MELODY",
@@ -2667,7 +1467,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797113",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MELODY",
@@ -2682,7 +1482,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796893",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT MELODY",
+    "elemento": "11532501",
+    "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
+    "ow": "42318",
+    "orden_compra": "ML01. GN - 30374",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "160",
+    "cantidad_despachada": "160",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797266",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MELODY",
@@ -2697,7 +1512,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797188",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MELODY",
@@ -2712,7 +1527,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797113",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT PARDO",
+    "elemento": "13019731",
+    "descripcion": "4CATAP149 TAPA TABACO REFORZADA BENCHMARK 105X25X24 C930",
+    "ow": "42347",
+    "orden_compra": "SB01. GS - 38941",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "600",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797211, 797267",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PARDO",
@@ -2727,7 +1557,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797166",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PARDO",
@@ -2742,7 +1572,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797114",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PARDO",
@@ -2757,7 +1587,37 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797166",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT PARDO",
+    "elemento": "12108701",
+    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
+    "ow": "42327",
+    "orden_compra": "SB01. GS - 38941",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797267",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT PARDO",
+    "elemento": "11215221",
+    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
+    "ow": "42315",
+    "orden_compra": "SB01. GS - 38941",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "120",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797267",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PARDO",
@@ -2772,7 +1632,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797114",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PARDO",
@@ -2787,7 +1647,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797114",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PARDO",
@@ -2802,7 +1662,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797114",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT SNF",
@@ -2817,7 +1677,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797167",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT SNF",
@@ -2832,7 +1692,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797115",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT SNF",
@@ -2847,7 +1707,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796850",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT SNF",
@@ -2862,7 +1722,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796894",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT SNF",
@@ -2877,7 +1737,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797115",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT GENERA",
@@ -2892,7 +1752,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797054",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT GENERA",
+    "elemento": "12108801",
+    "descripcion": "4CATAP133 TAPA 1/4 GOLDEN",
+    "ow": "42328",
+    "orden_compra": "FG01. GB - 16285",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "120",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797251",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT GENERA",
@@ -2907,7 +1782,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797054",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT GENERA",
@@ -2922,7 +1797,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797054",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -2937,7 +1812,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797091",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -2952,7 +1827,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797091",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -2967,7 +1842,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796872",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -2982,7 +1857,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797175",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -2997,7 +1872,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797091",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -3012,7 +1887,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796872, 797076",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -3027,7 +1902,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796872",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT ACACIA",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "LC01. GK - 42659",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "900",
+    "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797308",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -3042,7 +1932,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797191",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -3057,7 +1947,7 @@
     "porcentaje_despachado": 0,
     "nota_despacho": "796872, 797077",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -3072,7 +1962,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797175",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -3087,7 +1977,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797058",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT ACACIA",
+    "elemento": "13007534",
+    "descripcion": "4CATAP108 TAPA STD FALCON 97 X 48 X 21  CAB 2",
+    "ow": "42342",
+    "orden_compra": "FA01. GK - 42658",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "60",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797253",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -3102,7 +2007,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797058",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT ACACIA",
+    "elemento": "13007210",
+    "descripcion": "4CABAS36 BASE STD- CAB 2",
+    "ow": "42340",
+    "orden_compra": "FA01. GK - 42658",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "160",
+    "cantidad_despachada": "160",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797253",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -3117,7 +2037,52 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797058",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT ACACIA",
+    "elemento": "13028563",
+    "descripcion": "4CATAP172 TAPA 1-4 THE VALLEY SPRINGS 97X24X10.5",
+    "ow": "42349",
+    "orden_compra": "FA01. GK - 42658",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797253",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT ACACIA",
+    "elemento": "13003038",
+    "descripcion": "4CACAJ35  FOLDER 1/8  QUEENS C720",
+    "ow": "42335",
+    "orden_compra": "FA01. GK - 42658",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "120",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797253",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT ACACIA",
+    "elemento": "12108801",
+    "descripcion": "4CATAP133 TAPA 1/4 GOLDEN",
+    "ow": "42328",
+    "orden_compra": "FA01. GK - 42658",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "120",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797253",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT QUALIT",
@@ -3132,7 +2097,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797082",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT QUALIT",
@@ -3147,7 +2112,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797100",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CIPRES",
@@ -3162,7 +2127,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797065",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CIPRES",
@@ -3177,7 +2142,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796906",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CIPRES",
@@ -3192,7 +2157,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797095",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CIPRES",
@@ -3207,7 +2172,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797065",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CIPRES",
@@ -3222,7 +2187,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797065",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT CIPRES",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "CP01. G5 - 32120",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "30",
+    "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797289",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CIPRES",
@@ -3237,7 +2217,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797065",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT CIPRES",
+    "elemento": "13007210",
+    "descripcion": "4CABAS36 BASE STD- CAB 2",
+    "ow": "42340",
+    "orden_compra": "CP01. G5 - 32120",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "200",
+    "cantidad_despachada": "200",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797289",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3252,7 +2247,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797096",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3267,7 +2262,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797096",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3282,7 +2277,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796778, 797096",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT FALCON",
+    "elemento": "13007210",
+    "descripcion": "4CABAS36 BASE STD- CAB 2",
+    "ow": "42340",
+    "orden_compra": "LN01. X1 - 66822",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "200",
+    "cantidad_despachada": "200",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797218",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3297,7 +2307,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797096",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT FALCON",
+    "elemento": "11532501",
+    "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
+    "ow": "42318",
+    "orden_compra": "P001. X1 - 66824",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "700",
+    "cantidad_despachada": "700",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797305",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3312,7 +2337,37 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797173, 797189",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT FALCON",
+    "elemento": "13007210",
+    "descripcion": "4CABAS36 BASE STD- CAB 2",
+    "ow": "42340",
+    "orden_compra": "TM01. X1 - 66823",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "400",
+    "cantidad_despachada": "400",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797219",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT FALCON",
+    "elemento": "12009701",
+    "descripcion": "4CATAP109 TAPA 1/4 FALCON 97 X 24",
+    "ow": "42322",
+    "orden_compra": "TM01. X1 - 66823",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797219",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3327,7 +2382,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797097",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3342,7 +2397,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796905",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3357,7 +2412,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797097",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3372,7 +2427,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797089",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3387,7 +2442,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797089",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT FALCON",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "AJ01. X1 - 66821",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "1350",
+    "cantidad_despachada": "1350",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797306",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3402,7 +2472,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797186",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3417,7 +2487,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797089",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3432,7 +2502,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797186",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FALCON",
@@ -3440,14 +2510,14 @@
     "descripcion": "4CATAP109 TAPA 1/4 FALCON 97 X 24",
     "ow": "42322",
     "orden_compra": "AJ01. X1 - 66821",
-    "estado": "Despachado",
+    "estado": "Parcialmente despachado",
     "fecha_despacho": "28/09/2026",
     "cantidad_solicitada": "510",
-    "cantidad_despachada": "510",
+    "cantidad_despachada": "508",
     "porcentaje_despachado": 100,
-    "nota_despacho": "797186",
+    "nota_despacho": "797186, 797245",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3462,7 +2532,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797124",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3477,7 +2547,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796915, 797080",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT PLANIC",
+    "elemento": "12108701",
+    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
+    "ow": "42327",
+    "orden_compra": "PL02. XB - 22693",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "180",
+    "cantidad_despachada": "180",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797312",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3492,7 +2577,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797196",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3507,7 +2592,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797124",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3522,7 +2607,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797124",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3537,7 +2622,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797080",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3552,7 +2637,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797196",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3567,7 +2652,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797196",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3582,7 +2667,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797080",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT PLANIC",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "PL02. XB - 22693",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "1500",
+    "cantidad_despachada": "1500",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797312",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3597,7 +2697,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797196",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3612,7 +2712,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797080",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3627,7 +2727,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797124",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3642,7 +2742,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797080",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3657,7 +2757,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797196",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT PLANIC",
@@ -3672,7 +2772,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797080",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -3687,7 +2787,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797195",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT UBATE",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "UB01. GX - 24533",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "900",
+    "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797311",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -3702,7 +2817,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -3717,7 +2832,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -3732,7 +2847,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797195",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT UBATE",
+    "elemento": "12108701",
+    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
+    "ow": "42327",
+    "orden_compra": "UB01. GX - 24533",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "150",
+    "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797311",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -3747,7 +2877,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797195",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -3762,7 +2892,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797195",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -3777,7 +2907,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -3792,7 +2922,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797195",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -3807,7 +2937,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -3822,7 +2952,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -3837,7 +2967,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796914",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -3852,7 +2982,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FOLLAJ",
@@ -3867,7 +2997,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797161",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FOLLAJ",
@@ -3882,7 +3012,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796897",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FOLLAJ",
@@ -3897,7 +3027,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797161",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT BENCHM",
+    "elemento": "13019731",
+    "descripcion": "4CATAP149 TAPA TABACO REFORZADA BENCHMARK 105X25X24 C930",
+    "ow": "42347",
+    "orden_compra": "BG01. PB - 1861",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797217",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT LUISA",
@@ -3912,7 +3057,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796871",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT LUISA",
@@ -3927,7 +3072,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796871",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT LUISA",
@@ -3942,7 +3087,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797174",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT LUISA",
@@ -3957,7 +3102,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796871, 797090",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT LUISA",
@@ -3972,7 +3117,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796871, 797174",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT LUISA",
+    "elemento": "11532501",
+    "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
+    "ow": "42318",
+    "orden_compra": "SZ01. X3 - 32569",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "100",
+    "cantidad_despachada": "100",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797307",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT LUISA",
@@ -3987,7 +3147,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797126",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT LUISA",
@@ -4002,7 +3162,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797174",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT LUISA",
@@ -4017,7 +3177,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797090",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT LUISA",
@@ -4032,7 +3192,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797090",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT LUISA",
@@ -4047,7 +3207,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796871",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT MOUNTA",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "MO01. GO - 31630",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "60",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797304",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MOUNTA",
@@ -4062,7 +3237,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797088",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MOUNTA",
@@ -4077,7 +3252,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797088",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MOUNTA",
@@ -4092,7 +3267,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797172",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MOUNTA",
@@ -4107,7 +3282,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797088",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MOUNTA",
@@ -4122,7 +3297,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797088",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MOUNTA",
@@ -4137,7 +3312,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797088",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MOUNTA",
@@ -4152,7 +3327,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797172",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TANDIL",
@@ -4167,7 +3342,67 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797062",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "13007210",
+    "descripcion": "4CABAS36 BASE STD- CAB 2",
+    "ow": "42340",
+    "orden_compra": "PM01. GV - 41891",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797287",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "11532501",
+    "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
+    "ow": "42318",
+    "orden_compra": "PM01. GV - 41891",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797287",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "13005870",
+    "descripcion": "4CATAP144 TAPA MARITIMA BENCHMARK 86 X 36 X 19",
+    "ow": "42337",
+    "orden_compra": "PM01. GV - 41891",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "120",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797062, 797287",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "13019730",
+    "descripcion": "4CATAP150 TAPA CUARTO REFORZADA BENCHMARK 105X26X15 C930",
+    "ow": "42346",
+    "orden_compra": "PM01. GV - 41891",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "60",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797287",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TANDIL",
@@ -4175,14 +3410,14 @@
     "descripcion": "4CABAS53 BASE MARITIMA BENCHMARK 86 X 36 X 19",
     "ow": "42338",
     "orden_compra": "PM01. GV - 41891",
-    "estado": "Despachado",
-    "fecha_despacho": "26/09/2026",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "28/09/2026",
     "cantidad_solicitada": "180",
-    "cantidad_despachada": "180",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797062",
+    "cantidad_despachada": "178",
+    "porcentaje_despachado": 99,
+    "nota_despacho": "797062, 797242",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TANDIL",
@@ -4197,7 +3432,67 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797062",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "12009801",
+    "descripcion": "4CATAPF122 TAPA 1/4  POLO FARMS 97",
+    "ow": "42323",
+    "orden_compra": "PM01. GV - 41891",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "30",
+    "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797287",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "13003038",
+    "descripcion": "4CACAJ35  FOLDER 1/8  QUEENS C720",
+    "ow": "42335",
+    "orden_compra": "PM01. GV - 41891",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "150",
+    "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797287",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "PM01. GV - 41891",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "840",
+    "cantidad_despachada": "840",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797287",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "12108801",
+    "descripcion": "4CATAP133 TAPA 1/4 GOLDEN",
+    "ow": "42328",
+    "orden_compra": "PM01. GV - 41891",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "480",
+    "cantidad_despachada": "480",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797287",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TANDIL",
@@ -4212,7 +3507,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797094",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TANDIL",
@@ -4227,7 +3522,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796904",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "11532101",
+    "descripcion": "4CATAP09 TAPA  STD NACIONAL",
+    "ow": "42317",
+    "orden_compra": "PM01. GV - 41891",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797287",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TANDIL",
@@ -4242,7 +3552,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797093",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "12108701",
+    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
+    "ow": "42327",
+    "orden_compra": "TN01. GV - 41890",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "90",
+    "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797286",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TANDIL",
@@ -4257,7 +3582,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797093",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "TN01. GV - 41890",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797286",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TANDIL",
@@ -4272,7 +3612,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797061",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TANDIL",
@@ -4287,7 +3627,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797061",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT TANDIL",
@@ -4302,7 +3642,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797061",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT TANDIL",
+    "elemento": "13019730",
+    "descripcion": "4CATAP150 TAPA CUARTO REFORZADA BENCHMARK 105X26X15 C930",
+    "ow": "42346",
+    "orden_compra": "TN01. GV - 41890",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "30",
+    "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797286",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT J CHIA",
@@ -4317,7 +3672,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797102",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT J CHIA",
@@ -4332,7 +3687,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797116",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT J CHIA",
@@ -4347,7 +3702,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796895",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT J CHIA",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "CH01. G4 - 50805",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "210",
+    "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797280",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT J CHIA",
@@ -4362,7 +3732,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797116",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT J CHIA",
@@ -4377,7 +3747,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797102",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT J CHIA",
+    "elemento": "11215221",
+    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
+    "ow": "42315",
+    "orden_compra": "CH01. G4 - 50805",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "60",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797213",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT J CHIA",
@@ -4392,7 +3777,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797070",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT J CHIA",
+    "elemento": "12108701",
+    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
+    "ow": "42327",
+    "orden_compra": "CH01. G4 - 50805",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "60",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797280",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4407,7 +3807,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797064",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4422,7 +3822,37 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797064",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "13007210",
+    "descripcion": "4CABAS36 BASE STD- CAB 2",
+    "ow": "42340",
+    "orden_compra": "ER01. GM - 102086",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797288",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "JA01. GM - 102087",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "210",
+    "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797281",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4437,7 +3867,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797118",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4452,7 +3882,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797162",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4467,7 +3897,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797072",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4482,7 +3912,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797072",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "11215221",
+    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
+    "ow": "42315",
+    "orden_compra": "MG01. GM - 102088",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797215",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4497,7 +3942,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797119",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4512,7 +3957,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797162",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4527,7 +3972,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797162",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "12108701",
+    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
+    "ow": "42327",
+    "orden_compra": "MG01. GM - 102088",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797283",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4542,7 +4002,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797119",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4557,7 +4017,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797072",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4572,7 +4032,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797120",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "SC01. GM - 102089",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "1050",
+    "cantidad_despachada": "1050",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797284",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4587,7 +4062,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797120",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4602,7 +4077,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797163",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MG",
@@ -4617,7 +4092,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797071",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "HA01. GM - 102090",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "1350",
+    "cantidad_despachada": "1350",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797282",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CASABL",
@@ -4632,7 +4122,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797160",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT CASABL",
+    "elemento": "11215221",
+    "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
+    "ow": "42315",
+    "orden_compra": "RF01. G7 - 25654",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "210",
+    "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797214",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CASABL",
@@ -4647,7 +4152,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797103",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CASABL",
@@ -4662,7 +4167,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797160",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CASABL",
@@ -4677,7 +4182,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797160",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CASABL",
@@ -4692,7 +4197,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797117",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CASABL",
@@ -4707,7 +4212,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797103",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CASABL",
@@ -4722,7 +4227,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796896",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -4737,7 +4242,37 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797057",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT CHIA",
+    "elemento": "12009401",
+    "descripcion": "4CATAP107 TAPA TBC FALCON 97X24",
+    "ow": "42320",
+    "orden_compra": "GR18. G8 - 50867",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797252",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT CHIA",
+    "elemento": "12199801",
+    "descripcion": "4CACAJ52  FOLDER 1/8 GOLDEN NEW",
+    "ow": "42329",
+    "orden_compra": "GR18. G8 - 50867",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797252",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -4752,7 +4287,37 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797056",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT AJIBE",
+    "elemento": "12108801",
+    "descripcion": "4CATAP133 TAPA 1/4 GOLDEN",
+    "ow": "42328",
+    "orden_compra": "AL01. G1 - 33664",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "90",
+    "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797221",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT AJIBE",
+    "elemento": "12108701",
+    "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
+    "ow": "42327",
+    "orden_compra": "AL01. G1 - 33664",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "90",
+    "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797221",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT AJIBE",
@@ -4767,7 +4332,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797081",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT AJIBE",
@@ -4782,7 +4347,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797081",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT AJIBE",
@@ -4797,7 +4362,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797081",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT AJIBE",
+    "elemento": "13019730",
+    "descripcion": "4CATAP150 TAPA CUARTO REFORZADA BENCHMARK 105X26X15 C930",
+    "ow": "42346",
+    "orden_compra": "AL01. G1 - 33664",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "60",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797221",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT AJIBE",
@@ -4812,7 +4392,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796907",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT AJIBE",
@@ -4827,7 +4407,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797081",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT AJIBE",
@@ -4842,7 +4422,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797099",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT AJIBE",
+    "elemento": "13007210",
+    "descripcion": "4CABAS36 BASE STD- CAB 2",
+    "ow": "42340",
+    "orden_compra": "AL01. G1 - 33664",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "600",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797221",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT AJIBE",
@@ -4857,7 +4452,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797081",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FLOVAL",
@@ -4872,7 +4467,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797092",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT FLOVAL",
+    "elemento": "11532101",
+    "descripcion": "4CATAP09 TAPA  STD NACIONAL",
+    "ow": "42317",
+    "orden_compra": "QF01. GE - 68799",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "100",
+    "cantidad_despachada": "100",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797285",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FLOVAL",
@@ -4887,7 +4497,37 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796997",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT FLOVAL",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "QF01. GE - 68799",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797285",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT FLOVAL",
+    "elemento": "13003038",
+    "descripcion": "4CACAJ35  FOLDER 1/8  QUEENS C720",
+    "ow": "42335",
+    "orden_compra": "QF01. GE - 68799",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "120",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797285",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FLOVAL",
@@ -4902,7 +4542,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797063",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FLOVAL",
@@ -4917,7 +4557,52 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797092",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT FLOVAL",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "QF01. GE - 68799",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797285",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT FLOVAL",
+    "elemento": "12108801",
+    "descripcion": "4CATAP133 TAPA 1/4 GOLDEN",
+    "ow": "42328",
+    "orden_compra": "QF01. GE - 68799",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "120",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797285",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT FLOVAL",
+    "elemento": "11532501",
+    "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
+    "ow": "42318",
+    "orden_compra": "QF01. GE - 68799",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "60",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797285",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FLOVAL",
@@ -4932,7 +4617,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797122",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FLOVAL",
@@ -4947,7 +4632,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797194",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FLOVAL",
@@ -4962,7 +4647,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797122",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FLOVAL",
@@ -4977,7 +4662,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797194",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT FLOVAL",
+    "elemento": "13003036",
+    "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
+    "ow": "42333",
+    "orden_compra": "FV01. GE - 68798",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "1500",
+    "cantidad_despachada": "1500",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797310",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT FLOVAL",
@@ -4992,7 +4692,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797122",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MANA",
@@ -5007,7 +4707,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797098",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT MANA",
@@ -5022,7 +4722,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796779, 797098",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT ACACIA",
@@ -5037,7 +4737,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797175",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT UBATE",
@@ -5052,7 +4752,7 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797195",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT LUISA",
@@ -5067,7 +4767,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "797174",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT MG",
+    "elemento": "12200201",
+    "descripcion": "4CACAFJ44 FOLDER 1/8 FALCON",
+    "ow": "42330",
+    "orden_compra": "MG01. GM - 102088",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "300",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797215",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -5082,7 +4797,22 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796980",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT CHIA",
+    "elemento": "13021385",
+    "descripcion": "TAPA CUARTO SOLE FARMS NUEVA IMPRESIÓN",
+    "ow": "42348",
+    "orden_compra": "GR18. G8 - 50867",
+    "estado": "Despachado",
+    "fecha_despacho": "28/09/2026",
+    "cantidad_solicitada": "390",
+    "cantidad_despachada": "390",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797252",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   },
   {
     "finca": "GHT CHIA",
@@ -5097,6 +4827,66 @@
     "porcentaje_despachado": 100,
     "nota_despacho": "796979",
     "fecha_estimada_despacho": "",
-    "porcentaje_global": 64
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT FLOVAL",
+    "elemento": "13021385",
+    "descripcion": "TAPA CUARTO SOLE FARMS NUEVA IMPRESIÓN",
+    "ow": "42348",
+    "orden_compra": "QF01. GE - 68799",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "120",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797285",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT ACACIA",
+    "elemento": "13028563",
+    "descripcion": "4CATAP172 TAPA 1-4 THE VALLEY SPRINGS 97X24X10.5",
+    "ow": "42349",
+    "orden_compra": "LC01. GK - 42659",
+    "estado": "Despachado",
+    "fecha_despacho": "29/09/2026",
+    "cantidad_solicitada": "150",
+    "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797308",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT RIO FR",
+    "elemento": "13028786",
+    "descripcion": "4CATAP182 TAPA STD QUEENS MECANIZADA CAB2",
+    "ow": "",
+    "orden_compra": "RQ01. GR - 30835",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "26/09/2026",
+    "cantidad_solicitada": "140",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 86,
+    "nota_despacho": "797105",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
+  },
+  {
+    "finca": "GHT RIO FR",
+    "elemento": "13028786",
+    "descripcion": "4CATAP182 TAPA STD QUEENS MECANIZADA CAB2",
+    "ow": "",
+    "orden_compra": "RQ01. GR - 30963",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "26/09/2026",
+    "cantidad_solicitada": "2000",
+    "cantidad_despachada": "1980",
+    "porcentaje_despachado": 99,
+    "nota_despacho": "797105",
+    "fecha_estimada_despacho": "",
+    "porcentaje_global": 78
   }
 ]
