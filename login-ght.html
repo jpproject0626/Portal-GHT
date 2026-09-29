@@ -118,9 +118,9 @@
 
 <script>
 /* ------------------------------------------------------------
-   VALIDACION DE CLAVE — misma clave que usa el gate de index.html
-   (const PORTAL_PASSWORD ahi). No hay backend: si cambias la clave,
-   cambiala en AMBOS archivos.
+   VALIDACION DE CLAVE — unica fuente de la clave del portal (index.html
+   ya no tiene gate propio: solo revisa la sesion y redirige aqui si
+   falta). No hay backend: para cambiar la clave, cambiala solo aqui.
    ------------------------------------------------------------ */
 const PORTAL_PASSWORD = "ght2026";
 async function validarClave(clave) {
@@ -128,10 +128,10 @@ async function validarClave(clave) {
 }
 const RUTA_PORTAL = 'index.html'; // pagina de seguimiento de pedidos
 
-// "Recordar este dispositivo": token en localStorage con vencimiento
-// a 30 dias. Sin el checkbox, la sesion vive solo en sessionStorage
-// (se pierde al cerrar el navegador) -- igual que el gate de
-// index.html hoy, que no tenia ninguna opcion de "recordar".
+// "Recordar este dispositivo": token en localStorage con vencimiento a
+// 30 dias, leido por index.html para saltar el login automaticamente.
+// Sin el checkbox, la sesion vive solo en sessionStorage (se pierde al
+// cerrar el navegador).
 const REMEMBER_KEY = 'ght_remember_until';
 const REMEMBER_MS = 30 * 24 * 60 * 60 * 1000; // 30 dias
 

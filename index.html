@@ -4,6 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portal GHT · Seguimiento de pedidos</title>
+<script>
+  // Redirige a la pantalla de login (login-ght.html) si no hay sesion
+  // valida. Corre de forma sincronica antes de pintar el resto de la
+  // pagina para que no se alcance a ver el portal sin autenticar.
+  // 'ght_remember_until' es el mismo token de "Recordar este dispositivo"
+  // que escribe login-ght.html (30 dias); si sigue vigente, se reactiva
+  // la sesion de este tab sin volver a pedir la clave.
+  (function(){
+    var autenticado = sessionStorage.getItem('ghtAccess') === '1';
+    if (!autenticado) {
+      var recordarHasta = Number(localStorage.getItem('ght_remember_until') || 0);
+      if (recordarHasta > Date.now()) {
+        sessionStorage.setItem('ghtAccess', '1');
+        autenticado = true;
+      }
+    }
+    if (!autenticado) {
+      location.replace('login-ght.html');
+    }
+  })();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -661,70 +682,6 @@
   .footer-in a{ color: #08B2FF; font-weight:600; text-decoration:none; }
   .footer-in a:hover{ text-decoration:underline; }
 
-  /* ---------- PASSWORD GATE ---------- */
-  #gate{
-    position:fixed; inset:0;
-    background-color: #00205B;
-    background-image:
-      linear-gradient(rgba(18,48,31,.4), rgba(18,48,31,.4)),
-      url('fondo-sw.webp');
-    background-size: cover, 400px auto;
-    background-position: center, left center;
-    background-repeat: no-repeat, no-repeat;
-    display:flex; align-items:center; justify-content:center;
-    z-index: 50;
-    padding: 20px;
-    overflow-y:auto;
-  }
-  .gate-card{
-    background: var(--paper-raised);
-    border-radius: 8px;
-    padding: 36px 32px 32px;
-    width:100%; max-width: 360px;
-    text-align:left;
-    box-shadow: 0 24px 60px rgba(0,10,40,.35);
-  }
-  .gate-sw-row{
-    display:flex; align-items:center; gap:9px;
-    margin-bottom: 20px;
-  }
-  .gate-sw-row img{ height:24px; width:auto; display:block; }
-  .gate-sw-row span{
-    font-size:12px;
-    letter-spacing:.03em;
-    color: var(--mist);
-  }
-  .gate-sw-row span strong{ color: var(--ink-soft); font-weight:600; }
-  .gate-card .ght-logo{ height:56px; width:auto; display:block; margin-bottom:20px; }
-  .gate-card h2{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size:22px;
-    margin: 0 0 6px;
-    color: var(--navy-deep);
-  }
-  .gate-card p{
-    font-size:13.5px; color: var(--ink-soft);
-    margin: 0 0 18px; line-height:1.5;
-  }
-  .gate-card input{
-    width:100%;
-    font-family:'IBM Plex Mono', monospace;
-    padding: 12px 14px;
-    border: 1.5px solid var(--line);
-    border-radius: var(--radius);
-    margin-bottom: 12px;
-    font-size:14px;
-    background: var(--paper-raised);
-  }
-  .gate-card .btn{ width:100%; padding: 12px 0; }
-  .gate-error{
-    color: var(--clay);
-    font-size:12.5px;
-    margin: -4px 0 12px;
-    display:none;
-  }
-
   /* ---------- RESPONSIVE: header, banda y tarjeta de busqueda (tablet) ----------
      Nombres genericos pedidos (.wrap, header .in, .band .wrap, .logos .sw/.ght/.sep,
      .search, .btn2, .tools, footer .in) traducidos a los reales del proyecto:
@@ -796,26 +753,10 @@
 </head>
 <body>
 
-  <!-- ================= PASSWORD GATE ================= -->
-  <div id="gate">
-    <div class="gate-card">
-      <div class="gate-sw-row">
-        <img src="logo-sw.png" alt="Smurfit Westrock">
-        <span>Un portal de <strong>Smurfit Westrock</strong></span>
-      </div>
-      <img src="logo-ght.png" class="ght-logo" alt="GHT · Growers Hub Trading">
-      <h2>Acceso al portal</h2>
-      <p>Este portal es exclusivo para Growers Hub Trading (GHT). Ingresa la clave de acceso que te compartió tu contacto en Smurfit Westrock.</p>
-      <div class="gate-error" id="gateError">Clave incorrecta. Intenta de nuevo.</div>
-      <input type="password" id="gatePass" placeholder="Clave de acceso" autocomplete="off">
-      <button class="btn" onclick="checkPass()">Ingresar</button>
-    </div>
-  </div>
-
   <!-- ================= HEADER ================= -->
   <header class="site-header">
     <div class="site-header-in">
-      <a class="logos" href="index.html" onclick="sessionStorage.removeItem('ghtAccess')" aria-label="Cerrar sesión y volver al inicio">
+      <a class="logos" href="login-ght.html" onclick="sessionStorage.removeItem('ghtAccess'); localStorage.removeItem('ght_remember_until')" aria-label="Cerrar sesión y volver al login">
         <img class="logo-sw" src="SW_Logo_Primary_2COL.png" alt="Smurfit Westrock">
         <span class="logo-sep"></span>
         <img class="logo-ght" src="ght-logo.png" alt="GHT · Growers Hub Trading">
@@ -885,29 +826,6 @@
   </footer>
 
 <script>
-  // ------------------------------------------------------------
-  // CLAVE DE ACCESO — cámbiala aquí antes de compartir el link.
-  // Esto es una barrera simple, no seguridad fuerte: no subas
-  // información sensible de otros clientes a este portal.
-  // ------------------------------------------------------------
-  const PORTAL_PASSWORD = "ght2026";
-
-  function checkPass(){
-    const val = document.getElementById('gatePass').value.trim();
-    if (val === PORTAL_PASSWORD){
-      document.getElementById('gate').style.display = 'none';
-      sessionStorage.setItem('ghtAccess','1');
-    } else {
-      document.getElementById('gateError').style.display = 'block';
-    }
-  }
-  document.getElementById('gatePass').addEventListener('keydown', e=>{
-    if(e.key === 'Enter') checkPass();
-  });
-  if (sessionStorage.getItem('ghtAccess') === '1'){
-    document.getElementById('gate').style.display = 'none';
-  }
-
   // ------------------------------------------------------------
   // DATOS
   // ------------------------------------------------------------
