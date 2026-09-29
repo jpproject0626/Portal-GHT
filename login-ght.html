@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portal GHT · Acceso</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{--deep:#00205B;--light:#00A9E0;--hover:#0077C8;--muted:#667085;--line:#eaecf0;--err:#B42318;--warn:#B54708;--soft:#8fa0c4}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--deep)}
+  body{font-family:'IBM Plex Sans',sans-serif;color:#101828}
+  a{color:var(--hover);text-decoration:none} a:hover{color:var(--deep);text-decoration:underline}
+  .page{min-height:100vh;display:flex;flex-direction:column;position:relative;overflow:hidden;background:radial-gradient(1200px 600px at 50% 115%,#0a3a7a 0%,var(--deep) 62%)}
+  .glow{position:absolute;inset:0;pointer-events:none;transition:background .25s ease-out;
+        background:radial-gradient(520px 420px at var(--mx,50%) var(--my,50%),rgba(0,169,224,.14),rgba(0,169,224,0) 70%)}
+  .emblem{position:absolute;left:-7vw;bottom:-16vh;width:min(62vw,880px);pointer-events:none;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .emblem img{width:100%;display:block;opacity:0;transition:opacity 1.6s ease;animation:float 14s ease-in-out infinite;user-select:none}
+  .in .emblem img{opacity:.07}
+  header,main,footer{position:relative;width:100%;max-width:1200px;margin:0 auto;padding-left:clamp(16px,4vw,32px);padding-right:clamp(16px,4vw,32px)}
+  header{padding-top:clamp(16px,3vw,24px);padding-bottom:clamp(16px,3vw,24px);display:flex;align-items:center;justify-content:space-between;gap:16px;
+         opacity:0;transform:translateY(-8px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+  header img{height:clamp(44px,6vw,60px);display:block;margin:-8px -6px -8px -12px}
+  .support{font-size:13px;color:#c9d4ea;white-space:nowrap;border:1px solid rgba(255,255,255,.2);padding:8px 14px;border-radius:999px;transition:.2s}
+  .support:hover{color:#c9d4ea;text-decoration:none;border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.06)}
+  main{flex:1;display:flex;align-items:center;justify-content:center;padding-top:clamp(16px,3vw,32px);padding-bottom:clamp(32px,5vw,56px)}
+  .wrap{width:100%;max-width:380px;opacity:0;transform:translateY(18px) scale(.985);transition:opacity .9s ease .15s,transform .9s cubic-bezier(.2,.7,.2,1) .15s}
+  .in header,.in .wrap{opacity:1;transform:none}
+  .card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 40px 80px rgba(0,8,32,.45),0 2px 6px rgba(0,8,32,.25),0 0 0 1px rgba(255,255,255,.08)}
+  .card.shake{animation:shake .45s cubic-bezier(.36,.07,.19,.97)}
+  .body{padding:clamp(28px,6vw,40px) clamp(20px,6vw,36px) clamp(24px,5vw,32px)}
+  .ght{height:50px;display:block;margin:0 auto 32px}
+  .field{display:flex;align-items:center;gap:8px;border:1.5px solid #d0d5dd;border-radius:10px;padding:0 6px 0 14px;transition:border-color .2s,box-shadow .2s}
+  .field svg{flex:none;stroke:#98a2b3;transition:stroke .2s}
+  .field:focus-within{border-color:var(--hover);box-shadow:0 0 0 4px rgba(0,169,224,.18)} .field:focus-within svg{stroke:var(--hover)}
+  .field.err{border-color:var(--err);box-shadow:0 0 0 4px rgba(180,35,24,.10)} .field.err svg{stroke:var(--err)}
+  .field input{flex:1;min-width:0;border:0;outline:0;background:transparent;font-family:'IBM Plex Mono',monospace;font-size:16px;letter-spacing:.08em;color:#101828;padding:15px 0}
+  .field input::placeholder{color:#98a2b3;letter-spacing:0}
+  .reveal{border:0;background:transparent;cursor:pointer;font:500 13px 'IBM Plex Sans';color:var(--hover);padding:8px 10px;border-radius:6px}
+  .reveal:hover{background:#F2F6FB}
+  .msg{margin-top:10px;font-size:13px;display:none} .msg.show{display:block}
+  .msg.caps{color:var(--warn)} .msg.error{color:var(--err)}
+  .remember{margin-top:16px;display:flex;align-items:center;gap:10px;font-size:13.5px;color:#475467;cursor:pointer;min-height:24px}
+  .remember input{width:16px;height:16px;margin:0;accent-color:var(--deep);cursor:pointer}
+  .btn{margin-top:20px;width:100%;height:52px;border:0;cursor:pointer;background:var(--deep);color:#fff;font:500 15px 'IBM Plex Sans';border-radius:10px;display:flex;align-items:center;justify-content:center;gap:10px;
+       box-shadow:0 8px 20px rgba(0,32,91,.25);transition:background .3s,transform .15s,box-shadow .3s}
+  .btn:hover{background:var(--hover);box-shadow:0 10px 24px rgba(0,119,200,.35)} .btn:active{transform:scale(.985)}
+  .btn:disabled{cursor:default}
+  .btn .spin{width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:spin .7s linear infinite;display:none}
+  .btn .check{display:none}
+  .btn.loading .spin{display:block} .btn.loading .arrow{display:none}
+  .btn.ok{background:var(--light)} .btn.ok .arrow{display:none} .btn.ok .check{display:block}
+  .help{background:#F7F9FC;border-top:1px solid var(--line);padding:16px clamp(20px,6vw,36px);font-size:13px;text-align:center}
+  .secure{margin-top:20px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:12.5px;color:var(--soft)}
+  footer{padding-top:20px;padding-bottom:20px;text-align:center;font-size:12.5px;color:var(--soft);opacity:0;transition:opacity 1s ease .35s}
+  .in footer{opacity:1}
+  .overlay{position:absolute;inset:0;background:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;opacity:0;pointer-events:none;transition:opacity .6s ease}
+  .overlay img{width:96px;display:block;transform:scale(.7);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+  .overlay h2{margin:0;font:500 24px 'IBM Plex Serif',serif;color:#fff}
+  .overlay .track{width:160px;height:3px;border-radius:2px;background:rgba(255,255,255,.15);overflow:hidden}
+  .overlay .fill{height:100%;background:var(--light);transform:scaleX(0);transform-origin:left}
+  .page.success .overlay{opacity:1;pointer-events:auto} .page.success .overlay img{transform:scale(1)}
+  .page.success .overlay .fill{animation:bar 1.6s cubic-bezier(.4,0,.2,1) forwards}
+  @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(-1.2deg)}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes bar{to{transform:scaleX(1)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="page" id="page">
+  <div class="glow" id="glow" aria-hidden="true"></div>
+  <div class="emblem" id="emblem" aria-hidden="true"><img src="/assets/sw-emblem-white.png" alt="" /></div>
+
+  <header>
+    <img src="/assets/sw-logo-reverse.png" alt="Smurfit Westrock" />
+    <a class="support" href="mailto:servicio@smurfitwestrock.com">Soporte</a>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <form class="card" id="card" novalidate>
+        <div class="body">
+          <img class="ght" src="/assets/ght-logo.png" alt="GHT Growers Hub Trading" />
+          <div class="field" id="field">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            <input id="clave" type="password" placeholder="Clave de acceso" aria-label="Clave de acceso" autocomplete="current-password" autofocus />
+            <button type="button" class="reveal" id="reveal">Mostrar</button>
+          </div>
+          <div class="msg caps" id="caps">Bloq Mayús está activado.</div>
+          <div class="msg error" id="error" role="alert">Clave incorrecta. Verifica con tu contacto.</div>
+          <label class="remember"><input type="checkbox" id="remember" checked /> <span>Recordar este dispositivo</span></label>
+          <button type="submit" class="btn" id="btn">
+            <span class="spin"></span>
+            <span id="btnLabel">Ingresar</span>
+            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+          </button>
+        </div>
+        <div class="help"><a href="mailto:servicio@smurfitwestrock.com">¿No tienes clave?</a></div>
+      </form>
+      <div class="secure">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z"/></svg>
+        <span>Conexión segura</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2026 Smurfit Westrock · Bogotá, Colombia</footer>
+
+  <div class="overlay" aria-hidden="true">
+    <img src="/assets/sw-emblem-white.png" alt="" />
+    <h2>Bienvenido, GHT</h2>
+    <div class="track"><div class="fill"></div></div>
+  </div>
+</div>
+
+<script>
+/* ------------------------------------------------------------
+   VALIDACION DE CLAVE — misma clave que usa el gate de index.html
+   (const PORTAL_PASSWORD ahi). No hay backend: si cambias la clave,
+   cambiala en AMBOS archivos.
+   ------------------------------------------------------------ */
+const PORTAL_PASSWORD = "ght2026";
+async function validarClave(clave) {
+  return clave.trim() === PORTAL_PASSWORD;
+}
+const RUTA_PORTAL = 'index.html'; // pagina de seguimiento de pedidos
+
+// "Recordar este dispositivo": token en localStorage con vencimiento
+// a 30 dias. Sin el checkbox, la sesion vive solo en sessionStorage
+// (se pierde al cerrar el navegador) -- igual que el gate de
+// index.html hoy, que no tenia ninguna opcion de "recordar".
+const REMEMBER_KEY = 'ght_remember_until';
+const REMEMBER_MS = 30 * 24 * 60 * 60 * 1000; // 30 dias
+
+const $ = id => document.getElementById(id);
+const page = $('page'), card = $('card'), field = $('field'), input = $('clave'), btn = $('btn');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Si hay un "recordar" vigente, entra directo sin mostrar el formulario.
+const rememberUntil = Number(localStorage.getItem(REMEMBER_KEY) || 0);
+if (rememberUntil > Date.now()) {
+  sessionStorage.setItem('ghtAccess', '1');
+  location.replace(RUTA_PORTAL);
+} else {
+  if (localStorage.getItem(REMEMBER_KEY)) localStorage.removeItem(REMEMBER_KEY);
+
+  requestAnimationFrame(() => requestAnimationFrame(() => page.classList.add('in')));
+
+  if (!reduce) {
+    let raf;
+    page.addEventListener('mousemove', e => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const x = e.clientX / innerWidth, y = e.clientY / innerHeight;
+        $('glow').style.setProperty('--mx', (x * 100) + '%');
+        $('glow').style.setProperty('--my', (y * 100) + '%');
+        $('emblem').style.transform = `translate(${(x - .5) * -36}px, ${(y - .5) * -24}px)`;
+      });
+    });
+  }
+
+  $('reveal').addEventListener('click', () => {
+    const show = input.type === 'password';
+    input.type = show ? 'text' : 'password';
+    $('reveal').textContent = show ? 'Ocultar' : 'Mostrar';
+    input.focus();
+  });
+
+  const setError = on => { field.classList.toggle('err', on); $('error').classList.toggle('show', on); };
+  input.addEventListener('input', () => setError(false));
+  input.addEventListener('keydown', e => $('caps').classList.toggle('show', !!e.getModifierState?.('CapsLock')));
+  input.addEventListener('keyup', e => $('caps').classList.toggle('show', !!e.getModifierState?.('CapsLock')));
+
+  card.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (btn.disabled) return;
+    setError(false);
+    btn.disabled = true; btn.classList.add('loading'); $('btnLabel').textContent = 'Verificando';
+    let ok = false;
+    try { ok = await validarClave(input.value); } catch { ok = false; }
+    btn.classList.remove('loading');
+    if (ok) {
+      btn.classList.add('ok'); $('btnLabel').textContent = 'Acceso concedido';
+      sessionStorage.setItem('ghtAccess', '1');
+      if ($('remember').checked) {
+        localStorage.setItem(REMEMBER_KEY, String(Date.now() + REMEMBER_MS));
+      } else {
+        localStorage.removeItem(REMEMBER_KEY);
+      }
+      page.classList.add('success');
+      setTimeout(() => { location.href = RUTA_PORTAL; }, 1800);
+    } else {
+      btn.disabled = false; $('btnLabel').textContent = 'Ingresar';
+      setError(true);
+      card.classList.remove('shake'); void card.offsetWidth; card.classList.add('shake');
+      input.select();
+    }
+  });
+}
+</script>
+</body>
+</html>
