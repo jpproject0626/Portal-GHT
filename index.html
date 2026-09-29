@@ -104,6 +104,7 @@
     align-items:end;
   }
   .band h1{ color:#fff; }
+  .band-copy{ margin-left:0; }
   .band .lede{ color:#C9D4EA; margin-bottom:0; }
   .kpi{ min-width:200px; }
   .kpi .kpi-row{
@@ -126,6 +127,8 @@
     box-shadow: 0 12px 32px rgba(0,32,91,.14), 0 1px 2px rgba(0,32,91,.08);
     padding:28px;
     margin-bottom: 28px;
+    margin-left:32px;
+    margin-right:32px;
   }
   .wrap{ width:100%; max-width: 880px; }
   /* #result mantiene el ancho angosto original (560px) -- fuera de
@@ -738,9 +741,10 @@
     .logos .logo-sw{ height:48px; margin:-7px -5px -7px -10px; }
     .logos .logo-ght{ height:36px; }
     .logos .logo-sep{ height:28px; }
-    .card{ padding:24px; }
+    .card{ padding:24px; margin-left:0; margin-right:0; }
     .card .btn{ padding:0 22px; }
     .lookup input[type="text"]{ font-size:16px; }
+    .band-copy{ margin-left:0; }
   }
   @media (max-width:480px){
     main{ padding-left:16px; padding-right:16px; }
@@ -823,7 +827,7 @@
   <!-- ================= BANDA: titulo + avance general ================= -->
   <div class="band">
     <div class="band-in">
-      <div>
+      <div class="band-copy">
         <h1>Encuentra tu pedido</h1>
         <p class="lede">Ingresa el número de SAG o de orden de compra para ver en qué etapa va tu pedido.</p>
       </div>
