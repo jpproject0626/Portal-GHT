@@ -59,85 +59,87 @@
     *{ animation: none !important; transition: none !important; }
   }
 
-  /* ---------- HEADER RIBBON ---------- */
-  header.ribbon{
-    position:relative;
-    overflow:hidden;
-    background: linear-gradient(90deg, #00205B 0%, #041E42 40%, #00205B 100%);
-    color: #EFF3EE;
-    padding: 9px 24px;
+  /* ---------- HEADER (franja navy solida y plana, sin degradados) ---------- */
+  header.site-header{
+    background: #fff;
+    border-bottom: 1px solid #eaecf0;
+  }
+  .site-header-in{
+    max-width:1200px;
+    margin:0 auto;
+    padding:14px 32px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:14px;
-    border-bottom: 3px solid #08B2FF; /* Light Blue -- unico reemplazo de marigold en el header */
+    gap:24px;
+    flex-wrap:wrap;
   }
-  /* Formas circulares decorativas sutiles, al estilo del sitio corporativo. */
-  header.ribbon::before{
-    content:"";
-    position:absolute;
-    top:-46px; right:-24px;
-    width:150px; height:150px;
-    border-radius:50%;
-    background: rgba(8,178,255,.22);
-    pointer-events:none;
-  }
-  header.ribbon::after{
-    content:"";
-    position:absolute;
-    bottom:-60px; left:18%;
-    width:120px; height:120px;
-    border-radius:50%;
-    background: rgba(0,112,212,.18);
-    pointer-events:none;
-  }
-  .header-left{ position:relative; z-index:1; display:flex; align-items:center; gap:14px; }
-  .mark{
-    flex:none;
-    display:flex; align-items:center; justify-content:center;
-    border-radius: var(--radius);
+  a.logos{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    text-decoration:none;
+    cursor:pointer;
     transition: opacity .15s ease;
   }
-  a.mark{ cursor:pointer; }
-  a.mark:hover, a.mark:focus-visible{ opacity: .85; }
-  .mark img{ height:34px; width:auto; display:block; }
-
-  /* ---------- WATERMARK ---------- */
-  .watermark{
-    position:absolute;
-    top: -18px; right: -28px;
-    width: clamp(130px, 34vw, 200px);
-    opacity: 0.05;
-    filter: grayscale(1);
-    pointer-events:none;
-    z-index:-1;
-    animation: breathe 16s ease-in-out infinite;
-    transform-origin: 65% 35%;
+  a.logos:hover, a.logos:focus-visible{ opacity:.85; }
+  .logos .logo-sw{ height:56px; width:auto; display:block; }
+  .logos .logo-sep{ width:1px; height:32px; background:#e4e7ec; }
+  .logos .logo-ght{ height:40px; width:auto; display:block; }
+  .status{
+    display:flex; align-items:center; gap:8px;
+    font-size:12.5px; color:#667085; white-space:nowrap;
   }
-  @keyframes breathe{
-    0%, 100% { transform: scale(1) rotate(0deg); }
-    50% { transform: scale(1.035) rotate(0.6deg); }
-  }
-  main{ overflow:hidden; }
-  .wrap{ position:relative; z-index:1; }
-  .ribbon-text{ line-height:1.25; }
-  .ribbon-text .brand{ font-size:14px; letter-spacing:.02em; opacity:.85; }
-  .ribbon-text .brand strong{ color:#fff; font-weight:600; }
-  .ribbon-text .sub{ font-size:12.5px; color:#CBD8CF; }
+  .status i{ width:7px; height:7px; border-radius:50%; background:#3ccf91; flex:none; }
 
-  /* ---------- MAIN ---------- */
+  /* ---------- BAND (titulo + avance general, sobre navy) ---------- */
+  .band{
+    background: var(--navy);
+    border-bottom: 4px solid #08B2FF;
+  }
+  .band-in{
+    max-width:880px;
+    margin:0 auto;
+    padding: 64px 32px 112px;
+    display:grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    gap:24px 48px;
+    align-items:end;
+  }
+  .band h1{ color:#fff; }
+  .band .lede{ color:#C9D4EA; margin-bottom:0; }
+  .kpi{ min-width:200px; }
+  .kpi .kpi-row{
+    display:flex; justify-content:space-between; align-items:baseline;
+    gap:12px; margin-bottom:10px;
+  }
+  .kpi .kpi-row span{ font-size:12.5px; color:#C9D4EA; letter-spacing:.02em; }
+
+  /* ---------- MAIN (tarjeta de busqueda, flotando sobre la banda) ---------- */
   main{
     flex:1;
     display:flex;
     justify-content:center;
-    padding: 56px 20px 80px;
+    padding: 0 32px 80px;
   }
-  .wrap{ width:100%; max-width: 560px; }
+  .wrap{ margin-top:-72px; }
+  .card{
+    background:#fff;
+    border-radius:12px;
+    box-shadow: 0 12px 32px rgba(0,32,91,.14), 0 1px 2px rgba(0,32,91,.08);
+    padding:28px;
+    margin-bottom: 28px;
+  }
+  .wrap{ width:100%; max-width: 880px; }
+  /* #result mantiene el ancho angosto original (560px) -- fuera de
+     alcance de este rediseño -- aunque .wrap (banda + tarjeta) ahora
+     sea mas ancho. */
+  .results-wrap{ max-width:560px; margin:0 auto; }
 
   h1{
     font-family:'Fraunces', serif;
     font-weight:500;
-    font-size: clamp(28px, 4.4vw, 38px);
+    font-size: clamp(28px, 4.4vw, 40px);
     line-height:1.15;
     margin: 0 0 10px;
     color: var(--navy-deep);
@@ -151,63 +153,51 @@
     line-height:1.55;
   }
 
-  /* ---------- AVANCE GENERAL (junto a "Encuentra tu pedido") ---------- */
-  .avance-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    gap:16px;
-    margin: 0 0 14px;
-  }
-  .avance-header h1{ margin:0; }
-  /* Unico bloque, junto con el header, donde el naranja se reemplaza por
-     azul de marca -- hardcodeado, no via --marigold. Caja tenue con
-     degradado sutil para que el numero/etiqueta se lean como un chip. */
-  .avance-info{
-    flex:none;
-    text-align:right;
-  }
+  /* ---------- AVANCE GENERAL (dentro de .kpi, sobre la banda navy) ---------- */
   .avance-pct{
     font-family:'IBM Plex Mono', monospace;
     font-weight:600;
-    font-size: clamp(22px, 4vw, 28px);
+    font-size: clamp(20px, 4vw, 24px);
     line-height:1;
-    background: linear-gradient(90deg, #003DA5, #08B2FF);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-  }
-  .avance-info .avance-label{
-    font-size:10.5px;
-    letter-spacing:.03em;
-    text-transform:uppercase;
-    color: #003DA5;
-    margin-top:4px;
+    color:#fff;
   }
   .avance-bar-track{
-    height:7px;
-    border-radius:4px;
-    background: var(--line);
+    height:4px;
+    border-radius:2px;
+    background: rgba(255,255,255,.18);
     overflow:hidden;
-    margin: 0 0 22px;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,.08);
   }
   .avance-bar-fill{
     height:100%;
     width:0%;
-    border-radius:4px;
-    background: linear-gradient(90deg, #003DA5, #08B2FF);
+    border-radius:2px;
+    background: #08B2FF;
     transition: width .4s ease;
   }
 
-  /* ---------- SEARCH ---------- */
+  /* ---------- SEARCH (dentro de .card) ---------- */
   form.lookup{
     position:relative;
     display:flex;
     gap:10px;
-    margin-bottom: 8px;
   }
+
+  .field{
+    flex:1;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border: 1.5px solid #d0d5dd;
+    border-radius: 8px;
+    padding: 0 14px;
+    background: #fff;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .field:focus-within{
+    border-color:#0077C8;
+    box-shadow: 0 0 0 4px rgba(8,178,255,.18);
+  }
+  .field svg{ flex:none; }
 
   .suggestions{
     display:none;
@@ -216,7 +206,7 @@
     left:0; right:0;
     background: var(--paper-raised);
     border: 1.5px solid var(--line);
-    border-radius: var(--radius);
+    border-radius: 8px;
     box-shadow: 0 14px 30px rgba(18,48,31,.14);
     max-height: 320px;
     overflow-y:auto;
@@ -260,17 +250,16 @@
     flex:1;
     font-family:'IBM Plex Mono', monospace;
     font-size:15px;
-    padding: 14px 16px;
-    border: 1.5px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--paper-raised);
+    padding: 14px 0;
+    border:none;
+    background:none;
     color: var(--ink);
+    outline:none;
   }
   .lookup input[type="text"]::placeholder{
     font-family:'Inter', sans-serif;
-    color: var(--mist);
+    color: #98a2b3;
   }
-  .lookup input[type="text"]:focus{ border-color: var(--navy); }
 
   .btn{
     font-family:'Inter', sans-serif;
@@ -287,11 +276,19 @@
   }
   .btn:hover{ filter: brightness(1.12); }
   .btn:active{ transform: translateY(1px); }
+  /* Radio de esquina mas suave solo para el boton dentro de la tarjeta
+     de busqueda, sin tocar la regla base (--radius:3px) que usa tambien
+     el boton "Ingresar" del login. */
+  .card .btn{
+    border-radius:8px; padding:0 28px; font-size:15px;
+    background:#00205B; box-shadow:none;
+  }
+  .card .btn:hover{ background:#0077C8; filter:none; }
 
   .hint{
-    font-size:12.5px;
-    color: var(--mist);
-    margin: 0 0 16px;
+    font-size:13px;
+    color: #667085;
+    margin: 10px 0 0;
   }
 
   .filtro-finca{
@@ -299,52 +296,59 @@
     align-items:center;
     justify-content:space-between;
     gap:10px 14px;
-    flex-wrap:wrap;
-    margin: 0 0 36px;
+    flex-wrap:nowrap;
+    margin-top:22px;
+    padding-top:20px;
+    border-top:1px solid #eaecf0;
   }
   .filtro-finca-campo{
     display:flex;
     align-items:center;
-    gap:10px;
-    flex-wrap:wrap;
+    gap:8px;
+    min-width:0;
+    flex:1 1 auto;
   }
   .filtro-finca label{
-    font-size:12.5px;
-    color: var(--mist);
+    font-size:13px;
+    color:#475467;
     white-space:nowrap;
+    flex:none;
   }
   .filtro-finca select{
     width: auto;
-    max-width: 200px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12.5px;
-    padding: 6px 9px;
-    border: 1.5px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--paper-raised);
+    min-width:0;
+    max-width: 100%;
+    flex:1 1 auto;
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    padding: 8px 10px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    background: #fff;
     color: var(--ink);
+    overflow:hidden;
+    text-overflow:ellipsis;
   }
-  .filtro-finca select:focus{ border-color: var(--navy); }
+  .filtro-finca select:focus{ border-color: #0077C8; }
 
-  /* Accion secundaria: mismo lenguaje visual solido que "Buscar" pero
-     mas chica, para que se lea como parte del portal y no como un
-     elemento suelto sobre fondo blanco. */
+  /* Accion secundaria estilo "outline", igual lenguaje que el resto de
+     la tarjeta de busqueda pero de menor peso visual que "Buscar". */
   .btn-export{
+    display:flex; align-items:center; gap:6px;
     font-family:'Inter', sans-serif;
     font-weight:600;
     font-size:12px;
-    padding: 7px 12px;
-    border:none;
-    border-radius: var(--radius);
-    background: linear-gradient(135deg, #003DA5, #00205B);
-    box-shadow: 0 2px 6px rgba(0,32,91,.25);
-    color:#fff;
+    padding: 9px 12px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--navy);
     cursor:pointer;
     white-space:nowrap;
     flex:none;
-    transition: filter .15s ease;
+    transition: border-color .15s ease, background .15s ease;
   }
-  .btn-export:hover{ filter: brightness(1.12); }
+  .btn-export:hover{ border-color: var(--navy); background:#f5f7fb; }
   .btn-export:active{ transform: translateY(1px); }
 
   /* ---------- RESULT TICKET ---------- */
@@ -641,11 +645,23 @@
   .not-found strong{ color: var(--clay); display:block; margin-bottom:4px; font-size:14.5px;}
 
   footer{
-    text-align:center;
-    font-size:11.5px;
-    color: var(--mist);
-    padding: 18px 20px 26px;
+    background: var(--navy);
   }
+  .footer-in{
+    max-width:1200px;
+    margin:0 auto;
+    padding:16px 32px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+    font-size:13px;
+    color:#C9D4EA;
+    text-align:left;
+  }
+  .footer-in a{ color: #08B2FF; font-weight:600; text-decoration:none; }
+  .footer-in a:hover{ text-decoration:underline; }
 
   /* ---------- PASSWORD GATE ---------- */
   #gate{
@@ -711,7 +727,49 @@
     display:none;
   }
 
+  /* ---------- RESPONSIVE: header, banda y tarjeta de busqueda (tablet) ----------
+     Nombres genericos pedidos (.wrap, header .in, .band .wrap, .logos .sw/.ght/.sep,
+     .search, .btn2, .tools, footer .in) traducidos a los reales del proyecto:
+     .wrap, .site-header-in, .band-in, .logos .logo-sw/.logo-ght/.logo-sep,
+     form.lookup, .btn-export, .filtro-finca(-campo), .footer-in. No toca >768px
+     ni la tarjeta de resultado / stepper. */
+  @media (max-width:768px){
+    main{ padding-left:24px; padding-right:24px; }
+    .site-header-in, .footer-in{ padding-left:24px; padding-right:24px; }
+    .band-in{ grid-template-columns:1fr; padding-top:48px; padding-bottom:104px; }
+    .kpi{ max-width:320px; }
+    .band h1{ font-size:34px; }
+    a.logos{ gap:16px; }
+    .logos .logo-sw{ height:48px; margin:-7px -5px -7px -10px; }
+    .logos .logo-ght{ height:36px; }
+    .logos .logo-sep{ height:28px; }
+    .card{ padding:24px; }
+    .card .btn{ padding:0 22px; }
+    .lookup input[type="text"]{ font-size:16px; }
+  }
   @media (max-width:480px){
+    main{ padding-left:16px; padding-right:16px; }
+    .wrap{ margin-top:-64px; }
+    .site-header-in, .footer-in{ padding-left:16px; padding-right:16px; }
+    .site-header-in{ flex-direction:column; align-items:flex-start; gap:8px; }
+    .band-in{ grid-template-columns: 1fr; padding-top:32px; padding-bottom:88px; }
+    .kpi{ min-width:0; max-width:none; }
+    .band h1{ font-size:28px; line-height:1.15; }
+    .band .lede{ font-size:15px; }
+    .avance-pct{ font-size:20px; }
+    a.logos{ gap:12px; }
+    .logos .logo-sw{ height:40px; margin:-6px -4px -6px -9px; }
+    .logos .logo-ght{ height:30px; }
+    .logos .logo-sep{ height:24px; }
+    .card{ padding:16px; }
+    form.lookup{ flex-direction:column; gap:10px; }
+    .lookup input[type="text"]{ font-size:16px; }
+    .card .btn{ height:52px; width:100%; }
+    .filtro-finca{ flex-direction:column; align-items:stretch; gap:12px; }
+    .filtro-finca-campo{ flex-direction:column; align-items:stretch; gap:6px; }
+    .filtro-finca select{ width:100%; height:44px; min-width:0; }
+    .btn-export{ justify-content:center; height:44px; width:100%; }
+    .footer-in{ flex-direction:column; text-align:center; gap:6px; padding-top:16px; padding-bottom:16px; }
     dl.fields{ grid-template-columns: 1fr 1fr; gap:14px; }
     .ticket{ padding: 22px 18px 18px; }
     .perf{ margin: 0 -18px 16px; }
@@ -756,54 +814,76 @@
   </div>
 
   <!-- ================= HEADER ================= -->
-  <header class="ribbon">
-    <div class="header-left">
-      <a class="mark" href="index.html" onclick="sessionStorage.removeItem('ghtAccess')" aria-label="Cerrar sesión y volver al inicio"><img src="logo-sw.png" alt="Smurfit Westrock"></a>
-      <div class="ribbon-text">
-        <div class="brand"><strong>Smurfit Westrock</strong> · Portal GHT</div>
-        <div class="sub">Seguimiento de pedidos — Growers Hub Trading</div>
-      </div>
+  <header class="site-header">
+    <div class="site-header-in">
+      <a class="logos" href="index.html" onclick="sessionStorage.removeItem('ghtAccess')" aria-label="Cerrar sesión y volver al inicio">
+        <img class="logo-sw" src="SW_Logo_Primary_2COL.png" alt="Smurfit Westrock">
+        <span class="logo-sep"></span>
+        <img class="logo-ght" src="ght-logo.png" alt="GHT · Growers Hub Trading">
+      </a>
+      <div class="status"><i></i>Datos actualizados a diario</div>
     </div>
   </header>
 
-  <!-- ================= MAIN ================= -->
+  <!-- ================= BANDA: titulo + avance general ================= -->
+  <div class="band">
+    <div class="band-in">
+      <div>
+        <h1>Encuentra tu pedido</h1>
+        <p class="lede">Ingresa el número de SAG o de orden de compra para ver en qué etapa va tu pedido.</p>
+      </div>
+      <div class="kpi">
+        <div class="kpi-row">
+          <span>Avance general</span>
+          <b class="avance-pct" id="avancePct">—</b>
+        </div>
+        <div class="avance-bar-track">
+          <div class="avance-bar-fill" id="avanceBarFill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN: tarjeta de busqueda ================= -->
   <main>
     <div class="wrap">
-      <img src="logo-sw.png" class="watermark" alt="" aria-hidden="true">
-      <div class="avance-header">
-        <h1>Encuentra tu pedido</h1>
-        <div class="avance-info">
-          <div class="avance-pct" id="avancePct">—</div>
-          <div class="avance-label">Avance general</div>
+      <div class="card">
+        <form class="lookup" id="lookupForm" autocomplete="off">
+          <div class="field">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input type="text" id="query" placeholder="Ej. 4CABAS37 o SB01. GS - 38760" autocomplete="off" inputmode="search">
+          </div>
+          <button type="submit" class="btn">Buscar</button>
+          <div class="suggestions" id="suggestions"></div>
+        </form>
+        <p class="hint">Búsqueda por descripción del producto, orden de compra o nombre de la finca.</p>
+
+        <div class="filtro-finca">
+          <div class="filtro-finca-campo">
+            <label for="fincaFilter">Filtrar por finca:</label>
+            <select id="fincaFilter">
+              <option value="">Selecciona una finca…</option>
+            </select>
+          </div>
+          <button type="button" class="btn-export" id="exportExcelBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+            Exportar consolidado a Excel
+          </button>
         </div>
       </div>
-      <div class="avance-bar-track">
-        <div class="avance-bar-fill" id="avanceBarFill"></div>
+
+      <div class="results-wrap">
+        <div id="result"></div>
       </div>
-      <p class="lede">Ingresa el número de SAG o de orden de compra para ver en qué etapa va tu pedido.</p>
-
-      <form class="lookup" id="lookupForm" autocomplete="off">
-        <input type="text" id="query" placeholder="Ej. 4CABAS37 o SB01. GS - 38760" autocomplete="off" inputmode="search">
-        <button type="submit" class="btn">Buscar</button>
-        <div class="suggestions" id="suggestions"></div>
-      </form>
-      <p class="hint">Búsqueda por descripción del producto, orden de compra o nombre de la finca · datos actualizados a diario</p>
-
-      <div class="filtro-finca">
-        <div class="filtro-finca-campo">
-          <label for="fincaFilter">O selecciona una finca:</label>
-          <select id="fincaFilter">
-            <option value="">Selecciona una finca…</option>
-          </select>
-        </div>
-        <button type="button" class="btn-export" id="exportExcelBtn">Exportar consolidado a Excel</button>
-      </div>
-
-      <div id="result"></div>
     </div>
   </main>
 
-  <footer>Smurfit Westrock · Bogotá, Colombia</footer>
+  <footer>
+    <div class="footer-in">
+      <span>Smurfit Westrock · Bogotá, Colombia</span>
+      <span>¿Dudas con tu pedido? <a href="mailto:leydi.munoz@smurfitwestrock.co">Contacta a servicio al cliente</a></span>
+    </div>
+  </footer>
 
 <script>
   // ------------------------------------------------------------
