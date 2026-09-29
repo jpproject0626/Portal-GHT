@@ -878,13 +878,13 @@
     "Parcialmente despachado":"parcial",
     "Despachado":"despachado"
   };
-  /* Solo 3 colores en todo el stepper: Blue 05 para "Pedido recibido",
+  /* Escala de azules en el stepper: Blue 04 para "Pedido recibido" (Blue 05
+     quedaba demasiado palido, casi gris, contra el fondo de la pagina),
      Light Blue para "En produccion"/"Producido", Navy para "Parcialmente
-     despachado"/"Despachado". Blue 05 es muy claro para leerse como texto,
-     asi que el punto/tramo se queda en Blue 05 pero el titulo de esa
-     etapa usa un gris (ver ESTADO_LABEL_COLOR) solo para que se lea. */
+     despachado"/"Despachado". El titulo de "Pedido recibido" usa un gris
+     propio (ver ESTADO_LABEL_COLOR) solo para que se lea bien. */
   const ESTADO_COLOR = {
-    "Pedido recibido": "#D4EDFC",
+    "Pedido recibido": "#5FCDF5",
     "En producción": "#08B2FF",
     "Producido": "#08B2FF",
     "Parcialmente despachado": "#00205B",
