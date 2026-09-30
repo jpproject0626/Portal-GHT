@@ -282,9 +282,21 @@
     color: #00205B;
     white-space:nowrap;
   }
+  .suggestion-right{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:2px;
+  }
   .suggestion-item .suggestion-finca{
     font-size:13px;
     color:#667085;
+    white-space:nowrap;
+  }
+  .suggestion-item .suggestion-oc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:#98a2b3;
     white-space:nowrap;
   }
   .suggestion-item .suggestion-desc{
@@ -1233,9 +1245,13 @@
     const rows = items.map((item, i) => `
       <button type="button" class="suggestion-item" data-index="${i}">
         <div class="suggestion-top">
-          <span class="suggestion-code">${extraerCodigoProducto(item.descripcion)}</span><span class="suggestion-finca">${item.finca}</span>
+          <span class="suggestion-code">${extraerCodigoProducto(item.descripcion)}</span>
+          <div class="suggestion-right">
+            <span class="suggestion-finca">${item.finca}</span>
+            ${item.orden_compra ? `<span class="suggestion-oc">OC ${item.orden_compra}</span>` : ''}
+          </div>
         </div>
-        <div class="suggestion-desc">${item.descripcion}${item.orden_compra ? ' · OC ' + item.orden_compra : ''}</div>
+        <div class="suggestion-desc">${item.descripcion}</div>
       </button>
     `).join('');
     suggestionsBox.innerHTML = `<div class="sug-list">${rows}</div>`;
