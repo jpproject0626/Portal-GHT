@@ -220,52 +220,81 @@
   }
   .field svg{ flex:none; }
 
+  .search-clear{
+    display:none;
+    flex:none;
+    width:24px; height:24px;
+    border:0;
+    border-radius:50%;
+    background:#F2F4F7;
+    color:#667085;
+    cursor:pointer;
+    align-items:center;
+    justify-content:center;
+    transition: background .12s ease;
+  }
+  .search-clear:hover{ background:#eaecf0; }
+  .search-clear.visible{ display:flex; }
+
   .suggestions{
     display:none;
     position:absolute;
-    top: calc(100% + 6px);
+    top: calc(100% + 8px);
     left:0; right:0;
-    background: var(--paper-raised);
-    border: 1.5px solid var(--line);
-    border-radius: 8px;
-    box-shadow: 0 14px 30px rgba(18,48,31,.14);
-    max-height: 320px;
-    overflow-y:auto;
+    background:#fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    box-shadow: 0 24px 48px rgba(0,32,91,.18), 0 4px 10px rgba(0,32,91,.08);
+    overflow:hidden;
     z-index: 6;
   }
   .suggestions.open{ display:block; }
+  .sug-list{
+    max-height: 380px;
+    overflow-y:auto;
+    padding:6px;
+  }
+  .sug-list::-webkit-scrollbar{ width:10px; }
+  .sug-list::-webkit-scrollbar-thumb{ background:#d0d5dd; border-radius:10px; border:3px solid #fff; }
   .suggestion-item{
     display:block;
     width:100%;
     text-align:left;
-    padding: 10px 14px;
+    padding: 12px 14px;
     border:none;
-    border-bottom: 1px solid var(--line-soft);
+    border-radius: 8px;
     background:none;
     cursor:pointer;
     font-family:'Inter', sans-serif;
+    transition: background .12s ease;
   }
-  .suggestion-item:last-child{ border-bottom:none; }
-  .suggestion-item:hover, .suggestion-item:focus-visible{ background: var(--paper); }
+  .suggestion-item:hover, .suggestion-item:focus-visible, .suggestion-item.is-active{ background: #F2F6FB; }
+  .suggestion-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:16px;
+  }
   .suggestion-item .suggestion-code{
     font-family:'IBM Plex Mono', monospace;
-    font-size:13px;
+    font-size:15px;
     font-weight:600;
     color: var(--navy-deep);
+    white-space:nowrap;
   }
   .suggestion-item .suggestion-finca{
-    font-size:11px;
-    letter-spacing:.02em;
-    color: var(--mist);
-    margin-left:8px;
+    font-size:13px;
+    color:#667085;
+    white-space:nowrap;
   }
   .suggestion-item .suggestion-desc{
-    font-size:12.5px;
-    color: var(--ink-soft);
-    margin-top:2px;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
+    margin-top:4px;
+    font-size:13.5px;
+    color: #475467;
+  }
+  @media(max-width:480px){
+    .sug-list{ max-height:60vh; }
+    .suggestion-top{ flex-wrap:wrap; gap:2px 12px; }
   }
   .lookup input[type="text"]{
     flex:1;
@@ -792,6 +821,9 @@
           <div class="field">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
             <input type="text" id="query" placeholder="Ej. 4CABAS37 o SB01. GS - 38760" autocomplete="off" inputmode="search">
+            <button type="button" class="search-clear" id="clearBtn" aria-label="Borrar búsqueda">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
           </div>
           <button type="submit" class="btn">Buscar</button>
           <div class="suggestions" id="suggestions"></div>
@@ -1166,34 +1198,60 @@
   // ------------------------------------------------------------
   const queryInput = document.getElementById('query');
   const suggestionsBox = document.getElementById('suggestions');
+  const clearBtn = document.getElementById('clearBtn');
+
+  let currentSuggestions = [];
+  let activeSuggestionIndex = -1;
 
   function closeSuggestions(){
     suggestionsBox.classList.remove('open');
     suggestionsBox.innerHTML = '';
+    currentSuggestions = [];
+    activeSuggestionIndex = -1;
+  }
+
+  function selectSuggestion(item){
+    queryInput.value = extraerCodigoProducto(item.descripcion) || item.orden_compra || item.elemento;
+    closeSuggestions();
+    document.getElementById('result').innerHTML = renderTicket(item);
+  }
+
+  function updateActiveSuggestion(){
+    const rows = suggestionsBox.querySelectorAll('.suggestion-item');
+    rows.forEach((row, i) => {
+      const activo = i === activeSuggestionIndex;
+      row.classList.toggle('is-active', activo);
+      if(activo) row.scrollIntoView({ block:'nearest' });
+    });
   }
 
   function renderSuggestions(items){
     if(!items.length){ closeSuggestions(); return; }
+    currentSuggestions = items;
+    activeSuggestionIndex = -1;
 
-    suggestionsBox.innerHTML = items.map((item, i) => `
+    const rows = items.map((item, i) => `
       <button type="button" class="suggestion-item" data-index="${i}">
-        <span class="suggestion-code">${extraerCodigoProducto(item.descripcion)}</span><span class="suggestion-finca">${item.finca}</span>
+        <div class="suggestion-top">
+          <span class="suggestion-code">${extraerCodigoProducto(item.descripcion)}</span><span class="suggestion-finca">${item.finca}</span>
+        </div>
         <div class="suggestion-desc">${item.descripcion}${item.orden_compra ? ' · OC ' + item.orden_compra : ''}</div>
       </button>
     `).join('');
+    suggestionsBox.innerHTML = `<div class="sug-list">${rows}</div>`;
     suggestionsBox.classList.add('open');
 
     suggestionsBox.querySelectorAll('.suggestion-item').forEach((btn, i) => {
-      btn.addEventListener('click', () => {
-        const item = items[i];
-        queryInput.value = extraerCodigoProducto(item.descripcion) || item.orden_compra || item.elemento;
-        closeSuggestions();
-        document.getElementById('result').innerHTML = renderTicket(item);
-      });
+      btn.addEventListener('click', () => selectSuggestion(items[i]));
     });
   }
 
+  function actualizarBotonLimpiar(){
+    clearBtn.classList.toggle('visible', queryInput.value.length > 0);
+  }
+
   queryInput.addEventListener('input', () => {
+    actualizarBotonLimpiar();
     const q = normalizar(queryInput.value.trim());
     if(q.length < 2){ closeSuggestions(); return; }
 
@@ -1207,7 +1265,29 @@
   });
 
   queryInput.addEventListener('keydown', e => {
-    if(e.key === 'Escape') closeSuggestions();
+    const abierto = suggestionsBox.classList.contains('open') && currentSuggestions.length;
+    if(e.key === 'Escape'){ closeSuggestions(); return; }
+    if(!abierto) return;
+
+    if(e.key === 'ArrowDown'){
+      e.preventDefault();
+      activeSuggestionIndex = Math.min(activeSuggestionIndex + 1, currentSuggestions.length - 1);
+      updateActiveSuggestion();
+    } else if(e.key === 'ArrowUp'){
+      e.preventDefault();
+      activeSuggestionIndex = Math.max(activeSuggestionIndex - 1, 0);
+      updateActiveSuggestion();
+    } else if(e.key === 'Enter' && activeSuggestionIndex >= 0){
+      e.preventDefault();
+      selectSuggestion(currentSuggestions[activeSuggestionIndex]);
+    }
+  });
+
+  clearBtn.addEventListener('click', () => {
+    queryInput.value = '';
+    actualizarBotonLimpiar();
+    closeSuggestions();
+    queryInput.focus();
   });
 
   document.addEventListener('click', e => {
