@@ -439,16 +439,16 @@
     box-sizing:border-box;
     flex:none;
   }
-  .stamp.recibido{ color: #54677A; background: #EAF4F7; }
-  .stamp.recibido .stamp-dot{ background: #54677A; }
-  .stamp.produccion{ color: #0077C8; background: #DBF1F5; }
-  .stamp.produccion .stamp-dot{ background: #08B2FF; }
-  .stamp.producido{ color: #0077C8; background: #DBF1F5; }
-  .stamp.producido .stamp-dot{ background: #08B2FF; }
-  .stamp.parcial{ color: #00205B; background: #DFE3E4; }
-  .stamp.parcial .stamp-dot{ background: transparent; border: 2px solid #00205B; }
-  .stamp.despachado{ color: #00205B; background: #DFE3E4; }
-  .stamp.despachado .stamp-dot{ background: #00205B; }
+  .stamp.recibido{ color: #00205B; background: #EEF7FC; }
+  .stamp.recibido .stamp-dot{ background: #8FD3F0; }
+  .stamp.produccion{ color: #00205B; background: #E5F6FC; }
+  .stamp.produccion .stamp-dot{ background: #00A9E0; }
+  .stamp.producido{ color: #00205B; background: #E5F2FA; }
+  .stamp.producido .stamp-dot{ background: #0077C8; }
+  .stamp.parcial{ color: #00205B; background: #E6ECF5; }
+  .stamp.parcial .stamp-dot{ background: transparent; border: 2px solid #004C97; }
+  .stamp.despachado{ color: #fff; background: #00205B; }
+  .stamp.despachado .stamp-dot{ background: #fff; }
 
   /* ---------- PAGINA DE DETALLE DE UN PEDIDO (pd-*) ---------- */
   .pd-page{ padding:32px 0; }
@@ -636,12 +636,42 @@
   }
   .res-head{
     padding:16px 24px;
-    border-bottom:1px solid #eaecf0;
     font:400 14px 'IBM Plex Sans', sans-serif;
     color:#475467;
     white-space:nowrap;
   }
   .res-head b{ font-weight:600; color:#00205B; }
+  .res-filters{
+    margin-top:12px;
+    padding:0 24px 16px;
+    border-bottom:1px solid #eaecf0;
+    display:flex;
+    gap:6px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scrollbar-width:none;
+  }
+  .res-filters::-webkit-scrollbar{ display:none; }
+  .res-filter{
+    display:inline-flex;
+    align-items:center;
+    height:32px;
+    box-sizing:border-box;
+    padding:0 12px;
+    border-radius:999px;
+    flex:none;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:13px;
+    font-weight:500;
+    white-space:nowrap;
+    cursor:pointer;
+    background:#fff;
+    border:1px solid #d0d5dd;
+    color:#344054;
+    transition: border-color .12s ease;
+  }
+  .res-filter:hover{ border-color:#00205B; }
+  .res-filter.active{ background:#00205B; border-color:#00205B; color:#fff; }
   .match-row{
     display:flex;
     align-items:center;
@@ -677,6 +707,7 @@
   .match-row-arrow{ flex:none; color:#98a2b3; }
   @media(max-width:480px){
     .res-head, .match-row{ padding-left:16px; padding-right:16px; }
+    .res-filters{ padding-left:16px; padding-right:16px; }
     .match-row{ flex-wrap:wrap; gap:8px 12px; }
     .match-row-info{ flex-basis:calc(100% - 28px); }
     .match-row .stamp{ order:3; }
@@ -1107,7 +1138,10 @@
   // LISTA DE COINCIDENCIAS (cuando hay mas de 1 resultado)
   // ------------------------------------------------------------
   let currentMatches = [];
+  let currentDisplayedMatches = [];
   let currentQueryLabel = '';
+  let currentFiltroEstado = 'Todos';
+  const FILTROS_ESTADO = ['Todos', ...ESTADOS];
   const resultBox = document.getElementById('result');
 
   function setResultsWide(wide){
@@ -1117,6 +1151,19 @@
   function renderMatchList(items, queryLabel){
     currentMatches = items;
     currentQueryLabel = queryLabel;
+    currentFiltroEstado = 'Todos'; // una busqueda nueva siempre arranca sin filtro
+    renderMatchListView();
+  }
+
+  function renderMatchListView(){
+    const items = currentFiltroEstado === 'Todos'
+      ? currentMatches
+      : currentMatches.filter(item => item.estado === currentFiltroEstado);
+    currentDisplayedMatches = items;
+
+    const filtros = FILTROS_ESTADO.map(estado => `
+      <button type="button" class="res-filter${estado === currentFiltroEstado ? ' active' : ''}" data-estado="${estado}">${estado}</button>
+    `).join('');
 
     const rows = items.map((item, i) => {
       const stampClass = STAMP_CLASS[item.estado] || 'recibido';
@@ -1135,7 +1182,8 @@
     setResultsWide(true);
     resultBox.innerHTML = `
       <div class="res">
-        <div class="res-head"><b>${items.length} pedidos</b> para "${queryLabel}"</div>
+        <div class="res-head"><b>${items.length} pedidos</b> para "${currentQueryLabel}"</div>
+        <div class="res-filters">${filtros}</div>
         ${rows}
       </div>
     `;
@@ -1145,14 +1193,21 @@
         showTicketFromList(parseInt(btn.dataset.index, 10));
       });
     });
+
+    resultBox.querySelectorAll('.res-filter').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentFiltroEstado = btn.dataset.estado;
+        renderMatchListView();
+      });
+    });
   }
 
   function showTicketFromList(index){
-    const item = currentMatches[index];
+    const item = currentDisplayedMatches[index];
     setResultsWide(true);
     resultBox.innerHTML = renderTicket(item, '<button type="button" class="back-link" id="backToList">← Ver todas las fincas</button>');
     document.getElementById('backToList').addEventListener('click', () => {
-      renderMatchList(currentMatches, currentQueryLabel);
+      renderMatchListView();
     });
   }
 
