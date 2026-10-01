@@ -42,7 +42,63 @@ ARCHIVO_HISTORICO_DESPACHOS = "despachos_historico.json"
 # Un pedido ya despachado se sigue mostrando en el portal durante este
 # numero de dias despues de su fecha de despacho, AUNQUE el backlog ya
 # lo haya quitado de su lista. Pasado ese tiempo, deja de aparecer.
-DIAS_VISIBLE_DESPACHADO = 15
+DIAS_VISIBLE_DESPACHADO = 7
+
+# El "porcentaje_global" (avance general) se calcula contra un archivo
+# APARTE, fijo: el "BACKLOG_CONSOLIDADO" que manda logistica una vez por
+# semana con la TOTALIDAD de los pedidos de esa semana. Ese archivo se
+# queda quieto en la carpeta toda la semana (no se toca) y define el 100%
+# real. El BACKLOG.xlsm de todos los dias sigue igual que siempre - solo
+# se usa para el estado/seguimiento de cada pedido, ya no define el total.
+# Los adicionales (pedidos que no estaban en el consolidado) SI se siguen
+# viendo normal en el portal, pero NO se suman a este % - asi el numero
+# nunca baja por una razon que no es culpa de nadie.
+
+
+def encontrar_backlog_consolidado(carpeta="."):
+    """Busca en la carpeta un archivo que tenga 'consolidado' en el nombre
+    (mayusculas o minusculas, no importa) y termine en .xlsm o .xlsx - el
+    archivo semanal fijo de logistica. Si no hay ninguno todavia, devuelve
+    None (ese dia simplemente no se calcula el % de la semana)."""
+    for nombre_archivo in os.listdir(carpeta):
+        nombre_min = nombre_archivo.lower()
+        if nombre_archivo.startswith("~$"):
+            continue
+        if "consolidado" in nombre_min and (nombre_min.endswith(".xlsm") or nombre_min.endswith(".xlsx")):
+            return os.path.join(carpeta, nombre_archivo)
+    return None
+
+
+def cargar_base_semana_ght(ruta_consolidado):
+    """Lee el BACKLOG_CONSOLIDADO (mismo formato que el backlog diario,
+    hoja 'Formato') y devuelve un diccionario {OV|Elemento: cant_sol} SOLO
+    con las filas de clientes GHT. Este es el total FIJO de la semana."""
+    wb = load_workbook(ruta_consolidado, read_only=True, data_only=True)
+    ws = wb["Formato"]
+    filas = list(ws.iter_rows(values_only=True))
+    encabezado = [limpiar_texto(c) for c in filas[0]]
+    datos = filas[1:]
+
+    idx_id_cliente = encabezado.index("ID Cliente")
+    idx_elemento = encabezado.index("Elemento")
+    idx_ord_venta = encabezado.index("Ord. de Venta")
+    idx_cant_sol = encabezado.index("Cant Sol")
+
+    base = {}
+    for fila in datos:
+        id_cliente = limpiar_texto(fila[idx_id_cliente])
+        if not id_cliente.startswith("GHT"):
+            continue
+        elemento = limpiar_texto(fila[idx_elemento])
+        ord_venta = limpiar_texto(fila[idx_ord_venta])
+        try:
+            cant_sol = float(fila[idx_cant_sol]) if fila[idx_cant_sol] not in (None, "") else 0.0
+        except (ValueError, TypeError):
+            cant_sol = 0.0
+        clave = f"{ord_venta}|{elemento}"
+        # Por si el consolidado trae mas de una fila para la misma OV+Elemento
+        base[clave] = base.get(clave, 0.0) + cant_sol
+    return base
 
 
 def limpiar_texto(valor):
@@ -214,6 +270,16 @@ def formatear_cantidad(valor):
     return str(round(valor, 2))
 
 
+def formatear_fecha_entrega(valor):
+    """Convierte la celda 'Fecha entrega' (columna A del backlog) a texto
+    dd/mm/YYYY, igual que el resto de fechas del portal. Si la celda viene
+    vacia (sin fecha asignada todavia), devuelve "" - el frontend decide
+    como mostrar ese caso."""
+    if isinstance(valor, datetime):
+        return valor.strftime("%d/%m/%Y")
+    return ""
+
+
 def generar_datos():
     print("Leyendo Order Capacity...")
     mapa_order_capacity = cargar_order_capacity(RUTA_BACKLOG)
@@ -326,6 +392,7 @@ def generar_datos():
     encabezado = [limpiar_texto(c) for c in filas[0]]
     datos = filas[1:]
 
+    idx_fecha_entrega = encabezado.index("Fecha entrega")
     idx_id_cliente = encabezado.index("ID Cliente")
     idx_elemento = encabezado.index("Elemento")
     idx_descripcion = encabezado.index("Descripción")
@@ -335,7 +402,7 @@ def generar_datos():
     idx_estatus_omp = encabezado.index("Estatus OMP")
     idx_cant_sol = encabezado.index("Cant Sol")
 
-    def construir_registro(id_cliente, elemento, descripcion, ow_final, orden_compra, ov, cant_sol_original, estado_produccion):
+    def construir_registro(id_cliente, elemento, descripcion, ow_final, orden_compra, ov, cant_sol_original, estado_produccion, fecha_entrega=""):
         """
         Decide el estado final de un pedido comparando lo despachado
         (acumulado_por_clave, indexado por Elemento+OV) contra lo
@@ -388,11 +455,11 @@ def generar_datos():
             # de despachos para que incluya la fecha/hora ESTIMADA (antes
             # de que el pedido salga).
             "fecha_estimada_despacho": "",
-            # Campos temporales (numericos, sin formatear) para poder sumar
-            # por orden de compra mas abajo. Se borran antes de guardar el
-            # datos.json final - nunca llegan al portal.
-            "_cant_sol_num": cant_sol_original or 0.0,
-            "_cant_desp_num": cantidad_despachada or 0.0,
+            # Columna A del backlog ("Fecha entrega"): estimado de cuando
+            # llegara el pedido. Viene de la MISMA fila que elemento/OV/OC,
+            # asi que no necesita cruce aparte - ya esta garantizado que
+            # corresponde al pedido correcto.
+            "fecha_entrega": fecha_entrega,
         }, fecha_ultimo
 
     resultado = []
@@ -416,6 +483,7 @@ def generar_datos():
         descripcion = limpiar_texto(fila[idx_descripcion])
         orden_compra = limpiar_texto(fila[idx_ord_compra])
         ord_venta = limpiar_texto(fila[idx_ord_venta])
+        fecha_entrega = formatear_fecha_entrega(fila[idx_fecha_entrega])
 
         try:
             cant_sol = float(fila[idx_cant_sol]) if fila[idx_cant_sol] not in (None, "") else 0.0
@@ -453,7 +521,7 @@ def generar_datos():
 
         registro, _ = construir_registro(
             id_cliente, elemento, descripcion, ow_final, orden_compra,
-            ord_venta, cant_sol_original, estado_produccion,
+            ord_venta, cant_sol_original, estado_produccion, fecha_entrega,
         )
 
         # No exponemos los pedidos "Sin clasificar" al cliente (decision ya tomada en el proyecto)
@@ -482,6 +550,7 @@ def generar_datos():
                 "ow": ow_final, "orden_compra": orden_compra,
                 "cant_sol_original": cant_sol_original,
                 "estado_produccion": estado_produccion,
+                "fecha_entrega": fecha_entrega,
             }
 
         resultado.append(registro)
@@ -503,6 +572,7 @@ def generar_datos():
         registro, fecha_ultimo = construir_registro(
             info["finca"], info["elemento"], info["descripcion"], info["ow"],
             info["orden_compra"], ov_de_clave, cant_sol_original, info.get("estado_produccion", "Sin clasificar"),
+            info.get("fecha_entrega", ""),
         )
         # Solo tiene sentido recuperarlo si de verdad hubo algun despacho
         # (si nunca se despacho nada, y ya no esta en el backlog, no
@@ -522,28 +592,39 @@ def generar_datos():
     ov_desaparecidas_del_todo = ovs_conocidas_antes - ov_cubiertas - ov_recuperadas
 
     # ------------------------------------------------------------
-    # PORCENTAJE ACUMULADO GLOBAL (TODOS los pedidos, de TODAS las
-    # fincas, juntos). Se suma todo lo solicitado (original, congelado)
-    # y todo lo despachado de absolutamente TODAS las lineas del
-    # resultado, sin separar por finca ni por orden de compra, y ese
-    # mismo numero se le pone a cada linea (ademas del
-    # "porcentaje_despachado" que ya tiene cada linea individual sola).
+    # PORCENTAJE DE AVANCE DE LA SEMANA, contra el BACKLOG_CONSOLIDADO fijo
+    # (la totalidad real de los pedidos de la semana, segun logistica). No
+    # se recorre "resultado" para esto - se recorre directamente la base
+    # del consolidado, y para cada pedido de ahi se busca cuanto se ha
+    # despachado en total (acumulado_por_clave, que viene de TODAS las
+    # notas de despacho acumuladas, sin importar si el pedido ya salio del
+    # backlog diario o no). Los adicionales que no estan en el consolidado
+    # simplemente no entran a esta suma - siguen viendose normal en el
+    # portal con su propio estado, pero no afectan este numero.
     # ------------------------------------------------------------
-    total_sol_global = 0.0
-    total_desp_global = 0.0
-    for registro in resultado:
-        total_sol_global += registro["_cant_sol_num"]
-        total_desp_global += registro["_cant_desp_num"]
+    ruta_consolidado = encontrar_backlog_consolidado(CARPETA_DESPACHOS)
+    base_semana = {}
+    if ruta_consolidado:
+        print(f"Backlog consolidado de la semana encontrado: {ruta_consolidado}")
+        base_semana = cargar_base_semana_ght(ruta_consolidado)
+    else:
+        print("No se encontro ningun archivo 'consolidado' en la carpeta - "
+              "el % de avance de la semana no se puede calcular hoy.")
+
+    total_sol_semana = 0.0
+    total_desp_semana = 0.0
+    for clave_base, cant_sol_base in base_semana.items():
+        total_sol_semana += cant_sol_base
+        info_desp = acumulado_por_clave.get(clave_base)
+        cantidad_despachada_base = min(info_desp["cantidad"], cant_sol_base) if info_desp else 0.0
+        total_desp_semana += cantidad_despachada_base
 
     porcentaje_global = None
-    if total_sol_global > 0:
-        porcentaje_global = round(min(100.0, (total_desp_global / total_sol_global) * 100))
+    if total_sol_semana > 0:
+        porcentaje_global = round(min(100.0, (total_desp_semana / total_sol_semana) * 100))
 
     for registro in resultado:
         registro["porcentaje_global"] = porcentaje_global
-        # Se borran los campos temporales, nunca deben llegar al datos.json
-        del registro["_cant_sol_num"]
-        del registro["_cant_desp_num"]
 
     historico = {"notas": notas_historico, "pedidos": pedidos_cache}
     with open(ARCHIVO_HISTORICO_DESPACHOS, "w", encoding="utf-8") as f:
@@ -557,9 +638,10 @@ def generar_datos():
     print(f"Total filas de GHT (antes de quitar 'Sin clasificar'): {total_ght}")
     print(f"Pedidos recuperados del historico (ya no estan en el backlog): {agregados_desde_historico}")
     print(f"Total filas exportadas a {ARCHIVO_SALIDA}: {len(resultado)}")
-    print(f"Porcentaje global despachado (todas las fincas, todos los pedidos): "
+    print(f"Pedidos GHT en el backlog consolidado de la semana: {len(base_semana)}")
+    print(f"Porcentaje de avance de la semana (contra el consolidado, sin adicionales): "
           f"{porcentaje_global if porcentaje_global is not None else '—'}% "
-          f"({formatear_cantidad(total_desp_global)} / {formatear_cantidad(total_sol_global)})")
+          f"({formatear_cantidad(total_desp_semana)} / {formatear_cantidad(total_sol_semana)})")
     print()
 
     # ------------------------------------------------------------
