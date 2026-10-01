@@ -501,14 +501,14 @@
     flex:none;
   }
   .pd-badge-dot{ width:8px; height:8px; border-radius:50%; box-sizing:border-box; flex:none; }
-  .pd-badge.recibido{ color:#54677A; background:#EAF4F7; }
-  .pd-badge.recibido .pd-badge-dot{ background:#54677A; }
-  .pd-badge.produccion{ color:#0077C8; background:#DBF1F5; }
-  .pd-badge.produccion .pd-badge-dot{ background:#08B2FF; }
-  .pd-badge.producido{ color:#0077C8; background:#DBF1F5; }
-  .pd-badge.producido .pd-badge-dot{ background:#08B2FF; }
-  .pd-badge.parcial{ color:#00205B; background:#DFE3E4; }
-  .pd-badge.parcial .pd-badge-dot{ background:transparent; border:2px solid #0077C8; }
+  .pd-badge.recibido{ color:#00205B; background:#EEF7FC; }
+  .pd-badge.recibido .pd-badge-dot{ background:#8FD3F0; }
+  .pd-badge.produccion{ color:#00205B; background:#E5F2FA; }
+  .pd-badge.produccion .pd-badge-dot{ background:#0077C8; }
+  .pd-badge.producido{ color:#00205B; background:#E5F2FA; }
+  .pd-badge.producido .pd-badge-dot{ background:#0077C8; }
+  .pd-badge.parcial{ color:#00205B; background:#E6ECF5; }
+  .pd-badge.parcial .pd-badge-dot{ background:transparent; border:2px solid #004C97; }
   .pd-badge.despachado{ color:#fff; background:#00205B; }
   .pd-badge.despachado .pd-badge-dot{ background:#fff; }
 
@@ -557,7 +557,7 @@
     line-height:1.35;
     text-wrap:balance;
   }
-  .pd-stage-name.current{ font-weight:600; }
+  .pd-stage-name.current{ font-weight:600; color:#00205B; }
   .pd-stage-name.done{ color:#344054; font-weight:500; }
   .pd-stage-name.pending{ color:#98a2b3; font-weight:500; }
 
@@ -921,19 +921,22 @@
   };
   /* Colores de estado para la pagina de detalle de un pedido (encabezado,
      tracker y barra de despachado). Paleta propia de esta vista, distinta
-     de las pildoras .stamp que usa la lista de resultados. */
+     de las pildoras .stamp que usa la lista de resultados. Secuencia de
+     claro a oscuro, siempre en este orden. */
   const ESTADO_COLOR_DETALLE = {
-    "Pedido recibido": "#54677A",
-    "En producción": "#08B2FF",
-    "Producido": "#08B2FF",
-    "Parcialmente despachado": "#0077C8",
+    "Pedido recibido": "#8FD3F0",
+    "En producción": "#00A9E0",
+    "Producido": "#0077C8",
+    "Parcialmente despachado": "#004C97",
     "Despachado": "#00205B"
   };
 
   const CHECK_SVG = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
 
   function renderTrack(estado){
-    const idx = ESTADOS.indexOf(estado);
+    // "Despachado" muestra las 5 etapas como completadas (con check), sin
+    // anillo de etapa actual -- no hay "siguiente paso" que resaltar.
+    const idx = estado === "Despachado" ? ESTADOS.length : ESTADOS.indexOf(estado);
 
     const columnas = ESTADOS.map((etapa, i) => {
       const completada = i < idx;
@@ -947,14 +950,23 @@
         dotContent = CHECK_SVG;
       } else if (actual){
         dotClass = 'current';
-        dotStyle = `border:2px solid ${color}; box-shadow: 0 0 0 5px ${color}22, inset 0 0 0 4px #fff, inset 0 0 0 10px ${color};`;
+        dotStyle = `border:2px solid ${color}; box-shadow: 0 0 0 5px ${color}26, inset 0 0 0 4px #fff, inset 0 0 0 10px ${color};`;
       }
 
-      const lineaColor = completada ? color : '#e4e7ec';
+      // Tramo completado: degradado del color de esta etapa al color de
+      // la siguiente (no un color plano), para que se note la progresion
+      // de claro a oscuro a lo largo del camino recorrido.
+      let lineaStyle;
+      if (completada && i < ESTADOS.length - 1){
+        const colorSiguiente = ESTADO_COLOR_DETALLE[ESTADOS[i+1]];
+        lineaStyle = `background: linear-gradient(90deg, ${color}, ${colorSiguiente});`;
+      } else {
+        lineaStyle = `background:#e4e7ec;`;
+      }
 
-      let nombreClass = 'pending', nombreStyle = '';
-      if (actual){ nombreClass = 'current'; nombreStyle = `color:${color};`; }
-      else if (completada){ nombreClass = 'done'; }
+      let nombreClass = 'pending';
+      if (actual) nombreClass = 'current';
+      else if (completada) nombreClass = 'done';
 
       // Tiempos estimados: uno centrado en el tramo "En produccion"
       // (columna ancha, 2fr), otro sobre el punto de "Parcialmente
@@ -967,11 +979,11 @@
       return `
         <div class="pd-stage">
           <div class="pd-stage-row">
-            <div class="pd-stage-line" style="background:${lineaColor}"></div>
+            <div class="pd-stage-line" style="${lineaStyle}"></div>
             <div class="pd-stage-dot ${dotClass}" style="${dotStyle}">${dotContent}</div>
             ${tiempo}
           </div>
-          <div class="pd-stage-name ${nombreClass}" style="${nombreStyle}">${etapa}</div>
+          <div class="pd-stage-name ${nombreClass}">${etapa}</div>
         </div>
       `;
     }).join('');
@@ -999,7 +1011,7 @@
     const despachada = parseFloat(item.cantidad_despachada) || 0;
     const pctReal = solicitada > 0 ? (despachada / solicitada) * 100 : 0;
     const pctTexto = pctReal.toFixed(1).replace('.', ',') + '%';
-    const colorBarra = ESTADO_COLOR_DETALLE[item.estado] || ESTADO_COLOR_DETALLE["Pedido recibido"];
+    const colorBarra = '#00205B';
 
     const fechaUltimoEnvio = item.fecha_despacho && item.fecha_despacho.trim() ? item.fecha_despacho : null;
     let ultimoEnvioDM = '', ultimoEnvioAnio = '';
