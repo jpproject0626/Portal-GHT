@@ -13,7 +13,7 @@
     "nota_despacho": "797108, 797363",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "29/09/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PRESH",
@@ -29,7 +29,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "29/09/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BENCHM",
@@ -37,15 +37,15 @@
     "descripcion": "4CABAS17 BASE TBC BENCHMARK 105X",
     "ow": "42331",
     "orden_compra": "BG01. PB - 1861",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797438, 797452",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "29/09/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -61,7 +61,7 @@
     "nota_despacho": "797415",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "29/09/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -69,15 +69,15 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "AL01. G1 - 33664",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "29/09/2026",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "240",
-    "cantidad_despachada": "60",
-    "porcentaje_despachado": 25,
-    "nota_despacho": "797367",
+    "cantidad_despachada": "240",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797367, 797454",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "29/09/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -93,7 +93,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "29/09/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -109,7 +109,7 @@
     "nota_despacho": "797122, 797422",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "29/09/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TEMKIN",
@@ -125,7 +125,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "02/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -141,7 +141,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -157,7 +157,7 @@
     "nota_despacho": "797363",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -166,14 +166,14 @@
     "ow": "42355",
     "orden_compra": "RQ01. GR - 31005",
     "estado": "Parcialmente despachado",
-    "fecha_despacho": "30/09/2026",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "3000",
-    "cantidad_despachada": "1920",
-    "porcentaje_despachado": 64,
-    "nota_despacho": "797412",
+    "cantidad_despachada": "2880",
+    "porcentaje_despachado": 96,
+    "nota_despacho": "797412, 797562",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -189,7 +189,7 @@
     "nota_despacho": "797363",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -205,7 +205,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -213,15 +213,15 @@
     "descripcion": "4CATAP74 TAPA 2P TBC FLOREXPO C720",
     "ow": "42324",
     "orden_compra": "RQ01. GR - 31005",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797579",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -237,7 +237,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -245,15 +245,15 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42315",
     "orden_compra": "RQ01. GR - 31005",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797579",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -261,15 +261,15 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "RQ01. GR - 31005",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "3000",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "3000",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797471",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -285,7 +285,7 @@
     "nota_despacho": "797430",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -301,7 +301,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -309,15 +309,15 @@
     "descripcion": "4CATAP84 TAPA TBC  DESIGNER  C720",
     "ow": "42326",
     "orden_compra": "RQ01. GR - 30994",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797562",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -333,7 +333,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -341,15 +341,15 @@
     "descripcion": "4CATAP108 TAPA STD FALCON 97 X 48 X 21  CAB 2",
     "ow": "42342",
     "orden_compra": "FL01. GZ - 30117",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797476",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -357,15 +357,15 @@
     "descripcion": "CAB 2  4CATAP73 TAPA STD  FLOREXPO  C930 CAB 2",
     "ow": "42341",
     "orden_compra": "FL01. GZ - 30117",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "500",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "500",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797464",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -373,15 +373,15 @@
     "descripcion": "4CABAS37 BASE 1/3",
     "ow": "42319",
     "orden_compra": "FL01. GZ - 30117",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797476",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -397,7 +397,7 @@
     "nota_despacho": "797425",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -405,15 +405,15 @@
     "descripcion": "4CABAS34 BASE 1/4",
     "ow": "42312",
     "orden_compra": "FL01. GZ - 30117",
-    "estado": "Parcialmente despachado",
+    "estado": "Despachado",
     "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "2400",
-    "cantidad_despachada": "2280",
-    "porcentaje_despachado": 95,
-    "nota_despacho": "797425",
+    "cantidad_despachada": "2400",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797425, 797476",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -421,15 +421,15 @@
     "descripcion": "4CATAP74 TAPA 2P TBC FLOREXPO C720",
     "ow": "42324",
     "orden_compra": "FL01. GZ - 30117",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797464",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -445,7 +445,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -461,7 +461,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -469,15 +469,15 @@
     "descripcion": "4CATAP83 TAPA TBC SIN IMPRES C720",
     "ow": "42325",
     "orden_compra": "FL01. GZ - 30117",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "210",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797489",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -493,7 +493,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -501,15 +501,15 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42315",
     "orden_compra": "ML01. GN - 30404",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797456",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -525,7 +525,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -541,7 +541,7 @@
     "nota_despacho": "797345",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -549,15 +549,15 @@
     "descripcion": "4CABAS37 BASE 1/3",
     "ow": "42319",
     "orden_compra": "ML01. GN - 30404",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "180",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "180",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797456",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -573,7 +573,7 @@
     "nota_despacho": "797432",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -589,7 +589,7 @@
     "nota_despacho": "797432",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -597,15 +597,15 @@
     "descripcion": "CAB 2  4CATAP73 TAPA STD  FLOREXPO  C930 CAB 2",
     "ow": "42341",
     "orden_compra": "ML01. GN - 30404",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "260",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "260",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797456",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -621,7 +621,7 @@
     "nota_despacho": "797426",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -629,15 +629,15 @@
     "descripcion": "4CABAS37 BASE 1/3",
     "ow": "42319",
     "orden_compra": "SB01. GS - 38973",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "210",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797477",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -653,7 +653,7 @@
     "nota_despacho": "797426",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -669,7 +669,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -677,15 +677,15 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42315",
     "orden_compra": "SB01. GS - 38973",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797477",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -693,15 +693,15 @@
     "descripcion": "4CATAPF122 TAPA 1/4  POLO FARMS 97",
     "ow": "42323",
     "orden_compra": "SB01. GS - 38973",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797477",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -709,15 +709,15 @@
     "descripcion": "TAPA CUARTO SOLE FARMS NUEVA IMPRESIÓN",
     "ow": "42348",
     "orden_compra": "SB01. GS - 38973",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "150",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797477",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -733,7 +733,7 @@
     "nota_despacho": "797426",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -749,7 +749,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -765,7 +765,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -773,15 +773,15 @@
     "descripcion": "CAB 2  4CATAP73 TAPA STD  FLOREXPO  C930 CAB 2",
     "ow": "42341",
     "orden_compra": "SB01. GS - 38973",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "400",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "400",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797490",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -789,15 +789,15 @@
     "descripcion": "4CABAS24 BENCHMARK CUARTO BASE 105 X 26 X 15",
     "ow": "42343",
     "orden_compra": "SB01. GS - 38973",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "720",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "360",
+    "porcentaje_despachado": 50,
+    "nota_despacho": "797477",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -813,7 +813,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -821,15 +821,15 @@
     "descripcion": "4CABAS53 BASE MARITIMA BENCHMARK 86 X 36 X 19",
     "ow": "42338",
     "orden_compra": "SB01. GS - 38973",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "270",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "270",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797477",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT SNF",
@@ -845,7 +845,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT SNF",
@@ -853,15 +853,15 @@
     "descripcion": "CAB 2  4CATAP73 TAPA STD  FLOREXPO  C930 CAB 2",
     "ow": "42341",
     "orden_compra": "SN01. GU - 35939",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797491",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT SNF",
@@ -869,15 +869,15 @@
     "descripcion": "4CABAS36 BASE STD- CAB 2",
     "ow": "42340",
     "orden_compra": "SN01. GU - 35939",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "29/09/2026",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "1300",
-    "cantidad_despachada": "1080",
-    "porcentaje_despachado": 83,
-    "nota_despacho": "797381",
+    "cantidad_despachada": "1300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797381, 797478",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT GENERA",
@@ -885,15 +885,15 @@
     "descripcion": "4CABAS34 BASE 1/4",
     "ow": "42312",
     "orden_compra": "FG01. GB - 16303",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797479",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT GENERA",
@@ -901,15 +901,15 @@
     "descripcion": "4CATAP09 TAPA  STD NACIONAL",
     "ow": "42317",
     "orden_compra": "FG01. GB - 16303",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797479",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT GENERA",
@@ -917,15 +917,15 @@
     "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
     "ow": "42318",
     "orden_compra": "FG01. GB - 16303",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "280",
+    "porcentaje_despachado": 93,
+    "nota_despacho": "797539",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT GENERA",
@@ -941,7 +941,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT GENERA",
@@ -957,7 +957,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -973,7 +973,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -981,15 +981,15 @@
     "descripcion": "4CATAP74 TAPA 2P TBC FLOREXPO C720",
     "ow": "42324",
     "orden_compra": "LC01. GK - 42708",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "150",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797465",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -997,15 +997,15 @@
     "descripcion": "4CATAP83 TAPA TBC SIN IMPRES C720",
     "ow": "42325",
     "orden_compra": "LC01. GK - 42708",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "210",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797535",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1013,15 +1013,15 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "LC01. GK - 42708",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "540",
+    "porcentaje_despachado": 90,
+    "nota_despacho": "797465",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1029,15 +1029,15 @@
     "descripcion": "4CATAP81 TAPA TBC QUEENS",
     "ow": "42334",
     "orden_compra": "LC01. GK - 42708",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "30",
+    "porcentaje_despachado": 25,
+    "nota_despacho": "797590",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1045,15 +1045,15 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42315",
     "orden_compra": "LC01. GK - 42708",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797590",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1061,15 +1061,15 @@
     "descripcion": "4CATAP78 TAPA STD QUEENS CAB2",
     "ow": "42339",
     "orden_compra": "LC01. GK - 42708",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "200",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "200",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797590",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1077,15 +1077,15 @@
     "descripcion": "4CABAS36 BASE STD- CAB 2",
     "ow": "42340",
     "orden_compra": "LC01. GK - 42708",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "500",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "500",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797465",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1093,15 +1093,15 @@
     "descripcion": "CAB 2  4CATAP73 TAPA STD  FLOREXPO  C930 CAB 2",
     "ow": "42341",
     "orden_compra": "LC01. GK - 42708",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797465",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1117,7 +1117,7 @@
     "nota_despacho": "797362",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1125,15 +1125,15 @@
     "descripcion": "4CATAP78 TAPA STD QUEENS CAB2",
     "ow": "42339",
     "orden_compra": "FA01. GK - 42707",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797480",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1149,7 +1149,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1157,15 +1157,15 @@
     "descripcion": "4CABAS35 BASE TBC Cab 3",
     "ow": "42313",
     "orden_compra": "FA01. GK - 42707",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "150",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797480",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1173,15 +1173,15 @@
     "descripcion": "4CABAS34 BASE 1/4",
     "ow": "42312",
     "orden_compra": "FA01. GK - 42707",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "450",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797480",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1189,15 +1189,15 @@
     "descripcion": "TAPA CUARTO SOLE FARMS NUEVA IMPRESIÓN",
     "ow": "42348",
     "orden_compra": "FA01. GK - 42707",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797480",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1213,7 +1213,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -1229,7 +1229,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PRESH",
@@ -1245,7 +1245,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PRESH",
@@ -1261,7 +1261,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PRESH",
@@ -1277,7 +1277,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -1285,15 +1285,15 @@
     "descripcion": "CAB 2  4CATAP73 TAPA STD  FLOREXPO  C930 CAB 2",
     "ow": "42341",
     "orden_compra": "CP01. G5 - 32150",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "740",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "700",
+    "porcentaje_despachado": 95,
+    "nota_despacho": "797547",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -1301,15 +1301,15 @@
     "descripcion": "4CABAS36 BASE STD- CAB 2",
     "ow": "42340",
     "orden_compra": "CP01. G5 - 32150",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "1800",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "1800",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797441",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -1317,15 +1317,15 @@
     "descripcion": "4CATAP74 TAPA 2P TBC FLOREXPO C720",
     "ow": "42324",
     "orden_compra": "CP01. G5 - 32150",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797441",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -1341,7 +1341,7 @@
     "nota_despacho": "797424",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -1357,7 +1357,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -1373,7 +1373,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -1381,15 +1381,15 @@
     "descripcion": "4CATAP78 TAPA STD QUEENS CAB2",
     "ow": "42339",
     "orden_compra": "CP01. G5 - 32150",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797499",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -1405,7 +1405,7 @@
     "nota_despacho": "797424",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -1413,15 +1413,15 @@
     "descripcion": "4CABAS37 BASE 1/3",
     "ow": "42319",
     "orden_compra": "CP01. G5 - 32150",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "900",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797499",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1437,7 +1437,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1445,15 +1445,15 @@
     "descripcion": "4CATAP108 TAPA STD FALCON 97 X 48 X 21  CAB 2",
     "ow": "42342",
     "orden_compra": "AJ01. X1 - 66982",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "420",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "420",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797482",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1469,7 +1469,7 @@
     "nota_despacho": "797431",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1477,15 +1477,15 @@
     "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
     "ow": "42318",
     "orden_compra": "AJ01. X1 - 66982",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "1200",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797532",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1493,15 +1493,15 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "AJ01. X1 - 66982",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "1200",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "900",
+    "porcentaje_despachado": 75,
+    "nota_despacho": "797482",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1517,7 +1517,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1533,7 +1533,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1549,7 +1549,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1565,7 +1565,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1581,7 +1581,7 @@
     "nota_despacho": "797431",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1589,15 +1589,15 @@
     "descripcion": "4CATAP09 TAPA  STD NACIONAL",
     "ow": "42317",
     "orden_compra": "AJ01. X1 - 66982",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "1200",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "1200",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797482",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1613,7 +1613,7 @@
     "nota_despacho": "797431",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1621,15 +1621,15 @@
     "descripcion": "4CATAP108 TAPA STD FALCON 97 X 48 X 21  CAB 2",
     "ow": "42342",
     "orden_compra": "TM01. X1 - 66984",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "400",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "400",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797453",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1637,15 +1637,15 @@
     "descripcion": "4CATAP83 TAPA TBC SIN IMPRES C720",
     "ow": "42325",
     "orden_compra": "TM01. X1 - 66984",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "2100",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "1740",
+    "porcentaje_despachado": 83,
+    "nota_despacho": "797497",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1661,7 +1661,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1669,15 +1669,15 @@
     "descripcion": "4CATAP108 TAPA STD FALCON 97 X 48 X 21  CAB 2",
     "ow": "42342",
     "orden_compra": "LN01. X1 - 66983",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "800",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "800",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797492",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1685,15 +1685,15 @@
     "descripcion": "4CABAS34 BASE 1/4",
     "ow": "42312",
     "orden_compra": "LN01. X1 - 66983",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797439",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1701,15 +1701,15 @@
     "descripcion": "4CATAP107 TAPA TBC FALCON 97X24",
     "ow": "42320",
     "orden_compra": "LN01. X1 - 66983",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797439",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1725,7 +1725,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -1733,15 +1733,15 @@
     "descripcion": "4CATAP83 TAPA TBC SIN IMPRES C720",
     "ow": "42325",
     "orden_compra": "LN01. X1 - 66983",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "900",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797492",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1757,7 +1757,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1765,15 +1765,15 @@
     "descripcion": "4CATAP74 TAPA 2P TBC FLOREXPO C720",
     "ow": "42324",
     "orden_compra": "PL02. XB - 22751",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797459",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1789,7 +1789,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1797,15 +1797,15 @@
     "descripcion": "4CABAS24 BENCHMARK CUARTO BASE 105 X 26 X 15",
     "ow": "42343",
     "orden_compra": "PL02. XB - 22751",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "150",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797487",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1813,15 +1813,15 @@
     "descripcion": "4CATAP108 TAPA STD FALCON 97 X 48 X 21  CAB 2",
     "ow": "42342",
     "orden_compra": "PL02. XB - 22751",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "100",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "90",
+    "porcentaje_despachado": 90,
+    "nota_despacho": "797487",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1837,7 +1837,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1853,7 +1853,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1861,15 +1861,15 @@
     "descripcion": "4CABAS34 BASE 1/4",
     "ow": "42312",
     "orden_compra": "PL02. XB - 22751",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "1800",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "1800",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797459",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1877,15 +1877,15 @@
     "descripcion": "4CABAS37 BASE 1/3",
     "ow": "42319",
     "orden_compra": "PL02. XB - 22751",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "30",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797487",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1893,15 +1893,15 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42315",
     "orden_compra": "PL02. XB - 22751",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797550",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1917,7 +1917,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1933,7 +1933,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1949,7 +1949,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -1957,15 +1957,15 @@
     "descripcion": "4CATAPF124 TAPA TBC POLO FARMS  97",
     "ow": "42321",
     "orden_compra": "PL02. XB - 22751",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "150",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797459",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -1981,7 +1981,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -1997,7 +1997,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -2005,15 +2005,15 @@
     "descripcion": "4CABAS36 BASE STD- CAB 2",
     "ow": "42340",
     "orden_compra": "UB01. GX - 24559",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "40",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "40",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797495",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -2029,7 +2029,7 @@
     "nota_despacho": "797423",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -2037,15 +2037,15 @@
     "descripcion": "4CATAP108 TAPA STD FALCON 97 X 48 X 21  CAB 2",
     "ow": "42342",
     "orden_compra": "UB01. GX - 24559",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "40",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "40",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797495",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -2053,15 +2053,15 @@
     "descripcion": "4CATAP154 TAPA TBC GOLDEN 105 X 25 X 24 C930",
     "ow": "42351",
     "orden_compra": "UB01. GX - 24559",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797495",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -2077,7 +2077,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -2085,15 +2085,15 @@
     "descripcion": "4CATAP74 TAPA 2P TBC FLOREXPO C720",
     "ow": "42324",
     "orden_compra": "UB01. GX - 24559",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "240",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "240",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797495",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -2101,15 +2101,15 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42315",
     "orden_compra": "UB01. GX - 24559",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "150",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797495",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -2125,7 +2125,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -2141,7 +2141,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -2157,7 +2157,7 @@
     "nota_despacho": "797423",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -2165,15 +2165,15 @@
     "descripcion": "4CABAS35 BASE TBC Cab 3",
     "ow": "42313",
     "orden_compra": "UB01. GX - 24559",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "630",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "630",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797495",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FOLLAJ",
@@ -2181,15 +2181,15 @@
     "descripcion": "4CATAP09 TAPA  STD NACIONAL",
     "ow": "42317",
     "orden_compra": "CG01. G3 - 10523",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "1200",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "960",
+    "porcentaje_despachado": 80,
+    "nota_despacho": "797560",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FOLLAJ",
@@ -2205,7 +2205,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -2213,15 +2213,15 @@
     "descripcion": "4CATAP108 TAPA STD FALCON 97 X 48 X 21  CAB 2",
     "ow": "42342",
     "orden_compra": "SZ01. X3 - 32609",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "500",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "500",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797463",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -2229,15 +2229,15 @@
     "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
     "ow": "42318",
     "orden_compra": "SZ01. X3 - 32609",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "500",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "500",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797533",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -2245,15 +2245,15 @@
     "descripcion": "4CABAS36 BASE STD- CAB 2",
     "ow": "42340",
     "orden_compra": "SZ01. X3 - 32609",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "200",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "200",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797463",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -2269,7 +2269,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -2285,7 +2285,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -2293,15 +2293,15 @@
     "descripcion": "4CATAP09 TAPA  STD NACIONAL",
     "ow": "42317",
     "orden_compra": "SZ01. X3 - 32609",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "500",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "500",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797463",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -2309,15 +2309,15 @@
     "descripcion": "4CATAPF124 TAPA TBC POLO FARMS  97",
     "ow": "42321",
     "orden_compra": "SZ01. X3 - 32609",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "1020",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "1020",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797483",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -2333,7 +2333,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -2349,7 +2349,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -2357,15 +2357,15 @@
     "descripcion": "4CATAP103  TAPA 1/3  QUEENS",
     "ow": "42332",
     "orden_compra": "MO01. GO - 31660",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "150",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797475",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -2381,7 +2381,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -2397,7 +2397,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -2405,15 +2405,15 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "MO01. GO - 31660",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "150",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797475",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -2421,15 +2421,15 @@
     "descripcion": "4CABAS37 BASE 1/3",
     "ow": "42319",
     "orden_compra": "MO01. GO - 31660",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797475",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -2445,7 +2445,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -2453,15 +2453,15 @@
     "descripcion": "CAB 2  4CATAP73 TAPA STD  FLOREXPO  C930 CAB 2",
     "ow": "42341",
     "orden_compra": "MO01. GO - 31660",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797481",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -2469,15 +2469,15 @@
     "descripcion": "4CATAP78 TAPA STD QUEENS CAB2",
     "ow": "42339",
     "orden_compra": "MO01. GO - 31660",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "29/09/2026",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "1000",
-    "cantidad_despachada": "540",
-    "porcentaje_despachado": 54,
-    "nota_despacho": "797384",
+    "cantidad_despachada": "1000",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797384, 797475",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2485,15 +2485,15 @@
     "descripcion": "4CATAP09 TAPA  STD NACIONAL",
     "ow": "42317",
     "orden_compra": "PM01. GV - 41925",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "240",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "240",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797486",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2509,7 +2509,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2517,15 +2517,15 @@
     "descripcion": "CAB 2  4CATAP73 TAPA STD  FLOREXPO  C930 CAB 2",
     "ow": "42341",
     "orden_compra": "PM01. GV - 41965",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "80",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "80",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797486",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2541,7 +2541,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2549,15 +2549,15 @@
     "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
     "ow": "42318",
     "orden_compra": "PM01. GV - 41965",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797549",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2565,15 +2565,15 @@
     "descripcion": "4CATAP09 TAPA  STD NACIONAL",
     "ow": "42317",
     "orden_compra": "PM01. GV - 41965",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797486",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2581,15 +2581,15 @@
     "descripcion": "4CATAP95 TAPA 1/4 .DESIGNER C720",
     "ow": "42314",
     "orden_compra": "PM01. GV - 41965",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 20,
+    "nota_despacho": "797458",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2597,15 +2597,15 @@
     "descripcion": "4CATAP81 TAPA TBC QUEENS",
     "ow": "42334",
     "orden_compra": "PM01. GV - 41965",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "180",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 67,
+    "nota_despacho": "797486",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2613,15 +2613,15 @@
     "descripcion": "4CATAP84 TAPA TBC  DESIGNER  C720",
     "ow": "42326",
     "orden_compra": "PM01. GV - 41965",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797549",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2637,7 +2637,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2645,15 +2645,15 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42315",
     "orden_compra": "PM01. GV - 41965",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797549",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2661,15 +2661,15 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "PM01. GV - 41965",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "720",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "720",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797486",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2685,7 +2685,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2693,15 +2693,15 @@
     "descripcion": "4CABAS17 BASE TBC BENCHMARK 105X",
     "ow": "42331",
     "orden_compra": "TN01. GV - 41964",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "40",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "40",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797485",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2709,15 +2709,15 @@
     "descripcion": "CAB 2  4CATAP73 TAPA STD  FLOREXPO  C930 CAB 2",
     "ow": "42341",
     "orden_compra": "TN01. GV - 41964",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797485",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2725,15 +2725,15 @@
     "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
     "ow": "42318",
     "orden_compra": "TN01. GV - 41964",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797548",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2741,15 +2741,15 @@
     "descripcion": "4CABAS37 BASE 1/3",
     "ow": "42319",
     "orden_compra": "TN01. GV - 41964",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797485",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2757,15 +2757,15 @@
     "descripcion": "4CATAP09 TAPA  STD NACIONAL",
     "ow": "42317",
     "orden_compra": "TN01. GV - 41964",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797457",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2781,7 +2781,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2789,15 +2789,15 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "TN01. GV - 41964",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797485",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2805,15 +2805,15 @@
     "descripcion": "4CATAP74 TAPA 2P TBC FLOREXPO C720",
     "ow": "42324",
     "orden_compra": "TN01. GV - 41964",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797548",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -2821,15 +2821,15 @@
     "descripcion": "4CATAP103  TAPA 1/3  QUEENS",
     "ow": "42332",
     "orden_compra": "TN01. GV - 41964",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "90",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797485",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -2837,15 +2837,15 @@
     "descripcion": "4CATAP81 TAPA TBC QUEENS",
     "ow": "42334",
     "orden_compra": "CH01. G4 - 50827",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797450",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -2853,15 +2853,15 @@
     "descripcion": "4CATAP103  TAPA 1/3  QUEENS",
     "ow": "42332",
     "orden_compra": "CH01. G4 - 50827",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "30",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797450",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -2869,15 +2869,15 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42315",
     "orden_compra": "CH01. G4 - 50827",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797450",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -2885,15 +2885,15 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "CH01. G4 - 50827",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "450",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797450",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -2901,15 +2901,15 @@
     "descripcion": "4CABAS37 BASE 1/3",
     "ow": "42319",
     "orden_compra": "CH01. G4 - 50827",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "30",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797450",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -2925,7 +2925,7 @@
     "nota_despacho": "797429",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -2933,15 +2933,15 @@
     "descripcion": "4CABAS34 BASE 1/4",
     "ow": "42312",
     "orden_compra": "CH01. G4 - 50827",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797450",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -2949,15 +2949,15 @@
     "descripcion": "4CABAS35 BASE TBC Cab 3",
     "ow": "42313",
     "orden_compra": "CH01. G4 - 50827",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797450",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -2973,7 +2973,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -2981,15 +2981,15 @@
     "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
     "ow": "42327",
     "orden_compra": "CH01. G4 - 50827",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "30",
+    "porcentaje_despachado": 50,
+    "nota_despacho": "797450",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -2997,15 +2997,15 @@
     "descripcion": "4CABAS35 BASE TBC Cab 3",
     "ow": "42313",
     "orden_compra": "HA01. GM - 102215",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "450",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797468",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3021,7 +3021,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3029,15 +3029,15 @@
     "descripcion": "TAPA CUARTO SOLE FARMS NUEVA IMPRESIÓN",
     "ow": "42348",
     "orden_compra": "HA01. GM - 102215",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "210",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797468",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3045,15 +3045,15 @@
     "descripcion": "4CATAP84 TAPA TBC  DESIGNER  C720",
     "ow": "42326",
     "orden_compra": "HA01. GM - 102215",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "360",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "360",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797561",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3069,7 +3069,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3077,15 +3077,15 @@
     "descripcion": "4CABAS24 BENCHMARK CUARTO BASE 105 X 26 X 15",
     "ow": "42343",
     "orden_compra": "HA01. GM - 102215",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "900",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797468",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3101,7 +3101,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3109,15 +3109,15 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42315",
     "orden_compra": "SC01. GM - 102214",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "390",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "390",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797578",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3133,7 +3133,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3141,15 +3141,15 @@
     "descripcion": "4CATAP74 TAPA 2P TBC FLOREXPO C720",
     "ow": "42324",
     "orden_compra": "SC01. GM - 102214",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797578",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3157,15 +3157,15 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "SC01. GM - 102214",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797470",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3181,7 +3181,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3189,15 +3189,15 @@
     "descripcion": "4CABAS35 BASE TBC Cab 3",
     "ow": "42313",
     "orden_compra": "SC01. GM - 102214",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "900",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797470",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3205,15 +3205,15 @@
     "descripcion": "4CABAS53 BASE MARITIMA BENCHMARK 86 X 36 X 19",
     "ow": "42338",
     "orden_compra": "SC01. GM - 102214",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "330",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "330",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797470",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3229,7 +3229,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3237,15 +3237,15 @@
     "descripcion": "4CABAS36 BASE STD- CAB 2",
     "ow": "42340",
     "orden_compra": "SC01. GM - 102214",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "240",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "240",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797470",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3253,15 +3253,15 @@
     "descripcion": "4CATAP108 TAPA STD FALCON 97 X 48 X 21  CAB 2",
     "ow": "42342",
     "orden_compra": "SC01. GM - 102214",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "180",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "180",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797470",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3269,15 +3269,15 @@
     "descripcion": "4CATAP78 TAPA STD QUEENS CAB2",
     "ow": "42339",
     "orden_compra": "SC01. GM - 102214",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "160",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "160",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797470",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3293,7 +3293,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3309,7 +3309,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3317,15 +3317,15 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42315",
     "orden_compra": "MG01. GM - 102213",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "150",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "150",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797577",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3333,15 +3333,15 @@
     "descripcion": "4CATAP78 TAPA STD QUEENS CAB2",
     "ow": "42339",
     "orden_compra": "MG01. GM - 102213",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "1000",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "1000",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797469",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3357,7 +3357,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3365,15 +3365,15 @@
     "descripcion": "4CATAP78 TAPA STD QUEENS CAB2",
     "ow": "42339",
     "orden_compra": "JA01. GM - 102212",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "160",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "160",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797467",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3381,15 +3381,15 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "JA01. GM - 102212",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797467",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3397,15 +3397,15 @@
     "descripcion": "4CATAP103  TAPA 1/3  QUEENS",
     "ow": "42332",
     "orden_compra": "JA01. GM - 102212",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797467",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3413,15 +3413,15 @@
     "descripcion": "4CABAS36 BASE STD- CAB 2",
     "ow": "42340",
     "orden_compra": "ER01. GM - 102211",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "1100",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "1100",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797440",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3429,15 +3429,15 @@
     "descripcion": "CAB 2  4CATAP73 TAPA STD  FLOREXPO  C930 CAB 2",
     "ow": "42341",
     "orden_compra": "ER01. GM - 102211",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797546",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3445,15 +3445,15 @@
     "descripcion": "4CATAP78 TAPA STD QUEENS CAB2",
     "ow": "42339",
     "orden_compra": "ER01. GM - 102211",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797498",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3469,7 +3469,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3477,15 +3477,15 @@
     "descripcion": "4CABAS37 BASE 1/3",
     "ow": "42319",
     "orden_compra": "ER01. GM - 102211",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "180",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "180",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797498",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3493,15 +3493,15 @@
     "descripcion": "4CABAS36 BASE STD- CAB 2",
     "ow": "42340",
     "orden_compra": "JA01. GM - 102212",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "160",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "160",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797467",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3509,15 +3509,15 @@
     "descripcion": "4CABAS37 BASE 1/3",
     "ow": "42319",
     "orden_compra": "JA01. GM - 102212",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "150",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "90",
+    "porcentaje_despachado": 60,
+    "nota_despacho": "797576",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -3525,15 +3525,15 @@
     "descripcion": "4CABAS34 BASE 1/4",
     "ow": "42312",
     "orden_compra": "JA01. GM - 102212",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "450",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797467",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -3549,7 +3549,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -3557,15 +3557,15 @@
     "descripcion": "4CABAS35 BASE TBC Cab 3",
     "ow": "42313",
     "orden_compra": "RF01. G7 - 25683",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797451",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -3573,15 +3573,15 @@
     "descripcion": "4CABAS34 BASE 1/4",
     "ow": "42312",
     "orden_compra": "RF01. G7 - 25683",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "750",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "750",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797451",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -3597,7 +3597,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -3605,15 +3605,15 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42315",
     "orden_compra": "RF01. G7 - 25683",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "450",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797559",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -3621,15 +3621,15 @@
     "descripcion": "4CATAP84 TAPA TBC  DESIGNER  C720",
     "ow": "42326",
     "orden_compra": "RF01. G7 - 25683",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797559",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -3645,7 +3645,23 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
+  },
+  {
+    "finca": "GHT CHIA",
+    "elemento": "13005670",
+    "descripcion": "4CATAP139 TAPA TBC BENCHMARK USA",
+    "ow": "",
+    "orden_compra": "GR18. G8 - 50874",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
+    "cantidad_solicitada": "540",
+    "cantidad_despachada": "540",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797540",
+    "fecha_estimada_despacho": "",
+    "fecha_entrega": "06/10/2026",
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -3661,7 +3677,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -3669,15 +3685,15 @@
     "descripcion": "4CATAP154 TAPA TBC GOLDEN 105 X 25 X 24 C930",
     "ow": "42351",
     "orden_compra": "GR18. G8 - 50874",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "30/09/2026",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "450",
-    "cantidad_despachada": "390",
-    "porcentaje_despachado": 87,
-    "nota_despacho": "797404",
+    "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797404, 797540",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -3693,7 +3709,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -3709,7 +3725,7 @@
     "nota_despacho": "797416",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -3717,15 +3733,15 @@
     "descripcion": "CAB 2  4CATAP73 TAPA STD  FLOREXPO  C930 CAB 2",
     "ow": "42341",
     "orden_compra": "AL01. G1 - 33699",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797454",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -3741,7 +3757,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -3757,7 +3773,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -3765,15 +3781,15 @@
     "descripcion": "4CATAP74 TAPA 2P TBC FLOREXPO C720",
     "ow": "42324",
     "orden_compra": "AL01. G1 - 33699",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797500",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -3789,7 +3805,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -3797,15 +3813,15 @@
     "descripcion": "4CABAS37 BASE 1/3",
     "ow": "42319",
     "orden_compra": "AL01. G1 - 33699",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "120",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "120",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797500",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -3821,7 +3837,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -3837,7 +3853,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -3853,7 +3869,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -3861,15 +3877,15 @@
     "descripcion": "4CATAP74 TAPA 2P TBC FLOREXPO C720",
     "ow": "42324",
     "orden_compra": "QF01. GE - 68862",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "450",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "450",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797545",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -3877,15 +3893,15 @@
     "descripcion": "4CATAP131 TAPA TBC GOLDEN NEW",
     "ow": "42327",
     "orden_compra": "QF01. GE - 68862",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797437",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -3901,7 +3917,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -3909,15 +3925,15 @@
     "descripcion": "4CABAS36 BASE STD- CAB 2",
     "ow": "42340",
     "orden_compra": "QF01. GE - 68862",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "200",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "200",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797437",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -3933,7 +3949,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -3941,15 +3957,15 @@
     "descripcion": "4CABAS36 BASE STD- CAB 2",
     "ow": "42340",
     "orden_compra": "QF01. GE - 68862",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "100",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "100",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797437",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -3957,15 +3973,15 @@
     "descripcion": "4CABAS08 BASE STD NACIONAL105X5",
     "ow": "42318",
     "orden_compra": "QF01. GE - 68862",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797496",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -3981,7 +3997,7 @@
     "nota_despacho": "797421",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -3989,15 +4005,15 @@
     "descripcion": "4CATAP09 TAPA  STD NACIONAL",
     "ow": "42317",
     "orden_compra": "QF01. GE - 68862",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797496",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -4005,15 +4021,15 @@
     "descripcion": "4CABAS35 BASE TBC Cab 3",
     "ow": "42313",
     "orden_compra": "FV01. GE - 68861",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797494",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -4029,7 +4045,7 @@
     "nota_despacho": "797422",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -4037,15 +4053,15 @@
     "descripcion": "4CATAP78 TAPA STD QUEENS CAB2",
     "ow": "42339",
     "orden_compra": "FV01. GE - 68861",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "400",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "400",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797494",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -4053,15 +4069,15 @@
     "descripcion": "4CABAS36 BASE STD- CAB 2",
     "ow": "42340",
     "orden_compra": "FV01. GE - 68861",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "400",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "400",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797494",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -4069,15 +4085,15 @@
     "descripcion": "4CATAP154 TAPA TBC GOLDEN 105 X 25 X 24 C930",
     "ow": "42351",
     "orden_compra": "FV01. GE - 68861",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "30",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "30",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797494",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -4093,7 +4109,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -4109,7 +4125,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -4125,7 +4141,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -4133,15 +4149,15 @@
     "descripcion": "4CATAP109 TAPA 1/4 FALCON 97 X 24",
     "ow": "42322",
     "orden_compra": "FV01. GE - 68861",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "180",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 33,
+    "nota_despacho": "797494",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -4157,7 +4173,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -4173,7 +4189,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MANA",
@@ -4181,15 +4197,15 @@
     "descripcion": "4CABAS34 BASE 1/4",
     "ow": "42312",
     "orden_compra": "LM01. GL - 39450",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "1800",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "1800",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797442",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MANA",
@@ -4205,7 +4221,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MANA",
@@ -4221,7 +4237,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MANA",
@@ -4237,7 +4253,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MANA",
@@ -4253,7 +4269,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MANA",
@@ -4261,15 +4277,15 @@
     "descripcion": "4CATAP74 TAPA 2P TBC FLOREXPO C720",
     "ow": "42324",
     "orden_compra": "LM01. GL - 39450",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797493",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MANA",
@@ -4285,7 +4301,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MANA",
@@ -4293,15 +4309,15 @@
     "descripcion": "CAB 2  4CATAP73 TAPA STD  FLOREXPO  C930 CAB 2",
     "ow": "42341",
     "orden_compra": "LM01. GL - 39450",
-    "estado": "Producido",
-    "fecha_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "200",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "200",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797493",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TEMKIN",
@@ -4317,7 +4333,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TEMKIN",
@@ -4333,7 +4349,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "20/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TEMKIN",
@@ -4349,7 +4365,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "20/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TEMKIN",
@@ -4365,7 +4381,7 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "26/10/2026",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TEMKIN",
@@ -4381,7 +4397,7 @@
     "nota_despacho": "797033",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PRESH",
@@ -4397,7 +4413,7 @@
     "nota_despacho": "797313",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4413,7 +4429,7 @@
     "nota_despacho": "796682, 797109",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -4429,7 +4445,7 @@
     "nota_despacho": "796503, 797065",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -4445,7 +4461,7 @@
     "nota_despacho": "797080",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -4461,7 +4477,7 @@
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -4477,7 +4493,7 @@
     "nota_despacho": "796360, 796463, 797088",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -4493,7 +4509,7 @@
     "nota_despacho": "796642, 797062",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -4509,7 +4525,7 @@
     "nota_despacho": "796394, 797093",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -4525,7 +4541,7 @@
     "nota_despacho": "797061",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -4541,7 +4557,7 @@
     "nota_despacho": "796686, 797055",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -4557,7 +4573,7 @@
     "nota_despacho": "796569, 796663, 796913",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PRESH",
@@ -4573,7 +4589,7 @@
     "nota_despacho": "796825, 797313",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PRESH",
@@ -4589,7 +4605,7 @@
     "nota_despacho": "796825, 797313",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PRESH",
@@ -4605,7 +4621,7 @@
     "nota_despacho": "796825, 797313",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4621,7 +4637,7 @@
     "nota_despacho": "797108",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4637,7 +4653,7 @@
     "nota_despacho": "797105",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4653,7 +4669,7 @@
     "nota_despacho": "797052",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4669,7 +4685,7 @@
     "nota_despacho": "797052",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4685,7 +4701,7 @@
     "nota_despacho": "797105",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4701,7 +4717,7 @@
     "nota_despacho": "797035",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4717,7 +4733,7 @@
     "nota_despacho": "797035",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4733,7 +4749,7 @@
     "nota_despacho": "797147",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4741,15 +4757,15 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42315",
     "orden_compra": "RQ01. GR - 30963",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "30/09/2026",
+    "estado": "Despachado",
+    "fecha_despacho": "01/10/2026",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "270",
-    "porcentaje_despachado": 90,
-    "nota_despacho": "797216, 797434",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797216, 797434, 797562",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4765,7 +4781,7 @@
     "nota_despacho": "797121",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4781,7 +4797,7 @@
     "nota_despacho": "797216",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4797,7 +4813,7 @@
     "nota_despacho": "797294",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4813,7 +4829,7 @@
     "nota_despacho": "797052",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4829,7 +4845,7 @@
     "nota_despacho": "797216, 797294",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4845,7 +4861,7 @@
     "nota_despacho": "797035, 797105",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4861,7 +4877,7 @@
     "nota_despacho": "797164",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -4877,7 +4893,7 @@
     "nota_despacho": "797109",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -4893,7 +4909,7 @@
     "nota_despacho": "797112",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -4909,7 +4925,7 @@
     "nota_despacho": "797165",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -4925,7 +4941,7 @@
     "nota_despacho": "797112",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -4941,7 +4957,7 @@
     "nota_despacho": "797165",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -4957,7 +4973,7 @@
     "nota_despacho": "797165",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -4973,7 +4989,7 @@
     "nota_despacho": "797265",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -4989,7 +5005,7 @@
     "nota_despacho": "797112",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -5005,7 +5021,7 @@
     "nota_despacho": "797265",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BOJACA",
@@ -5021,7 +5037,7 @@
     "nota_despacho": "796892",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -5037,7 +5053,7 @@
     "nota_despacho": "797113",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -5053,7 +5069,7 @@
     "nota_despacho": "797113",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -5069,7 +5085,7 @@
     "nota_despacho": "797113",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -5085,7 +5101,7 @@
     "nota_despacho": "797266",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -5101,7 +5117,7 @@
     "nota_despacho": "797113",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -5117,7 +5133,7 @@
     "nota_despacho": "797188",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -5133,7 +5149,7 @@
     "nota_despacho": "797188",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -5149,7 +5165,7 @@
     "nota_despacho": "797113",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -5165,7 +5181,7 @@
     "nota_despacho": "796893",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -5181,7 +5197,7 @@
     "nota_despacho": "797266",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -5197,7 +5213,7 @@
     "nota_despacho": "797188",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MELODY",
@@ -5213,7 +5229,7 @@
     "nota_despacho": "797113",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -5229,7 +5245,7 @@
     "nota_despacho": "797211, 797267",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -5245,7 +5261,7 @@
     "nota_despacho": "797380",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -5261,7 +5277,7 @@
     "nota_despacho": "797166",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -5277,7 +5293,7 @@
     "nota_despacho": "797114",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -5293,7 +5309,7 @@
     "nota_despacho": "797166",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -5309,7 +5325,7 @@
     "nota_despacho": "797267",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -5325,7 +5341,7 @@
     "nota_despacho": "797267",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -5341,7 +5357,7 @@
     "nota_despacho": "797114",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -5357,7 +5373,7 @@
     "nota_despacho": "797114",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PARDO",
@@ -5373,7 +5389,7 @@
     "nota_despacho": "797114",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT SNF",
@@ -5389,7 +5405,7 @@
     "nota_despacho": "797167",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT SNF",
@@ -5405,7 +5421,7 @@
     "nota_despacho": "797115",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT SNF",
@@ -5421,7 +5437,7 @@
     "nota_despacho": "796894",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT SNF",
@@ -5437,7 +5453,7 @@
     "nota_despacho": "797115",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT GENERA",
@@ -5453,7 +5469,7 @@
     "nota_despacho": "797319",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT GENERA",
@@ -5469,7 +5485,7 @@
     "nota_despacho": "797054",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT GENERA",
@@ -5485,7 +5501,7 @@
     "nota_despacho": "797251",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT GENERA",
@@ -5501,7 +5517,7 @@
     "nota_despacho": "797054",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT GENERA",
@@ -5517,7 +5533,7 @@
     "nota_despacho": "797054",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5533,7 +5549,7 @@
     "nota_despacho": "797091",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5549,7 +5565,7 @@
     "nota_despacho": "797091",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5565,7 +5581,7 @@
     "nota_despacho": "797175",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5581,7 +5597,7 @@
     "nota_despacho": "797091",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5597,7 +5613,7 @@
     "nota_despacho": "796872, 797076",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5613,7 +5629,7 @@
     "nota_despacho": "797308",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5629,7 +5645,7 @@
     "nota_despacho": "797191",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5645,7 +5661,7 @@
     "nota_despacho": "796872, 797077",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5661,7 +5677,7 @@
     "nota_despacho": "797175",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5677,7 +5693,7 @@
     "nota_despacho": "797058",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5693,7 +5709,7 @@
     "nota_despacho": "797253",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5709,7 +5725,7 @@
     "nota_despacho": "797058",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5725,7 +5741,7 @@
     "nota_despacho": "797253",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5741,7 +5757,7 @@
     "nota_despacho": "797058",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5757,7 +5773,7 @@
     "nota_despacho": "797253, 797435",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5773,7 +5789,7 @@
     "nota_despacho": "797322",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5789,7 +5805,7 @@
     "nota_despacho": "797253",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -5805,7 +5821,7 @@
     "nota_despacho": "797253",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT QUALIT",
@@ -5821,7 +5837,7 @@
     "nota_despacho": "797082",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT QUALIT",
@@ -5837,7 +5853,7 @@
     "nota_despacho": "797100",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -5853,7 +5869,7 @@
     "nota_despacho": "797065",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -5869,7 +5885,7 @@
     "nota_despacho": "796906",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -5885,7 +5901,7 @@
     "nota_despacho": "797095",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -5901,7 +5917,7 @@
     "nota_despacho": "797065",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -5917,7 +5933,7 @@
     "nota_despacho": "797065",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -5933,7 +5949,7 @@
     "nota_despacho": "797289",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -5949,7 +5965,7 @@
     "nota_despacho": "797065",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CIPRES",
@@ -5965,7 +5981,7 @@
     "nota_despacho": "797289",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -5981,7 +5997,7 @@
     "nota_despacho": "797096",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -5997,7 +6013,7 @@
     "nota_despacho": "797096",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6013,7 +6029,7 @@
     "nota_despacho": "796778, 797096",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6029,7 +6045,7 @@
     "nota_despacho": "797218",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6045,7 +6061,7 @@
     "nota_despacho": "797096",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6061,7 +6077,7 @@
     "nota_despacho": "797305",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6077,7 +6093,7 @@
     "nota_despacho": "797173, 797189",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6093,7 +6109,7 @@
     "nota_despacho": "797219",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6109,7 +6125,7 @@
     "nota_despacho": "797219",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6125,7 +6141,7 @@
     "nota_despacho": "797097",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6141,7 +6157,7 @@
     "nota_despacho": "796905",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6157,7 +6173,7 @@
     "nota_despacho": "797097",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6173,7 +6189,7 @@
     "nota_despacho": "797089, 797337",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6189,7 +6205,7 @@
     "nota_despacho": "797089, 797339, 797431",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6205,7 +6221,7 @@
     "nota_despacho": "797306",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6221,7 +6237,7 @@
     "nota_despacho": "797186",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6237,7 +6253,7 @@
     "nota_despacho": "797089",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6253,7 +6269,7 @@
     "nota_despacho": "797186",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FALCON",
@@ -6269,7 +6285,7 @@
     "nota_despacho": "797186, 797245",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6285,7 +6301,7 @@
     "nota_despacho": "797124",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6301,7 +6317,7 @@
     "nota_despacho": "796915, 797080",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6317,7 +6333,7 @@
     "nota_despacho": "797312",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6333,7 +6349,7 @@
     "nota_despacho": "797196",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6349,7 +6365,7 @@
     "nota_despacho": "797124",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6365,7 +6381,7 @@
     "nota_despacho": "797124",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6381,7 +6397,7 @@
     "nota_despacho": "797080",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6397,7 +6413,7 @@
     "nota_despacho": "797196",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6413,7 +6429,7 @@
     "nota_despacho": "797196",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6429,7 +6445,7 @@
     "nota_despacho": "797080",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6445,7 +6461,7 @@
     "nota_despacho": "797312",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6461,7 +6477,7 @@
     "nota_despacho": "797196",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6477,7 +6493,7 @@
     "nota_despacho": "797080",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6493,7 +6509,7 @@
     "nota_despacho": "797124",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6509,7 +6525,7 @@
     "nota_despacho": "797080",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6525,7 +6541,7 @@
     "nota_despacho": "797196",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT PLANIC",
@@ -6541,7 +6557,7 @@
     "nota_despacho": "797080",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6557,7 +6573,7 @@
     "nota_despacho": "797195",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6573,7 +6589,7 @@
     "nota_despacho": "797311",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6589,7 +6605,7 @@
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6605,7 +6621,7 @@
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6621,7 +6637,7 @@
     "nota_despacho": "797195",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6637,7 +6653,7 @@
     "nota_despacho": "797311",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6653,7 +6669,7 @@
     "nota_despacho": "797195",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6669,7 +6685,7 @@
     "nota_despacho": "797195",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6685,7 +6701,7 @@
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6701,7 +6717,7 @@
     "nota_despacho": "797195",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6717,7 +6733,7 @@
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6733,7 +6749,7 @@
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6749,7 +6765,7 @@
     "nota_despacho": "796914",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -6765,7 +6781,7 @@
     "nota_despacho": "797123",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FOLLAJ",
@@ -6781,7 +6797,7 @@
     "nota_despacho": "797161",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FOLLAJ",
@@ -6797,7 +6813,7 @@
     "nota_despacho": "796897",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FOLLAJ",
@@ -6813,7 +6829,7 @@
     "nota_despacho": "797161",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT BENCHM",
@@ -6829,7 +6845,7 @@
     "nota_despacho": "797217",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -6845,7 +6861,7 @@
     "nota_despacho": "797174",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -6861,7 +6877,7 @@
     "nota_despacho": "796871, 797090",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -6877,7 +6893,7 @@
     "nota_despacho": "796871, 797174",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -6893,7 +6909,7 @@
     "nota_despacho": "797307",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -6909,7 +6925,7 @@
     "nota_despacho": "797126",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -6925,7 +6941,7 @@
     "nota_despacho": "797174",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -6941,7 +6957,7 @@
     "nota_despacho": "797090",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -6957,7 +6973,7 @@
     "nota_despacho": "797090",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -6973,7 +6989,7 @@
     "nota_despacho": "797304",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -6989,7 +7005,7 @@
     "nota_despacho": "797088",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -7005,7 +7021,7 @@
     "nota_despacho": "797088",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -7021,7 +7037,7 @@
     "nota_despacho": "797172",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -7037,7 +7053,7 @@
     "nota_despacho": "797088",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -7053,7 +7069,7 @@
     "nota_despacho": "797088",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -7069,7 +7085,7 @@
     "nota_despacho": "797088",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MOUNTA",
@@ -7085,7 +7101,7 @@
     "nota_despacho": "797172",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7101,7 +7117,7 @@
     "nota_despacho": "797062",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7117,7 +7133,7 @@
     "nota_despacho": "797287",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7133,7 +7149,7 @@
     "nota_despacho": "797287",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7149,7 +7165,7 @@
     "nota_despacho": "797062, 797287",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7165,7 +7181,7 @@
     "nota_despacho": "797287",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7181,7 +7197,7 @@
     "nota_despacho": "797062, 797242",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7197,7 +7213,7 @@
     "nota_despacho": "797062",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7213,7 +7229,7 @@
     "nota_despacho": "797287",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7229,7 +7245,7 @@
     "nota_despacho": "797287",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7245,7 +7261,7 @@
     "nota_despacho": "797287",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7261,7 +7277,7 @@
     "nota_despacho": "797287",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7277,7 +7293,7 @@
     "nota_despacho": "797094",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7293,7 +7309,7 @@
     "nota_despacho": "796904",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7309,7 +7325,7 @@
     "nota_despacho": "797287",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7325,7 +7341,7 @@
     "nota_despacho": "797093",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7341,7 +7357,7 @@
     "nota_despacho": "797286",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7357,7 +7373,7 @@
     "nota_despacho": "797093",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7373,7 +7389,7 @@
     "nota_despacho": "797286",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7389,7 +7405,7 @@
     "nota_despacho": "797061",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7405,7 +7421,7 @@
     "nota_despacho": "797061",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7421,7 +7437,7 @@
     "nota_despacho": "797061",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT TANDIL",
@@ -7437,7 +7453,7 @@
     "nota_despacho": "797286",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -7453,7 +7469,7 @@
     "nota_despacho": "797102",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -7469,7 +7485,7 @@
     "nota_despacho": "797116",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -7485,7 +7501,7 @@
     "nota_despacho": "796895",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -7493,15 +7509,15 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42333",
     "orden_compra": "CH01. G4 - 50805",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "29/09/2026",
+    "estado": "Despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "210",
-    "cantidad_despachada": "30",
-    "porcentaje_despachado": 14,
-    "nota_despacho": "797280, 797329",
+    "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797280, 797329, 797450",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -7517,7 +7533,7 @@
     "nota_despacho": "797116",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -7533,7 +7549,7 @@
     "nota_despacho": "797102",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -7549,7 +7565,7 @@
     "nota_despacho": "797213",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -7565,7 +7581,7 @@
     "nota_despacho": "797070",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT J CHIA",
@@ -7581,7 +7597,7 @@
     "nota_despacho": "797280",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7597,7 +7613,7 @@
     "nota_despacho": "797064",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7613,7 +7629,7 @@
     "nota_despacho": "797064",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7629,7 +7645,7 @@
     "nota_despacho": "797288",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7645,7 +7661,7 @@
     "nota_despacho": "797281",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7661,7 +7677,7 @@
     "nota_despacho": "797118",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7677,7 +7693,7 @@
     "nota_despacho": "797162",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7693,7 +7709,7 @@
     "nota_despacho": "797072",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7709,7 +7725,7 @@
     "nota_despacho": "797072",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7725,7 +7741,7 @@
     "nota_despacho": "797215",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7741,7 +7757,7 @@
     "nota_despacho": "797119",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7757,7 +7773,7 @@
     "nota_despacho": "797162",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7773,7 +7789,7 @@
     "nota_despacho": "797162",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7789,7 +7805,7 @@
     "nota_despacho": "797283",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7805,7 +7821,7 @@
     "nota_despacho": "797119",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7821,7 +7837,7 @@
     "nota_despacho": "797072",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7837,7 +7853,7 @@
     "nota_despacho": "797120",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7853,7 +7869,7 @@
     "nota_despacho": "797284",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7869,7 +7885,7 @@
     "nota_despacho": "797120",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7885,7 +7901,7 @@
     "nota_despacho": "797163",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7901,7 +7917,7 @@
     "nota_despacho": "797071",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -7917,7 +7933,7 @@
     "nota_despacho": "797282",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -7933,7 +7949,7 @@
     "nota_despacho": "797160",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -7949,7 +7965,7 @@
     "nota_despacho": "797214",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -7965,7 +7981,7 @@
     "nota_despacho": "797103",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -7981,7 +7997,7 @@
     "nota_despacho": "797160",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -7997,7 +8013,7 @@
     "nota_despacho": "797160",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -8013,7 +8029,7 @@
     "nota_despacho": "797117",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -8029,7 +8045,7 @@
     "nota_despacho": "797103",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CASABL",
@@ -8045,7 +8061,7 @@
     "nota_despacho": "796896",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -8061,7 +8077,7 @@
     "nota_despacho": "797057",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -8077,7 +8093,7 @@
     "nota_despacho": "797252",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -8093,7 +8109,7 @@
     "nota_despacho": "797252, 797321, 797354",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -8109,7 +8125,7 @@
     "nota_despacho": "797252, 797321, 797353",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -8125,7 +8141,7 @@
     "nota_despacho": "797057, 797360",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -8141,7 +8157,7 @@
     "nota_despacho": "797252",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -8157,7 +8173,7 @@
     "nota_despacho": "797320",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -8173,7 +8189,7 @@
     "nota_despacho": "797056",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -8189,7 +8205,7 @@
     "nota_despacho": "797221",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -8205,7 +8221,7 @@
     "nota_despacho": "797221",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -8221,7 +8237,7 @@
     "nota_despacho": "797410",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -8237,7 +8253,7 @@
     "nota_despacho": "797081",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -8253,7 +8269,7 @@
     "nota_despacho": "797081",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -8269,7 +8285,7 @@
     "nota_despacho": "797081",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -8285,7 +8301,7 @@
     "nota_despacho": "797221",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -8301,7 +8317,7 @@
     "nota_despacho": "796907",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -8317,7 +8333,7 @@
     "nota_despacho": "797081",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -8333,7 +8349,7 @@
     "nota_despacho": "797099",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -8349,7 +8365,7 @@
     "nota_despacho": "797221",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT AJIBE",
@@ -8365,7 +8381,7 @@
     "nota_despacho": "797081",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8381,7 +8397,7 @@
     "nota_despacho": "797092",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8397,7 +8413,7 @@
     "nota_despacho": "797285",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8413,7 +8429,7 @@
     "nota_despacho": "796997",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8429,7 +8445,7 @@
     "nota_despacho": "797285",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8445,7 +8461,7 @@
     "nota_despacho": "797285",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8461,7 +8477,7 @@
     "nota_despacho": "797063",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8477,7 +8493,7 @@
     "nota_despacho": "797092",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8493,7 +8509,7 @@
     "nota_despacho": "797285",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8509,7 +8525,7 @@
     "nota_despacho": "797285",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8525,7 +8541,7 @@
     "nota_despacho": "797285",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8541,7 +8557,7 @@
     "nota_despacho": "797122",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8557,7 +8573,7 @@
     "nota_despacho": "797194",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8573,7 +8589,7 @@
     "nota_despacho": "797122",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8589,7 +8605,7 @@
     "nota_despacho": "797194",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8605,7 +8621,7 @@
     "nota_despacho": "797310",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8621,7 +8637,7 @@
     "nota_despacho": "797122",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MANA",
@@ -8637,7 +8653,7 @@
     "nota_despacho": "797098",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MANA",
@@ -8653,7 +8669,7 @@
     "nota_despacho": "796779, 797098",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -8669,7 +8685,7 @@
     "nota_despacho": "797175",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT UBATE",
@@ -8685,7 +8701,7 @@
     "nota_despacho": "797195",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT LUISA",
@@ -8701,7 +8717,7 @@
     "nota_despacho": "797174",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT MG",
@@ -8717,7 +8733,7 @@
     "nota_despacho": "797215",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -8733,7 +8749,7 @@
     "nota_despacho": "796980",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -8749,7 +8765,7 @@
     "nota_despacho": "797252",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -8765,7 +8781,7 @@
     "nota_despacho": "797252, 797355, 797360, 797403",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT CHIA",
@@ -8781,7 +8797,7 @@
     "nota_despacho": "796979",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT FLOVAL",
@@ -8797,7 +8813,7 @@
     "nota_despacho": "797285",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT ACACIA",
@@ -8805,15 +8821,15 @@
     "descripcion": "4CATAP172 TAPA 1-4 THE VALLEY SPRINGS 97X24X10.5",
     "ow": "42349",
     "orden_compra": "LC01. GK - 42659",
-    "estado": "Despachado",
-    "fecha_despacho": "29/09/2026",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "30/09/2026",
     "cantidad_solicitada": "150",
-    "cantidad_despachada": "150",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797308",
+    "cantidad_despachada": "140",
+    "porcentaje_despachado": 93,
+    "nota_despacho": "797308, 797472",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -8829,7 +8845,7 @@
     "nota_despacho": "797105",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   },
   {
     "finca": "GHT RIO FR",
@@ -8845,6 +8861,6 @@
     "nota_despacho": "797105",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 80
+    "porcentaje_global": 81
   }
 ]
