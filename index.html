@@ -27,7 +27,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
     /* Paleta original del portal. El unico color de marca reemplazado es
@@ -414,38 +414,9 @@
   /* ---------- RESULT TICKET ---------- */
   #result{ min-height: 4px; }
 
-  .ticket{
-    position:relative;
-    background: var(--paper-raised);
-    border: 1.5px solid var(--line);
-    border-radius: 6px;
-    padding: 26px 26px 22px;
-    animation: rise .38s cubic-bezier(.2,.7,.3,1) both;
-  }
   @keyframes rise{
     from{ opacity:0; transform: translateY(10px); }
     to{ opacity:1; transform: translateY(0); }
-  }
-
-  .ticket-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:16px;
-    margin-bottom: 18px;
-  }
-  .ticket-top .finca-label{
-    font-size:11.5px;
-    letter-spacing:.03em;
-    color: var(--mist);
-    margin: 0 0 3px;
-  }
-  .ticket-top .finca-name{
-    font-family:'Fraunces', serif;
-    font-size:21px;
-    font-weight:500;
-    color: var(--navy-deep);
-    margin:0;
   }
 
   .stamp{
@@ -479,169 +450,179 @@
   .stamp.despachado{ color: #00205B; background: #DFE3E4; }
   .stamp.despachado .stamp-dot{ background: #00205B; }
 
-  /* progress track */
-  .track{
+  /* ---------- PAGINA DE DETALLE DE UN PEDIDO (pd-*) ---------- */
+  .pd-page{ padding:32px 0; }
+  .pd-card{
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 1px 2px rgba(0,32,91,.08);
+    overflow:hidden;
+    animation: rise .38s cubic-bezier(.2,.7,.3,1) both;
+  }
+
+  /* -- 1. Encabezado -- */
+  .pd-head{
+    padding:32px 32px 28px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .pd-head-left{ min-width:0; }
+  .pd-meta{
     display:flex;
     align-items:center;
-    margin: 4px 0 4px;
+    gap:8px;
+    font-family:'IBM Plex Sans', sans-serif;
   }
-  .track .node{
-    width:9px; height:9px; border-radius:50%;
-    background: var(--line);
+  .pd-finca{ font-size:13px; font-weight:600; color:#00205B; white-space:nowrap; }
+  .pd-meta-dot{ width:3px; height:3px; border-radius:50%; background:#98a2b3; flex:none; }
+  .pd-oc{ font-family:'IBM Plex Mono', monospace; font-size:13px; color:#667085; white-space:nowrap; }
+  .pd-desc{
+    margin-top:8px;
+    font-family:'IBM Plex Serif', serif;
+    font-size:26px;
+    font-weight:500;
+    line-height:1.2;
+    color:#00205B;
+    text-wrap:balance;
+  }
+  .pd-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:6px 14px;
+    border-radius:999px;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:13px;
+    font-weight:500;
+    white-space:nowrap;
     flex:none;
   }
-  .track .node.done{ background: var(--pine); }
-  .track .seg{
-    flex:1; height:2px; background: var(--line);
-    margin: 0 2px;
-  }
-  .track .seg.done{ background: var(--pine); }
-  /* Tramos con ancho proporcional en vez de iguales: el tramo 2
-     (En produccion -> Producido) es mas ancho porque esa etapa toma
-     mucho mas tiempo en la realidad que las demas. El track alterna
-     nodo/tramo/nodo/... asi que los tramos caen en las posiciones
-     pares (2,4,6,8) entre los 5 nodos (impares). */
-  .track > div.seg:nth-child(2){ flex: 15; } /* Tramo 1: Pedido recibido -> En produccion */
-  .track > div.seg:nth-child(4){ flex: 45; } /* Tramo 2: En produccion -> Producido */
-  .track > div.seg:nth-child(6){ flex: 20; } /* Tramo 3: Producido -> Parcialmente despachado */
-  .track > div.seg:nth-child(8){ flex: 20; } /* Tramo 4: Parcialmente despachado -> Despachado */
+  .pd-badge-dot{ width:8px; height:8px; border-radius:50%; box-sizing:border-box; flex:none; }
+  .pd-badge.recibido{ color:#54677A; background:#EAF4F7; }
+  .pd-badge.recibido .pd-badge-dot{ background:#54677A; }
+  .pd-badge.produccion{ color:#0077C8; background:#DBF1F5; }
+  .pd-badge.produccion .pd-badge-dot{ background:#08B2FF; }
+  .pd-badge.producido{ color:#0077C8; background:#DBF1F5; }
+  .pd-badge.producido .pd-badge-dot{ background:#08B2FF; }
+  .pd-badge.parcial{ color:#00205B; background:#DFE3E4; }
+  .pd-badge.parcial .pd-badge-dot{ background:transparent; border:2px solid #0077C8; }
+  .pd-badge.despachado{ color:#fff; background:#00205B; }
+  .pd-badge.despachado .pd-badge-dot{ background:#fff; }
 
-  /* Anotacion estatica (misma para todos los pedidos, no depende de
-     datos): estimado de duracion del tramo largo "En produccion ->
-     Producido". Fila propia, separada de .track-labels, para que se
-     lea como una nota aparte y no como el titulo de una etapa. */
-  .track-annot{
-    position:relative;
-    height: 13px;
-    margin: 0 0 6px;
-    font-size: 10px;
-    color: var(--mist);
+  /* -- 2. Tracker -- */
+  .pd-tracker{ margin:0 32px; padding:8px 0 32px; }
+  .pd-tracker-scroll{
+    overflow-x:auto;
+    scrollbar-width:none;
+    margin:0 -32px;
+    padding:26px 32px 0;
   }
-  .track-annot span{
+  .pd-tracker-scroll::-webkit-scrollbar{ display:none; }
+  .pd-tracker-grid{
+    min-width:640px;
+    padding:0 60px;
+    display:grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,2fr) minmax(0,1fr) minmax(0,1fr) 0px;
+  }
+  .pd-stage{ position:relative; }
+  .pd-stage-row{ height:28px; position:relative; }
+  .pd-stage-line{ position:absolute; top:13px; left:0; right:0; height:2px; }
+  .pd-stage-dot{
+    position:absolute; left:0; top:14px; transform:translate(-50%,-50%);
+    border-radius:50%; box-sizing:border-box;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .pd-stage-dot.done{ width:20px; height:20px; }
+  .pd-stage-dot.current{ width:22px; height:22px; background:#fff; }
+  .pd-stage-dot.pending{ width:20px; height:20px; background:#fff; border:2px solid #d0d5dd; }
+  .pd-stage-time{
     position:absolute;
-    top:0;
-    left: 37.5%;
-    transform: translateX(-50%);
+    top:-18px;
+    transform:translateX(-50%);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    color:#98a2b3;
     white-space:nowrap;
   }
-  .track-labels{
-    position:relative;
-    height: 28px;
-    font-size:10.5px; color: var(--mist);
-    margin: 6px 0 22px;
-    letter-spacing:.01em;
-  }
-  .track-labels span{
-    position:absolute;
-    top:0;
+  .pd-stage-name{
+    width:120px;
+    margin-left:-60px;
+    margin-top:12px;
     text-align:center;
-    white-space:normal;
-    overflow-wrap:break-word;
-    line-height:1.25;
-    /* Nunca mas angosto que su propia palabra mas larga, aunque el
-       carril proporcional calculado (via inline width:%) le de menos -
-       evita partir palabras a la mitad cuando el carril queda muy
-       ajustado (ej. "Despachado" en el tramo final, angosto). */
-    min-width: min-content;
-  }
-  .track-labels span.active{ color: var(--pine); font-weight:600; }
-
-  .perf{
-    border-top: 1.5px dashed var(--line);
-    position:relative;
-    margin: 0 -26px 18px;
-  }
-  .perf::before, .perf::after{
-    content:"";
-    position:absolute; top:-7px;
-    width:14px; height:14px; border-radius:50%;
-    background: var(--paper);
-    border: 1.5px solid var(--line);
-  }
-  .perf::before{ left:-7px; }
-  .perf::after{ right:-7px; }
-
-  .ring-wrap {
-    position: relative;
-    width: 110px;
-    height: 110px;
-    margin: 0 auto 16px;
-  }
-  .ring-wrap svg {
-    width: 110px;
-    height: 110px;
-    transform: rotate(-90deg);
-  }
-  .ring-bg {
-    fill: none;
-    stroke: #E4E1D3;
-    stroke-width: 10;
-  }
-  .ring-fg {
-    fill: none;
-    stroke-width: 10;
-    stroke-linecap: round;
-    transition: stroke-dashoffset 0.6s ease;
-  }
-  .ring-label {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .ring-pct {
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 700;
-    font-size: 22px;
-    color: var(--pine);
-  }
-  .ring-cap {
-    font-size: 9px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--slate);
-    margin-top: 2px;
-  }
-
-  dl.fields{
-    margin: 0;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px 18px;
-  }
-  dl.fields div{ min-width:0; }
-  dl.fields div.field-full{ grid-column: 1 / -1; }
-  dl.fields dt{
-    font-size:11px;
-    letter-spacing:.02em;
-    color: var(--mist);
-    margin: 0 0 3px;
-  }
-  dl.fields dd{
-    margin:0;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:14px;
-    color: var(--ink);
-    word-break: break-word;
-  }
-  dl.fields dd.pending{
-    font-family:'Inter', sans-serif;
-    font-style: italic;
-    color: var(--mist);
+    font-family:'IBM Plex Sans', sans-serif;
     font-size:13px;
+    line-height:1.35;
+    text-wrap:balance;
+  }
+  .pd-stage-name.current{ font-weight:600; }
+  .pd-stage-name.done{ color:#344054; font-weight:500; }
+  .pd-stage-name.pending{ color:#98a2b3; font-weight:500; }
+
+  /* -- 4. Franja de cantidades y fechas -- */
+  .pd-strip{
+    background:#F7F9FC;
+    border-top:1px solid #eaecf0;
+    padding:28px 32px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:24px 40px;
+  }
+  .pd-strip-label{ font-family:'IBM Plex Sans', sans-serif; font-size:12.5px; color:#667085; }
+  .pd-shipped{ flex:2 1 260px; min-width:0; }
+  .pd-shipped-row{ margin-top:4px; display:flex; align-items:baseline; gap:8px; flex-wrap:nowrap; white-space:nowrap; }
+  .pd-shipped-qty{ font-family:'IBM Plex Mono', monospace; font-size:30px; font-weight:500; letter-spacing:-0.02em; color:#00205B; }
+  .pd-shipped-total{ font-family:'IBM Plex Sans', sans-serif; font-size:14px; color:#667085; }
+  .pd-shipped-pct{ font-family:'IBM Plex Mono', monospace; font-size:13px; font-weight:500; color:#00205B; margin-left:auto; }
+  .pd-shipped-bar{ margin-top:10px; height:4px; border-radius:2px; background:#e4e7ec; overflow:hidden; }
+  .pd-shipped-fill{ height:100%; border-radius:2px; }
+  .pd-ship{ flex:1 1 120px; min-width:0; }
+  .pd-ship-date{ margin-top:4px; font-family:'IBM Plex Mono', monospace; font-size:30px; font-weight:500; color:#00205B; }
+  .pd-ship-date.pending{
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:16px; font-weight:400; font-style:italic; color:#98a2b3;
+  }
+  .pd-ship-year{ font-family:'IBM Plex Sans', sans-serif; font-size:12.5px; color:#667085; }
+  .pd-entrega{
+    margin-top:12px; padding-top:10px; border-top:1px solid #eaecf0;
+    display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;
+  }
+  .pd-entrega span{ font-family:'IBM Plex Sans', sans-serif; font-size:12.5px; color:#667085; white-space:nowrap; }
+  .pd-entrega b{ font-family:'IBM Plex Mono', monospace; font-size:13px; font-weight:500; color:#0077C8; }
+  .pd-entrega b.pending{ font-family:'IBM Plex Sans', sans-serif; font-weight:400; font-style:italic; color:#98a2b3; }
+
+  /* -- 5. Datos -- */
+  .pd-data{
+    padding:8px 32px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,200px),1fr));
+    column-gap:32px;
+  }
+  .pd-data-item{ padding:18px 0; min-width:0; }
+  .pd-data-label{ font-family:'IBM Plex Sans', sans-serif; font-size:12.5px; color:#667085; }
+  .pd-data-value{
+    margin-top:4px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14.5px;
+    color:#101828;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
   }
 
-  .expiry-note{
-    margin: 18px 0 0;
-    padding-top: 14px;
-    border-top: 1px solid var(--line-soft);
-    font-size:12px;
-    font-style: italic;
-    color: var(--mist);
+  /* -- 6. Nota final -- */
+  .pd-note{
+    padding:14px 32px 20px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:12.5px;
+    color:#98a2b3;
   }
+  .pd-note svg{ flex:none; }
 
   .results-wrap.wide{ max-width:none; margin-left:32px; margin-right:32px; }
 
@@ -704,15 +685,16 @@
   .back-link{
     display:inline-flex;
     align-items:center;
-    margin-bottom:12px;
+    margin-bottom:16px;
     padding:0;
     border:none;
     background:none;
     cursor:pointer;
-    font-family:'Inter', sans-serif;
-    font-size:13px;
-    font-weight:600;
-    color: var(--navy);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:14px;
+    font-weight:500;
+    color:#00205B;
+    white-space:nowrap;
   }
   .back-link:hover{ color: var(--navy-light); }
 
@@ -765,6 +747,12 @@
     .logos .logo-sep{ height:28px; }
     .card{ padding:24px; margin-left:0; margin-right:0; }
     .results-wrap.wide{ margin-left:0; margin-right:0; }
+    .pd-head{ padding:24px 24px 20px; }
+    .pd-tracker{ margin:0 24px; }
+    .pd-tracker-scroll{ margin:0 -24px; padding:26px 24px 0; }
+    .pd-strip{ padding:20px 24px; }
+    .pd-data{ padding:8px 24px; }
+    .pd-note{ padding:14px 24px 16px; }
     .card .btn{ padding:0 22px; }
     .lookup input[type="text"]{ font-size:16px; }
     .band-copy{ margin-left:0; }
@@ -792,27 +780,14 @@
     .filtro-finca select{ width:100%; height:44px; min-width:0; }
     .btn-export{ justify-content:center; height:44px; width:100%; }
     .footer-in{ flex-direction:column; text-align:center; gap:6px; padding-top:16px; padding-bottom:16px; }
-    dl.fields{ grid-template-columns: 1fr 1fr; gap:14px; }
-    .ticket{ padding: 22px 18px 18px; }
-    .perf{ margin: 0 -18px 16px; }
-    /* En pantallas angostas el carril proporcional (0/15/60/80/100%)
-       deja muy poco espacio en px reales a los titulos de carril mas
-       chico. Se mantiene el "left:%" (heredado del inline style) para
-       que cada titulo siga alineado bajo su punto real, y el ancho
-       pasa de el % fijo a min-content para que nunca parta una palabra
-       a la mitad. Con el texto a 10.5px el espacio no alcanzaba ni asi
-       (dos pares quedaban solapados unos 15px) - se baja un poco el
-       tamano de letra SOLO de estos titulos para ganar el margen que
-       falta. El track de puntos/segmentos arriba mantiene sus
-       proporciones 15/45/20/20 y su tamano sin cambios. */
-    .track-annot{ font-size: 9px; }
-    .track-labels{ font-size: 9px; }
-    .track-labels span{
-      width: min-content !important;
-      max-width: none !important;
-      left: var(--dot-pos) !important;
-      transform: translateX(var(--dot-base-x)) translateX(var(--extra-shift, 0px)) !important;
-    }
+    .pd-head{ padding:20px 16px 16px; }
+    .pd-desc{ font-size:22px; }
+    .pd-tracker{ margin:0 16px; }
+    .pd-tracker-scroll{ margin:0 -16px; padding:22px 16px 0; }
+    .pd-strip{ padding:16px; gap:16px 24px; }
+    .pd-shipped-qty, .pd-ship-date{ font-size:24px; }
+    .pd-data{ padding:4px 16px; grid-template-columns:1fr 1fr; }
+    .pd-note{ padding:12px 16px 16px; }
   }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
@@ -944,235 +919,165 @@
     "Parcialmente despachado":"parcial",
     "Despachado":"despachado"
   };
-  /* Escala de azules en el stepper: Blue 04 para "Pedido recibido" (Blue 05
-     quedaba demasiado palido, casi gris, contra el fondo de la pagina),
-     Light Blue para "En produccion"/"Producido", Navy para "Parcialmente
-     despachado"/"Despachado". El titulo de "Pedido recibido" usa un gris
-     propio (ver ESTADO_LABEL_COLOR) solo para que se lea bien. */
-  const ESTADO_COLOR = {
-    "Pedido recibido": "#5FCDF5",
+  /* Colores de estado para la pagina de detalle de un pedido (encabezado,
+     tracker y barra de despachado). Paleta propia de esta vista, distinta
+     de las pildoras .stamp que usa la lista de resultados. */
+  const ESTADO_COLOR_DETALLE = {
+    "Pedido recibido": "#54677A",
     "En producción": "#08B2FF",
     "Producido": "#08B2FF",
-    "Parcialmente despachado": "#00205B",
+    "Parcialmente despachado": "#0077C8",
     "Despachado": "#00205B"
   };
-  const ESTADO_LABEL_COLOR = { ...ESTADO_COLOR, "Pedido recibido": "#54677A" };
+
+  const CHECK_SVG = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
 
   function renderTrack(estado){
     const idx = ESTADOS.indexOf(estado);
-    let track = "";
-    ESTADOS.forEach((e,i)=>{
-      const nodoListo = i <= idx;
-      track += `<div class="node${nodoListo ? ' done' : ''}"${nodoListo ? ` style="background:${ESTADO_COLOR[e]}"` : ''}></div>`;
-      if(i < ESTADOS.length-1){
-        const segListo = i < idx;
-        track += `<div class="seg${segListo ? ' done' : ''}"${segListo ? ` style="background:${ESTADO_COLOR[e]}"` : ''}></div>`;
-      }
-    });
-    // Posiciones acumuladas (%) que coinciden con los tramos 15/45/20/20
-    // del track. Cada titulo ocupa todo el "carril" disponible hasta el
-    // punto medio con su vecino (no solo un ancho simetrico centrado),
-    // para aprovechar el espacio de sobra del tramo largo del medio y
-    // que el primer/ultimo titulo (los mas apretados) tengan algo mas
-    // de aire para envolver en 2 lineas sin partir palabras a la mitad.
-    const LABEL_POS = [0, 15, 60, 80, 100];
-    const nPos = LABEL_POS.length;
-    // Limites naturales = punto medio entre posiciones vecinas. Se
-    // ajustan un poco los dos extremos (los carriles mas apretados,
-    // "Pedido recibido" y "Despachado") quitandole aire al carril
-    // vecino del medio (que sobra de espacio), para que ninguno de los
-    // dos necesite crecer mas alla de su carril via min-width.
-    const boundaries = [0];
-    for (let i = 0; i < nPos - 1; i++){
-      boundaries.push((LABEL_POS[i] + LABEL_POS[i+1]) / 2);
-    }
-    boundaries.push(100);
-    boundaries[1] = Math.max(boundaries[1], 9);
-    boundaries[nPos-1] = Math.min(boundaries[nPos-1], 87);
 
-    const labels = ESTADOS.map((e,i) => {
-      const activo = e === estado;
-      const leftBound = boundaries[i];
-      const rightBound = boundaries[i+1];
-      const widthPct = rightBound - leftBound;
-      // Para pantallas angostas (ver media query mobile): centrar sobre
-      // la posicion REAL del punto (no el borde del carril), ya que ahi
-      // el ancho se reduce a min-content y el carril completo ya no
-      // aplica. --dot-pos/--dot-base-x quedan sin uso en desktop.
-      // --extra-shift la ajusta despues resolverColisionesTrackLabels()
-      // si dos etiquetas vecinas quedan encimadas.
-      let dotBaseX = '-50%';
-      if (i === 0) dotBaseX = '0%';
-      else if (i === nPos-1) dotBaseX = '-100%';
-      const colorStyle = activo ? `color:${ESTADO_LABEL_COLOR[e]};` : '';
-      return `<span class="${activo ? 'active' : ''}" style="left:${leftBound}%; width:${widthPct}%; --dot-pos:${LABEL_POS[i]}%; --dot-base-x:${dotBaseX}; --extra-shift:0px; ${colorStyle}">${e}</span>`;
+    const columnas = ESTADOS.map((etapa, i) => {
+      const completada = i < idx;
+      const actual = i === idx;
+      const color = ESTADO_COLOR_DETALLE[etapa];
+
+      let dotClass = 'pending', dotStyle = '', dotContent = '';
+      if (completada){
+        dotClass = 'done';
+        dotStyle = `background:${color}; border:2px solid ${color};`;
+        dotContent = CHECK_SVG;
+      } else if (actual){
+        dotClass = 'current';
+        dotStyle = `border:2px solid ${color}; box-shadow: 0 0 0 5px ${color}22, inset 0 0 0 4px #fff, inset 0 0 0 10px ${color};`;
+      }
+
+      const lineaColor = completada ? color : '#e4e7ec';
+
+      let nombreClass = 'pending', nombreStyle = '';
+      if (actual){ nombreClass = 'current'; nombreStyle = `color:${color};`; }
+      else if (completada){ nombreClass = 'done'; }
+
+      // Tiempos estimados: uno centrado en el tramo "En produccion"
+      // (columna ancha, 2fr), otro sobre el punto de "Parcialmente
+      // despachado" (al 100% de la columna "Producido"), representando
+      // junto el resto del camino. Estatico, igual para todos los pedidos.
+      let tiempo = '';
+      if (i === 1) tiempo = `<span class="pd-stage-time" style="left:50%">~1,5 días</span>`;
+      else if (i === 2) tiempo = `<span class="pd-stage-time" style="left:100%">~1,5 días</span>`;
+
+      return `
+        <div class="pd-stage">
+          <div class="pd-stage-row">
+            <div class="pd-stage-line" style="background:${lineaColor}"></div>
+            <div class="pd-stage-dot ${dotClass}" style="${dotStyle}">${dotContent}</div>
+            ${tiempo}
+          </div>
+          <div class="pd-stage-name ${nombreClass}" style="${nombreStyle}">${etapa}</div>
+        </div>
+      `;
     }).join('');
-    // Nota estatica (no depende de datos del pedido, es la misma para
-    // todos): estimado de duracion del tramo largo "En produccion ->
-    // Producido" (15% a 60%), centrada en su punto medio (37.5%, fijo
-    // via CSS en .track-annot span). Toma el color del punto/tramo
-    // activo solo mientras el pedido esta en ese tramo (En produccion
-    // o Producido); en el resto de estados usa el gris por defecto.
-    const annotColorStyle = (estado === "En producción" || estado === "Producido")
-      ? ` style="color:${ESTADO_COLOR[estado]}"`
-      : '';
-    const annot = `<div class="track-annot"><span${annotColorStyle}>~1.5 días</span></div>`;
-    return `<div class="track">${track}</div>${annot}<div class="track-labels">${labels}</div>`;
-  }
-
-  // ------------------------------------------------------------
-  // ANTI-SOLAPE DE TITULOS DEL TRACK EN MOBILE
-  // ------------------------------------------------------------
-  // En pantallas angostas (ver @media max-width:480px) los titulos se
-  // centran sobre la posicion real de su punto con ancho min-content;
-  // el espacio disponible es tan ajustado ahi que, segun como el
-  // navegador mida cada palabra, dos vecinos pueden terminar apenas
-  // encimados por unos pocos px. Esta funcion mide las cajas ya
-  // renderizadas y separa cualquier par que se toque, corriendo cada
-  // una la mitad hacia su lado via --extra-shift (sin tocar left ni el
-  // centrado base), hasta que no quede ningun solape.
-  function resolverColisionesTrackLabels(trackLabelsEl){
-    if (window.innerWidth > 480) return;
-    const spans = Array.from(trackLabelsEl.querySelectorAll('span'));
-    for (let pass = 0; pass < 4; pass++){
-      let movio = false;
-      for (let i = 0; i < spans.length - 1; i++){
-        const a = spans[i].getBoundingClientRect();
-        const b = spans[i+1].getBoundingClientRect();
-        const overlap = a.right - b.left;
-        if (overlap > 0.5){
-          const shift = overlap / 2 + 1;
-          const actualA = parseFloat(spans[i].style.getPropertyValue('--extra-shift')) || 0;
-          const actualB = parseFloat(spans[i+1].style.getPropertyValue('--extra-shift')) || 0;
-          spans[i].style.setProperty('--extra-shift', (actualA - shift) + 'px');
-          spans[i+1].style.setProperty('--extra-shift', (actualB + shift) + 'px');
-          movio = true;
-        }
-      }
-      if (!movio) break;
-    }
-  }
-
-  const resultObserver = new MutationObserver(() => {
-    document.querySelectorAll('#result .track-labels').forEach(resolverColisionesTrackLabels);
-  });
-  resultObserver.observe(document.getElementById('result'), { childList:true, subtree:true });
-
-  function colorSegunPct(pct){
-    if (pct === 0) return '#C7CBB7';       // gris, sin cambios
-    if (pct < 100) return '#00205B';       // Navy, igual que "Parcialmente despachado"
-    return '#00205B';                       // Navy, igual que "Despachado"
-  }
-
-  function renderRing(item){
-    const solicitada = parseFloat(item.cantidad_solicitada) || 0;
-    const despachada = parseFloat(item.cantidad_despachada) || 0;
-    const pct = solicitada > 0 ? Math.round((despachada / solicitada) * 100) : 0;
-    const color = colorSegunPct(pct);
-
-    const circunferencia = 276.46; // 2 * PI * r (r=44)
-    const offset = circunferencia - (circunferencia * pct / 100);
 
     return `
-      <div class="ring-wrap">
-        <svg viewBox="0 0 110 110">
-          <circle class="ring-bg" cx="55" cy="55" r="44"/>
-          <circle class="ring-fg" cx="55" cy="55" r="44"
-            stroke="${color}"
-            stroke-dasharray="${circunferencia}"
-            stroke-dashoffset="${offset}"/>
-        </svg>
-        <div class="ring-label">
-          <span class="ring-pct" style="color:${color}">${pct}%</span>
-          <span class="ring-cap">Enviado</span>
+      <div class="pd-tracker">
+        <div class="pd-tracker-scroll">
+          <div class="pd-tracker-grid">${columnas}</div>
         </div>
       </div>
     `;
   }
 
-  function renderTicket(item){
-    const stampClass = STAMP_CLASS[item.estado] || "recibido";
+  const RELOJ_SVG = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+
+  function renderTicket(item, backLinkHtml){
+    const pdBadgeClass = STAMP_CLASS[item.estado] || "recibido";
     const esParcial = item.estado === 'Parcialmente despachado';
     const esDespachado = item.estado === 'Despachado';
     const oc = item.orden_compra && item.orden_compra.trim() ? item.orden_compra : null;
-    const fechaReal = item.fecha_despacho && item.fecha_despacho.trim() ? item.fecha_despacho : null;
-    const fechaEstimada = item.fecha_estimada_despacho && item.fecha_estimada_despacho.trim() ? item.fecha_estimada_despacho : null;
-    let fechaLabel;
-    if (esParcial) fechaLabel = "Fecha del último envío";
-    else if (fechaReal) fechaLabel = "Fecha de despacho";
-    else fechaLabel = "Fecha estimada de despacho";
-    const fecha = fechaReal || fechaEstimada;
-    const entregaEstimada = item.fecha_entrega && item.fecha_entrega.trim() ? item.fecha_entrega : null;
     const desc = item.descripcion && item.descripcion.trim() ? item.descripcion : null;
+    const entregaEstimada = item.fecha_entrega && item.fecha_entrega.trim() ? item.fecha_entrega : null;
+
+    const solicitada = parseFloat(item.cantidad_solicitada) || 0;
+    const despachada = parseFloat(item.cantidad_despachada) || 0;
+    const pctReal = solicitada > 0 ? (despachada / solicitada) * 100 : 0;
+    const pctTexto = pctReal.toFixed(1).replace('.', ',') + '%';
+    const colorBarra = ESTADO_COLOR_DETALLE[item.estado] || ESTADO_COLOR_DETALLE["Pedido recibido"];
+
+    const fechaUltimoEnvio = item.fecha_despacho && item.fecha_despacho.trim() ? item.fecha_despacho : null;
+    let ultimoEnvioDM = '', ultimoEnvioAnio = '';
+    if (fechaUltimoEnvio){
+      const partes = fechaUltimoEnvio.split('/');
+      ultimoEnvioDM = `${partes[0]}/${partes[1]}`;
+      ultimoEnvioAnio = partes[2] || '';
+    }
 
     const nota = item.nota_despacho && item.nota_despacho.trim() ? item.nota_despacho.trim() : null;
     const notaLabel = nota && nota.includes(',') ? 'Notas de despacho' : 'Nota de despacho';
 
-    let expiryNote = '';
-    if (esDespachado){
-      expiryNote = '<p class="expiry-note">Este pedido permanece visible durante 7 días después del despacho.</p>';
-    } else if (esParcial){
-      expiryNote = '<p class="expiry-note">Este pedido permanece visible durante 7 días después de su último envío.</p>';
-    }
+    let notaFinalTexto = '';
+    if (esDespachado) notaFinalTexto = 'Visible hasta 7 días después del despacho.';
+    else if (esParcial) notaFinalTexto = 'Visible hasta 7 días después de su último envío.';
 
     return `
-      <div class="ticket">
-        <div class="ticket-top">
-          <div>
-            <p class="finca-label">Finca</p>
-            <p class="finca-name">${item.finca}</p>
+      <div class="pd-page">
+        ${backLinkHtml || ''}
+        <div class="pd-card">
+          <div class="pd-head">
+            <div class="pd-head-left">
+              <div class="pd-meta">
+                <span class="pd-finca">${item.finca}</span>
+                <span class="pd-meta-dot"></span>
+                <span class="pd-oc">${oc ? 'OC ' + oc : 'Sin OC asignada'}</span>
+              </div>
+              <div class="pd-desc">${desc || 'Sin descripción'}</div>
+            </div>
+            <div class="pd-badge ${pdBadgeClass}"><span class="pd-badge-dot"></span>${item.estado}</div>
           </div>
-          <div class="stamp ${stampClass}"><span class="stamp-dot"></span>${item.estado}</div>
+
+          ${renderTrack(item.estado)}
+
+          <div class="pd-strip">
+            <div class="pd-shipped">
+              <div class="pd-strip-label">Despachado</div>
+              <div class="pd-shipped-row">
+                <span class="pd-shipped-qty">${item.cantidad_despachada || '0'}</span>
+                <span class="pd-shipped-total">/ ${item.cantidad_solicitada || '0'} und</span>
+                <span class="pd-shipped-pct">${pctTexto}</span>
+              </div>
+              <div class="pd-shipped-bar"><div class="pd-shipped-fill" style="width:${Math.min(pctReal,100)}%; background:${colorBarra}"></div></div>
+            </div>
+            <div class="pd-ship">
+              <div class="pd-strip-label">Último envío</div>
+              ${fechaUltimoEnvio ? `
+                <div class="pd-ship-date">${ultimoEnvioDM}</div>
+                <div class="pd-ship-year">${ultimoEnvioAnio}</div>
+              ` : `<div class="pd-ship-date pending">Sin envíos aún</div>`}
+              <div class="pd-entrega">
+                <span>Entrega estimada</span>
+                <b class="${entregaEstimada ? '' : 'pending'}">${entregaEstimada || 'Sin fecha estimada'}</b>
+              </div>
+            </div>
+          </div>
+
+          <div class="pd-data">
+            <div class="pd-data-item">
+              <div class="pd-data-label">Orden de compra</div>
+              <div class="pd-data-value">${oc || '—'}</div>
+            </div>
+            <div class="pd-data-item">
+              <div class="pd-data-label">Orden de trabajo</div>
+              <div class="pd-data-value">${item.ow || '—'}</div>
+            </div>
+            <div class="pd-data-item">
+              <div class="pd-data-label">Elemento</div>
+              <div class="pd-data-value">${item.elemento || '—'}</div>
+            </div>
+            <div class="pd-data-item">
+              <div class="pd-data-label">${notaLabel}</div>
+              <div class="pd-data-value">${nota || '—'}</div>
+            </div>
+          </div>
+
+          ${notaFinalTexto ? `<div class="pd-note">${RELOJ_SVG}<span>${notaFinalTexto}</span></div>` : ''}
         </div>
-
-        ${renderTrack(item.estado)}
-
-        <div class="perf"></div>
-
-        ${renderRing(item)}
-
-        <dl class="fields">
-          <div class="field-full">
-            <dt>Descripción</dt>
-            <dd class="${desc ? '' : 'pending'}">${desc || 'Sin descripción'}</dd>
-          </div>
-          <div>
-            <dt>Orden de compra</dt>
-            <dd class="${oc ? '' : 'pending'}">${oc || 'Aún sin asignar'}</dd>
-          </div>
-          <div>
-            <dt>Elemento</dt>
-            <dd>${item.elemento || '—'}</dd>
-          </div>
-          <div>
-            <dt>${fechaLabel}</dt>
-            <dd class="${fecha ? '' : 'pending'}">${fecha || 'Aún sin definir'}</dd>
-          </div>
-          <div>
-            <dt>Entrega estimada</dt>
-            <dd class="${entregaEstimada ? '' : 'pending'}">${entregaEstimada || 'Sin fecha estimada'}</dd>
-          </div>
-          <div>
-            <dt>Orden de trabajo</dt>
-            <dd>${item.ow || '—'}</dd>
-          </div>
-          <div class="field-full">
-            <dt>Cantidad solicitada</dt>
-            <dd>${item.cantidad_solicitada || '—'}</dd>
-          </div>
-          ${parseFloat(item.cantidad_despachada) > 0 ? `
-          <div class="field-full">
-            <dt>Cantidad despachada</dt>
-            <dd>${item.cantidad_despachada}</dd>
-          </div>` : ''}
-          ${nota ? `
-          <div class="field-full">
-            <dt>${notaLabel}</dt>
-            <dd>${nota}</dd>
-          </div>` : ''}
-        </dl>
-
-        ${expiryNote}
       </div>
     `;
   }
@@ -1232,11 +1137,8 @@
 
   function showTicketFromList(index){
     const item = currentMatches[index];
-    setResultsWide(false);
-    resultBox.innerHTML = `
-      <button type="button" class="back-link" id="backToList">← Ver todas las fincas</button>
-      ${renderTicket(item)}
-    `;
+    setResultsWide(true);
+    resultBox.innerHTML = renderTicket(item, '<button type="button" class="back-link" id="backToList">← Ver todas las fincas</button>');
     document.getElementById('backToList').addEventListener('click', () => {
       renderMatchList(currentMatches, currentQueryLabel);
     });
@@ -1262,7 +1164,7 @@
   function selectSuggestion(item){
     queryInput.value = extraerCodigoProducto(item.descripcion) || item.orden_compra || item.elemento;
     closeSuggestions();
-    setResultsWide(false);
+    setResultsWide(true);
     resultBox.innerHTML = renderTicket(item);
   }
 
@@ -1378,7 +1280,7 @@
       setResultsWide(false);
       resultBox.innerHTML = renderNotFound(rawQuery);
     } else if(matches.length === 1){
-      setResultsWide(false);
+      setResultsWide(true);
       resultBox.innerHTML = renderTicket(matches[0]);
     } else {
       renderMatchList(matches, rawQuery);
@@ -1413,7 +1315,7 @@
       setResultsWide(false);
       resultBox.innerHTML = renderNotFound(fincaSeleccionada);
     } else if(matches.length === 1){
-      setResultsWide(false);
+      setResultsWide(true);
       resultBox.innerHTML = renderTicket(matches[0]);
     } else {
       renderMatchList(matches, fincaSeleccionada);
