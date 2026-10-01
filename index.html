@@ -1102,6 +1102,7 @@
     else if (fechaReal) fechaLabel = "Fecha de despacho";
     else fechaLabel = "Fecha estimada de despacho";
     const fecha = fechaReal || fechaEstimada;
+    const entregaEstimada = item.fecha_entrega && item.fecha_entrega.trim() ? item.fecha_entrega : null;
     const desc = item.descripcion && item.descripcion.trim() ? item.descripcion : null;
 
     const nota = item.nota_despacho && item.nota_despacho.trim() ? item.nota_despacho.trim() : null;
@@ -1146,6 +1147,10 @@
           <div>
             <dt>${fechaLabel}</dt>
             <dd class="${fecha ? '' : 'pending'}">${fecha || 'Aún sin definir'}</dd>
+          </div>
+          <div>
+            <dt>Entrega estimada</dt>
+            <dd class="${entregaEstimada ? '' : 'pending'}">${entregaEstimada || 'Sin fecha estimada'}</dd>
           </div>
           <div>
             <dt>Orden de trabajo</dt>
