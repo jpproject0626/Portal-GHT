@@ -195,7 +195,6 @@
     background: #08B2FF;
     transition: width .4s ease;
   }
-
   /* ---------- SEARCH (dentro de .card) ---------- */
   form.lookup{
     position:relative;
@@ -410,6 +409,9 @@
   }
   .btn-export:hover{ border-color: var(--navy); background:#f5f7fb; }
   .btn-export:active{ transform: translateY(1px); }
+  .filtro-acciones{ display:flex; gap:8px; margin-left:auto; flex:none; }
+  /* Con la clave interna hay 2 botones: la fila puede pasar a 2 renglones. */
+  .filtro-finca.con-interno{ flex-wrap:wrap; }
 
   /* ---------- RESULT TICKET ---------- */
   #result{ min-height: 4px; }
@@ -810,6 +812,7 @@
     .filtro-finca-campo{ flex-direction:column; align-items:stretch; gap:6px; }
     .filtro-finca select{ width:100%; height:44px; min-width:0; }
     .btn-export{ justify-content:center; height:44px; width:100%; }
+    .filtro-acciones{ flex-direction:column; align-items:stretch; margin-left:0; }
     .footer-in{ flex-direction:column; text-align:center; gap:6px; padding-top:16px; padding-bottom:16px; }
     .pd-head{ padding:20px 16px 16px; }
     .pd-desc{ font-size:22px; }
@@ -822,13 +825,14 @@
   }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="cripto-interno.js"></script>
 </head>
 <body>
 
   <!-- ================= HEADER ================= -->
   <header class="site-header">
     <div class="site-header-in">
-      <a class="logos" href="login-ght.html" onclick="sessionStorage.removeItem('ghtAccess'); localStorage.removeItem('ght_remember_until')" aria-label="Cerrar sesión y volver al login">
+      <a class="logos" href="login-ght.html" onclick="sessionStorage.removeItem('ghtAccess'); sessionStorage.removeItem('ghtRol'); sessionStorage.removeItem('ghtClaveInterna'); localStorage.removeItem('ght_remember_until')" aria-label="Cerrar sesión y volver al login">
         <img class="logo-sw" src="SW_Logo_Primary_2COL.png" alt="Smurfit Westrock">
         <span class="logo-sep"></span>
         <img class="logo-ght" src="ght-logo.png" alt="GHT · Growers Hub Trading">
@@ -880,10 +884,12 @@
               <option value="">Selecciona una finca…</option>
             </select>
           </div>
-          <button type="button" class="btn-export" id="exportExcelBtn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
-            Exportar consolidado a Excel
-          </button>
+          <div class="filtro-acciones" id="filtroAcciones">
+            <button type="button" class="btn-export" id="exportExcelBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+              Exportar consolidado a Excel
+            </button>
+          </div>
         </div>
       </div>
 
@@ -1415,6 +1421,87 @@
     XLSX.utils.book_append_sheet(libro, hoja, 'Consolidado');
     XLSX.writeFile(libro, 'GHT_consolidado_semana.xlsx');
   });
+
+  // ------------------------------------------------------------
+  // ACCESO INTERNO (clave de Smurfit, ver login-ght.html): boton extra para
+  // exportar a Excel el detalle de los pedidos que NO cuentan en el "Avance
+  // general". El boton solo se crea si el login dejo ghtRol=interno; con la
+  // clave normal de GHT no existe en la pagina.
+  // ------------------------------------------------------------
+  if (sessionStorage.getItem('ghtRol') === 'interno'){
+    const acciones = document.getElementById('filtroAcciones');
+    acciones.parentElement.classList.add('con-interno');
+    const btnInterno = document.createElement('button');
+    btnInterno.type = 'button';
+    btnInterno.className = 'btn-export';
+    btnInterno.id = 'exportExcluidosBtn';
+    btnInterno.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Exportar excluidos del avance';
+    acciones.appendChild(btnInterno);
+    btnInterno.addEventListener('click', exportarExcluidosAvance);
+  }
+
+  // El detalle viene cifrado (excluidos_avance.json): se descifra aqui, en el
+  // navegador, con la clave interna que se escribio al entrar. Si algo falla
+  // se avisa con un mensaje claro y NO se descarga ningun Excel.
+  async function exportarExcluidosAvance(){
+    const clave = sessionStorage.getItem('ghtClaveInterna');
+    if (!clave){
+      alert('Esta sesión no tiene la clave interna. Cierra sesión y vuelve a entrar con la clave interna para descargar el detalle.');
+      return;
+    }
+    let info;
+    try {
+      info = await descifrarExcluidos(clave);
+    } catch (err) {
+      const mensajes = {
+        red: 'No se pudo descargar el archivo de pedidos excluidos. Revisa tu conexión e intenta de nuevo.',
+        formato: 'El archivo de pedidos excluidos no tiene el formato cifrado esperado (puede estar dañado o sin cifrar). Avisa a quien administra el portal; no se descargó ningún Excel.',
+        clave: 'No se pudo descifrar el detalle con la clave de esta sesión. Cierra sesión y entra de nuevo con la clave interna. Si el error continúa, el archivo se generó con otra clave. No se descargó ningún Excel.',
+        cripto: 'Este navegador no permite descifrar el archivo (se requiere una conexión segura https y un navegador reciente). No se descargó ningún Excel.'
+      };
+      alert(mensajes[err.codigo] || 'No se pudo descifrar el detalle de pedidos excluidos. No se descargó ningún Excel.');
+      return;
+    }
+    const excluidos = info.excluidos || [];
+    if (!excluidos.length){
+      alert('No hay pedidos excluidos del Avance general en este ciclo.');
+      return;
+    }
+
+    const filas = excluidos.map(p => ({
+      'Finca': p.finca,
+      'Orden de venta': p.ov,
+      'Elemento': p.elemento,
+      'Orden de compra': p.orden_compra,
+      'Cantidad solicitada': p.cantidad_solicitada,
+      'Cantidad despachada': p.cantidad_despachada,
+      'Fecha de entrega': p.fecha_entrega,
+      'Razón de exclusión': p.razon
+    }));
+    const hoja = XLSX.utils.json_to_sheet(filas);
+    hoja['!cols'] = [{wch:14}, {wch:14}, {wch:12}, {wch:20}, {wch:19}, {wch:19}, {wch:16}, {wch:34}];
+
+    const porRazon = razon => excluidos.filter(p => p.razon === razon).length;
+    const resumen = XLSX.utils.aoa_to_sheet([
+      ['Concepto', 'Valor'],
+      ['Cierre del ciclo (moda de fecha de entrega)', info.cierre_ciclo],
+      ['Ciclo cerrado', info.ciclo_cerrado ? 'Sí' : 'No'],
+      ['Avance general (%)', info.porcentaje_global],
+      ['Pedidos que cuentan en el %', info.pedidos_en_porcentaje],
+      ['Solicitado en el %', info.total_solicitado_en_porcentaje],
+      ['Despachado en el %', info.total_despachado_en_porcentaje],
+      ['Pedidos excluidos', excluidos.length],
+      ['  Fecha de entrega futura', porRazon('Fecha de entrega futura')],
+      ['  Sin despacho al cierre del ciclo', porRazon('Sin despacho al cierre del ciclo')]
+    ]);
+    resumen['!cols'] = [{wch:44}, {wch:16}];
+
+    const libro = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(libro, hoja, 'Excluidos');
+    XLSX.utils.book_append_sheet(libro, resumen, 'Resumen');
+    const sufijo = (info.cierre_ciclo || '').replace(/\//g, '-');
+    XLSX.writeFile(libro, 'GHT_excluidos_avance' + (sufijo ? '_' + sufijo : '') + '.xlsx');
+  }
 </script>
 </body>
 </html>

@@ -116,6 +116,7 @@
   </div>
 </div>
 
+<script src="cripto-interno.js"></script>
 <script>
 /* ------------------------------------------------------------
    VALIDACION DE CLAVE — unica fuente de la clave del portal (index.html
@@ -123,15 +124,29 @@
    falta). No hay backend: para cambiar la clave, cambiala solo aqui.
    ------------------------------------------------------------ */
 const PORTAL_PASSWORD = "ght2026";
-async function validarClave(clave) {
-  return clave.trim() === PORTAL_PASSWORD;
+
+// Clave de uso interno de Smurfit: NO esta escrita en el codigo. Se
+// reconoce porque descifra excluidos_avance.json (ver cripto-interno.js);
+// entra al mismo portal, pero index.html habilita un boton extra para
+// exportar los pedidos excluidos del avance.
+async function rolDeClave(clave) {
+  const c = clave.trim();
+  if (c === PORTAL_PASSWORD) return 'cliente';
+  try {
+    await descifrarExcluidos(c);
+    return 'interno';
+  } catch {
+    return null;
+  }
 }
 const RUTA_PORTAL = 'index.html'; // pagina de seguimiento de pedidos
 
 // "Recordar este dispositivo": token en localStorage con vencimiento a
 // 30 dias, leido por index.html para saltar el login automaticamente.
 // Sin el checkbox, la sesion vive solo en sessionStorage (se pierde al
-// cerrar el navegador).
+// cerrar el navegador). El acceso interno NUNCA se recuerda: la clave
+// interna solo vive en sessionStorage, asi que hay que escribirla en cada
+// sesion.
 const REMEMBER_KEY = 'ght_remember_until';
 const REMEMBER_MS = 30 * 24 * 60 * 60 * 1000; // 30 dias
 
@@ -179,16 +194,25 @@ if (rememberUntil > Date.now()) {
     if (btn.disabled) return;
     setError(false);
     btn.disabled = true; btn.classList.add('loading'); $('btnLabel').textContent = 'Verificando';
-    let ok = false;
-    try { ok = await validarClave(input.value); } catch { ok = false; }
+    let rol = null;
+    try { rol = await rolDeClave(input.value); } catch { rol = null; }
     btn.classList.remove('loading');
-    if (ok) {
+    if (rol) {
       btn.classList.add('ok'); $('btnLabel').textContent = 'Acceso concedido';
       sessionStorage.setItem('ghtAccess', '1');
-      if ($('remember').checked) {
-        localStorage.setItem(REMEMBER_KEY, String(Date.now() + REMEMBER_MS));
+      if (rol === 'interno') {
+        // La clave interna se guarda solo en esta sesion del navegador (para
+        // descifrar el Excel de excluidos) y nunca se recuerda en el dispositivo.
+        sessionStorage.setItem('ghtRol', 'interno');
+        sessionStorage.setItem('ghtClaveInterna', input.value.trim());
       } else {
-        localStorage.removeItem(REMEMBER_KEY);
+        sessionStorage.removeItem('ghtRol');
+        sessionStorage.removeItem('ghtClaveInterna');
+        if ($('remember').checked) {
+          localStorage.setItem(REMEMBER_KEY, String(Date.now() + REMEMBER_MS));
+        } else {
+          localStorage.removeItem(REMEMBER_KEY);
+        }
       }
       page.classList.add('success');
       setTimeout(() => { location.href = RUTA_PORTAL; }, 1800);

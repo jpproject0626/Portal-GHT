@@ -18,12 +18,20 @@ COMO USARLO:
    hace por ti junto con la subida a GitHub/Vercel):
        python generar_datos.py
 
-Requiere: pip install openpyxl xlrd
+Requiere: pip install openpyxl xlrd cryptography
+
+CLAVE INTERNA (para cifrar excluidos_avance.json): se lee del archivo local
+"clave_interna.txt" (esta en .gitignore, NO se sube al repo) o de la variable
+de entorno CLAVE_INTERNA_PORTAL. Es la misma clave que se usa para entrar al
+portal como usuario interno de Smurfit.
 ============================================================
 """
 
+import base64
+import hashlib
 import json
 import os
+from collections import Counter
 from datetime import datetime, timedelta
 from openpyxl import load_workbook
 
@@ -38,6 +46,14 @@ CARPETA_DESPACHOS = "."  # el script busca aqui el .xls MAS RECIENTE
 
 ARCHIVO_SALIDA = "datos.json"
 ARCHIVO_HISTORICO_DESPACHOS = "despachos_historico.json"
+# Detalle de los pedidos que NO cuentan en el "Avance general" (uso interno:
+# lo lee el boton de exportar que solo aparece con la clave interna). Se
+# publica CIFRADO (AES-256-GCM, llave derivada con PBKDF2-SHA256): sin la
+# clave interna el archivo no deja leer ningun dato.
+ARCHIVO_EXCLUIDOS = "excluidos_avance.json"
+ARCHIVO_CLAVE_INTERNA = "clave_interna.txt"  # local, en .gitignore
+VARIABLE_CLAVE_INTERNA = "CLAVE_INTERNA_PORTAL"
+PBKDF2_ITERACIONES = 600_000  # el navegador lee este valor del propio archivo
 
 # Un pedido ya despachado se sigue mostrando en el portal durante este
 # numero de dias despues de su fecha de despacho, AUNQUE el backlog ya
@@ -53,6 +69,17 @@ DIAS_VISIBLE_DESPACHADO = 7
 # Los adicionales (pedidos que no estaban en el consolidado) SI se siguen
 # viendo normal en el portal, pero NO se suman a este % - asi el numero
 # nunca baja por una razon que no es culpa de nadie.
+#
+# Ademas, dentro del consolidado hay pedidos que NO cuentan en el % aunque
+# esten en la base (siguen apareciendo normal en el portal con su estado
+# real; ver calcular_avance_general):
+#   - Regla 1: fecha_entrega POSTERIOR al cierre del ciclo (pedidos de
+#     semanas futuras que nunca se esperaba tener listos todavia).
+#   - Regla 2: pedidos dentro del ciclo con CERO unidades despachadas, solo
+#     una vez que el ciclo ya cerro (hoy > cierre).
+# El cierre del ciclo es la moda (fecha mas repetida) de fecha_entrega en
+# el consolidado vigente; si cambia el consolidado, el ciclo se recalcula
+# solo.
 
 
 def encontrar_backlog_consolidado(carpeta="."):
@@ -71,16 +98,22 @@ def encontrar_backlog_consolidado(carpeta="."):
 
 def cargar_base_semana_ght(ruta_consolidado):
     """Lee el BACKLOG_CONSOLIDADO (mismo formato que el backlog diario,
-    hoja 'Formato') y devuelve un diccionario {OV|Elemento: cant_sol} SOLO
-    con las filas de clientes GHT. Este es el total FIJO de la semana."""
+    hoja 'Formato') y devuelve un diccionario
+    {OV|Elemento: {"cant_sol", "fecha_entrega" (date | None), "finca",
+    "orden_compra", "ov", "elemento"}} SOLO con las filas de clientes GHT.
+    Este es el total FIJO de la semana.
+    "fecha_entrega" sale de la columna A del consolidado (la misma que se
+    muestra como "Entrega estimada" en el portal)."""
     wb = load_workbook(ruta_consolidado, read_only=True, data_only=True)
     ws = wb["Formato"]
     filas = list(ws.iter_rows(values_only=True))
     encabezado = [limpiar_texto(c) for c in filas[0]]
     datos = filas[1:]
 
+    idx_fecha_entrega = encabezado.index("Fecha entrega")
     idx_id_cliente = encabezado.index("ID Cliente")
     idx_elemento = encabezado.index("Elemento")
+    idx_ord_compra = encabezado.index("Ord. de Compra")
     idx_ord_venta = encabezado.index("Ord. de Venta")
     idx_cant_sol = encabezado.index("Cant Sol")
 
@@ -90,15 +123,168 @@ def cargar_base_semana_ght(ruta_consolidado):
         if not id_cliente.startswith("GHT"):
             continue
         elemento = limpiar_texto(fila[idx_elemento])
+        orden_compra = limpiar_texto(fila[idx_ord_compra])
         ord_venta = limpiar_texto(fila[idx_ord_venta])
         try:
             cant_sol = float(fila[idx_cant_sol]) if fila[idx_cant_sol] not in (None, "") else 0.0
         except (ValueError, TypeError):
             cant_sol = 0.0
+        valor_fecha = fila[idx_fecha_entrega]
+        fecha_entrega = valor_fecha.date() if isinstance(valor_fecha, datetime) else None
         clave = f"{ord_venta}|{elemento}"
-        # Por si el consolidado trae mas de una fila para la misma OV+Elemento
-        base[clave] = base.get(clave, 0.0) + cant_sol
+        # Por si el consolidado trae mas de una fila para la misma OV+Elemento:
+        # se suman las cantidades y se conserva la fecha de entrega mas temprana.
+        previa = base.get(clave)
+        if previa is None:
+            base[clave] = {
+                "cant_sol": cant_sol, "fecha_entrega": fecha_entrega,
+                "finca": id_cliente, "orden_compra": orden_compra, "ov": ord_venta,
+                "elemento": elemento,
+            }
+        else:
+            previa["cant_sol"] += cant_sol
+            fechas = [f for f in (previa["fecha_entrega"], fecha_entrega) if f]
+            previa["fecha_entrega"] = min(fechas) if fechas else None
     return base
+
+
+def calcular_fecha_cierre_ciclo(base_semana):
+    """Cierre del ciclo = moda (fecha mas repetida) de fecha_entrega entre
+    los pedidos del consolidado. Si dos fechas empatan, gana la mas tardia.
+    Devuelve None si el consolidado no trae ninguna fecha de entrega."""
+    conteo = Counter(d["fecha_entrega"] for d in base_semana.values() if d["fecha_entrega"])
+    if not conteo:
+        return None
+    return max(conteo.items(), key=lambda item: (item[1], item[0]))[0]
+
+
+def leer_clave_interna():
+    """Devuelve la clave interna (variable de entorno o archivo local) o
+    None si no esta configurada. NUNCA debe quedar escrita en el codigo ni
+    en ningun archivo que se suba al repo."""
+    clave = os.environ.get(VARIABLE_CLAVE_INTERNA, "").strip()
+    if clave:
+        return clave
+    try:
+        with open(ARCHIVO_CLAVE_INTERNA, "r", encoding="utf-8") as f:
+            return f.readline().strip() or None
+    except FileNotFoundError:
+        return None
+
+
+def cifrar_contenido(contenido, clave):
+    """Cifra un diccionario con AES-256-GCM. La llave sale de la clave con
+    PBKDF2-HMAC-SHA256 y un salt aleatorio nuevo en cada corrida; el IV
+    (nonce) tambien es aleatorio. Devuelve el "sobre" que se publica: solo
+    parametros del cifrado + texto cifrado en base64, sin ningun dato
+    legible. Compatible con Web Crypto (el texto cifrado lleva la etiqueta
+    de autenticacion GCM al final)."""
+    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+
+    salt = os.urandom(16)
+    iv = os.urandom(12)
+    llave = hashlib.pbkdf2_hmac("sha256", clave.encode("utf-8"), salt, PBKDF2_ITERACIONES, dklen=32)
+    claro = json.dumps(contenido, ensure_ascii=False).encode("utf-8")
+    cifrado = AESGCM(llave).encrypt(iv, claro, None)
+    b64 = lambda datos: base64.b64encode(datos).decode("ascii")
+    return {
+        "v": 1,
+        "alg": "AES-256-GCM",
+        "kdf": "PBKDF2-SHA256",
+        "iter": PBKDF2_ITERACIONES,
+        "salt": b64(salt),
+        "iv": b64(iv),
+        "ct": b64(cifrado),
+    }
+
+
+RAZON_FECHA_FUTURA = "Fecha de entrega futura"
+RAZON_SIN_DESPACHO = "Sin despacho al cierre del ciclo"
+
+
+def armar_detalle_excluidos(base_semana, acumulado_por_clave, avance):
+    """Arma el contenido de excluidos_avance.json: el detalle de cada pedido
+    que quedo fuera del % (finca, elemento, OC, cantidades, fecha de entrega
+    y razon), mas un resumen del calculo. La cantidad despachada es la REAL
+    acumulada (sin el tope de lo solicitado que usa el calculo del %)."""
+    def fila(clave, razon):
+        d = base_semana[clave]
+        info = acumulado_por_clave.get(clave)
+        return {
+            "finca": d["finca"], "ov": d["ov"], "elemento": d["elemento"],
+            "orden_compra": d["orden_compra"],
+            "cantidad_solicitada": d["cant_sol"],
+            "cantidad_despachada": info["cantidad"] if info else 0.0,
+            "fecha_entrega": d["fecha_entrega"].strftime("%d/%m/%Y") if d["fecha_entrega"] else "",
+            "razon": razon,
+        }
+
+    def orden(clave):
+        d = base_semana[clave]
+        return (d["fecha_entrega"].isoformat() if d["fecha_entrega"] else "", d["finca"], d["ov"])
+
+    # Primero los de fecha futura, luego los sin despacho; dentro de cada
+    # grupo, por fecha de entrega, finca y OV.
+    excluidos = [fila(c, RAZON_FECHA_FUTURA) for c in sorted(avance["futuros"], key=orden)]
+    excluidos += [fila(c, RAZON_SIN_DESPACHO) for c in sorted(avance["sin_despacho"], key=orden)]
+    cierre = avance["cierre_ciclo"]
+    return {
+        "cierre_ciclo": cierre.strftime("%d/%m/%Y") if cierre else "",
+        "ciclo_cerrado": avance["ciclo_cerrado"],
+        "porcentaje_global": avance["porcentaje"],
+        "total_solicitado_en_porcentaje": avance["total_sol"],
+        "total_despachado_en_porcentaje": avance["total_desp"],
+        "pedidos_en_porcentaje": len(avance["incluidos"]),
+        "excluidos": excluidos,
+    }
+
+
+def calcular_avance_general(base_semana, acumulado_por_clave, hoy):
+    """Calcula el "Avance general" sobre la base fija del consolidado,
+    sacando de la cuenta (sin quitarlos del portal) dos grupos de pedidos:
+      - Regla 1 "futuros": fecha_entrega POSTERIOR al cierre del ciclo.
+      - Regla 2 "sin despacho": fecha_entrega dentro del ciclo (o sin fecha),
+        CERO unidades despachadas, y el ciclo ya cerro (hoy > cierre). Si el
+        ciclo sigue abierto, estos pedidos cuentan normal.
+    Devuelve un diccionario con el %, los totales y las llaves excluidas."""
+    cierre = calcular_fecha_cierre_ciclo(base_semana)
+    ciclo_cerrado = cierre is not None and hoy > cierre
+
+    futuros, sin_despacho, incluidos = [], [], []
+    for clave, datos in base_semana.items():
+        fecha = datos["fecha_entrega"]
+        if cierre and fecha and fecha > cierre:
+            futuros.append(clave)
+            continue
+        info_desp = acumulado_por_clave.get(clave)
+        cantidad_despachada = info_desp["cantidad"] if info_desp else 0.0
+        if ciclo_cerrado and cantidad_despachada <= 0:
+            sin_despacho.append(clave)
+            continue
+        incluidos.append(clave)
+
+    total_sol = 0.0
+    total_desp = 0.0
+    for clave in incluidos:
+        cant_sol = base_semana[clave]["cant_sol"]
+        info_desp = acumulado_por_clave.get(clave)
+        total_sol += cant_sol
+        total_desp += min(info_desp["cantidad"], cant_sol) if info_desp else 0.0
+
+    porcentaje = None
+    if total_sol > 0:
+        porcentaje = round(min(100.0, (total_desp / total_sol) * 100))
+
+    return {
+        "porcentaje": porcentaje,
+        "total_sol": total_sol,
+        "total_desp": total_desp,
+        "cierre_ciclo": cierre,
+        "ciclo_cerrado": ciclo_cerrado,
+        "incluidos": incluidos,
+        "futuros": futuros,
+        "sin_despacho": sin_despacho,
+    }
 
 
 def limpiar_texto(valor):
@@ -611,20 +797,33 @@ def generar_datos():
         print("No se encontro ningun archivo 'consolidado' en la carpeta - "
               "el % de avance de la semana no se puede calcular hoy.")
 
-    total_sol_semana = 0.0
-    total_desp_semana = 0.0
-    for clave_base, cant_sol_base in base_semana.items():
-        total_sol_semana += cant_sol_base
-        info_desp = acumulado_por_clave.get(clave_base)
-        cantidad_despachada_base = min(info_desp["cantidad"], cant_sol_base) if info_desp else 0.0
-        total_desp_semana += cantidad_despachada_base
-
-    porcentaje_global = None
-    if total_sol_semana > 0:
-        porcentaje_global = round(min(100.0, (total_desp_semana / total_sol_semana) * 100))
+    avance = calcular_avance_general(base_semana, acumulado_por_clave, hoy)
+    total_sol_semana = avance["total_sol"]
+    total_desp_semana = avance["total_desp"]
+    porcentaje_global = avance["porcentaje"]
+    cierre_ciclo = avance["cierre_ciclo"]
 
     for registro in resultado:
         registro["porcentaje_global"] = porcentaje_global
+
+    # El detalle de los pedidos excluidos del % NO va en datos.json (que ve el
+    # cliente): se guarda aparte, CIFRADO, para el boton interno de exportar
+    # a Excel. Nunca se escribe en claro: si falta la clave o la libreria, se
+    # avisa y el archivo anterior se deja como estaba.
+    clave_interna = leer_clave_interna()
+    if clave_interna is None:
+        print(f"*** AVISO: no hay clave interna ('{ARCHIVO_CLAVE_INTERNA}' o variable "
+              f"{VARIABLE_CLAVE_INTERNA}). NO se actualizo {ARCHIVO_EXCLUIDOS}. ***")
+    else:
+        detalle_excluidos = armar_detalle_excluidos(base_semana, acumulado_por_clave, avance)
+        try:
+            sobre = cifrar_contenido(detalle_excluidos, clave_interna)
+        except ImportError:
+            print(f"*** AVISO: falta la libreria 'cryptography' (pip install cryptography). "
+                  f"NO se actualizo {ARCHIVO_EXCLUIDOS}. ***")
+        else:
+            with open(ARCHIVO_EXCLUIDOS, "w", encoding="utf-8") as f:
+                json.dump(sobre, f, indent=2)
 
     historico = {"notas": notas_historico, "pedidos": pedidos_cache}
     with open(ARCHIVO_HISTORICO_DESPACHOS, "w", encoding="utf-8") as f:
@@ -639,7 +838,19 @@ def generar_datos():
     print(f"Pedidos recuperados del historico (ya no estan en el backlog): {agregados_desde_historico}")
     print(f"Total filas exportadas a {ARCHIVO_SALIDA}: {len(resultado)}")
     print(f"Pedidos GHT en el backlog consolidado de la semana: {len(base_semana)}")
-    print(f"Porcentaje de avance de la semana (contra el consolidado, sin adicionales): "
+    print(f"Cierre del ciclo (moda de fecha_entrega del consolidado): "
+          f"{cierre_ciclo.strftime('%d/%m/%Y') if cierre_ciclo else '—'} "
+          f"({'ya cerro' if avance['ciclo_cerrado'] else 'aun abierto'})")
+    print(f"  Excluidos del % por Regla 1 (fecha_entrega posterior al ciclo): {len(avance['futuros'])}")
+    for clave in avance["futuros"]:
+        d = base_semana[clave]
+        print(f"    - {clave} | entrega {d['fecha_entrega'].strftime('%d/%m/%Y')} | solicitado {formatear_cantidad(d['cant_sol'])}")
+    print(f"  Excluidos del % por Regla 2 (sin ningun despacho al cerrar el ciclo): {len(avance['sin_despacho'])}")
+    for clave in avance["sin_despacho"]:
+        d = base_semana[clave]
+        print(f"    - {clave} | solicitado {formatear_cantidad(d['cant_sol'])}")
+    print(f"  Pedidos que SI cuentan en el %: {len(avance['incluidos'])}")
+    print(f"Porcentaje de avance de la semana: "
           f"{porcentaje_global if porcentaje_global is not None else '—'}% "
           f"({formatear_cantidad(total_desp_semana)} / {formatear_cantidad(total_sol_semana)})")
     print()

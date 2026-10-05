@@ -15,7 +15,7 @@ if errorlevel 1 (
 
 echo.
 echo [2/4] Preparando el cambio para subir...
-git add datos.json
+git add datos.json excluidos_avance.json
 
 echo [3/4] Guardando el cambio...
 git commit -m "Actualizar datos del dia"

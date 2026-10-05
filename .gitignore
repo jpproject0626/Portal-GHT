@@ -13,6 +13,10 @@ despachos_historico.json
 SW_Brand_Guidelines_v01_2024*.pdf
 SW_Logo_Guide_R1.pdf
 
+# Clave interna de Smurfit (cifra excluidos_avance.json). Solo local: si se
+# sube al repo publico, el cifrado deja de servir.
+clave_interna.txt
+
 # Basura de entorno local
 .Rhistory
 portal_ght_web.zip
