@@ -4,12 +4,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Portal GHT · Acceso</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
+  /* Tipografia de marca Smurfit Westrock: Effra Corp (principal) y Source Serif Pro (apoyo). */
+  @font-face{font-family:'Effra';src:url('/fonts/Effra_Corp_Rg.ttf') format('truetype');font-weight:400;font-display:swap}
+  @font-face{font-family:'Effra';src:url('/fonts/Effra_Corp_It.ttf') format('truetype');font-weight:400;font-style:italic;font-display:swap}
+  @font-face{font-family:'Effra';src:url('/fonts/Effra_Corp_Md.ttf') format('truetype');font-weight:500 700;font-display:swap}
+  @font-face{font-family:'Source Serif Pro';src:url('/fonts/SourceSerifPro-SemiBold.ttf') format('truetype');font-weight:500 700;font-display:swap}
+  button,input,select,textarea{font-family:inherit}
   :root{--deep:#00205B;--light:#00A9E0;--hover:#0077C8;--muted:#667085;--line:#eaecf0;--err:#B42318;--warn:#B54708;--soft:#8fa0c4}
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--deep)}
-  body{font-family:'IBM Plex Sans',sans-serif;color:#101828}
+  body{font-family:'Effra', Helvetica, Arial, sans-serif;color:#101828}
   a{color:var(--hover);text-decoration:none} a:hover{color:var(--deep);text-decoration:underline}
   .page{min-height:100vh;display:flex;flex-direction:column;position:relative;overflow:hidden;background:radial-gradient(1200px 600px at 50% 115%,#0a3a7a 0%,var(--deep) 62%)}
   .glow{position:absolute;inset:0;pointer-events:none;transition:background .25s ease-out;
@@ -34,15 +39,15 @@
   .field svg{flex:none;stroke:#98a2b3;transition:stroke .2s}
   .field:focus-within{border-color:var(--hover);box-shadow:0 0 0 4px rgba(0,169,224,.18)} .field:focus-within svg{stroke:var(--hover)}
   .field.err{border-color:var(--err);box-shadow:0 0 0 4px rgba(180,35,24,.10)} .field.err svg{stroke:var(--err)}
-  .field input{flex:1;min-width:0;border:0;outline:0;background:transparent;font-family:'IBM Plex Mono',monospace;font-size:16px;letter-spacing:.08em;color:#101828;padding:15px 0}
+  .field input{flex:1;min-width:0;border:0;outline:0;background:transparent;font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums;font-size:16px;letter-spacing:.08em;color:#101828;padding:15px 0}
   .field input::placeholder{color:#98a2b3;letter-spacing:0}
-  .reveal{border:0;background:transparent;cursor:pointer;font:500 13px 'IBM Plex Sans';color:var(--hover);padding:8px 10px;border-radius:6px}
+  .reveal{border:0;background:transparent;cursor:pointer;font:500 13px 'Effra', Helvetica, Arial, sans-serif;color:var(--hover);padding:8px 10px;border-radius:6px}
   .reveal:hover{background:#F2F6FB}
   .msg{margin-top:10px;font-size:13px;display:none} .msg.show{display:block}
   .msg.caps{color:var(--warn)} .msg.error{color:var(--err)}
   .remember{margin-top:16px;display:flex;align-items:center;gap:10px;font-size:13.5px;color:#475467;cursor:pointer;min-height:24px}
   .remember input{width:16px;height:16px;margin:0;accent-color:var(--deep);cursor:pointer}
-  .btn{margin-top:20px;width:100%;height:52px;border:0;cursor:pointer;background:var(--deep);color:#fff;font:500 15px 'IBM Plex Sans';border-radius:10px;display:flex;align-items:center;justify-content:center;gap:10px;
+  .btn{margin-top:20px;width:100%;height:52px;border:0;cursor:pointer;background:var(--deep);color:#fff;font:500 15px 'Effra', Helvetica, Arial, sans-serif;border-radius:10px;display:flex;align-items:center;justify-content:center;gap:10px;
        box-shadow:0 8px 20px rgba(0,32,91,.25);transition:background .3s,transform .15s,box-shadow .3s}
   .btn:hover{background:var(--hover);box-shadow:0 10px 24px rgba(0,119,200,.35)} .btn:active{transform:scale(.985)}
   .btn:disabled{cursor:default}
@@ -56,7 +61,7 @@
   .in footer{opacity:1}
   .overlay{position:absolute;inset:0;background:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;opacity:0;pointer-events:none;transition:opacity .6s ease}
   .overlay img{width:96px;display:block;transform:scale(.7);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
-  .overlay h2{margin:0;font:500 24px 'IBM Plex Serif',serif;color:#fff}
+  .overlay h2{margin:0;font:500 24px 'Source Serif Pro', Georgia, serif;color:#fff}
   .overlay .track{width:160px;height:3px;border-radius:2px;background:rgba(255,255,255,.15);overflow:hidden}
   .overlay .fill{height:100%;background:var(--light);transform:scaleX(0);transform-origin:left}
   .page.success .overlay{opacity:1;pointer-events:auto} .page.success .overlay img{transform:scale(1)}
@@ -70,11 +75,11 @@
   .sw-emblem .sw-fill{position:absolute;inset:0;width:100%;height:100%;clip-path:inset(0 100% 0 0);transition:clip-path 2.2s cubic-bezier(.45,0,.2,1) .2s}
   .page.success-sw .sw-fill{clip-path:inset(0 0 0 0)}
   .sw-bienvenido{margin-top:36px;display:flex;align-items:center;justify-content:center;gap:12px;opacity:0;transition:opacity .8s ease .4s}
-  .sw-bienvenido span{font:500 13px 'IBM Plex Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8FD3F0;white-space:nowrap}
+  .sw-bienvenido span{font:500 13px 'Effra', Helvetica, Arial, sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8FD3F0;white-space:nowrap}
   .sw-bienvenido i{display:block;width:24px;height:1px;background:#00A9E0;transform:scaleX(0);transition:transform .8s cubic-bezier(.2,.7,.2,1) .5s}
   .sw-bienvenido .sw-l{transform-origin:right} .sw-bienvenido .sw-r{transform-origin:left}
   .page.success-sw .sw-bienvenido{opacity:1} .page.success-sw .sw-bienvenido i{transform:scaleX(1)}
-  .sw-nombre{margin-top:12px;font:500 32px/1.1 'IBM Plex Serif',serif;letter-spacing:-.015em;color:#fff;white-space:nowrap;opacity:0;transform:translateY(8px);
+  .sw-nombre{margin-top:12px;font:500 32px/1.1 'Source Serif Pro', Georgia, serif;letter-spacing:-.015em;color:#fff;white-space:nowrap;opacity:0;transform:translateY(8px);
              transition:opacity .9s cubic-bezier(.2,.7,.2,1) .6s,transform .9s cubic-bezier(.2,.7,.2,1) .6s}
   .page.success-sw .sw-nombre{opacity:1;transform:none}
   @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}

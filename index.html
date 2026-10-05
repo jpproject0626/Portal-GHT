@@ -25,10 +25,13 @@
     }
   })();
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500&display=swap" rel="stylesheet">
 <style>
+  /* Tipografia de marca Smurfit Westrock: Effra Corp (principal) y Source Serif Pro (apoyo). */
+  @font-face{font-family:'Effra';src:url('/fonts/Effra_Corp_Rg.ttf') format('truetype');font-weight:400;font-display:swap}
+  @font-face{font-family:'Effra';src:url('/fonts/Effra_Corp_It.ttf') format('truetype');font-weight:400;font-style:italic;font-display:swap}
+  @font-face{font-family:'Effra';src:url('/fonts/Effra_Corp_Md.ttf') format('truetype');font-weight:500 700;font-display:swap}
+  @font-face{font-family:'Source Serif Pro';src:url('/fonts/SourceSerifPro-SemiBold.ttf') format('truetype');font-weight:500 700;font-display:swap}
+  button,input,select,textarea{font-family:inherit}
   :root{
     /* Paleta original del portal. El unico color de marca reemplazado es
        el naranja -> azul, y solo en 2 lugares puntuales (franja del header
@@ -62,7 +65,7 @@
     margin:0;
     background: var(--paper);
     color: var(--ink);
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     min-height:100vh;
     display:flex;
     flex-direction:column;
@@ -158,7 +161,7 @@
   .results-wrap{ max-width:560px; margin:0 auto; }
 
   h1{
-    font-family:'Fraunces', serif;
+    font-family:'Source Serif Pro', Georgia, serif;
     font-weight:500;
     font-size: clamp(28px, 4.4vw, 40px);
     line-height:1.15;
@@ -176,7 +179,7 @@
 
   /* ---------- AVANCE GENERAL (dentro de .kpi, sobre la banda navy) ---------- */
   .avance-pct{
-    font-family:'IBM Plex Mono', monospace;
+    font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums;
     font-weight:600;
     font-size: clamp(20px, 4vw, 24px);
     line-height:1;
@@ -264,7 +267,7 @@
     border-radius: 8px;
     background:none;
     cursor:pointer;
-    font-family:'Inter', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     transition: background .12s ease;
   }
   .suggestion-item:hover, .suggestion-item:focus-visible, .suggestion-item.is-active{ background: #F2F6FB; }
@@ -275,7 +278,7 @@
     gap:16px;
   }
   .suggestion-item .suggestion-code{
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     font-size:15px;
     font-weight:600;
     color: #00205B;
@@ -288,12 +291,12 @@
     gap:4px;
   }
   .suggestion-item .suggestion-finca{
-    font:500 13px 'IBM Plex Sans', sans-serif;
+    font:500 13px 'Effra', Helvetica, Arial, sans-serif;
     color:#344054;
     white-space:nowrap;
   }
   .suggestion-item .suggestion-oc{
-    font-family:'IBM Plex Mono', monospace;
+    font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums;
     font-size:11px;
     color:#98a2b3;
     white-space:nowrap;
@@ -309,7 +312,7 @@
   }
   .lookup input[type="text"]{
     flex:1;
-    font-family:'IBM Plex Mono', monospace;
+    font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums;
     font-size:15px;
     padding: 14px 0;
     border:none;
@@ -318,12 +321,12 @@
     outline:none;
   }
   .lookup input[type="text"]::placeholder{
-    font-family:'Inter', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     color: #98a2b3;
   }
 
   .btn{
-    font-family:'Inter', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     font-weight:600;
     font-size:14.5px;
     padding: 0 22px;
@@ -378,7 +381,7 @@
     width: auto;
     min-width:220px;
     flex:none;
-    font-family:'Inter', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     font-size:13px;
     padding: 8px 10px;
     border: 1px solid #d0d5dd;
@@ -394,7 +397,7 @@
      la tarjeta de busqueda pero de menor peso visual que "Buscar". */
   .btn-export{
     display:flex; align-items:center; gap:6px;
-    font-family:'Inter', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     font-weight:600;
     font-size:12px;
     padding: 9px 12px;
@@ -427,7 +430,7 @@
     gap:8px;
     padding:5px 12px;
     border-radius:999px;
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     font-size:13px;
     font-weight:500;
     border:none;
@@ -476,14 +479,14 @@
     display:flex;
     align-items:center;
     gap:8px;
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
   }
   .pd-finca{ font-size:13px; font-weight:600; color:#00205B; white-space:nowrap; }
   .pd-meta-dot{ width:3px; height:3px; border-radius:50%; background:#98a2b3; flex:none; }
-  .pd-oc{ font-family:'IBM Plex Mono', monospace; font-size:13px; color:#667085; white-space:nowrap; }
+  .pd-oc{ font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums; font-size:13px; color:#667085; white-space:nowrap; }
   .pd-desc{
     margin-top:8px;
-    font-family:'IBM Plex Serif', serif;
+    font-family:'Source Serif Pro', Georgia, serif;
     font-size:26px;
     font-weight:500;
     line-height:1.2;
@@ -496,7 +499,7 @@
     gap:8px;
     padding:6px 14px;
     border-radius:999px;
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     font-size:13px;
     font-weight:500;
     white-space:nowrap;
@@ -544,7 +547,7 @@
     position:absolute;
     top:-18px;
     transform:translateX(-50%);
-    font-family:'IBM Plex Mono', monospace;
+    font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums;
     font-size:10.5px;
     color:#98a2b3;
     white-space:nowrap;
@@ -554,7 +557,7 @@
     margin-left:-60px;
     margin-top:12px;
     text-align:center;
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     font-size:13px;
     line-height:1.35;
     text-wrap:balance;
@@ -572,28 +575,28 @@
     flex-wrap:wrap;
     gap:24px 40px;
   }
-  .pd-strip-label{ font-family:'IBM Plex Sans', sans-serif; font-size:12.5px; color:#667085; }
+  .pd-strip-label{ font-family:'Effra', Helvetica, Arial, sans-serif; font-size:12.5px; color:#667085; }
   .pd-shipped{ flex:2 1 260px; min-width:0; }
   .pd-shipped-row{ margin-top:4px; display:flex; align-items:baseline; gap:8px; flex-wrap:nowrap; white-space:nowrap; }
-  .pd-shipped-qty{ font-family:'IBM Plex Mono', monospace; font-size:30px; font-weight:500; letter-spacing:-0.02em; color:#00205B; }
-  .pd-shipped-total{ font-family:'IBM Plex Sans', sans-serif; font-size:14px; color:#667085; }
-  .pd-shipped-pct{ font-family:'IBM Plex Mono', monospace; font-size:13px; font-weight:500; color:#00205B; margin-left:auto; }
+  .pd-shipped-qty{ font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums; font-size:30px; font-weight:500; letter-spacing:-0.02em; color:#00205B; }
+  .pd-shipped-total{ font-family:'Effra', Helvetica, Arial, sans-serif; font-size:14px; color:#667085; }
+  .pd-shipped-pct{ font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums; font-size:13px; font-weight:500; color:#00205B; margin-left:auto; }
   .pd-shipped-bar{ margin-top:10px; height:4px; border-radius:2px; background:#e4e7ec; overflow:hidden; }
   .pd-shipped-fill{ height:100%; border-radius:2px; }
   .pd-ship{ flex:1 1 120px; min-width:0; }
-  .pd-ship-date{ margin-top:4px; font-family:'IBM Plex Mono', monospace; font-size:30px; font-weight:500; color:#00205B; }
+  .pd-ship-date{ margin-top:4px; font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums; font-size:30px; font-weight:500; color:#00205B; }
   .pd-ship-date.pending{
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     font-size:16px; font-weight:400; font-style:italic; color:#98a2b3;
   }
-  .pd-ship-year{ font-family:'IBM Plex Sans', sans-serif; font-size:12.5px; color:#667085; }
+  .pd-ship-year{ font-family:'Effra', Helvetica, Arial, sans-serif; font-size:12.5px; color:#667085; }
   .pd-entrega{
     margin-top:12px; padding-top:10px; border-top:1px solid #eaecf0;
     display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;
   }
-  .pd-entrega span{ font-family:'IBM Plex Sans', sans-serif; font-size:12.5px; color:#667085; white-space:nowrap; }
-  .pd-entrega b{ font-family:'IBM Plex Mono', monospace; font-size:13px; font-weight:500; color:#0077C8; }
-  .pd-entrega b.pending{ font-family:'IBM Plex Sans', sans-serif; font-weight:400; font-style:italic; color:#98a2b3; }
+  .pd-entrega span{ font-family:'Effra', Helvetica, Arial, sans-serif; font-size:12.5px; color:#667085; white-space:nowrap; }
+  .pd-entrega b{ font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums; font-size:13px; font-weight:500; color:#0077C8; }
+  .pd-entrega b.pending{ font-family:'Effra', Helvetica, Arial, sans-serif; font-weight:400; font-style:italic; color:#98a2b3; }
 
   /* -- 5. Datos -- */
   .pd-data{
@@ -603,10 +606,10 @@
     column-gap:32px;
   }
   .pd-data-item{ padding:18px 0; min-width:0; }
-  .pd-data-label{ font-family:'IBM Plex Sans', sans-serif; font-size:12.5px; color:#667085; }
+  .pd-data-label{ font-family:'Effra', Helvetica, Arial, sans-serif; font-size:12.5px; color:#667085; }
   .pd-data-value{
     margin-top:4px;
-    font-family:'IBM Plex Mono', monospace;
+    font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums;
     font-size:14.5px;
     color:#101828;
     white-space:nowrap;
@@ -620,7 +623,7 @@
     display:flex;
     align-items:center;
     gap:8px;
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     font-size:12.5px;
     color:#98a2b3;
   }
@@ -638,7 +641,7 @@
   }
   .res-head{
     padding:16px 24px;
-    font:400 14px 'IBM Plex Sans', sans-serif;
+    font:400 14px 'Effra', Helvetica, Arial, sans-serif;
     color:#475467;
     white-space:nowrap;
   }
@@ -662,7 +665,7 @@
     padding:0 12px;
     border-radius:999px;
     flex:none;
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     font-size:13px;
     font-weight:500;
     white-space:nowrap;
@@ -685,21 +688,21 @@
     border-top:1px solid #f2f4f7;
     background:none;
     cursor:pointer;
-    font-family:'Inter', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     transition: background .12s ease;
   }
   .match-row:first-of-type{ border-top:0; }
   .match-row:hover, .match-row:focus-visible{ background:#F7F9FC; }
   .match-row-info{ flex:1; min-width:0; }
   .match-row-finca{
-    font:600 15px 'IBM Plex Sans', sans-serif;
+    font:600 15px 'Effra', Helvetica, Arial, sans-serif;
     color:#00205B;
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
   }
   .match-row-oc{
-    font:400 12.5px 'IBM Plex Mono', monospace;
+    font:400 12.5px 'Effra', sans-serif; font-variant-numeric:tabular-nums;
     color:#667085;
     margin-top:2px;
     overflow:hidden;
@@ -723,7 +726,7 @@
     border:none;
     background:none;
     cursor:pointer;
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:'Effra', Helvetica, Arial, sans-serif;
     font-size:14px;
     font-weight:500;
     color:#00205B;
