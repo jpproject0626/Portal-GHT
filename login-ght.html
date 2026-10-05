@@ -61,6 +61,22 @@
   .overlay .fill{height:100%;background:var(--light);transform:scaleX(0);transform-origin:left}
   .page.success .overlay{opacity:1;pointer-events:auto} .page.success .overlay img{transform:scale(1)}
   .page.success .overlay .fill{animation:bar 1.6s cubic-bezier(.4,0,.2,1) forwards}
+  /* Bienvenida solo para el usuario interno de Smurfit (rol 'interno'). La de GHT (.overlay) no se toca. */
+  .sw-welcome{position:fixed;inset:0;z-index:10;background:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;visibility:hidden;pointer-events:none}
+  .page.success-sw .sw-welcome{opacity:1;visibility:visible;pointer-events:auto}
+  .sw-emblem{position:relative;height:96px}
+  .sw-emblem img{display:block;height:96px;width:auto}
+  .sw-emblem .sw-base{opacity:.18}
+  .sw-emblem .sw-fill{position:absolute;inset:0;width:100%;height:100%;clip-path:inset(0 100% 0 0);transition:clip-path 2.2s cubic-bezier(.45,0,.2,1) .2s}
+  .page.success-sw .sw-fill{clip-path:inset(0 0 0 0)}
+  .sw-bienvenido{margin-top:36px;display:flex;align-items:center;justify-content:center;gap:12px;opacity:0;transition:opacity .8s ease .4s}
+  .sw-bienvenido span{font:500 13px 'IBM Plex Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8FD3F0;white-space:nowrap}
+  .sw-bienvenido i{display:block;width:24px;height:1px;background:#00A9E0;transform:scaleX(0);transition:transform .8s cubic-bezier(.2,.7,.2,1) .5s}
+  .sw-bienvenido .sw-l{transform-origin:right} .sw-bienvenido .sw-r{transform-origin:left}
+  .page.success-sw .sw-bienvenido{opacity:1} .page.success-sw .sw-bienvenido i{transform:scaleX(1)}
+  .sw-nombre{margin-top:12px;font:500 32px/1.1 'IBM Plex Serif',serif;letter-spacing:-.015em;color:#fff;white-space:nowrap;opacity:0;transform:translateY(8px);
+             transition:opacity .9s cubic-bezier(.2,.7,.2,1) .6s,transform .9s cubic-bezier(.2,.7,.2,1) .6s}
+  .page.success-sw .sw-nombre{opacity:1;transform:none}
   @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
   @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(-1.2deg)}}
   @keyframes spin{to{transform:rotate(360deg)}}
@@ -114,6 +130,16 @@
     <h2>Bienvenido, GHT</h2>
     <div class="track"><div class="fill"></div></div>
   </div>
+
+  <div class="sw-welcome" aria-hidden="true">
+    <div class="sw-emblem">
+      <!-- Mismo emblema del login, en el Light Blue de la marca (#08B2FF). -->
+      <img class="sw-base" src="/assets/sw-emblem-lightblue.png" alt="" />
+      <img class="sw-fill" src="/assets/sw-emblem-lightblue.png" alt="" />
+    </div>
+    <div class="sw-bienvenido"><i class="sw-l"></i><span>Bienvenido</span><i class="sw-r"></i></div>
+    <div class="sw-nombre">Smurfit Westrock</div>
+  </div>
 </div>
 
 <script src="cripto-interno.js"></script>
@@ -140,6 +166,7 @@ async function rolDeClave(clave) {
   }
 }
 const RUTA_PORTAL = 'index.html'; // pagina de seguimiento de pedidos
+const SW_BIENVENIDA_MS = 2600;    // duracion de la bienvenida del usuario interno (animacion 2.4 s + margen)
 
 // "Recordar este dispositivo": token en localStorage con vencimiento a
 // 30 dias, leido por index.html para saltar el login automaticamente.
@@ -214,8 +241,10 @@ if (rememberUntil > Date.now()) {
           localStorage.removeItem(REMEMBER_KEY);
         }
       }
-      page.classList.add('success');
-      setTimeout(() => { location.href = RUTA_PORTAL; }, 1800);
+      // El usuario interno de Smurfit tiene su propia bienvenida; GHT conserva la suya.
+      const esInterno = rol === 'interno';
+      page.classList.add(esInterno ? 'success-sw' : 'success');
+      setTimeout(() => { location.href = RUTA_PORTAL; }, esInterno ? SW_BIENVENIDA_MS : 1800);
     } else {
       btn.disabled = false; $('btnLabel').textContent = 'Ingresar';
       setError(true);
