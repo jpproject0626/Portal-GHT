@@ -59,14 +59,35 @@
   .secure{margin-top:20px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:12.5px;color:var(--soft)}
   footer{padding-top:20px;padding-bottom:20px;text-align:center;font-size:12.5px;color:var(--soft);opacity:0;transition:opacity 1s ease .35s}
   .in footer{opacity:1}
-  .overlay{position:absolute;inset:0;background:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;opacity:0;pointer-events:none;transition:opacity .6s ease}
-  .overlay img{width:96px;display:block;transform:scale(.7);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
-  .overlay h2{margin:0;font:500 24px 'Source Serif Pro', Georgia, serif;color:#fff}
-  .overlay .track{width:160px;height:3px;border-radius:2px;background:rgba(255,255,255,.15);overflow:hidden}
-  .overlay .fill{height:100%;background:var(--light);transform:scaleX(0);transform-origin:left}
-  .page.success .overlay{opacity:1;pointer-events:auto} .page.success .overlay img{transform:scale(1)}
-  .page.success .overlay .fill{animation:bar 1.6s cubic-bezier(.4,0,.2,1) forwards}
-  /* Bienvenida solo para el usuario interno de Smurfit (rol 'interno'). La de GHT (.overlay) no se toca. */
+  /* Bienvenida del usuario GHT (clase .success). La del usuario interno de Smurfit (.sw-welcome) va aparte y no cambia. */
+  .ght-welcome{position:fixed;inset:0;z-index:10;background:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;visibility:hidden;pointer-events:none}
+  .page.success .ght-welcome{opacity:1;visibility:visible;pointer-events:auto}
+  .ght-marcas{display:flex;align-items:center;justify-content:center;gap:28px}
+  .ght-emblema,.ght-logo{position:relative}
+  .ght-emblema{height:80px} .ght-logo{height:72px}
+  .ght-emblema img,.ght-logo img{display:block;height:100%;width:auto}
+  .ght-base-e,.ght-fill-e,.ght-base-l,.ght-fill-l{max-width:none}
+  .ght-base-e{opacity:.18} .ght-base-l{opacity:.25}
+  .ght-fill-e,.ght-fill-l{position:absolute;inset:0;width:100%;height:100%;clip-path:inset(0 100% 0 0)}
+  .ght-fill-e{transition:clip-path 2.2s cubic-bezier(.45,0,.2,1) .2s}
+  .ght-fill-l{transition:clip-path 2.2s cubic-bezier(.45,0,.2,1) .6s}
+  .page.success .ght-fill-e,.page.success .ght-fill-l{clip-path:inset(0 0 0 0)}
+  .ght-sep{width:1px;height:64px;background:rgba(255,255,255,.22);transform:scaleY(0);transform-origin:center;transition:transform .7s cubic-bezier(.2,.7,.2,1) .6s}
+  .page.success .ght-sep{transform:scaleY(1)}
+  .ght-bienvenido{margin-top:36px;display:flex;align-items:center;justify-content:center;gap:12px;opacity:0;transition:opacity .8s ease .4s}
+  .ght-bienvenido span{font:500 13px 'Effra', Helvetica, Arial, sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8FD3F0;white-space:nowrap}
+  .ght-bienvenido i{display:block;width:24px;height:1px;background:#00A9E0;transform:scaleX(0);transition:transform .8s cubic-bezier(.2,.7,.2,1) .5s}
+  .ght-bienvenido .ght-l{transform-origin:right} .ght-bienvenido .ght-r{transform-origin:left}
+  .page.success .ght-bienvenido{opacity:1} .page.success .ght-bienvenido i{transform:scaleX(1)}
+  .ght-nombre{margin-top:12px;font:500 32px/1.1 'Source Serif Pro', Georgia, serif;letter-spacing:-.015em;color:#fff;white-space:nowrap;opacity:0;transform:translateY(8px);
+              transition:opacity .9s cubic-bezier(.2,.7,.2,1) .6s,transform .9s cubic-bezier(.2,.7,.2,1) .6s}
+  .page.success .ght-nombre{opacity:1;transform:none}
+  @media (max-width:479px){
+    .ght-marcas{gap:20px}
+    .ght-emblema{height:64px} .ght-logo{height:56px} .ght-sep{height:52px}
+    .ght-nombre{font-size:26px}
+  }
+  /* Bienvenida solo para el usuario interno de Smurfit (rol 'interno'). */
   .sw-welcome{position:fixed;inset:0;z-index:10;background:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;visibility:hidden;pointer-events:none}
   .page.success-sw .sw-welcome{opacity:1;visibility:visible;pointer-events:auto}
   .sw-emblem{position:relative;height:96px}
@@ -85,7 +106,6 @@
   @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
   @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(-1.2deg)}}
   @keyframes spin{to{transform:rotate(360deg)}}
-  @keyframes bar{to{transform:scaleX(1)}}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -130,10 +150,20 @@
 
   <footer>© 2026 Smurfit Westrock · Bogotá, Colombia</footer>
 
-  <div class="overlay" aria-hidden="true">
-    <img src="/assets/sw-emblem-white.png" alt="" />
-    <h2>Bienvenido, GHT</h2>
-    <div class="track"><div class="fill"></div></div>
+  <div class="ght-welcome" aria-hidden="true">
+    <div class="ght-marcas">
+      <div class="ght-emblema">
+        <img class="ght-base-e" src="/assets/sw-emblem-lightblue.png" alt="" />
+        <img class="ght-fill-e" src="/assets/sw-emblem-lightblue.png" alt="" />
+      </div>
+      <div class="ght-sep"></div>
+      <div class="ght-logo">
+        <img class="ght-base-l" src="/assets/ght-logo.png" alt="" />
+        <img class="ght-fill-l" src="/assets/ght-logo.png" alt="" />
+      </div>
+    </div>
+    <div class="ght-bienvenido"><i class="ght-l"></i><span>Bienvenido</span><i class="ght-r"></i></div>
+    <div class="ght-nombre">Growers Hub Trading</div>
   </div>
 
   <div class="sw-welcome" aria-hidden="true">
@@ -171,6 +201,7 @@ async function rolDeClave(clave) {
   }
 }
 const RUTA_PORTAL = 'index.html'; // pagina de seguimiento de pedidos
+const GHT_BIENVENIDA_MS = 3200;   // bienvenida GHT: animacion 2.8 s + margen
 const SW_BIENVENIDA_MS = 2600;    // duracion de la bienvenida del usuario interno (animacion 2.4 s + margen)
 
 // "Recordar este dispositivo": token en localStorage con vencimiento a
@@ -249,7 +280,7 @@ if (rememberUntil > Date.now()) {
       // El usuario interno de Smurfit tiene su propia bienvenida; GHT conserva la suya.
       const esInterno = rol === 'interno';
       page.classList.add(esInterno ? 'success-sw' : 'success');
-      setTimeout(() => { location.href = RUTA_PORTAL; }, esInterno ? SW_BIENVENIDA_MS : 1800);
+      setTimeout(() => { location.href = RUTA_PORTAL; }, esInterno ? SW_BIENVENIDA_MS : GHT_BIENVENIDA_MS);
     } else {
       btn.disabled = false; $('btnLabel').textContent = 'Ingresar';
       setError(true);
