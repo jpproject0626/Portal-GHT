@@ -103,6 +103,16 @@
   .sw-nombre{margin-top:12px;font:500 32px/1.1 'Source Serif Pro', Georgia, serif;letter-spacing:-.015em;color:#fff;white-space:nowrap;opacity:0;transform:translateY(8px);
              transition:opacity .9s cubic-bezier(.2,.7,.2,1) .6s,transform .9s cubic-bezier(.2,.7,.2,1) .6s}
   .page.success-sw .sw-nombre{opacity:1;transform:none}
+  /* Tamanos de las dos bienvenidas en tablet/escritorio. En celular (<=480px) no se aplica nada de esto. */
+  @media (min-width:481px){
+    .sw-emblem{height:84px} .sw-emblem img{height:84px}
+    .sw-bienvenido{margin-top:32px}
+    .sw-nombre{font-size:29px}
+    .ght-marcas{gap:24px}
+    .ght-emblema{height:70px} .ght-logo{height:62px} .ght-sep{height:56px}
+    .ght-bienvenido{margin-top:32px}
+    .ght-nombre{font-size:29px}
+  }
   @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
   @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(-1.2deg)}}
   @keyframes spin{to{transform:rotate(360deg)}}
