@@ -86,7 +86,7 @@
     border-bottom: 1px solid #eaecf0;
   }
   .site-header-in{
-    max-width:1200px;
+    max-width:880px;
     margin:0 auto;
     padding:14px 32px;
     display:flex;
@@ -104,9 +104,11 @@
     transition: opacity .15s ease;
   }
   a.logos:hover, a.logos:focus-visible{ opacity:.85; }
-  .logos .logo-sw{ height:56px; width:auto; display:block; }
-  .logos .logo-sep{ width:1px; height:32px; background:#e4e7ec; }
-  .logos .logo-ght{ height:40px; width:auto; display:block; }
+  /* El contenedor del logo SW no existe para el layout (display:contents) salvo en >=1240px. */
+  .logos .logo-sw-box{ display:contents; }
+  .logos .logo-sw{ height:60px; width:auto; display:block; }
+  .logos .logo-sep{ width:1px; height:34px; background:#e4e7ec; }
+  .logos .logo-ght{ height:43px; width:auto; display:block; }
   .status{
     display:flex; align-items:center; gap:8px;
     font-size:12.5px; color:#667085; white-space:nowrap;
@@ -135,7 +137,7 @@
     display:flex; justify-content:space-between; align-items:baseline;
     gap:12px; margin-bottom:10px;
   }
-  .kpi .kpi-row span{ font-size:12.5px; color:#C9D4EA; letter-spacing:.02em; }
+  .kpi .kpi-row span{ font-size:12.5px; color:#C9D4EA; letter-spacing:.02em; white-space:nowrap; }
 
   /* ---------- MAIN (tarjeta de busqueda, flotando sobre la banda) ---------- */
   main{
@@ -372,6 +374,7 @@
     flex:none;
   }
   .filtro-finca label{
+    white-space:nowrap;
     font-size:13px;
     color:#475467;
     white-space:nowrap;
@@ -826,6 +829,29 @@
     .pd-data{ padding:4px 16px; grid-template-columns:1fr 1fr; }
     .pd-note{ padding:12px 16px 16px; }
   }
+
+  /* ---------- HEADER: alineacion de logos con el contenido ----------
+     El logo SW mide 60px; el PNG trae ~10.8px de margen transparente por lado
+     (170/2835 del ancho), por eso el margin-left de -10.8px en el flujo normal:
+     asi el borde VISIBLE del logo queda sobre el borde izquierdo del contenido.
+     Celular (<=480px) no se toca. */
+  @media (min-width:481px){
+    .site-header-in{ padding-left:32px; padding-right:32px; }
+    .status{ white-space:nowrap; flex:none; }
+  }
+  @media (min-width:481px) and (max-width:1239px){
+    a.logos{ gap:20px; }
+    .logos .logo-sw{ height:60px; margin:0 -6px 0 -10.8px; }
+    .logos .logo-sep{ height:34px; }
+    .logos .logo-ght{ height:43px; }
+  }
+  /* >=1240px: el logo SW cuelga hacia la izquierda de la columna de contenido y la
+     linea divisoria queda exactamente sobre el borde izquierdo del titulo. */
+  @media (min-width:1240px){
+    .logos .logo-sw-box{ display:block; width:0; height:60px; position:relative; flex:none; }
+    .logos .logo-sw{ position:absolute; right:14px; top:0; width:auto; max-width:none; }
+    .logos .logo-sep{ margin-left:-20px; }
+  }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="cripto-interno.js"></script>
@@ -836,7 +862,7 @@
   <header class="site-header">
     <div class="site-header-in">
       <a class="logos" href="login-ght.html" onclick="sessionStorage.removeItem('ghtAccess'); sessionStorage.removeItem('ghtRol'); sessionStorage.removeItem('ghtClaveInterna'); localStorage.removeItem('ght_remember_until')" aria-label="Cerrar sesión y volver al login">
-        <img class="logo-sw" src="SW_Logo_Primary_2COL.png" alt="Smurfit Westrock">
+        <span class="logo-sw-box"><img class="logo-sw" src="SW_Logo_Primary_2COL.png" alt="Smurfit Westrock"></span>
         <span class="logo-sep"></span>
         <img class="logo-ght" src="ght-logo.png" alt="GHT · Growers Hub Trading">
       </a>
