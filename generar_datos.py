@@ -18,6 +18,26 @@ COMO USARLO:
    hace por ti junto con la subida a GitHub/Vercel):
        python generar_datos.py
 
+MODO AUTOMATICO (para correrlo sin intervencion, p. ej. con el Programador de
+tareas de Windows en los cortes de 7:30, 12:00 y 16:00 hora Colombia):
+       python generar_datos.py --auto
+  Usa el .xls de despachos mas reciente de la carpeta. Si falta un archivo de
+  entrada, la clave interna, o el .xls esta bloqueado (reintenta una vez), NO
+  escribe nada y termina con un codigo de salida distinto de 0:
+       0 ok | 1 error inesperado | 2 falta un archivo de entrada
+       3 falta la clave interna (o la libreria cryptography)
+       4 archivo de entrada bloqueado/incompleto | 5 config.json invalido
+  Las rutas y los cortes se leen de config.json (copia config.ejemplo.json como
+  config.json; config.json NO se sube al repo). Cada corrida deja:
+  logs/corridas.log, salida_interna/resumen_corrida.json (para el correo de
+  aviso, SOLO interno) y salida/GHT_consolidado_AAAA-MM-DD_HHMM.xlsx (el Excel
+  para el cliente, con lo mismo que ve GHT en el portal).
+  Solo las corridas con --auto:
+    - actualizan salida_interna/estado_despachos_reportados.json (que despachos
+      ya se reportaron como nuevos): una corrida manual NO consume despachos;
+    - escriben SIEMPRE salida_interna/ultima_corrida.json (tambien si fallan),
+      sin tocar datos.json, excluidos_avance.json ni resumen_corrida.json.
+
 Requiere: pip install openpyxl xlrd cryptography
 
 CLAVE INTERNA (para cifrar excluidos_avance.json): se lee del archivo local
@@ -27,13 +47,19 @@ portal como usuario interno de Smurfit.
 ============================================================
 """
 
+import argparse
 import base64
 import hashlib
 import json
 import os
+import struct
+import sys
+import time
+import traceback
 from collections import Counter
-from datetime import datetime, timedelta
-from openpyxl import load_workbook
+from datetime import datetime, timedelta, timezone
+from openpyxl import Workbook, load_workbook
+from openpyxl.styles import Font
 
 # ------------------------------------------------------------------
 # 1. RUTAS DE LOS ARCHIVOS
@@ -59,6 +85,231 @@ PBKDF2_ITERACIONES = 600_000  # el navegador lee este valor del propio archivo
 # numero de dias despues de su fecha de despacho, AUNQUE el backlog ya
 # lo haya quitado de su lista. Pasado ese tiempo, deja de aparecer.
 DIAS_VISIBLE_DESPACHADO = 7
+
+
+# ------------------------------------------------------------------
+# 1b. CONFIGURACION (config.json), CODIGOS DE SALIDA Y MODO AUTOMATICO
+# ------------------------------------------------------------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ARCHIVO_CONFIG = os.path.join(BASE_DIR, "config.json")
+BOGOTA = timezone(timedelta(hours=-5), "America/Bogota")  # Colombia no tiene horario de verano
+
+SALIDA_OK = 0
+SALIDA_ERROR = 1            # error inesperado
+SALIDA_FALTA_ARCHIVO = 2    # falta un archivo de entrada
+SALIDA_FALTA_CLAVE = 3      # falta la clave interna o la libreria cryptography
+SALIDA_BLOQUEADO = 4        # archivo de entrada bloqueado / incompleto (tras reintentar)
+SALIDA_CONFIG = 5           # config.json invalido
+
+# Todas las rutas son relativas a la carpeta de config.json (la del proyecto).
+CONFIG_POR_DEFECTO = {
+    "backlog": RUTA_BACKLOG,
+    "programacion": RUTA_PROGRAMACION,
+    "carpeta_despachos": CARPETA_DESPACHOS,   # .xls de despachos y BACKLOG CONSOLIDADO
+    "datos_json": ARCHIVO_SALIDA,
+    "historico_despachos": ARCHIVO_HISTORICO_DESPACHOS,
+    "excluidos_avance": ARCHIVO_EXCLUIDOS,
+    "clave_interna": ARCHIVO_CLAVE_INTERNA,
+    "carpeta_salida": "salida",                  # Excel para el cliente
+    "carpeta_salida_interna": "salida_interna",  # resumen para el correo (NO se sube)
+    "carpeta_logs": "logs",
+    "espera_reintento_segundos": 5,              # pausa antes del unico reintento
+    "cortes": ["07:30", "12:00", "16:00"],       # hora Colombia
+    "tolerancia_corte_minutos": 120,
+}
+CLAVES_DE_RUTA = ("backlog", "programacion", "carpeta_despachos", "datos_json", "historico_despachos",
+                  "excluidos_avance", "clave_interna", "carpeta_salida", "carpeta_salida_interna", "carpeta_logs")
+
+
+class ErrorCorrida(Exception):
+    """Error esperado de una corrida: lleva el codigo de salida y un mensaje claro."""
+    def __init__(self, codigo, mensaje, corto=None):
+        super().__init__(mensaje)
+        self.codigo = codigo
+        self.mensaje = mensaje
+        self.corto = corto or mensaje  # version sin rutas largas, para ultima_corrida.json
+
+
+def cargar_config(ruta=None):
+    """Lee config.json (si no existe usa CONFIG_POR_DEFECTO) y devuelve el
+    diccionario con las rutas ya convertidas a absolutas."""
+    ruta = os.path.abspath(ruta or ARCHIVO_CONFIG)
+    cfg = dict(CONFIG_POR_DEFECTO)
+    if os.path.exists(ruta):
+        try:
+            with open(ruta, "r", encoding="utf-8") as f:
+                leido = json.load(f)
+        except (OSError, ValueError) as e:
+            raise ErrorCorrida(SALIDA_CONFIG, f"No se pudo leer {ruta}: {e}", f"No se pudo leer config.json: {e}")
+        if not isinstance(leido, dict):
+            raise ErrorCorrida(SALIDA_CONFIG, f"{ruta} debe contener un objeto JSON.", "config.json debe contener un objeto JSON.")
+        desconocidas = sorted(set(leido) - set(cfg))
+        if desconocidas:
+            raise ErrorCorrida(SALIDA_CONFIG, f"{ruta}: claves desconocidas: {', '.join(desconocidas)}",
+                               f"config.json: claves desconocidas: {', '.join(desconocidas)}")
+        cfg.update(leido)
+    for clave in CLAVES_DE_RUTA:
+        if not isinstance(cfg[clave], str) or not cfg[clave].strip():
+            raise ErrorCorrida(SALIDA_CONFIG, f"config.json: '{clave}' debe ser una ruta (texto).")
+    if not isinstance(cfg["espera_reintento_segundos"], (int, float)) or cfg["espera_reintento_segundos"] < 0:
+        raise ErrorCorrida(SALIDA_CONFIG, "config.json: 'espera_reintento_segundos' debe ser un numero >= 0.")
+    if not isinstance(cfg["tolerancia_corte_minutos"], (int, float)) or cfg["tolerancia_corte_minutos"] < 0:
+        raise ErrorCorrida(SALIDA_CONFIG, "config.json: 'tolerancia_corte_minutos' debe ser un numero >= 0.")
+    try:
+        cfg["cortes"] = [datetime.strptime(c, "%H:%M").strftime("%H:%M") for c in cfg["cortes"]]
+    except (TypeError, ValueError):
+        raise ErrorCorrida(SALIDA_CONFIG, "config.json: 'cortes' debe ser una lista de horas 'HH:MM'.")
+    return resolver_rutas(cfg, os.path.dirname(ruta))
+
+
+def resolver_rutas(cfg, base):
+    """Convierte las rutas de la configuracion (relativas a 'base') en absolutas."""
+    cfg = dict(cfg)
+    for clave in CLAVES_DE_RUTA:
+        cfg[clave] = os.path.normpath(os.path.join(base, cfg[clave]))
+    return cfg
+
+
+def config_por_defecto():
+    """Configuracion de respaldo (si config.json no sirve): sirve para dejar
+    constancia del error en ultima_corrida.json y en los logs."""
+    return resolver_rutas(CONFIG_POR_DEFECTO, BASE_DIR)
+
+
+def aplicar_config(cfg):
+    """Apunta las rutas globales del script a las de la configuracion."""
+    global RUTA_BACKLOG, RUTA_PROGRAMACION, CARPETA_DESPACHOS, ARCHIVO_SALIDA
+    global ARCHIVO_HISTORICO_DESPACHOS, ARCHIVO_EXCLUIDOS, ARCHIVO_CLAVE_INTERNA
+    RUTA_BACKLOG = cfg["backlog"]
+    RUTA_PROGRAMACION = cfg["programacion"]
+    CARPETA_DESPACHOS = cfg["carpeta_despachos"]
+    ARCHIVO_SALIDA = cfg["datos_json"]
+    ARCHIVO_HISTORICO_DESPACHOS = cfg["historico_despachos"]
+    ARCHIVO_EXCLUIDOS = cfg["excluidos_avance"]
+    ARCHIVO_CLAVE_INTERNA = cfg["clave_interna"]
+
+
+def verificar_lectura(ruta, espera):
+    """Abre el archivo en lectura. Si esta bloqueado por otro programa espera y
+    reintenta UNA vez; si sigue bloqueado, termina con SALIDA_BLOQUEADO."""
+    for intento in (1, 2):
+        try:
+            with open(ruta, "rb") as f:
+                f.read(1)
+            return
+        except FileNotFoundError:
+            raise ErrorCorrida(SALIDA_FALTA_ARCHIVO, f"Falta el archivo de entrada: {ruta}",
+                               f"Falta el archivo de entrada: {os.path.basename(ruta)}")
+        except PermissionError:
+            if intento == 1:
+                print(f"  '{os.path.basename(ruta)}' esta bloqueado; reintento en {espera} s...")
+                time.sleep(espera)
+    raise ErrorCorrida(SALIDA_BLOQUEADO, f"El archivo esta bloqueado (lo tiene abierto otro programa): {ruta}",
+                       f"Archivo bloqueado: {os.path.basename(ruta)}")
+
+
+def verificar_entradas_auto(espera):
+    """Comprobaciones previas del modo --auto, ANTES de leer o escribir nada:
+    archivos de entrada, clave interna y archivos no bloqueados."""
+    for ruta in (RUTA_BACKLOG, RUTA_PROGRAMACION):
+        if not os.path.isfile(ruta):
+            raise ErrorCorrida(SALIDA_FALTA_ARCHIVO, f"Falta el archivo de entrada: {ruta}",
+                               f"Falta el archivo de entrada: {os.path.basename(ruta)}")
+    try:
+        ruta_xls = encontrar_archivo_mas_reciente(CARPETA_DESPACHOS, ".xls")
+    except (FileNotFoundError, NotADirectoryError):
+        raise ErrorCorrida(SALIDA_FALTA_ARCHIVO,
+                           f"No hay ningun .xls de despachos en la carpeta: {CARPETA_DESPACHOS}",
+                           "No hay ningun .xls de despachos")
+    ruta_consolidado = encontrar_backlog_consolidado(CARPETA_DESPACHOS)
+    if ruta_consolidado is None:
+        raise ErrorCorrida(SALIDA_FALTA_ARCHIVO,
+                           f"No hay ningun archivo 'consolidado' (.xlsm/.xlsx) en la carpeta: {CARPETA_DESPACHOS}",
+                           "Falta el BACKLOG CONSOLIDADO")
+    if leer_clave_interna() is None:
+        raise ErrorCorrida(SALIDA_FALTA_CLAVE,
+                           f"No hay clave interna ('{ARCHIVO_CLAVE_INTERNA}' o variable {VARIABLE_CLAVE_INTERNA}).",
+                           "Falta la clave interna")
+    try:
+        import cryptography  # noqa: F401
+    except ImportError:
+        raise ErrorCorrida(SALIDA_FALTA_CLAVE, "Falta la libreria 'cryptography' (pip install cryptography).",
+                           "Falta la libreria cryptography")
+    for ruta in (RUTA_BACKLOG, RUTA_PROGRAMACION, ruta_xls, ruta_consolidado):
+        verificar_lectura(ruta, espera)
+
+
+def cargar_despachos_con_reintento(ruta, espera):
+    """cargar_despachos, con UN reintento si el .xls esta bloqueado o todavia
+    se esta escribiendo (incompleto)."""
+    import xlrd
+    motivo = ""
+    for intento in (1, 2):
+        try:
+            return cargar_despachos(ruta)
+        except PermissionError:
+            motivo = "bloqueado (lo tiene abierto otro programa)"
+        except (xlrd.XLRDError, IndexError, EOFError, struct.error) as e:
+            # un .xls cortado (todavia se esta escribiendo) puede fallar de varias formas
+            motivo = f"ilegible o incompleto ({type(e).__name__}: {e})"
+        if intento == 1:
+            print(f"  El .xls de despachos esta {motivo}; reintento en {espera} s...")
+            time.sleep(espera)
+    raise ErrorCorrida(SALIDA_BLOQUEADO, f"El archivo de despachos esta {motivo}: {ruta}",
+                       "Archivo de despachos " + ("bloqueado" if motivo.startswith("bloqueado") else "incompleto o ilegible"))
+
+
+def escribir_todo_o_nada(destinos):
+    """destinos: lista de (ruta_final, funcion_escritora(ruta_temporal)). Escribe
+    primero todo en archivos temporales y solo si TODO salio bien los mueve a su
+    lugar; si algo falla no se sobrescribe ningun archivo."""
+    pendientes = []
+    try:
+        for ruta, escribir in destinos:
+            os.makedirs(os.path.dirname(ruta), exist_ok=True)
+            tmp = ruta + ".tmp"
+            escribir(tmp)
+            pendientes.append((tmp, ruta))
+        for tmp, ruta in pendientes:
+            os.replace(tmp, ruta)
+    except BaseException:
+        for tmp, _ in pendientes:
+            try:
+                os.remove(tmp)
+            except OSError:
+                pass
+        raise
+
+
+def escribir_json(contenido, **opciones):
+    def escritor(ruta_tmp):
+        with open(ruta_tmp, "w", encoding="utf-8") as f:
+            json.dump(contenido, f, **opciones)
+    return escritor
+
+
+def etiqueta_de_corte(ahora, cortes, tolerancia_min):
+    """'07:30' / '12:00' / '16:00' segun el corte programado mas cercano a la
+    hora de la corrida (dentro de la tolerancia); 'manual' si ninguno aplica."""
+    minutos_ahora = ahora.hour * 60 + ahora.minute
+    mejor = None
+    for corte in cortes:
+        h, m = map(int, corte.split(":"))
+        distancia = abs(minutos_ahora - (h * 60 + m))
+        if mejor is None or distancia < mejor[0]:
+            mejor = (distancia, corte)
+    return mejor[1] if mejor and mejor[0] <= tolerancia_min else "manual"
+
+
+def registrar_log(cfg, ahora, modo, texto):
+    """Agrega una linea a logs/corridas.log. Un fallo al escribir el log nunca
+    debe tumbar la corrida."""
+    try:
+        os.makedirs(cfg["carpeta_logs"], exist_ok=True)
+        with open(os.path.join(cfg["carpeta_logs"], "corridas.log"), "a", encoding="utf-8") as f:
+            f.write(f"{ahora:%Y-%m-%d %H:%M:%S} (Colombia) | {modo} | {texto}\n")
+    except OSError:
+        pass
 
 # El "porcentaje_global" (avance general) se calcula contra un archivo
 # APARTE, fijo: el "BACKLOG_CONSOLIDADO" que manda logistica una vez por
@@ -403,6 +654,9 @@ def cargar_despachos(ruta_despachos):
     idx_elemento = encabezado.index("Elemento")
     idx_cantidad = encabezado.index("Cantidad Enviada")
     idx_cancelada = encabezado.index("Cancelada") if "Cancelada" in encabezado else None
+    # "Devolución" (1 = la linea es una devolucion, con cantidad negativa). Solo
+    # sirve para etiquetar el tipo en el Excel del cliente; no cambia ningun calculo.
+    idx_devolucion = encabezado.index("Devolución") if "Devolución" in encabezado else None
 
     lineas = []
     for r in range(1, ws.nrows):
@@ -441,9 +695,12 @@ def cargar_despachos(ruta_despachos):
         # mismo envio (una guia con varios items), y una misma OV a
         # veces se repite en mas de un Elemento.
         clave_linea = f"{nota}|{ov}|{elemento}"
+        es_devolucion = False
+        if idx_devolucion is not None:
+            es_devolucion = limpiar_texto(ws.cell_value(r, idx_devolucion)) not in ("", "0", "0.0")
         lineas.append({
             "clave": clave_linea, "ov": ov, "elemento": elemento,
-            "nota": nota, "cantidad": cantidad, "fecha": fecha,
+            "nota": nota, "cantidad": cantidad, "fecha": fecha, "devolucion": es_devolucion,
         })
 
     return lineas
@@ -466,7 +723,185 @@ def formatear_fecha_entrega(valor):
     return ""
 
 
-def generar_datos():
+# Columnas del Excel para el cliente: EXACTAMENTE las del boton "Exportar
+# consolidado a Excel" del portal (index.html, hoja 'Consolidado'). Si se cambian
+# alla, hay que cambiarlas aqui. No incluye nada interno (ni OV, ni %, ni fechas
+# de corte).
+COLUMNAS_CONSOLIDADO = [
+    ("Finca", "finca"), ("Descripción", "descripcion"), ("Orden de compra", "orden_compra"),
+    ("Elemento", "elemento"), ("Orden de trabajo", "ow"), ("Estado", "estado"),
+    ("Cantidad solicitada", "cantidad_solicitada"), ("Cantidad despachada", "cantidad_despachada"),
+    ("Fecha del último envío", "fecha_despacho"), ("Notas de despacho", "nota_despacho"),
+]
+COLUMNAS_DESPACHOS_NUEVOS = [
+    ("Finca", "finca"), ("Orden de compra", "orden_compra"), ("Elemento", "elemento"),
+    ("Descripción", "descripcion"), ("Nota de despacho", "nota"),
+    ("Cantidad enviada", "cantidad"), ("Fecha del envío", "fecha"),
+    ("Tipo", "tipo"),   # "Despacho" o "Devolución" (campo Devolución del .xls); sin la razon
+]
+ARCHIVO_ESTADO_DESPACHOS = "estado_despachos_reportados.json"
+ARCHIVO_RESUMEN = "resumen_corrida.json"
+ARCHIVO_ULTIMA_CORRIDA = "ultima_corrida.json"
+
+
+def despachos_hasta_del_xls_mas_reciente(cfg):
+    """'dd/mm/aaaa hh:mm' del .xls de despachos mas reciente, o None si no hay
+    ninguno legible (se usa para dejar constancia cuando una corrida falla)."""
+    try:
+        ruta = encontrar_archivo_mas_reciente(cfg["carpeta_despachos"], ".xls")
+        return datetime.fromtimestamp(os.path.getmtime(ruta), BOGOTA).strftime("%d/%m/%Y %H:%M")
+    except (OSError, ValueError):
+        return None
+
+
+def mensaje_sin_rutas(texto, cfg, maximo=140):
+    """Quita de un mensaje de error las rutas de las carpetas del proyecto y lo
+    recorta: asi el mensaje de ultima_corrida.json es corto y legible."""
+    carpetas = {BASE_DIR} | {cfg[k] for k in CLAVES_DE_RUTA if k.startswith("carpeta_")}
+    for carpeta in carpetas:
+        for variante in (carpeta + os.sep, carpeta.replace("\\", "\\\\") + "\\\\"):
+            texto = texto.replace(variante, "")
+    return texto[:maximo]
+
+
+def escribir_ultima_corrida(cfg, ahora, codigo, estado, mensaje_error, despachos_hasta):
+    """salida_interna/ultima_corrida.json: SOLO este archivo, nunca datos.json,
+    excluidos_avance.json ni resumen_corrida.json. Si no se puede escribir se
+    deja constancia en el log, pero no se cambia el resultado de la corrida."""
+    contenido = {
+        "corte": etiqueta_de_corte(ahora, cfg["cortes"], cfg["tolerancia_corte_minutos"]),
+        "hora": ahora.isoformat(timespec="seconds"),
+        "codigo_salida": codigo,
+        "estado": estado,                      # ok / sin_despachos_nuevos / error
+        "mensaje_error": mensaje_error,        # None si no hubo error
+        "despachos_hasta": despachos_hasta,    # en un error: el del .xls mas reciente (o None)
+    }
+    try:
+        escribir_todo_o_nada([(os.path.join(cfg["carpeta_salida_interna"], ARCHIVO_ULTIMA_CORRIDA),
+                               escribir_json(contenido, ensure_ascii=False, indent=2))])
+    except Exception as e:  # noqa: BLE001
+        registrar_log(cfg, ahora, "auto", f"No se pudo escribir {ARCHIVO_ULTIMA_CORRIDA}: {type(e).__name__}: {e}")
+
+
+def cantidad_para_json(valor):
+    """20000.0 -> 20000 (conserva decimales si los hay de verdad)."""
+    return int(valor) if valor == int(valor) else round(valor, 2)
+
+
+def calcular_despachos_nuevos(cfg, notas_historico, pedidos_cache, claves_previas_corrida):
+    """Lineas de despacho que no se habian reportado en la corrida anterior.
+    - "Corrida anterior" = el estado guardado en salida_interna (las llaves ya
+      reportadas). Si todavia no existe, se usa lo que habia en el historico
+      justo antes de leer el .xls de hoy.
+    - Solo cuentan los despachos de pedidos GHT que el portal conoce (el .xls
+      trae despachos de todos los clientes de Smurfit): los demas se omiten y
+      solo se cuentan, sin mostrar ningun dato.
+    Devuelve (lista_de_despachos, cantidad_omitida_de_otros_clientes)."""
+    previas = None
+    try:
+        with open(os.path.join(cfg["carpeta_salida_interna"], ARCHIVO_ESTADO_DESPACHOS), "r", encoding="utf-8") as f:
+            previas = set(json.load(f)["claves"])
+    except (FileNotFoundError, ValueError, KeyError, TypeError):
+        previas = None
+    if previas is None:
+        previas = claves_previas_corrida
+
+    nuevos, omitidos = [], 0
+    for clave, linea in notas_historico.items():
+        if clave in previas:
+            continue
+        pedido = pedidos_cache.get(f"{linea['ov']}|{linea.get('elemento', '')}")
+        if pedido is None:
+            omitidos += 1
+            continue
+        nuevos.append({
+            "nota": linea.get("nota", ""), "ov": linea["ov"], "finca": pedido["finca"],
+            "elemento": linea.get("elemento", ""), "cantidad": cantidad_para_json(linea["cantidad"]),
+            # Solo para el Excel del cliente (el resumen interno no los usa):
+            "orden_compra": pedido.get("orden_compra", ""), "descripcion": pedido.get("descripcion", ""),
+            "fecha": linea.get("fecha", ""),
+            # Lineas guardadas por versiones anteriores no traen el campo: todas las
+            # devoluciones del .xls tienen cantidad negativa, asi que se infiere de ahi.
+            "tipo": "Devolución" if linea.get("devolucion", linea["cantidad"] < 0) else "Despacho",
+        })
+    return nuevos, omitidos
+
+
+def escribir_excel_cliente(registros, despachos_nuevos):
+    """Devuelve la funcion que escribe el Excel del cliente: hoja 'Consolidado'
+    (los mismos pedidos y columnas que ve GHT en el portal) y hoja 'Despachos
+    nuevos' (despachos desde el corte anterior)."""
+    def escritor(ruta_tmp):
+        libro = Workbook()
+        hoja = libro.active
+        hoja.title = "Consolidado"
+        hoja.append([titulo for titulo, _ in COLUMNAS_CONSOLIDADO])
+        for r in registros:
+            hoja.append([r.get(campo) or "" for _, campo in COLUMNAS_CONSOLIDADO])
+        hoja2 = libro.create_sheet("Despachos nuevos")
+        hoja2.append([titulo for titulo, _ in COLUMNAS_DESPACHOS_NUEVOS])
+        if despachos_nuevos:
+            for d in despachos_nuevos:
+                hoja2.append([d.get(campo, "") for _, campo in COLUMNAS_DESPACHOS_NUEVOS])
+        else:
+            hoja2.append(["Sin despachos nuevos desde el corte anterior."])
+        for h, anchos in ((hoja, (14, 48, 16, 12, 16, 22, 20, 20, 22, 26)), (hoja2, (14, 16, 12, 48, 18, 16, 16, 14))):
+            for celda in h[1]:
+                celda.font = Font(bold=True)
+            for i, ancho in enumerate(anchos):
+                h.column_dimensions[chr(ord("A") + i)].width = ancho
+            h.freeze_panes = "A2"
+        libro.save(ruta_tmp)
+    return escritor
+
+
+def preparar_salidas(cfg, ahora, resultado, notas_historico, pedidos_cache, claves_previas_corrida,
+                     avance, despachos_hasta_txt, ruta_despachos, guardar_estado):
+    """Arma (sin escribir todavia) el resumen para el correo, el Excel del
+    cliente y, SOLO si guardar_estado (corridas --auto), el estado de despachos
+    reportados. Una corrida manual no consume despachos: genera el Excel y el
+    resumen pero deja el estado como estaba. Devuelve (destinos, resumen)."""
+    nuevos, omitidos = calcular_despachos_nuevos(cfg, notas_historico, pedidos_cache, claves_previas_corrida)
+    nombre_excel = f"GHT_consolidado_{ahora:%Y-%m-%d_%H%M}.xlsx"
+    ruta_excel = os.path.join(cfg["carpeta_salida"], nombre_excel)
+    resumen = {
+        "modo": "auto" if guardar_estado else "manual",
+        "corte": etiqueta_de_corte(ahora, cfg["cortes"], cfg["tolerancia_corte_minutos"]),
+        "hora": ahora.isoformat(timespec="seconds"),
+        "hora_texto": ahora.strftime("%d/%m/%Y %H:%M"),
+        "estado": "ok" if nuevos else "sin_despachos_nuevos",
+        "avance_general": avance["porcentaje"],
+        "despachos_hasta": despachos_hasta_txt,
+        "archivo_despachos": os.path.basename(ruta_despachos),
+        "total_despachos_nuevos": len(nuevos),
+        "despachos_nuevos": [
+            {"nota": d["nota"], "ov": d["ov"], "finca": d["finca"], "elemento": d["elemento"], "cantidad": d["cantidad"]}
+            for d in nuevos
+        ],
+        "despachos_nuevos_otros_clientes_omitidos": omitidos,
+        "excel_cliente": f"{os.path.basename(cfg['carpeta_salida'])}/{nombre_excel}",
+    }
+    estado = {"actualizado": ahora.isoformat(timespec="seconds"), "claves": sorted(notas_historico)}
+    carpeta_interna = cfg["carpeta_salida_interna"]
+    destinos = [
+        (ruta_excel, escribir_excel_cliente(resultado, nuevos)),
+        (os.path.join(carpeta_interna, ARCHIVO_RESUMEN), escribir_json(resumen, ensure_ascii=False, indent=2)),
+    ]
+    if guardar_estado:
+        destinos.append((os.path.join(carpeta_interna, ARCHIVO_ESTADO_DESPACHOS), escribir_json(estado, ensure_ascii=False)))
+    return destinos, resumen
+
+
+def generar_datos(auto=False, cfg=None, ahora=None):
+    if cfg is None:
+        cfg = cargar_config()
+        aplicar_config(cfg)
+    ahora = ahora or datetime.now(BOGOTA)
+    espera = cfg["espera_reintento_segundos"]
+    if auto:
+        print("Modo automatico: verificando archivos de entrada y clave interna...")
+        verificar_entradas_auto(espera)
+
     print("Leyendo Order Capacity...")
     mapa_order_capacity = cargar_order_capacity(RUTA_BACKLOG)
 
@@ -476,7 +911,13 @@ def generar_datos():
     print("Leyendo Notas de Despacho...")
     ruta_despachos = encontrar_archivo_mas_reciente(CARPETA_DESPACHOS, ".xls")
     print(f"  Archivo encontrado: {ruta_despachos}")
-    lineas_nuevas = cargar_despachos(ruta_despachos)
+    # "Despachos hasta": fecha-hora de modificacion del .xls (hora Colombia).
+    despachos_hasta_txt = datetime.fromtimestamp(os.path.getmtime(ruta_despachos), BOGOTA).strftime("%d/%m/%Y %H:%M")
+    print(f"  Despachos hasta: {despachos_hasta_txt} (fecha de modificacion del archivo)")
+    if auto:
+        lineas_nuevas = cargar_despachos_con_reintento(ruta_despachos, espera)
+    else:
+        lineas_nuevas = cargar_despachos(ruta_despachos)
 
     # --- Cargar el historial acumulado de corridas anteriores ---
     # "notas": cada envio individual, identificado por su Nota de Despacho
@@ -541,6 +982,10 @@ def generar_datos():
     # son "ov|elemento", no solo "ov".
     ovs_conocidas_antes = set(pedidos_cache.keys())
 
+    # Llaves que ya conociamos ANTES de sumar este .xls (base para "despachos
+    # nuevos" cuando todavia no existe el estado de la corrida anterior).
+    claves_previas_corrida = set(notas_historico.keys())
+
     notas_nuevas = 0
     for linea in lineas_nuevas:
         if linea["clave"] not in notas_historico:
@@ -548,6 +993,7 @@ def generar_datos():
         notas_historico[linea["clave"]] = {
             "ov": linea["ov"], "elemento": linea["elemento"], "nota": linea["nota"],
             "cantidad": linea["cantidad"], "fecha": linea["fecha"],
+            "devolucion": linea["devolucion"],
         }
 
     # Acumular cantidad total despachada, fecha del ultimo envio, y la
@@ -805,11 +1251,13 @@ def generar_datos():
 
     for registro in resultado:
         registro["porcentaje_global"] = porcentaje_global
+        registro["despachos_hasta"] = despachos_hasta_txt
 
     # El detalle de los pedidos excluidos del % NO va en datos.json (que ve el
     # cliente): se guarda aparte, CIFRADO, para el boton interno de exportar
     # a Excel. Nunca se escribe en claro: si falta la clave o la libreria, se
     # avisa y el archivo anterior se deja como estaba.
+    destinos = []  # (ruta_final, escritor): se escriben TODOS juntos al final (todo o nada)
     clave_interna = leer_clave_interna()
     if clave_interna is None:
         print(f"*** AVISO: no hay clave interna ('{ARCHIVO_CLAVE_INTERNA}' o variable "
@@ -822,15 +1270,18 @@ def generar_datos():
             print(f"*** AVISO: falta la libreria 'cryptography' (pip install cryptography). "
                   f"NO se actualizo {ARCHIVO_EXCLUIDOS}. ***")
         else:
-            with open(ARCHIVO_EXCLUIDOS, "w", encoding="utf-8") as f:
-                json.dump(sobre, f, indent=2)
+            destinos.append((ARCHIVO_EXCLUIDOS, escribir_json(sobre, indent=2)))
 
     historico = {"notas": notas_historico, "pedidos": pedidos_cache}
-    with open(ARCHIVO_HISTORICO_DESPACHOS, "w", encoding="utf-8") as f:
-        json.dump(historico, f, ensure_ascii=False, indent=2)
+    destinos.append((ARCHIVO_HISTORICO_DESPACHOS, escribir_json(historico, ensure_ascii=False, indent=2)))
+    destinos.append((ARCHIVO_SALIDA, escribir_json(resultado, ensure_ascii=False, indent=2)))
 
-    with open(ARCHIVO_SALIDA, "w", encoding="utf-8") as f:
-        json.dump(resultado, f, ensure_ascii=False, indent=2)
+    # Resumen para el correo (interno), Excel del cliente y estado de despachos.
+    destinos_extra, resumen = preparar_salidas(
+        cfg, ahora, resultado, notas_historico, pedidos_cache, claves_previas_corrida,
+        avance, despachos_hasta_txt, ruta_despachos, guardar_estado=auto)
+    destinos += destinos_extra
+    escribir_todo_o_nada(destinos)
 
     print()
     print(f"Total filas leidas en el backlog: {total_leidas}")
@@ -888,8 +1339,62 @@ def generar_datos():
     print("=" * 60)
     print()
 
+    print(f"Corte: {resumen['corte']} | estado: {resumen['estado']} | despachos nuevos (GHT): "
+          f"{resumen['total_despachos_nuevos']} | despachos hasta: {despachos_hasta_txt}")
+    print(f"Excel del cliente: {resumen['excel_cliente']}")
+    if not auto:
+        print("(Corrida manual: no se actualizo el estado de despachos reportados; "
+              "los despachos nuevos de arriba se volveran a reportar en la proxima corrida --auto.)")
     print("Listo. Sube el archivo 'datos.json' al portal web.")
+    return resumen
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="Genera datos.json del portal GHT.")
+    parser.add_argument("--auto", action="store_true",
+                        help="modo automatico: sin preguntas; si falta algo, no escribe nada y sale con error")
+    parser.add_argument("--config", help="ruta de config.json (por defecto, el de la carpeta del script)")
+    args = parser.parse_args(argv)
+    modo = "auto" if args.auto else "manual"
+    if args.auto:
+        for flujo in (sys.stdout, sys.stderr):
+            try:
+                flujo.reconfigure(encoding="utf-8", errors="replace")  # tareas programadas: sin consola
+            except Exception:
+                pass
+    ahora = datetime.now(BOGOTA)
+    cfg = None
+    try:
+        cfg = cargar_config(args.config)
+        aplicar_config(cfg)
+        resumen = generar_datos(auto=args.auto, cfg=cfg, ahora=ahora)
+    except ErrorCorrida as e:
+        print(f"\nERROR (codigo {e.codigo}): {e.mensaje}", file=sys.stderr)
+        print("No se modifico ningun archivo del portal ni de las salidas.", file=sys.stderr)
+        cfg_ok = cfg or config_por_defecto()
+        registrar_log(cfg_ok, ahora, modo, f"ERROR codigo={e.codigo} | {e.mensaje}")
+        if args.auto:
+            escribir_ultima_corrida(cfg_ok, ahora, e.codigo, "error", e.corto, despachos_hasta_del_xls_mas_reciente(cfg_ok))
+        return e.codigo
+    except Exception as e:
+        cfg_ok = cfg or config_por_defecto()
+        registrar_log(cfg_ok, ahora, modo, f"ERROR codigo={SALIDA_ERROR} | inesperado: {type(e).__name__}: {e}")
+        if not args.auto:
+            raise
+        print(f"\nERROR (codigo {SALIDA_ERROR}): error inesperado: {type(e).__name__}: {e}", file=sys.stderr)
+        traceback.print_exc()
+        escribir_ultima_corrida(cfg_ok, ahora, SALIDA_ERROR, "error",
+                                f"Error inesperado: {type(e).__name__}: {mensaje_sin_rutas(str(e), cfg_ok, 110)}",
+                                despachos_hasta_del_xls_mas_reciente(cfg_ok))
+        return SALIDA_ERROR
+    registrar_log(cfg, ahora, modo,
+                  f"OK | corte={resumen['corte']} | estado={resumen['estado']} | avance={resumen['avance_general']}% | "
+                  f"despachos_nuevos={resumen['total_despachos_nuevos']} | despachos_hasta={resumen['despachos_hasta']} | "
+                  f"xls={resumen['archivo_despachos']} | excel={resumen['excel_cliente']}")
+    if args.auto:
+        escribir_ultima_corrida(cfg, ahora, SALIDA_OK, resumen["estado"], None, resumen["despachos_hasta"])
+    return SALIDA_OK
 
 
 if __name__ == "__main__":
-    generar_datos()
+    sys.exit(main())

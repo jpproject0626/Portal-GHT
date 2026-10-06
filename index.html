@@ -866,7 +866,7 @@
         <span class="logo-sep"></span>
         <img class="logo-ght" src="ght-logo.png" alt="GHT · Growers Hub Trading">
       </a>
-      <div class="status"><i></i>Datos actualizados a diario</div>
+      <div class="status"><i></i><span id="estadoDatosTexto">Datos actualizados a diario</span></div>
     </div>
   </header>
 
@@ -944,7 +944,24 @@
     DATA = d;
     poblarFiltroFinca();
     actualizarAvanceGeneral(DATA.length ? DATA[0].porcentaje_global : null);
+    actualizarIndicadorDatos(DATA.length ? DATA[0].despachos_hasta : null);
   }).catch(()=>{ DATA = []; });
+
+  // Indicador de arriba a la derecha: la hora que muestra es la del CORTE de los despachos
+  // (campo despachos_hasta de datos.json, "dd/mm/aaaa hh:mm", fecha-hora del .xls de
+  // despachos, hora Colombia). "Hoy" se decide con la fecha del navegador del visitante.
+  //   hoy      -> "Datos actualizados hoy, hh:mm"
+  //   otro dia -> "Datos actualizados dd/mm, hh:mm"
+  // Si el campo no existe o no se entiende, queda el texto de siempre ("a diario").
+  function actualizarIndicadorDatos(despachosHasta) {
+    const el = document.getElementById('estadoDatosTexto');
+    const m = /^(\d{2})\/(\d{2})\/(\d{4}) (\d{2}):(\d{2})$/.exec(despachosHasta || '');
+    if (!el || !m) return;
+    const [, dd, mm, aaaa, hh, min] = m;
+    const ahora = new Date();
+    const esHoy = ahora.getFullYear() === +aaaa && ahora.getMonth() + 1 === +mm && ahora.getDate() === +dd;
+    el.textContent = 'Datos actualizados ' + (esHoy ? 'hoy' : dd + '/' + mm) + ', ' + hh + ':' + min;
+  }
 
   function actualizarAvanceGeneral(pct) {
     const barFill = document.getElementById('avanceBarFill');

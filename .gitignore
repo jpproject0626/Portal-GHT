@@ -17,6 +17,17 @@ SW_Logo_Guide_R1.pdf
 # sube al repo publico, el cifrado deja de servir.
 clave_interna.txt
 
+# Configuracion local de generar_datos.py (rutas de ESTA maquina). Se sube solo
+# config.ejemplo.json; cada equipo copia ese archivo como config.json.
+config.json
+
+# Salidas de las corridas automaticas (generar_datos.py --auto): el resumen
+# para el correo es INTERNO y los logs tambien; el Excel del cliente se envia
+# por correo, no se publica en el repo (que es publico).
+salida_interna/
+salida/
+logs/
+
 # Basura de entorno local
 .Rhistory
 portal_ght_web.zip

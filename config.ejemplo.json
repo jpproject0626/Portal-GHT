@@ -1,0 +1,15 @@
+{
+  "backlog": "BACKLOG.xlsm",
+  "programacion": "PROGRAMACION.xlsx",
+  "carpeta_despachos": ".",
+  "datos_json": "datos.json",
+  "historico_despachos": "despachos_historico.json",
+  "excluidos_avance": "excluidos_avance.json",
+  "clave_interna": "clave_interna.txt",
+  "carpeta_salida": "salida",
+  "carpeta_salida_interna": "salida_interna",
+  "carpeta_logs": "logs",
+  "espera_reintento_segundos": 5,
+  "cortes": ["07:30", "12:00", "16:00"],
+  "tolerancia_corte_minutos": 120
+}
