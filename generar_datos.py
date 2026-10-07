@@ -36,7 +36,10 @@ tareas de Windows en los cortes de 7:30, 12:00 y 16:00 hora Colombia):
     - actualizan salida_interna/estado_despachos_reportados.json (que despachos
       ya se reportaron como nuevos): una corrida manual NO consume despachos;
     - escriben SIEMPRE salida_interna/ultima_corrida.json (tambien si fallan),
-      sin tocar datos.json, excluidos_avance.json ni resumen_corrida.json.
+      sin tocar datos.json, excluidos_avance.json ni resumen_corrida.json;
+    - escriben SIEMPRE el correo del corte: salida_interna/correo_asunto.txt y
+      salida_interna/correo_cuerpo.html (exito o error). ultima_corrida.json trae
+      "adjunto": el Excel consolidado de esa corrida (null si fallo).
 
 Requiere: pip install openpyxl xlrd cryptography
 
@@ -50,6 +53,7 @@ portal como usuario interno de Smurfit.
 import argparse
 import base64
 import hashlib
+import html as html_lib
 import json
 import os
 import struct
@@ -327,7 +331,8 @@ def registrar_log(cfg, ahora, modo, texto):
 #   - Regla 1: fecha_entrega POSTERIOR al cierre del ciclo (pedidos de
 #     semanas futuras que nunca se esperaba tener listos todavia).
 #   - Regla 2: pedidos dentro del ciclo con CERO unidades despachadas, solo
-#     una vez que el ciclo ya cerro (hoy > cierre).
+#     una vez que el ciclo ya cerro (ver ciclo_esta_cerrado: el ciclo cierra el
+#     MISMO dia de la moda, a las 15:30 hora Colombia).
 # El cierre del ciclo es la moda (fecha mas repetida) de fecha_entrega en
 # el consolidado vigente; si cambia el consolidado, el ciclo se recalcula
 # solo.
@@ -490,16 +495,33 @@ def armar_detalle_excluidos(base_semana, acumulado_por_clave, avance):
     }
 
 
-def calcular_avance_general(base_semana, acumulado_por_clave, hoy):
+HORA_CIERRE_CICLO = (15, 30)  # hora Colombia: desde aqui el DIA de la moda ya cuenta como ciclo cerrado
+
+
+def ciclo_esta_cerrado(cierre, hoy, hora=None):
+    """El ciclo cierra el MISMO dia de la moda (cierre). Esta cerrado si:
+      - la fecha de la corrida es POSTERIOR a la moda, o
+      - la fecha de la corrida es la moda Y la hora de la corrida es >= 15:30.
+    Antes de las 15:30 del dia de la moda no se excluye nada (los despachos
+    todavia pueden entrar). Una vez cerrado, las corridas siguientes lo mantienen
+    mientras el consolidado (y por tanto la moda) sea el mismo. Sin 'hora' solo
+    cuenta lo de "posterior a la moda" (el comportamiento anterior)."""
+    if hoy > cierre:
+        return True
+    return hora is not None and hoy == cierre and (hora.hour, hora.minute) >= HORA_CIERRE_CICLO
+
+
+def calcular_avance_general(base_semana, acumulado_por_clave, hoy, hora=None):
     """Calcula el "Avance general" sobre la base fija del consolidado,
     sacando de la cuenta (sin quitarlos del portal) dos grupos de pedidos:
       - Regla 1 "futuros": fecha_entrega POSTERIOR al cierre del ciclo.
       - Regla 2 "sin despacho": fecha_entrega dentro del ciclo (o sin fecha),
-        CERO unidades despachadas, y el ciclo ya cerro (hoy > cierre). Si el
+        CERO unidades despachadas, y el ciclo ya cerro (ver ciclo_esta_cerrado:
+        el dia de la moda desde las 15:30, o cualquier dia posterior). Si el
         ciclo sigue abierto, estos pedidos cuentan normal.
     Devuelve un diccionario con el %, los totales y las llaves excluidas."""
     cierre = calcular_fecha_cierre_ciclo(base_semana)
-    ciclo_cerrado = cierre is not None and hoy > cierre
+    ciclo_cerrado = cierre is not None and ciclo_esta_cerrado(cierre, hoy, hora)
 
     futuros, sin_despacho, incluidos = [], [], []
     for clave, datos in base_semana.items():
@@ -764,7 +786,7 @@ def mensaje_sin_rutas(texto, cfg, maximo=140):
     return texto[:maximo]
 
 
-def escribir_ultima_corrida(cfg, ahora, codigo, estado, mensaje_error, despachos_hasta):
+def escribir_ultima_corrida(cfg, ahora, codigo, estado, mensaje_error, despachos_hasta, adjunto=None):
     """salida_interna/ultima_corrida.json: SOLO este archivo, nunca datos.json,
     excluidos_avance.json ni resumen_corrida.json. Si no se puede escribir se
     deja constancia en el log, pero no se cambia el resultado de la corrida."""
@@ -775,12 +797,162 @@ def escribir_ultima_corrida(cfg, ahora, codigo, estado, mensaje_error, despachos
         "estado": estado,                      # ok / sin_despachos_nuevos / error
         "mensaje_error": mensaje_error,        # None si no hubo error
         "despachos_hasta": despachos_hasta,    # en un error: el del .xls mas reciente (o None)
+        "adjunto": adjunto,                    # Excel consolidado de esta corrida (ruta relativa); None si fallo
     }
     try:
         escribir_todo_o_nada([(os.path.join(cfg["carpeta_salida_interna"], ARCHIVO_ULTIMA_CORRIDA),
                                escribir_json(contenido, ensure_ascii=False, indent=2))])
     except Exception as e:  # noqa: BLE001
         registrar_log(cfg, ahora, "auto", f"No se pudo escribir {ARCHIVO_ULTIMA_CORRIDA}: {type(e).__name__}: {e}")
+
+
+ARCHIVO_CORREO_ASUNTO = "correo_asunto.txt"
+ARCHIVO_CORREO_CUERPO = "correo_cuerpo.html"
+
+# Motivo en lenguaje simple y que revisar, segun el codigo de salida (sin rutas completas).
+MOTIVOS_ERROR = {
+    SALIDA_FALTA_ARCHIVO: (
+        "Falta un archivo de entrada que el proceso necesita.",
+        ["Que BACKLOG.xlsm, PROGRAMACION.xlsx, el BACKLOG CONSOLIDADO y el .xls de despachos estén en la carpeta del portal.",
+         "Que ningún archivo haya cambiado de nombre o se haya movido."]),
+    SALIDA_FALTA_CLAVE: (
+        "No se encontró la clave interna del portal.",
+        ["Que exista el archivo clave_interna.txt en la carpeta del portal (o la variable CLAVE_INTERNA_PORTAL).",
+         "Que esté instalada la librería 'cryptography' en el equipo que corre el proceso."]),
+    SALIDA_BLOQUEADO: (
+        "El archivo de despachos (.xls) —u otro archivo de entrada— está abierto en otro programa o está incompleto.",
+        ["Cerrar el archivo si está abierto en Excel.",
+         "Esperar a que termine de guardarse o descargarse y volver a ejecutar el proceso."]),
+    SALIDA_CONFIG: (
+        "La configuración del proceso (config.json) tiene un error.",
+        ["Comparar config.json con config.ejemplo.json y corregir lo que difiera."]),
+    SALIDA_ERROR: (
+        "Ocurrió un error inesperado.",
+        ["Revisar el detalle en logs/corridas.log.",
+         "Avisar a quien mantiene el proceso si el problema continúa."]),
+}
+
+
+def hora_corta_correo(despachos_hasta_txt, hoy):
+    """'hh:mm' si el corte de los despachos es de hoy; 'dd/mm hh:mm' si es de otro dia."""
+    try:
+        dt = datetime.strptime(despachos_hasta_txt, "%d/%m/%Y %H:%M")
+    except (TypeError, ValueError):
+        return despachos_hasta_txt or "—"
+    return dt.strftime("%H:%M") if dt.date() == hoy else dt.strftime("%d/%m %H:%M")
+
+
+def corte_para_correo(ahora, corte):
+    """Etiqueta del corte (07:30 / 12:00 / 16:00); si la corrida fue fuera de los cortes, la hora real."""
+    return ahora.strftime("%H:%M") if corte == "manual" else corte
+
+
+def _marco_correo(titulo, color_titulo, contenido):
+    """HTML simple y sobrio (estilos en linea, para que lo respete cualquier cliente de correo)."""
+    return (
+        '<!DOCTYPE html>\n<html lang="es"><head><meta charset="utf-8"><title>' + html_lib.escape(titulo) + '</title></head>\n'
+        '<body style="margin:0;padding:0;background:#f4f6f8;">\n'
+        '<div style="max-width:640px;margin:0 auto;padding:24px 22px;background:#ffffff;font-family:Arial,Helvetica,sans-serif;'
+        'font-size:14px;line-height:1.5;color:#1f2933;">\n'
+        '<h2 style="margin:0 0 14px;font-size:18px;color:' + color_titulo + ';">' + html_lib.escape(titulo) + '</h2>\n'
+        + contenido +
+        '<p style="margin:22px 0 0;font-size:12px;color:#7b8794;">Mensaje automático del portal GHT.</p>\n'
+        '</div>\n</body></html>\n'
+    )
+
+
+def _filas_datos(pares):
+    celdas = "".join(
+        '<tr><td style="padding:3px 14px 3px 0;color:#52606d;">' + html_lib.escape(k) + '</td>'
+        '<td style="padding:3px 0;font-weight:bold;">' + html_lib.escape(v) + '</td></tr>' for k, v in pares)
+    return '<table style="border-collapse:collapse;margin:0 0 14px;">' + celdas + '</table>\n'
+
+
+def construir_correo_ok(ahora, resumen, nuevos, omitidos, mismo_archivo, cierre_ciclo_excluidos=None):
+    """(asunto, html) del correo de un corte exitoso. Solo datos de GHT: nada interno
+    (sin OV, sin razones de devolucion, sin datos de otros clientes)."""
+    corte = corte_para_correo(ahora, resumen["corte"])
+    hasta = hora_corta_correo(resumen["despachos_hasta"], ahora.date())
+    asunto = f"Portal GHT actualizado – corte {corte} – despachos hasta {hasta}"
+    avance = f"{resumen['avance_general']} %" if resumen["avance_general"] is not None else "No disponible"
+    partes = [_filas_datos([("Corte", f"{corte} ({ahora:%d/%m/%Y})"), ("Despachos hasta", resumen["despachos_hasta"] or "—"),
+                            ("Avance general", avance)])]
+    if cierre_ciclo_excluidos is not None:   # solo en el corte que cierra el ciclo
+        n = cierre_ciclo_excluidos
+        if n > 0:
+            plural = "s" if n != 1 else ""
+            texto = (f"Cierre de ciclo: {n} pedido{plural} excluido{plural} del avance. "
+                     "Descarga el Excel de excluidos del portal antes de reemplazar el consolidado.")
+        else:
+            texto = "Cierre de ciclo: 0 pedidos excluidos del avance."
+        partes.append('<p style="margin:0 0 14px;padding:8px 12px;background:#eef3fb;border-left:3px solid #00205B;">'
+                      + html_lib.escape(texto) + '</p>\n')
+    if mismo_archivo:
+        partes.append('<p style="margin:0 0 14px;padding:8px 12px;background:#fff8e6;border-left:3px solid #e0a100;">'
+                      'El archivo de despachos no se ha actualizado desde el corte anterior</p>\n')
+    if nuevos:
+        partes.append('<p style="margin:0 0 6px;"><b>Despachos nuevos de GHT desde el corte anterior: ' + str(len(nuevos)) + '</b></p>\n')
+        encabezado = "".join(
+            '<th style="text-align:' + alin + ';padding:6px 8px;border-bottom:2px solid #00205B;color:#00205B;">' + t + '</th>'
+            for t, alin in (("Finca", "left"), ("Orden de compra", "left"), ("Elemento", "left"), ("Nota", "left"),
+                            ("Cantidad", "right"), ("Tipo", "left")))
+        filas = ""
+        for d in nuevos:
+            celdas = [(d["finca"], "left"), (d["orden_compra"], "left"), (d["elemento"], "left"), (d["nota"], "left"),
+                      (f"{d['cantidad']:,}".replace(",", " ") if isinstance(d["cantidad"], int) else str(d["cantidad"]), "right"),
+                      (d["tipo"], "left")]
+            filas += "<tr>" + "".join(
+                '<td style="text-align:' + alin + ';padding:5px 8px;border-bottom:1px solid #e4e7eb;">' + html_lib.escape(str(v)) + '</td>'
+                for v, alin in celdas) + "</tr>"
+        partes.append('<table style="border-collapse:collapse;width:100%;font-size:13px;"><tr>' + encabezado + '</tr>' + filas + '</table>\n')
+    else:
+        partes.append('<p style="margin:0 0 6px;">Sin nuevos despachos desde el corte anterior</p>\n')
+    nombre_excel = os.path.basename(resumen["excel_cliente"])
+    partes.append('<p style="margin:16px 0 0;font-size:13px;color:#52606d;">Se adjunta el Excel consolidado: ' + html_lib.escape(nombre_excel) + '</p>\n')
+    if omitidos:
+        partes.append('<p style="margin:4px 0 0;font-size:12px;color:#7b8794;">Líneas de despachos de otros clientes omitidas: ' + str(omitidos) + '</p>\n')
+    return asunto, _marco_correo("Portal GHT actualizado", "#00205B", "".join(partes))
+
+
+def construir_correo_error(ahora, corte, codigo, corto):
+    """(asunto, html) del correo cuando la corrida fallo. Motivo en lenguaje simple, sin rutas completas."""
+    corte = corte_para_correo(ahora, corte)
+    motivo, revisar = MOTIVOS_ERROR.get(codigo, MOTIVOS_ERROR[SALIDA_ERROR])
+    asunto = f"ATENCIÓN: el portal GHT NO se actualizó – corte {corte}"
+    partes = [_filas_datos([("Corte", f"{corte} ({ahora:%d/%m/%Y %H:%M})")]),
+              '<p style="margin:0 0 6px;"><b>Motivo</b></p>\n<p style="margin:0 0 14px;">' + html_lib.escape(motivo) + '</p>\n',
+              '<p style="margin:0 0 6px;"><b>Qué revisar</b></p>\n<ul style="margin:0 0 14px;padding-left:20px;">'
+              + "".join("<li>" + html_lib.escape(r) + "</li>" for r in revisar) + '</ul>\n',
+              '<p style="margin:0 0 14px;font-size:13px;color:#52606d;">Detalle técnico: ' + html_lib.escape(corto or "—") + '</p>\n',
+              '<p style="margin:0;">El portal conserva la última actualización correcta: este corte no modificó ningún dato.</p>\n']
+    return asunto, _marco_correo("ATENCIÓN: el portal GHT NO se actualizó", "#b42318", "".join(partes))
+
+
+def escribir_correo(cfg, ahora, asunto, cuerpo_html):
+    """Escribe salida_interna/correo_asunto.txt y correo_cuerpo.html (UTF-8, juntos o ninguno).
+    Un fallo aqui se deja en el log pero no cambia el resultado de la corrida."""
+    carpeta = cfg["carpeta_salida_interna"]
+
+    def escribir_texto(texto):
+        def escritor(ruta_tmp):
+            with open(ruta_tmp, "w", encoding="utf-8", newline="") as f:
+                f.write(texto)
+        return escritor
+    try:
+        escribir_todo_o_nada([(os.path.join(carpeta, ARCHIVO_CORREO_ASUNTO), escribir_texto(asunto)),
+                              (os.path.join(carpeta, ARCHIVO_CORREO_CUERPO), escribir_texto(cuerpo_html))])
+    except Exception as e:  # noqa: BLE001
+        registrar_log(cfg, ahora, "auto", f"No se pudo escribir el correo: {type(e).__name__}: {e}")
+
+
+def leer_estado_reportados(cfg):
+    """Estado guardado por la ultima corrida --auto (o None si no existe / no se entiende)."""
+    try:
+        with open(os.path.join(cfg["carpeta_salida_interna"], ARCHIVO_ESTADO_DESPACHOS), "r", encoding="utf-8") as f:
+            estado = json.load(f)
+        return estado if isinstance(estado, dict) and "claves" in estado else None
+    except (OSError, ValueError):
+        return None
 
 
 def cantidad_para_json(valor):
@@ -797,12 +969,8 @@ def calcular_despachos_nuevos(cfg, notas_historico, pedidos_cache, claves_previa
       trae despachos de todos los clientes de Smurfit): los demas se omiten y
       solo se cuentan, sin mostrar ningun dato.
     Devuelve (lista_de_despachos, cantidad_omitida_de_otros_clientes)."""
-    previas = None
-    try:
-        with open(os.path.join(cfg["carpeta_salida_interna"], ARCHIVO_ESTADO_DESPACHOS), "r", encoding="utf-8") as f:
-            previas = set(json.load(f)["claves"])
-    except (FileNotFoundError, ValueError, KeyError, TypeError):
-        previas = None
+    estado_previo = leer_estado_reportados(cfg)
+    previas = set(estado_previo["claves"]) if estado_previo else None
     if previas is None:
         previas = claves_previas_corrida
 
@@ -860,8 +1028,21 @@ def preparar_salidas(cfg, ahora, resultado, notas_historico, pedidos_cache, clav
     """Arma (sin escribir todavia) el resumen para el correo, el Excel del
     cliente y, SOLO si guardar_estado (corridas --auto), el estado de despachos
     reportados. Una corrida manual no consume despachos: genera el Excel y el
-    resumen pero deja el estado como estaba. Devuelve (destinos, resumen)."""
+    resumen pero deja el estado como estaba. Devuelve (destinos, resumen, extra);
+    'extra' trae lo que necesita el correo (despachos nuevos con OC y Tipo, omitidos,
+    corte de despachos de la corrida --auto anterior)."""
     nuevos, omitidos = calcular_despachos_nuevos(cfg, notas_historico, pedidos_cache, claves_previas_corrida)
+    # corte de despachos de la corrida --auto anterior (para avisar si el .xls no se ha actualizado)
+    estado_previo = leer_estado_reportados(cfg)
+    hasta_anterior = estado_previo.get("despachos_hasta") if estado_previo else None
+    # Corte que CIERRA el ciclo: ya esta cerrado y la corrida --auto anterior lo dejo abierto
+    # (o era de otro ciclo). Si el estado anterior no trae esta informacion no se puede saber,
+    # y por prudencia no se avisa.
+    cierre_txt = avance["cierre_ciclo"].strftime("%d/%m/%Y") if avance["cierre_ciclo"] else ""
+    ciclo_previo = estado_previo.get("ciclo") if estado_previo else None
+    cierra_ahora = bool(avance["ciclo_cerrado"] and ciclo_previo
+                        and not (ciclo_previo.get("cierre") == cierre_txt and ciclo_previo.get("cerrado")))
+    excluidos_ciclo = len(avance["futuros"]) + len(avance["sin_despacho"])
     nombre_excel = f"GHT_consolidado_{ahora:%Y-%m-%d_%H%M}.xlsx"
     ruta_excel = os.path.join(cfg["carpeta_salida"], nombre_excel)
     resumen = {
@@ -881,7 +1062,9 @@ def preparar_salidas(cfg, ahora, resultado, notas_historico, pedidos_cache, clav
         "despachos_nuevos_otros_clientes_omitidos": omitidos,
         "excel_cliente": f"{os.path.basename(cfg['carpeta_salida'])}/{nombre_excel}",
     }
-    estado = {"actualizado": ahora.isoformat(timespec="seconds"), "claves": sorted(notas_historico)}
+    estado = {"actualizado": ahora.isoformat(timespec="seconds"), "despachos_hasta": despachos_hasta_txt,
+              "ciclo": {"cierre": cierre_txt, "cerrado": bool(avance["ciclo_cerrado"])},
+              "claves": sorted(notas_historico)}
     carpeta_interna = cfg["carpeta_salida_interna"]
     destinos = [
         (ruta_excel, escribir_excel_cliente(resultado, nuevos)),
@@ -889,7 +1072,9 @@ def preparar_salidas(cfg, ahora, resultado, notas_historico, pedidos_cache, clav
     ]
     if guardar_estado:
         destinos.append((os.path.join(carpeta_interna, ARCHIVO_ESTADO_DESPACHOS), escribir_json(estado, ensure_ascii=False)))
-    return destinos, resumen
+    extra = {"nuevos": nuevos, "omitidos": omitidos, "hasta_anterior": hasta_anterior,
+             "cierre_ciclo_excluidos": excluidos_ciclo if cierra_ahora else None}
+    return destinos, resumen, extra
 
 
 def generar_datos(auto=False, cfg=None, ahora=None):
@@ -1243,7 +1428,8 @@ def generar_datos(auto=False, cfg=None, ahora=None):
         print("No se encontro ningun archivo 'consolidado' en la carpeta - "
               "el % de avance de la semana no se puede calcular hoy.")
 
-    avance = calcular_avance_general(base_semana, acumulado_por_clave, hoy)
+    # La fecha y la hora del cierre del ciclo salen de la hora de la corrida (Colombia).
+    avance = calcular_avance_general(base_semana, acumulado_por_clave, ahora.date(), ahora.time())
     total_sol_semana = avance["total_sol"]
     total_desp_semana = avance["total_desp"]
     porcentaje_global = avance["porcentaje"]
@@ -1277,7 +1463,7 @@ def generar_datos(auto=False, cfg=None, ahora=None):
     destinos.append((ARCHIVO_SALIDA, escribir_json(resultado, ensure_ascii=False, indent=2)))
 
     # Resumen para el correo (interno), Excel del cliente y estado de despachos.
-    destinos_extra, resumen = preparar_salidas(
+    destinos_extra, resumen, extra = preparar_salidas(
         cfg, ahora, resultado, notas_historico, pedidos_cache, claves_previas_corrida,
         avance, despachos_hasta_txt, ruta_despachos, guardar_estado=auto)
     destinos += destinos_extra
@@ -1346,7 +1532,7 @@ def generar_datos(auto=False, cfg=None, ahora=None):
         print("(Corrida manual: no se actualizo el estado de despachos reportados; "
               "los despachos nuevos de arriba se volveran a reportar en la proxima corrida --auto.)")
     print("Listo. Sube el archivo 'datos.json' al portal web.")
-    return resumen
+    return resumen, extra
 
 
 def main(argv=None):
@@ -1354,6 +1540,8 @@ def main(argv=None):
     parser.add_argument("--auto", action="store_true",
                         help="modo automatico: sin preguntas; si falta algo, no escribe nada y sale con error")
     parser.add_argument("--config", help="ruta de config.json (por defecto, el de la carpeta del script)")
+    parser.add_argument("--ahora", help="SOLO PARA PRUEBAS: simula la fecha y hora (Colombia) de la corrida, "
+                                        "p. ej. '2026-10-06 15:30'")
     args = parser.parse_args(argv)
     modo = "auto" if args.auto else "manual"
     if args.auto:
@@ -1362,19 +1550,33 @@ def main(argv=None):
                 flujo.reconfigure(encoding="utf-8", errors="replace")  # tareas programadas: sin consola
             except Exception:
                 pass
-    ahora = datetime.now(BOGOTA)
+    if args.ahora:
+        for formato in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M"):
+            try:
+                ahora = datetime.strptime(args.ahora, formato).replace(tzinfo=BOGOTA)
+                break
+            except ValueError:
+                ahora = None
+        if ahora is None:
+            print("ERROR: --ahora debe tener el formato 'AAAA-MM-DD HH:MM'.", file=sys.stderr)
+            return SALIDA_CONFIG
+    else:
+        ahora = datetime.now(BOGOTA)
     cfg = None
     try:
         cfg = cargar_config(args.config)
         aplicar_config(cfg)
-        resumen = generar_datos(auto=args.auto, cfg=cfg, ahora=ahora)
+        resumen, extra = generar_datos(auto=args.auto, cfg=cfg, ahora=ahora)
     except ErrorCorrida as e:
         print(f"\nERROR (codigo {e.codigo}): {e.mensaje}", file=sys.stderr)
         print("No se modifico ningun archivo del portal ni de las salidas.", file=sys.stderr)
         cfg_ok = cfg or config_por_defecto()
         registrar_log(cfg_ok, ahora, modo, f"ERROR codigo={e.codigo} | {e.mensaje}")
         if args.auto:
-            escribir_ultima_corrida(cfg_ok, ahora, e.codigo, "error", e.corto, despachos_hasta_del_xls_mas_reciente(cfg_ok))
+            corte = etiqueta_de_corte(ahora, cfg_ok["cortes"], cfg_ok["tolerancia_corte_minutos"])
+            asunto, cuerpo = construir_correo_error(ahora, corte, e.codigo, e.corto)
+            escribir_correo(cfg_ok, ahora, asunto, cuerpo)
+            escribir_ultima_corrida(cfg_ok, ahora, e.codigo, "error", e.corto, despachos_hasta_del_xls_mas_reciente(cfg_ok), None)
         return e.codigo
     except Exception as e:
         cfg_ok = cfg or config_por_defecto()
@@ -1383,16 +1585,24 @@ def main(argv=None):
             raise
         print(f"\nERROR (codigo {SALIDA_ERROR}): error inesperado: {type(e).__name__}: {e}", file=sys.stderr)
         traceback.print_exc()
-        escribir_ultima_corrida(cfg_ok, ahora, SALIDA_ERROR, "error",
-                                f"Error inesperado: {type(e).__name__}: {mensaje_sin_rutas(str(e), cfg_ok, 110)}",
-                                despachos_hasta_del_xls_mas_reciente(cfg_ok))
+        corto = f"Error inesperado: {type(e).__name__}: {mensaje_sin_rutas(str(e), cfg_ok, 110)}"
+        corte = etiqueta_de_corte(ahora, cfg_ok["cortes"], cfg_ok["tolerancia_corte_minutos"])
+        asunto, cuerpo = construir_correo_error(ahora, corte, SALIDA_ERROR, corto)
+        escribir_correo(cfg_ok, ahora, asunto, cuerpo)
+        escribir_ultima_corrida(cfg_ok, ahora, SALIDA_ERROR, "error", corto,
+                                despachos_hasta_del_xls_mas_reciente(cfg_ok), None)
         return SALIDA_ERROR
     registrar_log(cfg, ahora, modo,
                   f"OK | corte={resumen['corte']} | estado={resumen['estado']} | avance={resumen['avance_general']}% | "
                   f"despachos_nuevos={resumen['total_despachos_nuevos']} | despachos_hasta={resumen['despachos_hasta']} | "
                   f"xls={resumen['archivo_despachos']} | excel={resumen['excel_cliente']}")
     if args.auto:
-        escribir_ultima_corrida(cfg, ahora, SALIDA_OK, resumen["estado"], None, resumen["despachos_hasta"])
+        mismo_archivo = extra["hasta_anterior"] is not None and extra["hasta_anterior"] == resumen["despachos_hasta"]
+        asunto, cuerpo = construir_correo_ok(ahora, resumen, extra["nuevos"], extra["omitidos"], mismo_archivo,
+                                             extra["cierre_ciclo_excluidos"])
+        escribir_correo(cfg, ahora, asunto, cuerpo)
+        escribir_ultima_corrida(cfg, ahora, SALIDA_OK, resumen["estado"], None, resumen["despachos_hasta"],
+                                resumen["excel_cliente"])
     return SALIDA_OK
 
 
