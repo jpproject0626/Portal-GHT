@@ -40,6 +40,11 @@ tareas de Windows en los cortes de 7:30, 12:00 y 16:00 hora Colombia):
     - escriben SIEMPRE el correo del corte: salida_interna/correo_asunto.txt y
       salida_interna/correo_cuerpo.html (exito o error). ultima_corrida.json trae
       "adjunto": el Excel consolidado de esa corrida (null si fallo).
+    - la corrida --auto que CIERRA el ciclo (pasa de abierto a cerrado) ademas deja
+      salida_interna/excluidos_ciclo_AAAA-MM-DD.xlsx (con el mismo contenido que el
+      boton de excluidos del portal), lo indica en "adjunto_excluidos" de
+      ultima_corrida.json y lo anuncia en el correo. Ese Excel es INTERNO: queda en
+      salida_interna/ (en .gitignore) y nunca se sube.
 
 Requiere: pip install openpyxl xlrd cryptography
 
@@ -332,7 +337,7 @@ def registrar_log(cfg, ahora, modo, texto):
 #     semanas futuras que nunca se esperaba tener listos todavia).
 #   - Regla 2: pedidos dentro del ciclo con CERO unidades despachadas, solo
 #     una vez que el ciclo ya cerro (ver ciclo_esta_cerrado: el ciclo cierra el
-#     MISMO dia de la moda, a las 15:30 hora Colombia).
+#     MISMO dia de la moda, a las 16:00 hora Colombia).
 # El cierre del ciclo es la moda (fecha mas repetida) de fecha_entrega en
 # el consolidado vigente; si cambia el consolidado, el ciclo se recalcula
 # solo.
@@ -495,14 +500,14 @@ def armar_detalle_excluidos(base_semana, acumulado_por_clave, avance):
     }
 
 
-HORA_CIERRE_CICLO = (15, 30)  # hora Colombia: desde aqui el DIA de la moda ya cuenta como ciclo cerrado
+HORA_CIERRE_CICLO = (16, 0)  # hora Colombia: desde aqui el DIA de la moda ya cuenta como ciclo cerrado
 
 
 def ciclo_esta_cerrado(cierre, hoy, hora=None):
     """El ciclo cierra el MISMO dia de la moda (cierre). Esta cerrado si:
       - la fecha de la corrida es POSTERIOR a la moda, o
-      - la fecha de la corrida es la moda Y la hora de la corrida es >= 15:30.
-    Antes de las 15:30 del dia de la moda no se excluye nada (los despachos
+      - la fecha de la corrida es la moda Y la hora de la corrida es >= 16:00.
+    Antes de las 16:00 del dia de la moda no se excluye nada (los despachos
     todavia pueden entrar). Una vez cerrado, las corridas siguientes lo mantienen
     mientras el consolidado (y por tanto la moda) sea el mismo. Sin 'hora' solo
     cuenta lo de "posterior a la moda" (el comportamiento anterior)."""
@@ -517,7 +522,7 @@ def calcular_avance_general(base_semana, acumulado_por_clave, hoy, hora=None):
       - Regla 1 "futuros": fecha_entrega POSTERIOR al cierre del ciclo.
       - Regla 2 "sin despacho": fecha_entrega dentro del ciclo (o sin fecha),
         CERO unidades despachadas, y el ciclo ya cerro (ver ciclo_esta_cerrado:
-        el dia de la moda desde las 15:30, o cualquier dia posterior). Si el
+        el dia de la moda desde las 16:00, o cualquier dia posterior). Si el
         ciclo sigue abierto, estos pedidos cuentan normal.
     Devuelve un diccionario con el %, los totales y las llaves excluidas."""
     cierre = calcular_fecha_cierre_ciclo(base_semana)
@@ -786,7 +791,8 @@ def mensaje_sin_rutas(texto, cfg, maximo=140):
     return texto[:maximo]
 
 
-def escribir_ultima_corrida(cfg, ahora, codigo, estado, mensaje_error, despachos_hasta, adjunto=None):
+def escribir_ultima_corrida(cfg, ahora, codigo, estado, mensaje_error, despachos_hasta, adjunto=None,
+                            adjunto_excluidos=None):
     """salida_interna/ultima_corrida.json: SOLO este archivo, nunca datos.json,
     excluidos_avance.json ni resumen_corrida.json. Si no se puede escribir se
     deja constancia en el log, pero no se cambia el resultado de la corrida."""
@@ -798,6 +804,8 @@ def escribir_ultima_corrida(cfg, ahora, codigo, estado, mensaje_error, despachos
         "mensaje_error": mensaje_error,        # None si no hubo error
         "despachos_hasta": despachos_hasta,    # en un error: el del .xls mas reciente (o None)
         "adjunto": adjunto,                    # Excel consolidado de esta corrida (ruta relativa); None si fallo
+        # Excel de excluidos: solo en la corrida --auto que cierra el ciclo y con al menos 1 excluido; si no, None
+        "adjunto_excluidos": adjunto_excluidos,
     }
     try:
         escribir_todo_o_nada([(os.path.join(cfg["carpeta_salida_interna"], ARCHIVO_ULTIMA_CORRIDA),
@@ -874,6 +882,8 @@ def construir_correo_ok(ahora, resumen, nuevos, omitidos, mismo_archivo, cierre_
     corte = corte_para_correo(ahora, resumen["corte"])
     hasta = hora_corta_correo(resumen["despachos_hasta"], ahora.date())
     asunto = f"Portal GHT actualizado – corte {corte} – despachos hasta {hasta}"
+    if cierre_ciclo_excluidos is not None:   # corte que cierra el ciclo
+        asunto = "CIERRE DE CICLO – " + asunto
     avance = f"{resumen['avance_general']} %" if resumen["avance_general"] is not None else "No disponible"
     partes = [_filas_datos([("Corte", f"{corte} ({ahora:%d/%m/%Y})"), ("Despachos hasta", resumen["despachos_hasta"] or "—"),
                             ("Avance general", avance)])]
@@ -882,7 +892,7 @@ def construir_correo_ok(ahora, resumen, nuevos, omitidos, mismo_archivo, cierre_
         if n > 0:
             plural = "s" if n != 1 else ""
             texto = (f"Cierre de ciclo: {n} pedido{plural} excluido{plural} del avance. "
-                     "Descarga el Excel de excluidos del portal antes de reemplazar el consolidado.")
+                     "El Excel de excluidos va adjunto.")
         else:
             texto = "Cierre de ciclo: 0 pedidos excluidos del avance."
         partes.append('<p style="margin:0 0 14px;padding:8px 12px;background:#eef3fb;border-left:3px solid #00205B;">'
@@ -1023,8 +1033,53 @@ def escribir_excel_cliente(registros, despachos_nuevos):
     return escritor
 
 
+def escribir_excel_excluidos(detalle):
+    """Excel de los pedidos excluidos del avance, con el MISMO contenido que descarga
+    el boton "Exportar excluidos del avance" del portal (index.html): hoja 'Excluidos'
+    (8 columnas, con la razon de exclusion) y hoja 'Resumen'. 'detalle' es el mismo
+    diccionario que se cifra en excluidos_avance.json."""
+    def numero(v):
+        return int(v) if isinstance(v, float) and v == int(v) else v
+
+    def escritor(ruta_tmp):
+        excluidos = detalle["excluidos"]
+        libro = Workbook()
+        hoja = libro.active
+        hoja.title = "Excluidos"
+        hoja.append(["Finca", "Orden de venta", "Elemento", "Orden de compra", "Cantidad solicitada",
+                     "Cantidad despachada", "Fecha de entrega", "Razón de exclusión"])
+        for p in excluidos:
+            hoja.append([p["finca"], p["ov"], p["elemento"], p["orden_compra"], numero(p["cantidad_solicitada"]),
+                         numero(p["cantidad_despachada"]), p["fecha_entrega"], p["razon"]])
+        for celda in hoja[1]:
+            celda.font = Font(bold=True)
+        for i, ancho in enumerate((14, 14, 12, 20, 19, 19, 16, 34)):
+            hoja.column_dimensions[chr(ord("A") + i)].width = ancho
+        resumen = libro.create_sheet("Resumen")
+        por_razon = lambda razon: sum(1 for p in excluidos if p["razon"] == razon)
+        for fila in (
+            ["Concepto", "Valor"],
+            ["Cierre del ciclo (moda de fecha de entrega)", detalle["cierre_ciclo"]],
+            ["Ciclo cerrado", "Sí" if detalle["ciclo_cerrado"] else "No"],
+            ["Avance general (%)", detalle["porcentaje_global"]],
+            ["Pedidos que cuentan en el %", detalle["pedidos_en_porcentaje"]],
+            ["Solicitado en el %", numero(detalle["total_solicitado_en_porcentaje"])],
+            ["Despachado en el %", numero(detalle["total_despachado_en_porcentaje"])],
+            ["Pedidos excluidos", len(excluidos)],
+            ["  " + RAZON_FECHA_FUTURA, por_razon(RAZON_FECHA_FUTURA)],
+            ["  " + RAZON_SIN_DESPACHO, por_razon(RAZON_SIN_DESPACHO)],
+        ):
+            resumen.append(fila)
+        for celda in resumen[1]:
+            celda.font = Font(bold=True)
+        resumen.column_dimensions["A"].width = 44
+        resumen.column_dimensions["B"].width = 16
+        libro.save(ruta_tmp)
+    return escritor
+
+
 def preparar_salidas(cfg, ahora, resultado, notas_historico, pedidos_cache, claves_previas_corrida,
-                     avance, despachos_hasta_txt, ruta_despachos, guardar_estado):
+                     avance, despachos_hasta_txt, ruta_despachos, guardar_estado, detalle_excluidos=None):
     """Arma (sin escribir todavia) el resumen para el correo, el Excel del
     cliente y, SOLO si guardar_estado (corridas --auto), el estado de despachos
     reportados. Una corrida manual no consume despachos: genera el Excel y el
@@ -1072,8 +1127,15 @@ def preparar_salidas(cfg, ahora, resultado, notas_historico, pedidos_cache, clav
     ]
     if guardar_estado:
         destinos.append((os.path.join(carpeta_interna, ARCHIVO_ESTADO_DESPACHOS), escribir_json(estado, ensure_ascii=False)))
+    # Solo la corrida --auto que CIERRA el ciclo y tiene al menos 1 excluido deja el Excel de excluidos.
+    excel_excluidos = None
+    if guardar_estado and cierra_ahora and excluidos_ciclo > 0 and detalle_excluidos is not None:
+        nombre_excluidos = f"excluidos_ciclo_{avance['cierre_ciclo']:%Y-%m-%d}.xlsx"
+        destinos.append((os.path.join(carpeta_interna, nombre_excluidos), escribir_excel_excluidos(detalle_excluidos)))
+        excel_excluidos = f"{os.path.basename(carpeta_interna)}/{nombre_excluidos}"
     extra = {"nuevos": nuevos, "omitidos": omitidos, "hasta_anterior": hasta_anterior,
-             "cierre_ciclo_excluidos": excluidos_ciclo if cierra_ahora else None}
+             "cierre_ciclo_excluidos": excluidos_ciclo if cierra_ahora else None,
+             "adjunto_excluidos": excel_excluidos}
     return destinos, resumen, extra
 
 
@@ -1444,12 +1506,12 @@ def generar_datos(auto=False, cfg=None, ahora=None):
     # a Excel. Nunca se escribe en claro: si falta la clave o la libreria, se
     # avisa y el archivo anterior se deja como estaba.
     destinos = []  # (ruta_final, escritor): se escriben TODOS juntos al final (todo o nada)
+    detalle_excluidos = armar_detalle_excluidos(base_semana, acumulado_por_clave, avance)
     clave_interna = leer_clave_interna()
     if clave_interna is None:
         print(f"*** AVISO: no hay clave interna ('{ARCHIVO_CLAVE_INTERNA}' o variable "
               f"{VARIABLE_CLAVE_INTERNA}). NO se actualizo {ARCHIVO_EXCLUIDOS}. ***")
     else:
-        detalle_excluidos = armar_detalle_excluidos(base_semana, acumulado_por_clave, avance)
         try:
             sobre = cifrar_contenido(detalle_excluidos, clave_interna)
         except ImportError:
@@ -1465,7 +1527,7 @@ def generar_datos(auto=False, cfg=None, ahora=None):
     # Resumen para el correo (interno), Excel del cliente y estado de despachos.
     destinos_extra, resumen, extra = preparar_salidas(
         cfg, ahora, resultado, notas_historico, pedidos_cache, claves_previas_corrida,
-        avance, despachos_hasta_txt, ruta_despachos, guardar_estado=auto)
+        avance, despachos_hasta_txt, ruta_despachos, guardar_estado=auto, detalle_excluidos=detalle_excluidos)
     destinos += destinos_extra
     escribir_todo_o_nada(destinos)
 
@@ -1541,7 +1603,7 @@ def main(argv=None):
                         help="modo automatico: sin preguntas; si falta algo, no escribe nada y sale con error")
     parser.add_argument("--config", help="ruta de config.json (por defecto, el de la carpeta del script)")
     parser.add_argument("--ahora", help="SOLO PARA PRUEBAS: simula la fecha y hora (Colombia) de la corrida, "
-                                        "p. ej. '2026-10-06 15:30'")
+                                        "p. ej. '2026-10-06 16:00'")
     args = parser.parse_args(argv)
     modo = "auto" if args.auto else "manual"
     if args.auto:
@@ -1602,7 +1664,7 @@ def main(argv=None):
                                              extra["cierre_ciclo_excluidos"])
         escribir_correo(cfg, ahora, asunto, cuerpo)
         escribir_ultima_corrida(cfg, ahora, SALIDA_OK, resumen["estado"], None, resumen["despachos_hasta"],
-                                resumen["excel_cliente"])
+                                resumen["excel_cliente"], extra["adjunto_excluidos"])
     return SALIDA_OK
 
 
