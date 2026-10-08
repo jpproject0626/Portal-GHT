@@ -866,7 +866,7 @@ def _marco_correo(titulo, color_titulo, contenido):
         '<h2 style="margin:0 0 14px;font-size:18px;color:' + color_titulo + ';">' + html_lib.escape(titulo) + '</h2>\n'
         + contenido +
         '<p style="margin:22px 0 0;font-size:12px;color:#7b8794;">Mensaje automático del portal GHT.</p>\n'
-        '<p style="margin:8px 0 0;font-size:12px;color:#7b8794;">Creado por: ' + html_lib.escape(CREADO_POR) + '</p>\n'
+        '<p style="margin:8px 0 0;font-size:12px;color:#7b8794;">Autor: ' + html_lib.escape(CREADO_POR) + '</p>\n'
         '</div>\n</body></html>\n'
     )
 
