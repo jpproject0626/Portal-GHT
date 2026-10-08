@@ -816,6 +816,7 @@ def escribir_ultima_corrida(cfg, ahora, codigo, estado, mensaje_error, despachos
 
 ARCHIVO_CORREO_ASUNTO = "correo_asunto.txt"
 ARCHIVO_CORREO_CUERPO = "correo_cuerpo.html"
+CREADO_POR = "Juan Pablo Salcedo Torres"   # segunda linea del pie de todos los correos
 
 # Motivo en lenguaje simple y que revisar, segun el codigo de salida (sin rutas completas).
 MOTIVOS_ERROR = {
@@ -865,6 +866,7 @@ def _marco_correo(titulo, color_titulo, contenido):
         '<h2 style="margin:0 0 14px;font-size:18px;color:' + color_titulo + ';">' + html_lib.escape(titulo) + '</h2>\n'
         + contenido +
         '<p style="margin:22px 0 0;font-size:12px;color:#7b8794;">Mensaje automático del portal GHT.</p>\n'
+        '<p style="margin:8px 0 0;font-size:12px;color:#7b8794;">Creado por: ' + html_lib.escape(CREADO_POR) + '</p>\n'
         '</div>\n</body></html>\n'
     )
 
