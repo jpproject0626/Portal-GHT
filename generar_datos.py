@@ -1,3 +1,4 @@
+# Portal GHT · Creado por Juan Pablo Salcedo Torres · Smurfit Westrock
 """
 ============================================================
  GENERADOR DE DATOS DIARIOS - Portal GHT (Grupo Chia)
