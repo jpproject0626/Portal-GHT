@@ -14,8 +14,8 @@
     "nota_despacho": "797412, 797562, 797818, 798281",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -32,8 +32,8 @@
     "nota_despacho": "798057",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -41,17 +41,17 @@
     "descripcion": "4CATAPF122 TAPA 1/4  POLO FARMS 97",
     "ow": "42558",
     "orden_compra": "AJ01. X1 - 66982",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:13",
     "cantidad_solicitada": "900",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798288",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -59,17 +59,17 @@
     "descripcion": "4CATAPF122 TAPA 1/4  POLO FARMS 97",
     "ow": "42558",
     "orden_compra": "SZ01. X3 - 32609",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "02/10/2026",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:13",
     "cantidad_solicitada": "210",
-    "cantidad_despachada": "30",
-    "porcentaje_despachado": 14,
-    "nota_despacho": "797671",
+    "cantidad_despachada": "210",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "797671, 798289",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -86,8 +86,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -95,17 +95,17 @@
     "descripcion": "4CACAJ35  FOLDER 1/8  QUEENS C720",
     "ow": "42572",
     "orden_compra": "RQ01. GR - 31046",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:03",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798285",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -113,17 +113,17 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42570",
     "orden_compra": "RQ01. GR - 31046",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:03",
     "cantidad_solicitada": "4200",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "3750",
+    "porcentaje_despachado": 89,
+    "nota_despacho": "798285",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -131,17 +131,17 @@
     "descripcion": "4CATAP95 TAPA 1/4 .DESIGNER C720",
     "ow": "42549",
     "orden_compra": "RQ01. GR - 31046",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:03",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798285",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -149,17 +149,17 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42550",
     "orden_compra": "RQ01. GR - 31046",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:03",
     "cantidad_solicitada": "1500",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "1500",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798285",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -176,8 +176,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -194,8 +194,8 @@
     "nota_despacho": "798057, 798276",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -212,8 +212,8 @@
     "nota_despacho": "798281",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -221,17 +221,17 @@
     "descripcion": "4CATAP132  TAPA STD GOLDEN  NEW CAB 2",
     "ow": "42579",
     "orden_compra": "RQ01. GR - 31046",
-    "estado": "Parcialmente despachado",
-    "fecha_despacho": "07/10/2026",
-    "hora_despacho": "13:43",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:03",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "280",
-    "porcentaje_despachado": 93,
-    "nota_despacho": "798057",
+    "cantidad_despachada": "300",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798057, 798285",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -248,8 +248,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -266,8 +266,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -284,8 +284,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -302,8 +302,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -320,8 +320,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -338,8 +338,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -356,8 +356,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -374,8 +374,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -392,8 +392,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -410,8 +410,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -428,8 +428,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -446,8 +446,8 @@
     "nota_despacho": "798153",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -464,8 +464,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -482,8 +482,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -500,8 +500,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -518,8 +518,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PARDO",
@@ -536,8 +536,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PARDO",
@@ -554,8 +554,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PARDO",
@@ -572,8 +572,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PARDO",
@@ -590,8 +590,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PARDO",
@@ -608,8 +608,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT SNF",
@@ -626,8 +626,8 @@
     "nota_despacho": "798045",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT SNF",
@@ -644,8 +644,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT SNF",
@@ -662,8 +662,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT SNF",
@@ -680,8 +680,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT GENERA",
@@ -698,8 +698,8 @@
     "nota_despacho": "798255",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT GENERA",
@@ -716,8 +716,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT GENERA",
@@ -734,8 +734,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -752,8 +752,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -761,17 +761,17 @@
     "descripcion": "4CATAP172 TAPA 1-4 THE VALLEY SPRINGS 97X24X10.5",
     "ow": "42587",
     "orden_compra": "LC01. GK - 42743",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:13",
     "cantidad_solicitada": "240",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "240",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798290",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -788,8 +788,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -797,17 +797,17 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42570",
     "orden_compra": "LC01. GK - 42743",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:13",
     "cantidad_solicitada": "540",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "540",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798290",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -824,8 +824,8 @@
     "nota_despacho": "798066",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -833,17 +833,17 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42550",
     "orden_compra": "LC01. GK - 42743",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:13",
     "cantidad_solicitada": "90",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "90",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798290",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -860,8 +860,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -878,8 +878,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -896,8 +896,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -914,8 +914,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT QUALIT",
@@ -932,8 +932,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT QUALIT",
@@ -950,8 +950,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT QUALIT",
@@ -968,8 +968,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT QUALIT",
@@ -986,8 +986,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CIPRES",
@@ -1004,8 +1004,8 @@
     "nota_despacho": "798279",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CIPRES",
@@ -1022,8 +1022,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CIPRES",
@@ -1040,8 +1040,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CIPRES",
@@ -1058,8 +1058,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -1076,8 +1076,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -1094,8 +1094,8 @@
     "nota_despacho": "798070",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -1112,8 +1112,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -1130,8 +1130,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -1148,8 +1148,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -1166,8 +1166,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -1184,8 +1184,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -1202,8 +1202,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -1220,8 +1220,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -1229,17 +1229,17 @@
     "descripcion": "4CATAP93 TAPA 1/4 QUEENS  C720",
     "ow": "42570",
     "orden_compra": "AJ01. X1 - 67192",
-    "estado": "En producción",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:13",
     "cantidad_solicitada": "510",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "510",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798288",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -1247,17 +1247,17 @@
     "descripcion": "4CACAFJ44 FOLDER 1/8 FALCON",
     "ow": "42566",
     "orden_compra": "AJ01. X1 - 67192",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:13",
     "cantidad_solicitada": "810",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "810",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798288",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -1274,8 +1274,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -1292,8 +1292,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -1310,8 +1310,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -1328,8 +1328,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -1346,8 +1346,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -1364,8 +1364,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -1382,8 +1382,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -1400,8 +1400,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -1418,8 +1418,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -1436,8 +1436,8 @@
     "nota_despacho": "798269",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -1454,8 +1454,8 @@
     "nota_despacho": "798269",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -1472,8 +1472,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -1490,8 +1490,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -1508,8 +1508,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FOLLAJ",
@@ -1526,8 +1526,8 @@
     "nota_despacho": "798275",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -1535,17 +1535,17 @@
     "descripcion": "4CACAFJ44 FOLDER 1/8 FALCON",
     "ow": "42566",
     "orden_compra": "SZ01. X3 - 32641",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:13",
     "cantidad_solicitada": "600",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "600",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798289",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -1553,17 +1553,17 @@
     "descripcion": "4CATAPF122 TAPA 1/4  POLO FARMS 97",
     "ow": "42558",
     "orden_compra": "SZ01. X3 - 32641",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:13",
     "cantidad_solicitada": "900",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "900",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798289",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -1571,17 +1571,17 @@
     "descripcion": "4CATAP109 TAPA 1/4 FALCON 97 X 24",
     "ow": "42557",
     "orden_compra": "SZ01. X3 - 32641",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:13",
     "cantidad_solicitada": "1020",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "1020",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798289",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -1598,8 +1598,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -1616,8 +1616,8 @@
     "nota_despacho": "798156",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -1634,8 +1634,8 @@
     "nota_despacho": "798156",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -1652,8 +1652,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -1670,8 +1670,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -1688,8 +1688,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MOUNTA",
@@ -1706,8 +1706,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MOUNTA",
@@ -1724,8 +1724,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MOUNTA",
@@ -1742,8 +1742,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MOUNTA",
@@ -1751,17 +1751,17 @@
     "descripcion": "4CATAP75 TAPA 1/4 FLOREXPO  C720",
     "ow": "42550",
     "orden_compra": "MO01. GO - 31684",
-    "estado": "Producido",
-    "fecha_despacho": "",
-    "hora_despacho": "",
+    "estado": "Despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:13",
     "cantidad_solicitada": "60",
-    "cantidad_despachada": "",
-    "porcentaje_despachado": 0,
-    "nota_despacho": "",
+    "cantidad_despachada": "60",
+    "porcentaje_despachado": 100,
+    "nota_despacho": "798287",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MOUNTA",
@@ -1778,8 +1778,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MOUNTA",
@@ -1796,8 +1796,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MOUNTA",
@@ -1814,8 +1814,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -1832,8 +1832,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -1850,8 +1850,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -1868,8 +1868,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -1886,8 +1886,8 @@
     "nota_despacho": "798268",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -1904,8 +1904,8 @@
     "nota_despacho": "798268",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -1922,8 +1922,8 @@
     "nota_despacho": "798268",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -1940,8 +1940,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -1958,8 +1958,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -1976,8 +1976,8 @@
     "nota_despacho": "798093, 798267",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -1994,8 +1994,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -2012,8 +2012,8 @@
     "nota_despacho": "798267",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -2030,8 +2030,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -2048,8 +2048,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -2066,8 +2066,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -2084,8 +2084,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -2102,8 +2102,8 @@
     "nota_despacho": "798267",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -2120,8 +2120,8 @@
     "nota_despacho": "798273",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -2138,8 +2138,8 @@
     "nota_despacho": "798086",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -2156,8 +2156,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -2174,8 +2174,8 @@
     "nota_despacho": "798273",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -2192,8 +2192,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -2210,8 +2210,8 @@
     "nota_despacho": "798053, 798273",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -2228,8 +2228,8 @@
     "nota_despacho": "798273",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -2246,8 +2246,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -2264,8 +2264,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2282,8 +2282,8 @@
     "nota_despacho": "798278",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2300,8 +2300,8 @@
     "nota_despacho": "798278",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2318,8 +2318,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2336,8 +2336,8 @@
     "nota_despacho": "798278",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2354,8 +2354,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2372,8 +2372,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2390,8 +2390,8 @@
     "nota_despacho": "798262",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2408,8 +2408,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2426,8 +2426,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2444,8 +2444,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2462,8 +2462,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2480,8 +2480,8 @@
     "nota_despacho": "798262",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2498,8 +2498,8 @@
     "nota_despacho": "798262",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2516,8 +2516,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2534,8 +2534,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2552,8 +2552,8 @@
     "nota_despacho": "798263",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2570,8 +2570,8 @@
     "nota_despacho": "798056",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2588,8 +2588,8 @@
     "nota_despacho": "798263",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2606,8 +2606,8 @@
     "nota_despacho": "798263",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2624,8 +2624,8 @@
     "nota_despacho": "798261",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2642,8 +2642,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2660,8 +2660,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2678,8 +2678,8 @@
     "nota_despacho": "798260",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2696,8 +2696,8 @@
     "nota_despacho": "798260",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2714,8 +2714,8 @@
     "nota_despacho": "798260",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -2732,8 +2732,8 @@
     "nota_despacho": "798049",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -2750,8 +2750,8 @@
     "nota_despacho": "798274",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -2768,8 +2768,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -2786,8 +2786,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -2804,8 +2804,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -2822,8 +2822,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -2840,8 +2840,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -2858,8 +2858,8 @@
     "nota_despacho": "798274",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -2876,8 +2876,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CHIA",
@@ -2894,8 +2894,8 @@
     "nota_despacho": "798140, 798256",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CHIA",
@@ -2912,8 +2912,8 @@
     "nota_despacho": "798256",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT AJIBE",
@@ -2930,8 +2930,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT AJIBE",
@@ -2948,8 +2948,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -2966,8 +2966,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -2984,8 +2984,8 @@
     "nota_despacho": "798277",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3002,8 +3002,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3020,8 +3020,8 @@
     "nota_despacho": "798277",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3038,8 +3038,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3056,8 +3056,8 @@
     "nota_despacho": "798277",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3074,8 +3074,8 @@
     "nota_despacho": "798277",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3092,8 +3092,8 @@
     "nota_despacho": "798277",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3110,8 +3110,8 @@
     "nota_despacho": "798266",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3128,8 +3128,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3146,8 +3146,8 @@
     "nota_despacho": "798266",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3164,8 +3164,8 @@
     "nota_despacho": "798266",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3182,8 +3182,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3200,8 +3200,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3218,8 +3218,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3236,8 +3236,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -3254,8 +3254,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -3272,8 +3272,8 @@
     "nota_despacho": "798280",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -3290,8 +3290,8 @@
     "nota_despacho": "798217, 798280",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -3308,8 +3308,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -3326,8 +3326,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -3344,8 +3344,8 @@
     "nota_despacho": "798280",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -3362,8 +3362,8 @@
     "nota_despacho": "798073",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -3380,8 +3380,8 @@
     "nota_despacho": "798280",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -3398,8 +3398,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -3416,8 +3416,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -3434,8 +3434,8 @@
     "nota_despacho": "798281",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "14/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CHIA",
@@ -3452,8 +3452,8 @@
     "nota_despacho": "798256",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "14/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT COLOMB",
@@ -3470,8 +3470,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "15/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT COLOMB",
@@ -3488,8 +3488,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "15/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CHIA",
@@ -3506,8 +3506,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "16/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CHIA",
@@ -3524,8 +3524,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "16/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT DESIGN",
@@ -3542,8 +3542,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "16/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT DESIGN",
@@ -3560,8 +3560,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "16/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TEMKIN",
@@ -3578,8 +3578,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "20/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TEMKIN",
@@ -3596,8 +3596,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "20/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TEMKIN",
@@ -3614,8 +3614,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "26/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TEMKIN",
@@ -3632,8 +3632,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "03/11/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TEMKIN",
@@ -3650,8 +3650,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "10/11/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TEMKIN",
@@ -3668,8 +3668,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "17/11/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TEMKIN",
@@ -3686,8 +3686,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "17/11/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TEMKIN",
@@ -3704,8 +3704,8 @@
     "nota_despacho": "",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "24/11/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TEMKIN",
@@ -3722,8 +3722,8 @@
     "nota_despacho": "797667",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "02/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TEMKIN",
@@ -3740,8 +3740,8 @@
     "nota_despacho": "798003",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "09/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -3758,8 +3758,8 @@
     "nota_despacho": "797253, 797435, 797678",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PRESH",
@@ -3776,8 +3776,8 @@
     "nota_despacho": "798023",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "29/09/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -3794,8 +3794,8 @@
     "nota_despacho": "797699",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "29/09/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -3812,8 +3812,8 @@
     "nota_despacho": "797818",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -3830,8 +3830,8 @@
     "nota_despacho": "797744",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -3848,8 +3848,8 @@
     "nota_despacho": "797744",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -3866,8 +3866,8 @@
     "nota_despacho": "797744",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -3884,8 +3884,8 @@
     "nota_despacho": "797464, 797703, 797749",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -3902,8 +3902,8 @@
     "nota_despacho": "797749",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -3920,8 +3920,8 @@
     "nota_despacho": "797749",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -3938,8 +3938,8 @@
     "nota_despacho": "797723",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -3956,8 +3956,8 @@
     "nota_despacho": "797724",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -3974,8 +3974,8 @@
     "nota_despacho": "797345, 798242",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PARDO",
@@ -3992,8 +3992,8 @@
     "nota_despacho": "797477, 797750",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PARDO",
@@ -4010,8 +4010,8 @@
     "nota_despacho": "798044",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT SNF",
@@ -4028,8 +4028,8 @@
     "nota_despacho": "798017",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT GENERA",
@@ -4046,8 +4046,8 @@
     "nota_despacho": "797539, 797856",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT GENERA",
@@ -4064,8 +4064,8 @@
     "nota_despacho": "797809",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -4082,8 +4082,8 @@
     "nota_despacho": "797465, 797690",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -4100,8 +4100,8 @@
     "nota_despacho": "797465, 797673",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -4118,8 +4118,8 @@
     "nota_despacho": "797590, 798018",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -4136,8 +4136,8 @@
     "nota_despacho": "797857",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -4154,8 +4154,8 @@
     "nota_despacho": "797678",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -4172,8 +4172,8 @@
     "nota_despacho": "797678, 797812",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PRESH",
@@ -4190,8 +4190,8 @@
     "nota_despacho": "797888",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PRESH",
@@ -4208,8 +4208,8 @@
     "nota_despacho": "797888",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PRESH",
@@ -4226,8 +4226,8 @@
     "nota_despacho": "797888",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CIPRES",
@@ -4244,8 +4244,8 @@
     "nota_despacho": "797547, 798163",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CIPRES",
@@ -4262,8 +4262,8 @@
     "nota_despacho": "797794",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CIPRES",
@@ -4280,8 +4280,8 @@
     "nota_despacho": "797701",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -4298,8 +4298,8 @@
     "nota_despacho": "797482, 797670",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -4316,8 +4316,8 @@
     "nota_despacho": "797808",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -4334,8 +4334,8 @@
     "nota_despacho": "797670",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -4352,8 +4352,8 @@
     "nota_despacho": "797731",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -4370,8 +4370,8 @@
     "nota_despacho": "797700",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -4388,8 +4388,8 @@
     "nota_despacho": "797656",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -4406,8 +4406,8 @@
     "nota_despacho": "797656",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -4424,8 +4424,8 @@
     "nota_despacho": "797487, 797849, 797964",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -4442,8 +4442,8 @@
     "nota_despacho": "797801",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -4460,8 +4460,8 @@
     "nota_despacho": "797801, 797964",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -4478,8 +4478,8 @@
     "nota_despacho": "798192",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -4496,8 +4496,8 @@
     "nota_despacho": "797801",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -4514,8 +4514,8 @@
     "nota_despacho": "797801",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -4532,8 +4532,8 @@
     "nota_despacho": "797655",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -4550,8 +4550,8 @@
     "nota_despacho": "797655",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -4568,8 +4568,8 @@
     "nota_despacho": "797800",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -4586,8 +4586,8 @@
     "nota_despacho": "797732",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -4604,8 +4604,8 @@
     "nota_despacho": "797800",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FOLLAJ",
@@ -4622,8 +4622,8 @@
     "nota_despacho": "797560, 797641, 797740",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FOLLAJ",
@@ -4640,8 +4640,8 @@
     "nota_despacho": "797815",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -4658,8 +4658,8 @@
     "nota_despacho": "797463, 797891",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -4676,8 +4676,8 @@
     "nota_despacho": "797671",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MOUNTA",
@@ -4694,8 +4694,8 @@
     "nota_despacho": "797755",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MOUNTA",
@@ -4712,8 +4712,8 @@
     "nota_despacho": "797755",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -4730,8 +4730,8 @@
     "nota_despacho": "797654",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -4748,8 +4748,8 @@
     "nota_despacho": "797799",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -4766,8 +4766,8 @@
     "nota_despacho": "797458, 797730, 798027",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -4784,8 +4784,8 @@
     "nota_despacho": "797486, 798014",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -4802,8 +4802,8 @@
     "nota_despacho": "797799, 798035",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -4820,8 +4820,8 @@
     "nota_despacho": "797653",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -4838,8 +4838,8 @@
     "nota_despacho": "797485, 797850, 798013",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -4856,8 +4856,8 @@
     "nota_despacho": "797457, 797954, 798119",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -4874,8 +4874,8 @@
     "nota_despacho": "797798",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -4892,8 +4892,8 @@
     "nota_despacho": "797450, 797639, 798244",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -4910,8 +4910,8 @@
     "nota_despacho": "797742",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -4928,8 +4928,8 @@
     "nota_despacho": "797816",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -4946,8 +4946,8 @@
     "nota_despacho": "797578, 797957",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -4964,8 +4964,8 @@
     "nota_despacho": "797817, 798056",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -4982,8 +4982,8 @@
     "nota_despacho": "797743, 797969",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -5000,8 +5000,8 @@
     "nota_despacho": "797976, 798154",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -5018,8 +5018,8 @@
     "nota_despacho": "797644, 798179",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -5036,8 +5036,8 @@
     "nota_despacho": "797576, 797741",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -5054,8 +5054,8 @@
     "nota_despacho": "797814",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CHIA",
@@ -5072,8 +5072,8 @@
     "nota_despacho": "797677",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CHIA",
@@ -5081,17 +5081,17 @@
     "descripcion": "4CATAP154 TAPA TBC GOLDEN 105 X 25 X 24 C930",
     "ow": "42351",
     "orden_compra": "GR18. G8 - 50874",
-    "estado": "Despachado",
-    "fecha_despacho": "03/10/2026",
-    "hora_despacho": "",
+    "estado": "Parcialmente despachado",
+    "fecha_despacho": "09/10/2026",
+    "hora_despacho": "12:02",
     "cantidad_solicitada": "450",
-    "cantidad_despachada": "450",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797404, 797540, 797686, 797811",
+    "cantidad_despachada": "420",
+    "porcentaje_despachado": 93,
+    "nota_despacho": "797404, 797540, 797686, 797811, 798284",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CHIA",
@@ -5108,8 +5108,8 @@
     "nota_despacho": "797676",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT AJIBE",
@@ -5126,8 +5126,8 @@
     "nota_despacho": "797733",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT AJIBE",
@@ -5144,8 +5144,8 @@
     "nota_despacho": "797796",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -5162,8 +5162,8 @@
     "nota_despacho": "797786",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -5180,8 +5180,8 @@
     "nota_despacho": "797786, 798012",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -5198,8 +5198,8 @@
     "nota_despacho": "797699",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -5216,8 +5216,8 @@
     "nota_despacho": "797786",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -5234,8 +5234,8 @@
     "nota_despacho": "797797",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -5252,8 +5252,8 @@
     "nota_despacho": "797652",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -5270,8 +5270,8 @@
     "nota_despacho": "797729",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -5288,8 +5288,8 @@
     "nota_despacho": "797494, 797729",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -5306,8 +5306,8 @@
     "nota_despacho": "797797",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -5324,8 +5324,8 @@
     "nota_despacho": "797652",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -5342,8 +5342,8 @@
     "nota_despacho": "797702",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -5360,8 +5360,8 @@
     "nota_despacho": "797788",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -5378,8 +5378,8 @@
     "nota_despacho": "797788",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -5396,8 +5396,8 @@
     "nota_despacho": "797702",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -5414,8 +5414,8 @@
     "nota_despacho": "797656",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -5432,8 +5432,8 @@
     "nota_despacho": "797655",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -5450,8 +5450,8 @@
     "nota_despacho": "797652",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -5468,8 +5468,8 @@
     "nota_despacho": "797744",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -5486,8 +5486,8 @@
     "nota_despacho": "797818",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CIPRES",
@@ -5504,8 +5504,8 @@
     "nota_despacho": "797794",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -5522,8 +5522,8 @@
     "nota_despacho": "797798",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CHIA",
@@ -5531,17 +5531,17 @@
     "descripcion": "4CACAJT56 CAPUCHON SIN LOGO  TAPA Y BASE AA  SIN IMPR",
     "ow": "",
     "orden_compra": "GR18. G8 - 50874",
-    "estado": "Despachado",
-    "fecha_despacho": "03/10/2026",
+    "estado": "Sin clasificar",
+    "fecha_despacho": "",
     "hora_despacho": "",
     "cantidad_solicitada": "300",
-    "cantidad_despachada": "300",
-    "porcentaje_despachado": 100,
-    "nota_despacho": "797811",
+    "cantidad_despachada": "",
+    "porcentaje_despachado": 0,
+    "nota_despacho": "797811, 798286",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "06/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -5558,8 +5558,8 @@
     "nota_despacho": "798054",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "09/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -5576,8 +5576,8 @@
     "nota_despacho": "797975",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "09/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -5594,8 +5594,8 @@
     "nota_despacho": "797975",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "09/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -5612,8 +5612,8 @@
     "nota_despacho": "798073",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "09/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -5630,8 +5630,8 @@
     "nota_despacho": "798135",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -5648,8 +5648,8 @@
     "nota_despacho": "798088",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -5666,8 +5666,8 @@
     "nota_despacho": "798108",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT RIO FR",
@@ -5684,8 +5684,8 @@
     "nota_despacho": "798135",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -5702,8 +5702,8 @@
     "nota_despacho": "798144",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -5720,8 +5720,8 @@
     "nota_despacho": "798144",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -5738,8 +5738,8 @@
     "nota_despacho": "798235",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -5756,8 +5756,8 @@
     "nota_despacho": "798043",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -5774,8 +5774,8 @@
     "nota_despacho": "798235",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -5792,8 +5792,8 @@
     "nota_despacho": "798235",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -5810,8 +5810,8 @@
     "nota_despacho": "798235",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -5828,8 +5828,8 @@
     "nota_despacho": "798235",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -5846,8 +5846,8 @@
     "nota_despacho": "798032",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT BOJACA",
@@ -5864,8 +5864,8 @@
     "nota_despacho": "798144",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -5882,8 +5882,8 @@
     "nota_despacho": "798242",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -5900,8 +5900,8 @@
     "nota_despacho": "798242",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -5918,8 +5918,8 @@
     "nota_despacho": "798242",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -5936,8 +5936,8 @@
     "nota_despacho": "798153",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -5954,8 +5954,8 @@
     "nota_despacho": "798153",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -5972,8 +5972,8 @@
     "nota_despacho": "798153",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MELODY",
@@ -5990,8 +5990,8 @@
     "nota_despacho": "798153",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PARDO",
@@ -6008,8 +6008,8 @@
     "nota_despacho": "798044",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PARDO",
@@ -6026,8 +6026,8 @@
     "nota_despacho": "798236",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PARDO",
@@ -6044,8 +6044,8 @@
     "nota_despacho": "798033",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PARDO",
@@ -6062,8 +6062,8 @@
     "nota_despacho": "798145",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PARDO",
@@ -6080,8 +6080,8 @@
     "nota_despacho": "798145",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT SNF",
@@ -6098,8 +6098,8 @@
     "nota_despacho": "798237",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT SNF",
@@ -6116,8 +6116,8 @@
     "nota_despacho": "798146",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT GENERA",
@@ -6134,8 +6134,8 @@
     "nota_despacho": "798138",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT GENERA",
@@ -6152,8 +6152,8 @@
     "nota_despacho": "798138",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT GENERA",
@@ -6170,8 +6170,8 @@
     "nota_despacho": "798138",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT GENERA",
@@ -6188,8 +6188,8 @@
     "nota_despacho": "798138",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -6206,8 +6206,8 @@
     "nota_despacho": "798157",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -6224,8 +6224,8 @@
     "nota_despacho": "798066",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -6242,8 +6242,8 @@
     "nota_despacho": "798066",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -6260,8 +6260,8 @@
     "nota_despacho": "798157",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT ACACIA",
@@ -6278,8 +6278,8 @@
     "nota_despacho": "798157",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT QUALIT",
@@ -6296,8 +6296,8 @@
     "nota_despacho": "798241",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT QUALIT",
@@ -6314,8 +6314,8 @@
     "nota_despacho": "798125",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT QUALIT",
@@ -6332,8 +6332,8 @@
     "nota_despacho": "798125",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CIPRES",
@@ -6350,8 +6350,8 @@
     "nota_despacho": "798072",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CIPRES",
@@ -6368,8 +6368,8 @@
     "nota_despacho": "798072",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CIPRES",
@@ -6386,8 +6386,8 @@
     "nota_despacho": "798121",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CIPRES",
@@ -6404,8 +6404,8 @@
     "nota_despacho": "798072",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CIPRES",
@@ -6422,8 +6422,8 @@
     "nota_despacho": "798163",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -6440,8 +6440,8 @@
     "nota_despacho": "798215",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -6458,8 +6458,8 @@
     "nota_despacho": "798070",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -6476,8 +6476,8 @@
     "nota_despacho": "798122",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -6494,8 +6494,8 @@
     "nota_despacho": "798216",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -6512,8 +6512,8 @@
     "nota_despacho": "798152",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FALCON",
@@ -6530,8 +6530,8 @@
     "nota_despacho": "798152",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6548,8 +6548,8 @@
     "nota_despacho": "798151",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6566,8 +6566,8 @@
     "nota_despacho": "798075",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6584,8 +6584,8 @@
     "nota_despacho": "798075",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6602,8 +6602,8 @@
     "nota_despacho": "798151",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6620,8 +6620,8 @@
     "nota_despacho": "798075",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6638,8 +6638,8 @@
     "nota_despacho": "798239",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6656,8 +6656,8 @@
     "nota_despacho": "798192",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6674,8 +6674,8 @@
     "nota_despacho": "798075",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6692,8 +6692,8 @@
     "nota_despacho": "798075, 798151",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6710,8 +6710,8 @@
     "nota_despacho": "798239",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6728,8 +6728,8 @@
     "nota_despacho": "798192",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6746,8 +6746,8 @@
     "nota_despacho": "798239",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6764,8 +6764,8 @@
     "nota_despacho": "798239",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT PLANIC",
@@ -6782,8 +6782,8 @@
     "nota_despacho": "798075",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -6800,8 +6800,8 @@
     "nota_despacho": "798150",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -6818,8 +6818,8 @@
     "nota_despacho": "798150",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -6836,8 +6836,8 @@
     "nota_despacho": "798150",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -6854,8 +6854,8 @@
     "nota_despacho": "798190",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT UBATE",
@@ -6872,8 +6872,8 @@
     "nota_despacho": "798150",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FOLLAJ",
@@ -6890,8 +6890,8 @@
     "nota_despacho": "798115",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -6908,8 +6908,8 @@
     "nota_despacho": "798065",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -6926,8 +6926,8 @@
     "nota_despacho": "798156",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT LUISA",
@@ -6944,8 +6944,8 @@
     "nota_despacho": "798156",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MOUNTA",
@@ -6962,8 +6962,8 @@
     "nota_despacho": "798155",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MOUNTA",
@@ -6980,8 +6980,8 @@
     "nota_despacho": "798155",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MOUNTA",
@@ -6998,8 +6998,8 @@
     "nota_despacho": "798064",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MOUNTA",
@@ -7016,8 +7016,8 @@
     "nota_despacho": "798064",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -7034,8 +7034,8 @@
     "nota_despacho": "798094",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -7052,8 +7052,8 @@
     "nota_despacho": "798120",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -7070,8 +7070,8 @@
     "nota_despacho": "798120",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -7088,8 +7088,8 @@
     "nota_despacho": "798119",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -7106,8 +7106,8 @@
     "nota_despacho": "798161",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -7124,8 +7124,8 @@
     "nota_despacho": "798093",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -7142,8 +7142,8 @@
     "nota_despacho": "798119",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT TANDIL",
@@ -7160,8 +7160,8 @@
     "nota_despacho": "798093, 798119",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -7178,8 +7178,8 @@
     "nota_despacho": "798105",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -7196,8 +7196,8 @@
     "nota_despacho": "798053",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -7214,8 +7214,8 @@
     "nota_despacho": "798086",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT J CHIA",
@@ -7232,8 +7232,8 @@
     "nota_despacho": "798113",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7250,8 +7250,8 @@
     "nota_despacho": "798071",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7268,8 +7268,8 @@
     "nota_despacho": "798162",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7286,8 +7286,8 @@
     "nota_despacho": "798087",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7304,8 +7304,8 @@
     "nota_despacho": "798116",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7322,8 +7322,8 @@
     "nota_despacho": "798116",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7340,8 +7340,8 @@
     "nota_despacho": "798116",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7358,8 +7358,8 @@
     "nota_despacho": "798134",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7376,8 +7376,8 @@
     "nota_despacho": "798117",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7394,8 +7394,8 @@
     "nota_despacho": "798117",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7412,8 +7412,8 @@
     "nota_despacho": "798117",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7430,8 +7430,8 @@
     "nota_despacho": "798107",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7448,8 +7448,8 @@
     "nota_despacho": "798106",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7466,8 +7466,8 @@
     "nota_despacho": "798049",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7484,8 +7484,8 @@
     "nota_despacho": "798055",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MG",
@@ -7502,8 +7502,8 @@
     "nota_despacho": "798049",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -7520,8 +7520,8 @@
     "nota_despacho": "798114",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -7538,8 +7538,8 @@
     "nota_despacho": "798114",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CASABL",
@@ -7556,8 +7556,8 @@
     "nota_despacho": "798114",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CHIA",
@@ -7574,8 +7574,8 @@
     "nota_despacho": "798140",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT CHIA",
@@ -7592,8 +7592,8 @@
     "nota_despacho": "798140",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT AJIBE",
@@ -7610,8 +7610,8 @@
     "nota_despacho": "798240",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT AJIBE",
@@ -7628,8 +7628,8 @@
     "nota_despacho": "798124",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT AJIBE",
@@ -7646,8 +7646,8 @@
     "nota_despacho": "798124",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT AJIBE",
@@ -7664,8 +7664,8 @@
     "nota_despacho": "798193",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT AJIBE",
@@ -7682,8 +7682,8 @@
     "nota_despacho": "798124",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT AJIBE",
@@ -7700,8 +7700,8 @@
     "nota_despacho": "798193",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT AJIBE",
@@ -7718,8 +7718,8 @@
     "nota_despacho": "798240",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT AJIBE",
@@ -7736,8 +7736,8 @@
     "nota_despacho": "798240",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT AJIBE",
@@ -7754,8 +7754,8 @@
     "nota_despacho": "798240",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -7772,8 +7772,8 @@
     "nota_despacho": "798118",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -7790,8 +7790,8 @@
     "nota_despacho": "798160",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -7808,8 +7808,8 @@
     "nota_despacho": "798069",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -7826,8 +7826,8 @@
     "nota_despacho": "798118",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -7844,8 +7844,8 @@
     "nota_despacho": "798118",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -7862,8 +7862,8 @@
     "nota_despacho": "798069",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -7880,8 +7880,8 @@
     "nota_despacho": "798149",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -7898,8 +7898,8 @@
     "nota_despacho": "798149",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -7916,8 +7916,8 @@
     "nota_despacho": "798189",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT FLOVAL",
@@ -7934,8 +7934,8 @@
     "nota_despacho": "798149",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -7952,8 +7952,8 @@
     "nota_despacho": "798073",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -7970,8 +7970,8 @@
     "nota_despacho": "798217",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -7988,8 +7988,8 @@
     "nota_despacho": "798123",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -8006,8 +8006,8 @@
     "nota_despacho": "798073",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -8024,8 +8024,8 @@
     "nota_despacho": "798123",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -8042,8 +8042,8 @@
     "nota_despacho": "798217",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   },
   {
     "finca": "GHT MANA",
@@ -8060,7 +8060,7 @@
     "nota_despacho": "798123",
     "fecha_estimada_despacho": "",
     "fecha_entrega": "13/10/2026",
-    "porcentaje_global": 56,
-    "despachos_hasta": "09/10/2026 11:58"
+    "porcentaje_global": 61,
+    "despachos_hasta": "09/10/2026 15:57"
   }
 ]
