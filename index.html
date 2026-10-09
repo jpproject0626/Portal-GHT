@@ -595,9 +595,10 @@
     font-size:16px; font-weight:400; font-style:italic; color:#98a2b3;
   }
   .pd-ship-year{ font-family:'Effra', Helvetica, Arial, sans-serif; font-size:12.5px; color:#667085; }
-  .pd-ship-hora{ margin-top:6px; display:flex; align-items:baseline; gap:8px; white-space:nowrap; }
+  .pd-ship-linea{ margin-top:6px; display:flex; align-items:baseline; gap:10px; font-family:'Effra', Helvetica, Arial, sans-serif; font-size:12.5px; color:#667085; white-space:nowrap; }
+  .pd-ship-sep{ width:1px; height:10px; background:#d0d5dd; align-self:center; }
   .pd-ship-hora-label{ font-family:'Effra', Helvetica, Arial, sans-serif; font-size:12.5px; color:#667085; }
-  .pd-ship-hora-valor{ font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums; font-size:13px; font-weight:500; color:#00205B; }
+  .pd-ship-hora-valor{ font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums; font-size:13px; font-weight:500; color:#00205B; margin-left:-2px; }
   .pd-entrega{
     margin-top:12px; padding-top:10px; border-top:1px solid #eaecf0;
     display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;
@@ -1154,8 +1155,7 @@
               <div class="pd-strip-label">Último envío</div>
               ${fechaUltimoEnvio ? `
                 <div class="pd-ship-date">${ultimoEnvioDM}</div>
-                <div class="pd-ship-year">${ultimoEnvioAnio}</div>
-                ${ultimoEnvioHora ? `<div class="pd-ship-hora"><span class="pd-ship-hora-label">Hora</span><span class="pd-ship-hora-valor">${ultimoEnvioHora}</span></div>` : ''}
+                <div class="pd-ship-linea"><span class="pd-ship-year">${ultimoEnvioAnio}</span>${ultimoEnvioHora ? `<span class="pd-ship-sep"></span><span class="pd-ship-hora-label">Hora</span><span class="pd-ship-hora-valor">${ultimoEnvioHora}</span>` : ''}</div>
               ` : `<div class="pd-ship-date pending">Sin envíos aún</div>`}
               <div class="pd-entrega">
                 <span>Entrega estimada</span>
