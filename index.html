@@ -595,6 +595,9 @@
     font-size:16px; font-weight:400; font-style:italic; color:#98a2b3;
   }
   .pd-ship-year{ font-family:'Effra', Helvetica, Arial, sans-serif; font-size:12.5px; color:#667085; }
+  .pd-ship-hora{ margin-top:6px; display:flex; align-items:baseline; gap:8px; white-space:nowrap; }
+  .pd-ship-hora-label{ font-family:'Effra', Helvetica, Arial, sans-serif; font-size:12.5px; color:#667085; }
+  .pd-ship-hora-valor{ font-family:'Effra', sans-serif; font-variant-numeric:tabular-nums; font-size:13px; font-weight:500; color:#00205B; }
   .pd-entrega{
     margin-top:12px; padding-top:10px; border-top:1px solid #eaecf0;
     display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;
@@ -1099,6 +1102,12 @@
     const colorBarra = '#00205B';
 
     const fechaUltimoEnvio = item.fecha_despacho && item.fecha_despacho.trim() ? item.fecha_despacho : null;
+    let ultimoEnvioHora = '';
+    const mHora = fechaUltimoEnvio && item.hora_despacho ? /^(\d{1,2}):(\d{2})$/.exec(item.hora_despacho.trim()) : null;
+    if (mHora){
+      const h24 = parseInt(mHora[1], 10);
+      ultimoEnvioHora = `${h24 % 12 === 0 ? 12 : h24 % 12}:${mHora[2]} ${h24 < 12 ? 'a. m.' : 'p. m.'}`;
+    }
     let ultimoEnvioDM = '', ultimoEnvioAnio = '';
     if (fechaUltimoEnvio){
       const partes = fechaUltimoEnvio.split('/');
@@ -1146,6 +1155,7 @@
               ${fechaUltimoEnvio ? `
                 <div class="pd-ship-date">${ultimoEnvioDM}</div>
                 <div class="pd-ship-year">${ultimoEnvioAnio}</div>
+                ${ultimoEnvioHora ? `<div class="pd-ship-hora"><span class="pd-ship-hora-label">Hora</span><span class="pd-ship-hora-valor">${ultimoEnvioHora}</span></div>` : ''}
               ` : `<div class="pd-ship-date pending">Sin envíos aún</div>`}
               <div class="pd-entrega">
                 <span>Entrega estimada</span>

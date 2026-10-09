@@ -713,8 +713,13 @@ def cargar_despachos(ruta_despachos):
             cantidad = 0.0
 
         valor_fecha = ws.cell_value(r, idx_fecha)
+        hora = ""
         try:
-            fecha = xlrd.xldate.xldate_as_datetime(valor_fecha, wb.datemode).strftime("%d/%m/%Y")
+            momento = xlrd.xldate.xldate_as_datetime(valor_fecha, wb.datemode)
+            fecha = momento.strftime("%d/%m/%Y")
+            # Si el despacho no trae hora (queda 00:00) la hora se deja vacia: el portal muestra solo la fecha.
+            if (momento.hour, momento.minute) != (0, 0):
+                hora = momento.strftime("%H:%M")
         except (ValueError, TypeError):
             fecha = ""
 
@@ -728,7 +733,7 @@ def cargar_despachos(ruta_despachos):
             es_devolucion = limpiar_texto(ws.cell_value(r, idx_devolucion)) not in ("", "0", "0.0")
         lineas.append({
             "clave": clave_linea, "ov": ov, "elemento": elemento,
-            "nota": nota, "cantidad": cantidad, "fecha": fecha, "devolucion": es_devolucion,
+            "nota": nota, "cantidad": cantidad, "fecha": fecha, "hora": hora, "devolucion": es_devolucion,
         })
 
     return lineas
@@ -1242,7 +1247,7 @@ def generar_datos(auto=False, cfg=None, ahora=None):
             notas_nuevas += 1
         notas_historico[linea["clave"]] = {
             "ov": linea["ov"], "elemento": linea["elemento"], "nota": linea["nota"],
-            "cantidad": linea["cantidad"], "fecha": linea["fecha"],
+            "cantidad": linea["cantidad"], "fecha": linea["fecha"], "hora": linea["hora"],
             "devolucion": linea["devolucion"],
         }
 
@@ -1253,14 +1258,18 @@ def generar_datos(auto=False, cfg=None, ahora=None):
     acumulado_por_clave = {}
     for linea_guardada in notas_historico.values():
         clave_acum = f"{linea_guardada['ov']}|{linea_guardada.get('elemento', '')}"
-        entrada = acumulado_por_clave.setdefault(clave_acum, {"cantidad": 0.0, "fecha": None, "notas": set()})
+        entrada = acumulado_por_clave.setdefault(clave_acum, {"cantidad": 0.0, "fecha": None, "hora": "", "notas": set()})
         entrada["cantidad"] += linea_guardada["cantidad"]
         if linea_guardada.get("nota"):
             entrada["notas"].add(linea_guardada["nota"])
         try:
             f_linea = datetime.strptime(linea_guardada["fecha"], "%d/%m/%Y").date()
+            h_linea = linea_guardada.get("hora", "")
             if entrada["fecha"] is None or f_linea > entrada["fecha"]:
                 entrada["fecha"] = f_linea
+                entrada["hora"] = h_linea
+            elif f_linea == entrada["fecha"] and h_linea > entrada["hora"]:
+                entrada["hora"] = h_linea   # mismo dia: gana el envio mas tarde ("" = sin hora)
         except (ValueError, TypeError):
             pass
 
@@ -1309,6 +1318,7 @@ def generar_datos(auto=False, cfg=None, ahora=None):
 
         estado = estado_produccion
         fecha_despacho_txt = ""
+        hora_despacho_txt = ""
         if cantidad_despachada > 0:
             if cant_sol_original and cantidad_despachada >= cant_sol_original:
                 estado = "Despachado"
@@ -1316,6 +1326,7 @@ def generar_datos(auto=False, cfg=None, ahora=None):
                 estado = "Parcialmente despachado"
             if fecha_ultimo:
                 fecha_despacho_txt = fecha_ultimo.strftime("%d/%m/%Y")
+                hora_despacho_txt = info_despacho.get("hora", "")
 
         porcentaje_despachado = None
         if cant_sol_original:
@@ -1329,6 +1340,8 @@ def generar_datos(auto=False, cfg=None, ahora=None):
             "orden_compra": orden_compra,
             "estado": estado,
             "fecha_despacho": fecha_despacho_txt,
+            # Hora del ultimo envio ("HH:MM", vacia si el despacho no trae hora). Solo la usa la pantalla del pedido.
+            "hora_despacho": hora_despacho_txt,
             "cantidad_solicitada": formatear_cantidad(cant_sol_original) if cant_sol_original else "",
             "cantidad_despachada": formatear_cantidad(cantidad_despachada) if cantidad_despachada else "",
             "porcentaje_despachado": porcentaje_despachado,
