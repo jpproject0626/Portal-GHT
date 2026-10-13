@@ -907,6 +907,7 @@ def escribir_ultima_corrida(cfg, ahora, codigo, estado, mensaje_error, despachos
 ARCHIVO_CORREO_ASUNTO = "correo_asunto.txt"
 ARCHIVO_CORREO_CUERPO = "correo_cuerpo.html"
 CREADO_POR = "Juan Pablo Salcedo Torres"   # segunda linea del pie de todos los correos
+URL_LOGO_CORREO = "https://portal-ght.vercel.app/SW_Logo_Primary_2COL.png"   # logo del pie de los correos (publico, en el repositorio)
 
 # Motivo en lenguaje simple y que revisar, segun el codigo de salida (sin rutas completas).
 MOTIVOS_ERROR = {
@@ -959,9 +960,28 @@ def _marco_correo(titulo, color_titulo, contenido):
         'font-size:14px;line-height:1.5;color:#1f2933;">\n'
         '<h2 style="margin:0 0 14px;font-size:18px;color:' + color_titulo + ';">' + html_lib.escape(titulo) + '</h2>\n'
         + contenido +
-        '<p style="margin:22px 0 0;font-size:12px;color:#7b8794;">Mensaje automático del portal GHT.</p>\n'
-        '<p style="margin:8px 0 0;font-size:12px;color:#7b8794;">Autor: ' + html_lib.escape(CREADO_POR) + '</p>\n'
+        _pie_correo() +
         '</div>\n</body></html>\n'
+    )
+
+
+def _pie_correo():
+    """Pie comun de TODOS los correos automaticos (actualizado, alerta y cierre de ciclo). Tabla con estilos en linea
+    (sin flexbox ni CSS externo) para que lo respete Outlook. El logo es una URL publica; sin telefono (intencional)."""
+    fuente = "font-family:Arial,Helvetica,sans-serif;"
+    return (
+        '<div style="margin-top:32px;">\n'
+        '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">\n'
+        '<tr><td align="left" style="padding-top:20px;border-top:1px solid #eaecf0;text-align:left;' + fuente
+        + 'font-size:12px;color:#667085;">Mensaje automático del portal GHT</td></tr>\n'
+        '<tr><td align="left" style="padding-top:4px;text-align:left;' + fuente + 'font-size:13px;color:#344054;">'
+        'Desarrollado por <strong style="color:#00205B;">' + html_lib.escape(CREADO_POR) + '</strong></td></tr>\n'
+        '<tr><td align="left" style="padding-top:6px;text-align:left;' + fuente + 'font-size:12px;line-height:1.5;color:#667085;">'
+        '<strong style="color:#344054;">Smurfit Westrock Colombia</strong></td></tr>\n'
+        '<tr><td align="left" style="padding-top:10px;text-align:left;">'
+        '<img src="' + URL_LOGO_CORREO + '" alt="Smurfit Westrock" width="155" height="52" '
+        'style="display:block;width:155px;height:52px;border:0;margin-left:-9px;"></td></tr>\n'
+        '</table>\n</div>\n'
     )
 
 
