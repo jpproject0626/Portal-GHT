@@ -999,6 +999,15 @@
     const m = (descripcion || '').match(/4C[A-Za-z]+\d+/i);
     return m ? m[0] : '';
   }
+  // Linea bajo la finca en el listado de resultados: el CODIGO del producto (primera palabra de la descripcion, sin
+  // guiones ni signos al final). Si la descripcion no trae codigo (ej. "TAPA STD FLOREXPO ..."), la descripcion completa.
+  function etiquetaProductoListado(item){
+    const desc = (item.descripcion || '').trim();
+    if (!desc) return item.orden_compra ? 'OC ' + item.orden_compra : '—';
+    const primera = desc.split(/\s+/)[0].replace(/[^A-Za-z0-9]+$/, '');
+    if (/^(?=.*\d)(?=.*[A-Za-z])[A-Za-z0-9]+$/.test(primera)) return primera;
+    return extraerCodigoProducto(desc) || desc;
+  }
 
   const ESTADOS = ["Pedido recibido","En producción","Producido","Parcialmente despachado","Despachado"];
   const STAMP_CLASS = {
@@ -1235,7 +1244,7 @@
         <button type="button" class="match-row" data-index="${i}">
           <div class="match-row-info">
             <div class="match-row-finca">${item.finca}</div>
-            <div class="match-row-oc">${item.orden_compra ? 'OC ' + item.orden_compra : '—'}</div>
+            <div class="match-row-oc">${etiquetaProductoListado(item)}</div>
           </div>
           <div class="stamp ${stampClass}"><span class="stamp-dot"></span>${item.estado}</div>
           <svg class="match-row-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
