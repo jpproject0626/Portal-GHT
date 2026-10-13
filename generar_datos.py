@@ -977,7 +977,7 @@ def _pie_correo():
         '<tr><td align="left" style="padding-top:4px;text-align:left;' + fuente + 'font-size:13px;color:#344054;">'
         'Desarrollado por <strong style="color:#00205B;">' + html_lib.escape(CREADO_POR) + '</strong></td></tr>\n'
         '<tr><td align="left" style="padding-top:6px;text-align:left;' + fuente + 'font-size:12px;line-height:1.5;color:#667085;">'
-        '<strong style="color:#344054;">Smurfit Westrock Colombia</strong></td></tr>\n'
+        '<strong style="color:#344054;">Smurfit Westrock Colombia</strong><br>Av. Américas # 56-41 Bogotá</td></tr>\n'
         '<tr><td align="left" style="padding-top:10px;text-align:left;">'
         '<img src="' + URL_LOGO_CORREO + '" alt="Smurfit Westrock" width="155" height="52" '
         'style="display:block;width:155px;height:52px;border:0;margin-left:-9px;"></td></tr>\n'
