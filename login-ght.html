@@ -89,27 +89,21 @@
     .ght-emblema{height:64px} .ght-logo{height:56px} .ght-sep{height:52px}
     .ght-nombre{font-size:26px}
   }
-  /* Bienvenida solo para el usuario interno de Smurfit (rol 'interno'). */
+  /* Bienvenida solo para el usuario interno de Smurfit (rol 'interno'): "Bienvenido", linea y logo completo en version negativa. */
   .sw-welcome{position:fixed;inset:0;z-index:10;background:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;visibility:hidden;pointer-events:none}
   .page.success-sw .sw-welcome{opacity:1;visibility:visible;pointer-events:auto}
-  .sw-emblem{position:relative;height:96px}
-  .sw-emblem img{display:block;height:96px;width:auto}
-  .sw-emblem .sw-base{opacity:.18}
-  .sw-emblem .sw-fill{position:absolute;inset:0;width:100%;height:100%;clip-path:inset(0 100% 0 0);transition:clip-path 2.2s cubic-bezier(.45,0,.2,1) .2s}
+  .sw-bienvenido{font:500 29px/1.1 'Source Serif Pro', Georgia, serif;letter-spacing:-.015em;color:#fff;white-space:nowrap;opacity:0;transform:translateY(8px);
+                 transition:opacity .9s cubic-bezier(.2,.7,.2,1) .2s,transform .9s cubic-bezier(.2,.7,.2,1) .2s}
+  .page.success-sw .sw-bienvenido{opacity:1;transform:none}
+  .sw-linea{margin-top:16px;width:32px;height:1px;background:#00A9E0;transform:scaleX(0);transform-origin:center;transition:transform .8s cubic-bezier(.2,.7,.2,1) .5s}
+  .page.success-sw .sw-linea{transform:scaleX(1)}
+  .sw-logo{position:relative;margin-top:28px;height:76px;max-width:80vw}
+  .sw-logo img{display:block;height:76px;width:auto;max-width:80vw;object-fit:contain}
+  .sw-logo .sw-base{opacity:.16}
+  .sw-logo .sw-fill{position:absolute;inset:0;width:100%;height:100%;clip-path:inset(0 100% 0 0);transition:clip-path 2.2s cubic-bezier(.45,0,.2,1) .2s}
   .page.success-sw .sw-fill{clip-path:inset(0 0 0 0)}
-  .sw-bienvenido{margin-top:36px;display:flex;align-items:center;justify-content:center;gap:12px;opacity:0;transition:opacity .8s ease .4s}
-  .sw-bienvenido span{font:500 13px 'Effra', Helvetica, Arial, sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8FD3F0;white-space:nowrap}
-  .sw-bienvenido i{display:block;width:24px;height:1px;background:#00A9E0;transform:scaleX(0);transition:transform .8s cubic-bezier(.2,.7,.2,1) .5s}
-  .sw-bienvenido .sw-l{transform-origin:right} .sw-bienvenido .sw-r{transform-origin:left}
-  .page.success-sw .sw-bienvenido{opacity:1} .page.success-sw .sw-bienvenido i{transform:scaleX(1)}
-  .sw-nombre{margin-top:12px;font:500 32px/1.1 'Source Serif Pro', Georgia, serif;letter-spacing:-.015em;color:#fff;white-space:nowrap;opacity:0;transform:translateY(8px);
-             transition:opacity .9s cubic-bezier(.2,.7,.2,1) .6s,transform .9s cubic-bezier(.2,.7,.2,1) .6s}
-  .page.success-sw .sw-nombre{opacity:1;transform:none}
   /* Tamanos de las dos bienvenidas en tablet/escritorio. En celular (<=480px) no se aplica nada de esto. */
   @media (min-width:481px){
-    .sw-emblem{height:84px} .sw-emblem img{height:84px}
-    .sw-bienvenido{margin-top:32px}
-    .sw-nombre{font-size:29px}
     .ght-marcas{gap:24px}
     .ght-emblema{height:70px} .ght-logo{height:62px} .ght-sep{height:56px}
     .ght-bienvenido{margin-top:32px}
@@ -179,13 +173,13 @@
   </div>
 
   <div class="sw-welcome" aria-hidden="true">
-    <div class="sw-emblem">
-      <!-- Mismo emblema del login, en el Light Blue de la marca (#08B2FF). -->
-      <img class="sw-base" src="/assets/sw-emblem-lightblue.png" alt="" />
-      <img class="sw-fill" src="/assets/sw-emblem-lightblue.png" alt="" />
+    <div class="sw-bienvenido">Bienvenido</div>
+    <div class="sw-linea"></div>
+    <!-- Logo oficial completo en version negativa, sin modificar: capa tenue abajo y la misma encima que se revela de izquierda a derecha. -->
+    <div class="sw-logo">
+      <img class="sw-base" src="/assets/sw-logo-reverse.png" alt="" />
+      <img class="sw-fill" src="/assets/sw-logo-reverse.png" alt="" />
     </div>
-    <div class="sw-bienvenido"><i class="sw-l"></i><span>Bienvenido</span><i class="sw-r"></i></div>
-    <div class="sw-nombre">Smurfit Westrock</div>
   </div>
 </div>
 
