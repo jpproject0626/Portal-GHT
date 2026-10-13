@@ -28,6 +28,11 @@ salida_interna/
 salida/
 logs/
 
+# Envio del correo del corte por Outlook: scripts y destinatarios de ESTE equipo, no se suben
+corte_portal.bat
+enviar_correo.ps1
+config_correo.json
+
 # Basura de entorno local
 .Rhistory
 portal_ght_web.zip

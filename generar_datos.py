@@ -61,6 +61,7 @@ import base64
 import hashlib
 import html as html_lib
 import json
+import re
 import os
 import struct
 import sys
@@ -110,6 +111,7 @@ SALIDA_FALTA_ARCHIVO = 2    # falta un archivo de entrada
 SALIDA_FALTA_CLAVE = 3      # falta la clave interna o la libreria cryptography
 SALIDA_BLOQUEADO = 4        # archivo de entrada bloqueado / incompleto (tras reintentar)
 SALIDA_CONFIG = 5           # config.json invalido
+SALIDA_ESTRUCTURA = 6       # el BACKLOG cambio de formato: columnas de 'Order Capacity' no identificables o con contenido invalido
 
 # Todas las rutas son relativas a la carpeta de config.json (la del proyecto).
 CONFIG_POR_DEFECTO = {
@@ -596,16 +598,98 @@ def clasificar_estado_ght(estatus_omp_final):
     return "Sin clasificar"
 
 
-def cargar_order_capacity(ruta_backlog):
-    """Lee la hoja 'Order Capacity' del backlog y arma un mapa ORDER ID -> PRODUCTIONSTATUS."""
+def normalizar_encabezado(valor):
+    """Minusculas, sin acentos y sin espacios extra: para comparar nombres de columna."""
+    import unicodedata
+    texto = unicodedata.normalize("NFKD", "" if valor is None else str(valor))
+    texto = "".join(c for c in texto if not unicodedata.combining(c))
+    return " ".join(texto.lower().split())
+
+
+# Hoja 'Order Capacity': el BACKLOG ha llegado con los encabezados en ingles (ORDER ID, PRODUCTIONSTATUS) y,
+# desde el 13/10/2026, en espanol (No Pedido, Estadodeproduccion). Se aceptan ambos y, si no aparece ninguno, se usa
+# la posicion habitual (B y Q) siempre que el encabezado de esa posicion no este vacio.
+COLUMNAS_ORDER_CAPACITY = {
+    "id_pedido": {"nombres": ("ORDER ID", "No Pedido"), "posicion": 1, "letra": "B", "etiqueta": "ID de pedido"},
+    "estado": {"nombres": ("PRODUCTIONSTATUS", "Estadodeproducci\u00f3n"), "posicion": 16, "letra": "Q",
+               "etiqueta": "estado de produccion"},
+}
+MIN_PORCENTAJE_ID_NUMERICO = 0.90      # del ID de pedido: numeros de 4 o 5 digitos o tipo 585550A-02 (los codigos PR/PL se toleran)
+MAX_PORCENTAJE_ID_CODIGOS = 0.10       # maximo de codigos PR/PL tolerados sobre el total
+MIN_PORCENTAJE_ESTADO_CONOCIDO = 0.50  # del estado de produccion: textos parecidos a los conocidos
+ESTADOS_CONOCIDOS = ("programaci", "plano mest", "totalmente", "terminado", "parcial", "produccion", "product",
+                     "sin planificar")
+
+
+def validar_contenido_order_capacity(valores_id, valores_estado):
+    """Devuelve la lista de problemas (vacia si el contenido es el esperado). Se aplica igual cuando las columnas
+    se encontraron por nombre o por posicion."""
+    problemas = []
+    ids = [limpiar_texto(v) for v in valores_id if limpiar_texto(v)]
+    if not ids:
+        problemas.append("la columna del ID de pedido no tiene valores")
+    else:
+        codigos = sum(1 for v in ids if re.fullmatch(r"(PR|PL)\d+", v, re.IGNORECASE))
+        # formas reales del ID en el BACKLOG: numero de OW de 4 o 5 digitos (42576) y pedido-linea (585550A-02)
+        numericos = sum(1 for v in ids if re.fullmatch(r"\d{4,5}(\.0)?|\d{5,7}[A-Za-z]-\d{1,3}", v))
+        sin_codigos = len(ids) - codigos
+        pct = numericos / sin_codigos if sin_codigos else 0.0
+        if codigos / len(ids) > MAX_PORCENTAJE_ID_CODIGOS:
+            problemas.append(f"el ID de pedido tiene demasiados codigos PR/PL ({codigos} de {len(ids)}; maximo tolerado {MAX_PORCENTAJE_ID_CODIGOS:.0%})")
+        elif pct < MIN_PORCENTAJE_ID_NUMERICO:
+            problemas.append(f"el ID de pedido no parece un ID de pedido: solo {pct:.0%} de sus valores son numeros de 4 o 5 digitos o del tipo 585550A-02 "
+                             f"(se esperaba al menos {MIN_PORCENTAJE_ID_NUMERICO:.0%}; codigos PR/PL: {codigos} de {len(ids)})")
+    estados = [normalizar_encabezado(v) for v in valores_estado if limpiar_texto(v)]
+    if not estados:
+        problemas.append("la columna del estado de produccion no tiene valores")
+    else:
+        conocidos = sum(1 for v in estados if any(k in v for k in ESTADOS_CONOCIDOS))
+        if conocidos / len(estados) < MIN_PORCENTAJE_ESTADO_CONOCIDO:
+            problemas.append(f"el estado de produccion no se parece a los estados conocidos: solo {conocidos / len(estados):.0%} de sus "
+                             f"valores coinciden (se esperaba al menos {MIN_PORCENTAJE_ESTADO_CONOCIDO:.0%})")
+    return problemas
+
+
+def resolver_columnas_order_capacity(encabezado, datos, avisos=None):
+    """Posiciones (id_pedido, estado) de las columnas de 'Order Capacity'. Busca por nombre (ingles o espanol, sin
+    mayusculas, acentos ni espacios extra); si no aparece ninguno de los nombres usa la posicion habitual (si su
+    encabezado no esta vacio) y lo deja en 'avisos'. Luego valida el contenido. Ante cualquier duda lanza
+    ErrorCorrida(SALIDA_ESTRUCTURA): no se genera ningun dato."""
+    avisos = avisos if avisos is not None else []
+    indices = {}
+    for clave, d in COLUMNAS_ORDER_CAPACITY.items():
+        buscados = {normalizar_encabezado(n) for n in d["nombres"]}
+        idx = next((i for i, c in enumerate(encabezado) if normalizar_encabezado(c) in buscados), None)
+        if idx is None:
+            pos = d["posicion"]
+            texto_pos = limpiar_texto(encabezado[pos]) if pos < len(encabezado) else ""
+            if not texto_pos:
+                msg = (f"En la hoja 'Order Capacity' no se encontro la columna del {d['etiqueta']} ({' / '.join(d['nombres'])}) "
+                       f"y el encabezado de la columna {d['letra']} esta vacio.")
+                raise ErrorCorrida(SALIDA_ESTRUCTURA, msg, msg)
+            idx = pos
+            avisos.append(f"AVISO: en la hoja 'Order Capacity' no se encontro la columna del {d['etiqueta']} "
+                          f"({' / '.join(d['nombres'])}); se uso su posicion habitual (columna {d['letra']}, encabezado '{texto_pos}').")
+        indices[clave] = idx
+    problemas = validar_contenido_order_capacity([f[indices["id_pedido"]] if indices["id_pedido"] < len(f) else None for f in datos],
+                                                 [f[indices["estado"]] if indices["estado"] < len(f) else None for f in datos])
+    if problemas:
+        msg = "El contenido de 'Order Capacity' no es el esperado: " + "; ".join(problemas) + "."
+        raise ErrorCorrida(SALIDA_ESTRUCTURA, msg, msg)
+    return indices["id_pedido"], indices["estado"]
+
+
+def cargar_order_capacity(ruta_backlog, avisos=None):
+    """Lee la hoja 'Order Capacity' del backlog y arma un mapa ORDER ID -> PRODUCTIONSTATUS.
+    Acepta los nombres en ingles y en espanol, con respaldo por posicion y validacion del contenido
+    (ver resolver_columnas_order_capacity). 'avisos' (lista) recibe los avisos para el log."""
     wb = load_workbook(ruta_backlog, read_only=True, data_only=True)
     ws = wb["Order Capacity"]
     filas = list(ws.iter_rows(values_only=True))
     encabezado = filas[0]
     datos = filas[1:]
 
-    idx_order_id = encabezado.index("ORDER ID")
-    idx_status = encabezado.index("PRODUCTIONSTATUS")
+    idx_order_id, idx_status = resolver_columnas_order_capacity(encabezado, datos, avisos)
 
     mapa = {}
     for fila in datos:
@@ -841,6 +925,10 @@ MOTIVOS_ERROR = {
     SALIDA_CONFIG: (
         "La configuración del proceso (config.json) tiene un error.",
         ["Comparar config.json con config.ejemplo.json y corregir lo que difiera."]),
+    SALIDA_ESTRUCTURA: (
+        "El BACKLOG diario cambió de formato: el proceso no pudo identificar con seguridad las columnas de la hoja 'Order Capacity'.",
+        ["Revisar los encabezados y el contenido de la hoja 'Order Capacity' del BACKLOG (ID de pedido en la columna B y estado de producción en la columna Q).",
+         "Avisar a quien mantiene el proceso para ajustar los nombres de columna aceptados."]),
     SALIDA_ERROR: (
         "Ocurrió un error inesperado.",
         ["Revisar el detalle en logs/corridas.log.",
@@ -1158,7 +1246,11 @@ def generar_datos(auto=False, cfg=None, ahora=None):
         verificar_entradas_auto(espera)
 
     print("Leyendo Order Capacity...")
-    mapa_order_capacity = cargar_order_capacity(RUTA_BACKLOG)
+    avisos_oc = []
+    mapa_order_capacity = cargar_order_capacity(RUTA_BACKLOG, avisos_oc)
+    for aviso in avisos_oc:
+        print(f"  {aviso}")
+        registrar_log(cfg, ahora, "auto" if auto else "manual", aviso)
 
     print("Leyendo Programacion...")
     mapa_programacion = cargar_programacion(RUTA_PROGRAMACION)
