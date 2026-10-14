@@ -29,7 +29,9 @@
   .fondo-foto-caja img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:22% 96%;filter:saturate(.95) contrast(1.05);
                        transform:scale(1.06);transition:transform 2.2s cubic-bezier(.2,.7,.2,1)}
   .in .fondo-foto-caja img{transform:scale(1)}
-  .fondo-foto-h,.fondo-foto-v{position:absolute;inset:0}
+  .fondo-foto-h,.fondo-foto-v,.fondo-foto-luz{position:absolute;inset:0}
+  /* Luz sutil solo en la zona de la caja y las flores (derecha-abajo); se desvanece a 0, no toca el lado izquierdo. */
+  .fondo-foto-luz{background:radial-gradient(ellipse 42% 44% at 70% 66%,rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.165) 45%,rgba(255,255,255,0) 100%);mix-blend-mode:soft-light}
   .fondo-foto-h{background:linear-gradient(90deg,rgba(0,32,91,0.95) 0%,rgba(0,32,91,0.914) 5%,rgba(0,32,91,0.88) 10%,rgba(0,32,91,0.843) 15%,rgba(0,32,91,0.8) 20%,rgba(0,32,91,0.744) 25%,rgba(0,32,91,0.677) 30%,rgba(0,32,91,0.609) 35%,rgba(0,32,91,0.55) 40%,rgba(0,32,91,0.505) 45%,rgba(0,32,91,0.46) 50%,rgba(0,32,91,0.394) 55%,rgba(0,32,91,0.34) 60%,rgba(0,32,91,0.313) 65%,rgba(0,32,91,0.294) 70%,rgba(0,32,91,0.285) 75%,rgba(0,32,91,0.283) 80%,rgba(0,32,91,0.282) 85%,rgba(0,32,91,0.281) 90%,rgba(0,32,91,0.281) 95%,rgba(0,32,91,0.28) 100%)}
   .fondo-foto-v{background:linear-gradient(180deg,rgba(0,32,91,.85) 0%,rgba(0,32,91,.42) 30%,rgba(0,32,91,0) 50%,rgba(0,32,91,0) 75%,rgba(0,32,91,.65) 100%)}
   /* Marca de agua del emblema SW (encima de la foto). Valores originales en celular; tamano, opacidad y flotacion nuevos desde 768px. */
@@ -140,6 +142,7 @@
   <div class="fondo-foto" id="fondoFoto" aria-hidden="true">
     <div class="fondo-foto-caja" id="fondoFotoCaja">
       <img src="/assets/login-photo-ght.jpg" alt="" />
+      <div class="fondo-foto-luz"></div>
       <div class="fondo-foto-h"></div>
       <div class="fondo-foto-v"></div>
     </div>
