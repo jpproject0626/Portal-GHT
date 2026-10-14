@@ -21,9 +21,25 @@
   .page{min-height:100vh;display:flex;flex-direction:column;position:relative;overflow:hidden;background:radial-gradient(1200px 600px at 50% 115%,#0a3a7a 0%,var(--deep) 62%)}
   .glow{position:absolute;inset:0;pointer-events:none;transition:background .25s ease-out;
         background:radial-gradient(520px 420px at var(--mx,50%) var(--my,50%),rgba(0,169,224,.14),rgba(0,169,224,0) 70%)}
+  /* Foto del cliente de fondo: va DEBAJO de la marca de agua SW (.emblem) y no se muestra en celular. */
+  .fondo-foto{position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:0;transition:opacity 1.6s ease}
+  .in .fondo-foto{opacity:.95}
+  .fondo-foto-caja{position:absolute;top:-3%;right:-3%;height:106%;width:66%;overflow:hidden;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+  .fondo-foto-caja img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:22% 96%;filter:saturate(.95) contrast(1.05);
+                       transform:scale(1.06);transition:transform 2.2s cubic-bezier(.2,.7,.2,1)}
+  .in .fondo-foto-caja img{transform:scale(1)}
+  .fondo-foto-h,.fondo-foto-v{position:absolute;inset:0}
+  .fondo-foto-h{background:linear-gradient(90deg,#00205B 0%,#00205B 34%,rgba(0,32,91,.88) 46%,rgba(0,32,91,.55) 62%,rgba(0,32,91,.28) 80%,rgba(0,32,91,.2) 100%)}
+  .fondo-foto-v{background:linear-gradient(180deg,rgba(0,32,91,.8) 0%,rgba(0,32,91,.35) 30%,rgba(0,32,91,0) 50%,rgba(0,32,91,0) 75%,rgba(0,32,91,.65) 100%)}
+  /* Marca de agua del emblema SW (encima de la foto). Valores originales en celular; tamano, opacidad y flotacion nuevos desde 768px. */
   .emblem{position:absolute;left:-7vw;bottom:-16vh;width:min(62vw,880px);pointer-events:none;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
   .emblem img{width:100%;display:block;opacity:0;transition:opacity 1.6s ease;animation:float 14s ease-in-out infinite;user-select:none}
   .in .emblem img{opacity:.07}
+  @media (min-width:768px){
+    .emblem{left:-5vw;bottom:-12vh;width:min(46vw,640px)}
+    .emblem img{animation:swFloat 18s ease-in-out infinite}
+    .in .emblem img{opacity:.12}
+  }
   header,main,footer{position:relative;width:100%;max-width:1200px;margin:0 auto;padding-left:clamp(16px,4vw,32px);padding-right:clamp(16px,4vw,32px)}
   header{padding-top:clamp(16px,3vw,24px);padding-bottom:clamp(16px,3vw,24px);display:flex;align-items:center;justify-content:space-between;gap:16px;
          opacity:0;transform:translateY(-8px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
@@ -112,12 +128,21 @@
   }
   @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
   @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(-1.2deg)}}
+  @keyframes swFloat{0%,100%{transform:translate(0,0) rotate(0deg)}33%{transform:translate(8px,-34px) rotate(-1.4deg)}66%{transform:translate(-6px,-18px) rotate(.8deg)}}
   @keyframes spin{to{transform:rotate(360deg)}}
+  @media (max-width:767px){.fondo-foto{display:none}}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <div class="page" id="page">
+  <div class="fondo-foto" id="fondoFoto" aria-hidden="true">
+    <div class="fondo-foto-caja" id="fondoFotoCaja">
+      <img src="/assets/login-photo-ght.jpg" alt="" />
+      <div class="fondo-foto-h"></div>
+      <div class="fondo-foto-v"></div>
+    </div>
+  </div>
   <div class="glow" id="glow" aria-hidden="true"></div>
   <div class="emblem" id="emblem" aria-hidden="true"><img src="/assets/sw-emblem-white.png" alt="" /></div>
 
@@ -242,6 +267,7 @@ if (rememberUntil > Date.now()) {
         $('glow').style.setProperty('--mx', (x * 100) + '%');
         $('glow').style.setProperty('--my', (y * 100) + '%');
         $('emblem').style.transform = `translate(${(x - .5) * -36}px, ${(y - .5) * -24}px)`;
+        $('fondoFotoCaja').style.transform = `translate(${(x - .5) * -14}px, ${(y - .5) * -10}px)`;
       });
     });
   }
