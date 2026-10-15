@@ -33,6 +33,13 @@ corte_portal.bat
 enviar_correo.ps1
 config_correo.json
 
+# Motor del proceso y archivos internos: viven solo en este equipo, NO se sirven en el sitio publicado
+generar_datos.py
+actualizar_portal.bat
+servidor_local.ps1
+config.ejemplo.json
+BRAND.md
+
 # Basura de entorno local
 .Rhistory
 portal_ght_web.zip
